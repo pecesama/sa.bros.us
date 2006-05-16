@@ -1,0 +1,17 @@
+# Comienza Sa.bro.us v1.6
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule tag/(.+)/pag/([0-9]{1,}) index.php?tag=$1&pag=$2 [L]
+RewriteRule tag/(.+)(/)? index.php?tag=$1 [L]
+
+RewriteRule atom/(.+) atom.php?tag=$1 [L]
+RewriteRule rss92/(.+) rss92.php?tag=$1 [L]
+RewriteRule rss/(.+) rss.php?tag=$1 [L]
+RewriteRule rss92 rss92.php [L]
+RewriteRule rss rss.php [L]
+RewriteRule atom atom.php
+
+RewriteRule pag/([0-9]{1,}) index.php?pag=$1
+</IfModule>
+# Termina Sa.bro.us v1.6
