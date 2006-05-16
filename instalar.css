@@ -1,0 +1,69 @@
+#config_form div {
+	display:block;
+}
+#config_form fieldset {
+	border: 0;
+	padding: 5px;
+}
+#config_form legend{
+	font: normal 16.5px/17px georgia, "times new roman", serif;
+	border: 0;
+	margin-top:0;
+	padding-top:0;
+	margin-bottom: 0;
+	padding-bottom: 0;	
+	color: #c60;
+	margin-bottom: 20px;
+}
+
+#config_form label,#config_form input {
+	font-family: georgia, "times new roman", serif;
+	font-size: 13pt;
+	display: block;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#config_form label {
+	color: #999;
+	text-align: right;
+	padding-right: 10px;
+    width:300px;
+}
+
+#config_form input {
+        border: 1px solid #ccc;
+        color: #2F4165;
+        width:250px;
+}
+
+br {
+	clear: left;
+}
+
+#config_form.submit {
+	background-color: #FF9E10;
+	border-top: 1px solid #FFCA10;
+	border-left: 1px solid #FFCA10;	
+	border-right: 1px solid #c60;
+	border-bottom: 1px solid #c60;
+	margin-top:10px;
+	margin-bottom:10px;
+	color: #fcfcfc;
+	width: 200px;
+}
+
+.error {
+  color:#c00;
+  font: bold 14px/15px georgia, "times new roman", serif;
+  margin:1em;
+}
+
+.ejemplo {
+  font-size:.8em;
+  font-variant:italic;
+  margin-left:310px;
+  margin-top:0px;
+  clear:both;
+  margin-bottom:10px!important;
+}

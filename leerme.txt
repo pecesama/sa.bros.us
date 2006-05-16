@@ -1,0 +1,40 @@
+sa.bros.us version 1.6
+
+- Que es sa.bros.us?
+
+	sa.bros.us es en CMS para tener tus bookmarks en el web con soporte de etiquetas al estilo del.icio.us con la diferencia de que en este tu tienes el control del codigo. sa.bros.us esta desarrollado en PHP y como sistema de backend MySQL.
+
+- Donde lo obtengo?
+
+	http://sourceforge.net/projects/sabrosus/
+
+
+- Como lo instalo?
+
+	1.- Descomprime el .zip dentro de un folder llamado sabrosus (o puedes darle cualquier otro nombre).
+	2.- Corre instalar.php y llena los campos con los datos que se te solicitan.
+	3.- Una vez presionado el boton de configurar, tu sa.bros.us esta listo para trabajar.
+	4.- Por ultimo elimina el archivo instalar.php para evitar problemas de seguridad futuros.
+
+- Otros datos?
+
+	sa.bros.us aun se encuentra en sus primeras versiones y puede tener algunos errores, la idea de liberarlo es de que aportes tus mejoras, lo modifiques, jueges con el, o si comienzas a hacer tu CMS desde cero, el codigo de sa.bros.us es un buen comienzo para empezar y darse una idea de como podria funcionar un CMS.
+
+	Si tienes dudas, sugerencias o comentarios, puedes hacerlos publicos en los foros o en la lista de correos de:
+
+	http://sourceforge.net/projects/sabrosus/
+
+	Puedes ver funcionando a sa.bros.us en las siguientes direcciones:
+
+	    * Stanmx				http://www.stanmx.com/sabrosus/
+	    * Pecesama.Net			http://www.pecesama.net/sabrosus/
+	    * Concept and Development		http://www.lexas-solutions.com/sabrosus/
+	    * Victor Bracco			http://labs.vbracco.com.ar/sabrosus/
+
+- Mas informacion sobre sa.bro.sus
+
+	Consulta la página oficial de sa.bros.us para mas información http://sabros.us/wiki/
+
+- Creditos:
+
+	https://sourceforge.net/project/memberlist.php?group_id=143603
