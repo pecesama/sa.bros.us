@@ -1,4 +1,4 @@
-# Comienza Sa.bro.us v1.6
+# Comienza Sa.bro.us v1.7
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
@@ -14,4 +14,4 @@ RewriteRule atom atom.php
 
 RewriteRule pag/([0-9]{1,}) index.php?pag=$1
 </IfModule>
-# Termina Sa.bro.us v1.6
+# Termina Sa.bro.us v1.7

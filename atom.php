@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.6
+  sabrosus monousuario versión 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -47,7 +47,7 @@ echo "<?xml version=\"1.0\" encoding=\"".$idioma[codificacion]."\"?>";
 	<updated><?=gmdate("Y-m-d\TH:i:s\Z");?></updated>
 	<link rel="self" href="<?=$Sabrosus->sabrUrl;?>/atom.php" />
 	<link href="<?=$Sabrosus->sabrUrl;?>" />
-	<generator uri="http://sabros.us/wiki/" version="1.6">Sa.bros.us</generator>
+	<generator uri="http://sabros.us/wiki/" version="1.7">Sa.bros.us</generator>
 	<icon><?=$Sabrosus->sabrUrl;?>/images/sabrosus_icon.png</icon>
 
 <?
