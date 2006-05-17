@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.6
+  sabrosus monousuario versión 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -47,7 +47,7 @@
 	function MostrarErrorConexion($mensaje)
 	{
 		header( 'Content-Type: text/html;');
-		echo "		<!-- Sa.bros.us monousuario versión 1.5 -->
+		echo "		<!-- Sa.bros.us monousuario version 1.7 -->
 		<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">
 		<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"es\" lang=\"es\">
 		<head>

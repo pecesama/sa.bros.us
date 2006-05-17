@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.6
+  sabrosus monousuario versión 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -19,12 +19,12 @@
 	if (session_destroy())
 	{
 ?>
-<!-- Sa.bros.us monousuario version 1.6 -->
+<!-- Sa.bros.us monousuario version 1.7 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
 <head>
 	<title><?=$idioma[terminar_sesion];?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us 1.5" />
+	<meta name="generator" content="Sa.bros.us 1.7" />
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
 	<meta http-equiv="refresh" content="3;URL=index.php" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
