@@ -17,7 +17,6 @@
 	header("Content-type: application/x-javascript" );
 	echo "document.write(\"<div id='badgetags'> \");\n";
 	echo "document.write(\"<strong>".$idioma[mis_etiquetas]."</strong><br />\");\n";
-
 	$max_font = 25;
 	$min_font = 10;
 	$kw = array();
@@ -51,12 +50,12 @@
 			$step=1;
 		}
 		$i = 0;
-		echo "document.write('<span class=\"link_tags\">')\n";
+		echo "document.write(\"<ol>\");\n";
 		foreach($keys as $key){
 			$size = (($kw[$key] - $min)*$step) + $min_font;
-	        echo ("document.write ('".chequearURLFriendly('<a title="'.$kw[$key].$idioma[enlaces_con_etiqueta].'" style="font-size:'.$size.'px" href="'.$Sabrosus->sabrUrl.'/tag/'.$key.'">'.$key.'</a>','<a title="'.$kw[$key].$idioma[enlaces_con_etiqueta].'" style="font-size:'.$size.'px" href="'.$Sabrosus->sabrUrl.'/index.php?tag='.$key.'">'.$key.'</a> ')."');\n");
-		}
-	    echo "document.write('</span>')\n";
+			echo "document.write (\"<li><a title='".$kw[$key].$idioma[enlaces_con_etiqueta]."' style='font-size:".$size."px' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."'>".$key."</a></li>\");\n";
+		}	    
+		echo "document.write(\"</ol>\");\n";
 	}
 	echo "document.write(\"</div> \");\n";
 ?>

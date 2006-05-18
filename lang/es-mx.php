@@ -208,7 +208,8 @@
 	$idioma[imp_inst] = "Clic <kbd>Examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB";
 	$idioma[imp_selecc] = "Seleccionar la privacidad por defecto asignada a los marcadores importados";
 	$idioma[imp_daclic] = "Clic <kbd>Importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo";
-		
+	$idioma[imp_impor_delicious] = "Importar de del.icio.us";
+	
 	#eliminar.php
 	$idioma[eli_eliminar_enlace] = "eliminar enlace";
 	$idioma[eli_desea_eliminar1] = "&iquest;Realmente desea eliminar este enlace de su sa.bros.us?";
@@ -226,6 +227,19 @@
 	$idioma[rec_error3] = "Se produjo un error al intentar enviar el email. Vualva a intentarlo m&aacute;s tarde";
 	$idioma[rec_exito] = "La nueva contrase&ntilde;a fue enviada al email. Revise su bandaje de entrada donde encontrar&aacute; m&aacute;s indicaciones";
 	
-
+	#importdelicious.php
+	$idioma[deli_titulo] = "importar de delicious";
+	$idioma[deli_legend] = "Datos de del.icio.us";
+	$idioma[deli_usuario] = "Usuario:";
+	$idioma[deli_pass] = "Contrase&ntilde;a:";
+	$idioma[deli_boton] = "importar";
+	$idioma[deli_act_correcta] = "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces.";
+	$idioma[deli_enlaces_repe] = "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us.";
+	$idioma[deli_volver] = "Volver al Panel de control";
+	$idioma[deli_e401] = "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente.";
+	$idioma[deli_error_desc] = "Ha ocurrido un error no especificado (Error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes.";
+	$idioma[deli_instruc] = "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta.";
+	$idioma[deli_imp_archivo] = "importar desde un archivo";
+	
 	//$idioma[] = "";
 ?>
