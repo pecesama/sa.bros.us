@@ -9,7 +9,7 @@
   =========================== */
 
 include("include/config.php");
-include("include/conex.php");		
+include("include/conex.php");
 include("include/functions.php");
 include("lang/".$Sabrosus->archivoIdioma);
 
@@ -17,7 +17,7 @@ if (isset($_GET["tag"])) {
 	$navegador = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 	if (stristr($navegador, "opera") || stristr($navegador, "msie")) {
 		$tagtag = utf8_decode($_GET["tag"]);
-    	} else {
+	} else {
 		$tagtag = $_GET["tag"];
 	}
 }
