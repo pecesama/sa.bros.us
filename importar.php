@@ -85,7 +85,10 @@ if (esAdmin())
 <div id="pagina">
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=$idioma[imp_titulo];?></span></h2>
-		<p class="submenu"><a href="cpanel.php"><?=$idioma[panel_control];?></a></p>
+		<p class="submenu">
+			<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
+			<a href="importardelicious.php"><?=$idioma[imp_impor_delicious];?></a>
+		</p>
 	</div>
 
 	<div id="contenido">
