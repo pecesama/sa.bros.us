@@ -10,7 +10,7 @@
 
 session_start();
 include("include/config.php");
-include("include/conex.php");	
+include("include/conex.php");
 include("include/functions.php");
 include("lang/".$Sabrosus->archivoIdioma);
 
@@ -31,10 +31,9 @@ if (!esAdmin()) {
 	}
 }
 
-if (isset($_GET["id"])) {	
+if (isset($_GET["id"])) {
 	$result = mysql_query("select * from ".$prefix."sabrosus where id_enlace = ".$_GET["id"], $link);
-	if(mysql_num_rows($result)>0)
-	{
+	if (mysql_num_rows($result)>0) {
 		$row = mysql_fetch_array($result);
 		$titulo = $row['title'];
 		$enlace = $row['enlace'];
@@ -103,7 +102,7 @@ $titulo = htmlentities($titulo);
 
 				<label for="descripcion"><?=$idioma[descripcion];?></label>
 				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><? echo $descripcion; ?></textarea><br />
-			
+
 				<label for="etiquetas"><?=$idioma[etiquetas];?></label><br />
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
 				<p><?=$idioma[ayuda_editar];?></p>
@@ -111,11 +110,11 @@ $titulo = htmlentities($titulo);
 					<legend><?=$idioma[agregar_etiquetas];?></legend>
 					<?php include("insertags.php");?>
 				</fieldset>
-				
+
 				<label for="privado"><?=$idioma[enlaces_privados];?></label>
 				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
 				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
-					
+
 				<input class="submit" type="submit" name="accion" value="<? echo (isset($_GET['id']) ? $idioma[boton_editar] : $idioma[boton_agregar]); ?>" /><br />
 
 			</fieldset>
