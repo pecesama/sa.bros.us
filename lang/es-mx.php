@@ -208,7 +208,7 @@
 	$idioma[imp_inst] = "Clic <kbd>Examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB";
 	$idioma[imp_selecc] = "Seleccionar la privacidad por defecto asignada a los marcadores importados";
 	$idioma[imp_daclic] = "Clic <kbd>Importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo";
-	$idioma[imp_impor_delicious] = "Importar de del.icio.us";
+	$idioma[imp_impor_delicious] = "importar de del.icio.us";
 	
 	#eliminar.php
 	$idioma[eli_eliminar_enlace] = "eliminar enlace";
