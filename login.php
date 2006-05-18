@@ -17,11 +17,6 @@
 
 if(esAdmin()){
 	header("Location: cpanel.php");
-	if (isset($_POST['dirigir'])) {
-		header("Location: ".urldecode($_POST['dirigir']));
-	} else {
-		header("Location: cpanel.php");
-	}
 }
 
 if ((isset($_POST["pass"]) && md5($_POST["pass"])==$Sabrosus->adminPass))
