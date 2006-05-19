@@ -7,7 +7,8 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-
+?>
+<?php
 	include("include/config.php");
 	include("include/conex.php");		
 	include("include/functions.php");
@@ -50,36 +51,29 @@
 	echo "    <description>".$idioma[enlaces_de]." ".$Sabrosus->siteName."</description>\n";
 	echo "    <language>".$idioma[nombre_estandar]."</language>\n";
 	echo "    <docs>http://backend.userland.com/rss092</docs>\n";
-	
-	/* Controlando que haya enlaces */
-	if(mysql_num_rows($result)>0)
+	while ($registro = mysql_fetch_array($result))
 	{
-		while ($registro = mysql_fetch_array($result))
-		{
-			$titulo=limpiaHTML($registro["title"]);			
-			$desc=limpiaHTML($registro["descripcion"]);
-			$tags=limpiaHTML($registro["tags"]);
-			$url=limpiaHTML($registro["enlace"]);
+		$titulo=limpiaHTML($registro["title"]);			
+		$desc=limpiaHTML($registro["descripcion"]);
+		$tags=limpiaHTML($registro["tags"]);
+		$url=limpiaHTML($registro["enlace"]);
 		
-			/* Control de Enlaces Privados */
-			$privado=false;
-			$etiquetas = explode(" ",$tags);
-			foreach($etiquetas as $etiqueta)
-			{
-				if ($etiqueta==":sab:privado")
-				{ 
-					$privado=true;
-				}
+		/* Control de Enlaces Privados */
+		$privado=false;
+		$etiquetas = explode(" ",$tags);
+		foreach($etiquetas as $etiqueta){
+			if ($etiqueta==":sab:privado") { 
+				$privado=true;
 			}
-			if(!$privado)
-			{		
-				echo "     <item>\n";
-				echo "        <title>$titulo</title>\n";
-				echo "        <description>$desc</description>\n";
-				echo "        <category>$tags</category>\n";
-				echo "        <link>$url</link>\n";
-				echo "     </item>\n";
-			}
+		}
+		if(!$privado)
+		{		
+			echo "     <item>\n";
+			echo "        <title>$titulo</title>\n";
+			echo "        <description>$desc</description>\n";
+			echo "        <category>$tags</category>\n";
+			echo "        <link>$url</link>\n";
+			echo "     </item>\n";
 		}
 	}
 	echo "  </channel>";
