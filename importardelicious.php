@@ -84,7 +84,7 @@ if (esAdmin())
 					<label for="password"><?=$idioma[deli_pass];?></label><br />
 					<input type="password" name="password" /><br />
 					<input class="no_style" type="hidden" name="accion" value="import" />
-					<input class="submit" type="submit" name="accion" value="<?=$idioma[deli_boton];?>" />
+					<input class="submit" type="submit" name="btnsubmit" value="<?=$idioma[deli_boton];?>" />
 				</fieldset>
 			</form>	
 		</div>
