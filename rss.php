@@ -58,33 +58,39 @@
 	echo "			<title>".$idioma[enlaces_de]." ".$Sabrosus->siteName."</title>\n";
 	echo "			<link>".$Sabrosus->sabrUrl."</link>\n";
 	echo "		</image>\n";
-	while ($registro = mysql_fetch_array($result))
+	/* Controlando que haya enlaces */
+	if(mysql_num_rows($result)>0)
 	{
-		$titulo=limpiaHTML($registro["title"]);			
-		$desc=limpiaHTML($registro["descripcion"]);
-		$tags=limpiaHTML($registro["tags"]);
-		$url=limpiaHTML($registro["enlace"]);
-		
-		$fecha = gmdate("D, d M Y H:i:s \G\M\T", strtotime($registro["fecha"]));
-		
-		/* Control de Enlaces Privados */
-		$privado=false;
-		$etiquetas = explode(" ",$tags);
-		foreach($etiquetas as $etiqueta){
-			if ($etiqueta==":sab:privado") { 
-				$privado=true;
-			}
-		}
-		if(!$privado)
+		while ($registro = mysql_fetch_array($result))
 		{
-			echo "		  <item>\n";
-			echo "			 <title>".$titulo."</title>\n";
-			echo "		     <link>".$url."</link>\n";
-			echo "		     <description>".$desc."</description>\n";
-			echo "		     <pubDate>".$fecha."</pubDate>\n";
-			echo "			 <category>".$tags."</category>\n";
-			echo "           <guid isPermaLink=\"true\">".$Sabrosus->sabrUrl . "/ir.php?id=" . $registro['id_enlace'] ."</guid>";
-			echo "		  </item>\n";
+			$titulo=limpiaHTML($registro["title"]);			
+			$desc=limpiaHTML($registro["descripcion"]);
+			$tags=limpiaHTML($registro["tags"]);
+			$url=limpiaHTML($registro["enlace"]);
+		
+			$fecha = gmdate("D, d M Y H:i:s \G\M\T", strtotime($registro["fecha"]));
+		
+			/* Control de Enlaces Privados */
+			$privado=false;
+			$etiquetas = explode(" ",$tags);
+			foreach($etiquetas as $etiqueta)
+			{
+				if ($etiqueta==":sab:privado") 
+				{ 
+					$privado=true;
+				}	
+			}
+			if(!$privado)
+			{
+				echo "		  <item>\n";
+				echo "			 <title>".$titulo."</title>\n";
+				echo "		     <link>".$url."</link>\n";
+				echo "		     <description>".$desc."</description>\n";
+				echo "		     <pubDate>".$fecha."</pubDate>\n";
+				echo "			 <category>".$tags."</category>\n";
+				echo "           <guid isPermaLink=\"true\">".$Sabrosus->sabrUrl . "/ir.php?id=" . $registro['id_enlace'] ."</guid>";
+				echo "		  </item>\n";
+			}
 		}
 	}
 	echo "	</channel>";
