@@ -15,12 +15,12 @@
 	include("include/functions.php");
 	include("lang/".$Sabrosus->archivoIdioma);
 ?>
-<!-- Sa.bros.us monousuario version 1.7 -->
+<!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
 <head>
 	<title>sa.bros.us/<?=$Sabrosus->siteName?><? if((isset($_GET["tag"])) && (!eregi("$ *^",$_GET["tag"]))){ $tag=$_GET["tag"]; echo" - ".$tag; } ?></title>
-	<meta name="generator" content="Sa.bros.us 1.7" />
+	<meta name="generator" content="Sa.bros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
