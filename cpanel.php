@@ -71,10 +71,10 @@ if (esAdmin())
 		if (isset($_GET["buscar"]))
 		{
 			$keywords = explode(" ", $_GET["buscar"]);
-			$query = "SELECT id_enlace,title,enlace,descripcion FROM ".$prefix."sabrosus "."WHERE descripcion LIKE '%".$keywords['0']."%'";		
+			$query = "SELECT id_enlace,title,enlace,descripcion FROM ".$prefix."sabrosus "."WHERE title LIKE '%".$keywords['0']."%' OR descripcion LIKE '%".$keywords['0']."%'";		
 			for ($i=1; $i<count($keywords); $i++) 
 			{
-				$query .= " OR descripcion LIKE '%".$keywords[$i]."%'";
+				$query .= " OR title LIKE '%".$keywords[$i]."%' OR descripcion LIKE '%".$keywords[$i]."%'";
 			}	
 			
 			$query_next = $query." LIMIT $aux,$Sabrosus->limit";
