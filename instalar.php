@@ -7,6 +7,9 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
+
+include("include/functions.php");
+
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -14,8 +17,6 @@
 <head>
 	<title>sa.bros.us/Instalaci&oacute;n</title>
 <?php
-  
-	include("include/functions.php");
   
 	$errors_d=array();
 	$errors_d[11]="Debes introducir el servidor de base de datos";
