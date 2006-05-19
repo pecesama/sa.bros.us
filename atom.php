@@ -51,29 +51,27 @@ echo "<?xml version=\"1.0\" encoding=\"".$idioma[codificacion]."\"?>";
 	<icon><?=$Sabrosus->sabrUrl;?>/images/sabrosus_icon.png</icon>
 
 <?
-/* Controlando que haya enlaces */
-if(mysql_num_rows($result)>0){
-	while ($registro = mysql_fetch_array($result))
-	{
-		$titulo=limpiaHTML($registro["title"]);
-		$desc=$registro["descripcion"];
-		$tags=limpiaHTML($registro["tags"]);
-		$url=limpiaHTML($registro["enlace"]);
 
-		$fecha = gmdate("Y-m-d\TH:i:s\Z", strtotime($registro["fecha"]));
+while ($registro = mysql_fetch_array($result)) {
+	$titulo=limpiaHTML($registro["title"]);
+	$desc=$registro["descripcion"];
+	$tags=limpiaHTML($registro["tags"]);
+	$url=limpiaHTML($registro["enlace"]);
 
-		/* Control de Enlaces Privados */
-		$privado=false;
-		$etiquetas = explode(" ",$tags);
-		foreach($etiquetas as $etiqueta) {
-			if ($etiqueta==":sab:privado") {
-				$privado=true;
-			}
+	$fecha = gmdate("Y-m-d\TH:i:s\Z", strtotime($registro["fecha"]));
+
+	/* Control de Enlaces Privados */
+	$privado=false;
+	$etiquetas = explode(" ",$tags);
+	foreach($etiquetas as $etiqueta) {
+		if ($etiqueta==":sab:privado") {
+			$privado=true;
 		}
+	}
 
-		if (!$privado)
-		{
+	if (!$privado) {
 		?>
+
 		<entry>
 			<title><?=$titulo;?></title>
 			<link rel="alternate" href="<?=$Sabrosus->sabrUrl.chequearURLFriendly("/","/ir.php?id=").$registro["id_enlace"];?>" title="<?=$titulo." @ ".$Sabrosus->siteName;?>" />
@@ -103,9 +101,9 @@ if(mysql_num_rows($result)>0){
 		</entry>
 
 		<?
-		}
 	}
 }
+
 ?>
 
 </feed>
