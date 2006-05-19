@@ -52,7 +52,7 @@
 	echo "		<description>".$idioma[enlaces_de]." ".$Sabrosus->siteName."</description>\n";
 	echo "		<language>".$idioma[nombre_estandar]."</language>\n";
 	echo "		<docs>http://blogs.law.harvard.edu/tech/rss</docs>\n";
-	echo "		<generator>Sa.bros.us v1.7</generator>\n";
+	echo "		<generator>Sa.bros.us v".version()."</generator>\n";
 	echo "		<image>\n";
 	echo "			<url>".$Sabrosus->sabrUrl."/images/sabrosus_icon.png</url>\n";
 	echo "			<title>".$idioma[enlaces_de]." ".$Sabrosus->siteName."</title>\n";
