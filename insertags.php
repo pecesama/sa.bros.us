@@ -7,8 +7,7 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?
+
 if(esAdmin()){
 	?>
 	<div id="reltags">

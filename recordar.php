@@ -7,51 +7,39 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?
-include("include/config.php");
-include("include/conex.php");
-include("include/functions.php");
-include("lang/".$Sabrosus->archivoIdioma);
 
-/*
-PASOS
-CASO 1: No ingreso nunca el email del Administrador -> Imposible emplear este metodo.
+	include("include/config.php");
+	include("include/conex.php");
+	include("include/functions.php");
+	include("lang/".$Sabrosus->archivoIdioma);
 
-CASA 2:Existe el email del Admin.
-	1. Se solicita el email en un form.
-	2. Se lo compara con el guardado en el DB.
-	3. Si son iguales ->
-		1. Se envia una nuevo password al email del admin
-		2. Se cambia el pass el la DB para que pueda hacer el login
-	4. Si no son iguales -> Mensaje de error. 
-*/
-if($_SERVER[REQUEST_METHOD]=="POST"){
-
-	if($Sabrosus->emailAdmin=="")
+	
+	if($_SERVER[REQUEST_METHOD]=="POST")
 	{
-		header("Location: recordar.php?er=1");
-	} else {
-		if($_POST[email]==$Sabrosus->emailAdmin)
+		if($Sabrosus->emailAdmin=="")
 		{
-			$nuevo_password = generar_password();
-			$sqlStr = "UPDATE ".$prefix."config SET `admin_pass`='".md5($nuevo_password)."' WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
-			
-			/* Armamos el email */
-			$msg = $idioma[rec_msg_email]. $nuevo_password;
-			$asunto = $idioma[rec_email_asunto];
-			if(enviaMail($Sabrosus->emailAdmin, $asunto, $msg, $Sabrosus->emailAdmin))
-			{
-				mysql_query($sqlStr);
-				header("Location: recordar.php?ex=1");
-			} else {
-				header("Location: recordar.php?er=3");
-			}
+			header("Location: recordar.php?er=1");
 		} else {
-			header("Location: recordar.php?er=2");
+			if($_POST[email]==$Sabrosus->emailAdmin)
+			{
+				$nuevo_password = generar_password();
+				$sqlStr = "UPDATE ".$prefix."config SET `admin_pass`='".md5($nuevo_password)."' WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
+			
+				/* Armamos el email */
+				$msg = $idioma[rec_msg_email]. $nuevo_password;
+				$asunto = $idioma[rec_email_asunto];
+				if(enviaMail($Sabrosus->emailAdmin, $asunto, $msg, $Sabrosus->emailAdmin))
+				{
+					mysql_query($sqlStr);
+					header("Location: recordar.php?ex=1");
+				} else {
+					header("Location: recordar.php?er=3");
+				}
+			} else {
+				header("Location: recordar.php?er=2");
+			}
 		}
-	}
-} else {
+	} else {
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -114,4 +102,4 @@ if($_SERVER[REQUEST_METHOD]=="POST"){
 </div>
 </body>
 </html>
-<? } ?>
+<? 	} ?>

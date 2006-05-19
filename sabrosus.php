@@ -7,8 +7,7 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>	
-<?php
+
 	include("include/config.php");
 	include("include/conex.php");
 	include("include/functions.php");
@@ -46,6 +45,7 @@
 		<p>&nbsp;</p>
 		<p><strong><?=$idioma[funcionalidades];?></strong></p>
 		<p>&nbsp;</p>
+		<p>
 		:: <?=$idioma[func_1];?><br />
 		:: <?=$idioma[func_2];?><br />
 		:: <?=$idioma[func_3];?><br />
@@ -60,9 +60,8 @@
 	
 	<div id="pie">
 		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
-		<p><? echo chequearURLFriendly('<a href="'.$Sabrosus->sabrUrl.'/rss">','<a href="'.$Sabrosus->sabrUrl.'/rss.php">');?><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=$idioma[sabrosus_rss]?>" title="<?=$idioma[sabrosus_rss]?>" /></a></p>
-	</div>
-	
+		<p><a href="<?=$Sabrosus->sabrUrl.chequearURLFriendly('rss','rss.php')?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=$idioma[sabrosus_rss]?>" title="<?=$idioma[sabrosus_rss]?>" /></a></p
+	</div>		
 </div>
 </body>
 </html>
