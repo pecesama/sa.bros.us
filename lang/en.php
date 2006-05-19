@@ -53,8 +53,6 @@
 	#badge.php
 	$idioma[mi_sabrosus] = "My sa.bro.sus";
 	$idioma[ver_mas] = "More in&nbsp;";
-	
-	#badge.php
 	$idioma[mis_etiquetas] = "My tags on sa.bro.sus";
 	
 	#close.php
@@ -84,11 +82,11 @@
 	$idioma[pass] = "Password:";
 	$idioma[guardar_pass] = "Save password";
 	$idioma[ingresar] = "Log in";
+	$idioma[log_recordar] = "Forgot your password?";
 	
 	#opciones.php
 	$idioma[op_opciones] = "options";
 	$idioma[op_ir_opciones] = "go to options";
-
 	$idioma[op_titulo_opciones] = "Sa.bros.us configuration";
 	$idioma[op_nombre] = "Web site's name:";
 	$idioma[op_titulo] = "Web site's description:";
@@ -97,8 +95,7 @@
 	$idioma[op_urlfriend] = "Friendly <acronym title=\"Uniform Resource Locator\">URL</acronym>:";
 	$idioma[op_activado] = "Activated";
 	$idioma[op_desactivado] = "Deactivated";
-	$idioma[op_idioma] = "Language:";
-	
+	$idioma[op_idioma] = "Language:";	
 	$idioma[op_conf_apariencia] ="Look and feel configuration";
 	$idioma[op_limite_enlaces] = "Links by page: ";
 	$idioma[op_contenidos_multimedia] = "Show multimedia content:";
@@ -110,16 +107,13 @@
 	$idioma[op_color_4] = "Gray";
 	$idioma[op_color_5] = "Random";
 	$idioma[op_compartir] = "Allow links export:";
-
 	$idioma[op_conf_usuario] = "Administrator configuration";
 	$idioma[op_pass] = "<strong>Control panel's</strong> password:";
 	$idioma[op_repite_pass] = "Confirm password:";
 	$idioma[op_pass_iguales] = "Passwords have to match";
 	$idioma[op_deje_blanco] = "Leave blank for not changing passwords";
-	$idioma[op_emailadmin] = "E-mail:";
-	
-	$idioma[op_actualizar] = "update";
-	
+	$idioma[op_emailadmin] = "E-mail:";	
+	$idioma[op_actualizar] = "update";	
 	$idioma[op_exito] = "Changes have been updated";
 	$idioma[op_error1] = "An error has occurred";
 	$idioma[op_error2] = "The file <code>include/config.ini</code> is not writable";
@@ -207,11 +201,38 @@
 	$idioma[imp_inst] = "Click <kbd>Browse...</kbd> to find the saved bookmark file on your computer. The maximum size the file can be is 1MB";
 	$idioma[imp_selecc] = "Select the default privacy setting for your imported bookmarks";
 	$idioma[imp_daclic] = "Click <kbd>Import</kbd> to start importing the bookmarks; it may take a minute";
+	$idioma[imp_impor_delicious] = "import from del.icio.us";
 		
 	#eliminar.php
 	$idioma[eli_eliminar_enlace] = "delete link";
 	$idioma[eli_desea_eliminar1] = "Do you want to delete this link?";
 	$idioma[eli_desea_eliminar2] = "There's no undo here!!";
 
+	#recordar.php
+	$idioma[rec_titulo] = "remember password";
+	$idioma[rec_legend] = "New password";
+	$idioma[rec_email] = "E-mail:";
+	$idioma[rec_msg_email] = "The new password was automatically generated - you might like to change your password to something easier to remember.<br />Your current login information is now: ";
+	$idioma[rec_solicitar] = "get new password";
+	$idioma[rec_descrip] = "If you have forgotten your password, we can send you a new password by e-mail, please indicate your e-mail address, your new password will be sent to you.";	$idioma[rec_email] = "E-mail:";
+	$idioma[rec_error1] = "Impossible to send your password by email, because did not enter the administrator's e-mail";
+	$idioma[rec_error2] = "The e-mail introduced is not the same as in the data base.";
+	$idioma[rec_error3] = "An error has occurred. You may attempt to send ii again. If your attempt fails, please contact your System Administrator.";
+	$idioma[rec_exito] = "An email containing your new password has been sent to your address. It contains easy instructions to complete this password change.";
+	
+	#importdelicious.php
+	$idioma[deli_titulo] = "import from delicious";
+	$idioma[deli_legend] = "Del.icio.us info";
+	$idioma[deli_usuario] = "User:";
+	$idioma[deli_pass] = "Password:";
+	$idioma[deli_boton] = "import";
+	$idioma[deli_act_correcta] = "The import process has been completed successfully. Were imported <strong>%no_importados%</strong> links.";
+	$idioma[deli_enlaces_repe] = "Were not imported <strong>%no_noimportadosrepetidos%</strong> links because already were included in sa.bros.us.";
+	$idioma[deli_volver] = "Back to control panel.";
+	$idioma[deli_e401] = "Invalid user or password. Please try again.";
+	$idioma[deli_error_desc] = "An error has occurred (Error  <strong>%no_error%</strong>). You may attempt to try it again.";
+	$idioma[deli_instruc] = "In order to import the del.icio.us's links, introduce your login information.";
+	$idioma[deli_imp_archivo] = "import from a file";
+	
 	//$idioma[] = "";
 ?>

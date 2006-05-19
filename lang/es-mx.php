@@ -2,15 +2,15 @@
 /* =============================
 
 	sabrosus paquete de idioma para version 1.7
+	
 
 	Idioma : Español de México
+	
 
 	Paquete de idioma original
 	por Pedro Santana
-
-
-
-
+	
+	
 	sabrosus monousuario versión 1.7
 	http://sabrosus.sourceforge.net/
 	sabrosus is a free software licensed under GPL (General public license)
@@ -53,8 +53,6 @@
 	#badge.php
 	$idioma[mi_sabrosus] = "Mi sa.bro.sus";
 	$idioma[ver_mas] = "M&aacute;s en&nbsp;";
-	
-	#badge.php
 	$idioma[mis_etiquetas] = "Mis etiquetas en sa.bro.sus";
 
 	#close.php
@@ -89,7 +87,6 @@
 	#opciones.php
 	$idioma[op_opciones] = "opciones";
 	$idioma[op_ir_opciones] = "ir a opciones";
-
 	$idioma[op_titulo_opciones] = "Configuraci&oacute;n de sa.bros.us";
 	$idioma[op_nombre] = "Nombre del sitio:";
 	$idioma[op_titulo] = "Descripci&oacute;n del sitio:";
@@ -98,8 +95,7 @@
 	$idioma[op_urlfriend] = "<acronym title=\"Uniform Resource Locator\">URL</acronym> Amigable:";
 	$idioma[op_activado] = "Activado";
 	$idioma[op_desactivado] = "Desactivado";
-	$idioma[op_idioma] = "Idioma:";
-	
+	$idioma[op_idioma] = "Idioma:";	
 	$idioma[op_conf_apariencia] ="Configuraci&oacute;n de la apariencia";
 	$idioma[op_limite_enlaces] = "Enlaces por p&aacute;gina: ";
 	$idioma[op_contenidos_multimedia] = "Mostrar contenidos multimedia: ";
@@ -111,16 +107,13 @@
 	$idioma[op_color_4] = "Gris";
 	$idioma[op_color_5] = "Aleatorio";
 	$idioma[op_compartir] = "Permitir que se exporten los enlaces:";
-
 	$idioma[op_conf_usuario] = "Configuraci&oacute;n del Administrador";
 	$idioma[op_pass] = "Contrase&ntilde;a para el <strong>panel de control</strong>:";
 	$idioma[op_repite_pass] = "Reescribe la contrase&ntilde;a:";
 	$idioma[op_pass_iguales] = "Las contrase&ntilde;as deben ser iguales";
 	$idioma[op_deje_blanco] = "Deje en blanco para no cambiar la contrase&ntilde;a";
 	$idioma[op_emailadmin] = "E-mail:";
-
-	$idioma[op_actualizar] = "actualizar";
-	
+	$idioma[op_actualizar] = "actualizar";	
 	$idioma[op_exito] = "Los cambios se han almacenado con &eacute;xito";
 	$idioma[op_error1] = "Ha ocurrido un error al almacenar los cambios";
 	$idioma[op_error2] = "El archivo <code>include/config.ini</code> no tiene permisos de escritura";
@@ -218,14 +211,14 @@
 	#recordar.php
 	$idioma[rec_titulo] = "recordar contrase&ntilde;a";
 	$idioma[rec_legend] = "Nueva Contrase&ntilde;a";
-	$idioma[rec_email] = "Email:";
-	$idioma[rec_msg_email] = "La nueva contraseña para ingresar al panel de sa.bros.us es: ";
-	$idioma[rec_solicitar] = "soliciar nueva";
-	$idioma[rec_descrip] = "Si olvido su contrase&ntilde;a, ingrese el email del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.";	$idioma[rec_email] = "Email:";
-	$idioma[rec_error1] = "Imposible enviar su contrase&ntilde;a por email, debido a que nunca ingreso el email del administrador";
+	$idioma[rec_email] = "Correo electr&oacute;nico:";
+	$idioma[rec_msg_email] = "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contraseña para ingresar al panel de sa.bros.us es: ";
+	$idioma[rec_solicitar] = "solicitar nueva";
+	$idioma[rec_descrip] = "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.";	$idioma[rec_email] = "Email:";
+	$idioma[rec_error1] = "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador";
 	$idioma[rec_error2] = "El email ingresado en el formulario es distinto al que esta guardado en la base de datos";
-	$idioma[rec_error3] = "Se produjo un error al intentar enviar el email. Vualva a intentarlo m&aacute;s tarde";
-	$idioma[rec_exito] = "La nueva contrase&ntilde;a fue enviada al email. Revise su bandaje de entrada donde encontrar&aacute; m&aacute;s indicaciones";
+	$idioma[rec_error3] = "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde";
+	$idioma[rec_exito] = "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones";
 	
 	#importdelicious.php
 	$idioma[deli_titulo] = "importar de delicious";
