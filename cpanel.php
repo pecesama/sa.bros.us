@@ -56,7 +56,7 @@ if (esAdmin())
 	
 	<div id="contenido">
 		<div id="formulario">
-			<form action="cpanel.php" method="post" name="buscar">
+			<form action="cpanel.php" method="get" name="buscar">
 				<fieldset>
 					<label for="buscar"><?=$idioma[buscar];?></label>				
 					<input class="input_naranja" id="buscar" name="buscar" type="text" />				
