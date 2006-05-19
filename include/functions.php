@@ -154,8 +154,7 @@ function obtenerIdiomas() {
 	$exts['php']=true;
 	$files=array();
 	$ruta = getcwd();
-	//HACK: Diferencias entre los directorios en windows y *nix
-	$dire = (substr(PHP_OS, 0, 3) == 'WIN') ? $ruta."\\".$lang_dir : $ruta."/".$lang_dir;
+	$dire = $ruta."/".$lang_dir;
 	$handle = opendir($dire);
 	$i=0;
 	while ($filename = readdir($handle)) {
