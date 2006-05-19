@@ -2,6 +2,8 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Reparacion de bugs menores. (Pecesama, Victor Bracco)
+    * Importador de del.icio.us. (Pablo Viojo)
     * Incorporada una opcion para generar una nueva contraseña y enviarla por email (Victor Bracco)
     * Agregado soporte de sindicacion ATOM. (Kuer Mckee, Victor Bracco)
     * Agregado el elemento <guid> al RSS. (Victor Bracco, Kurt Mckee)
