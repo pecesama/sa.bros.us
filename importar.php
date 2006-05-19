@@ -7,10 +7,8 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?
+
 //Script basado parcialmente en el del proyecto Scuttle [http://sourceforge.net/projects/scuttle/]
-session_start();
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");

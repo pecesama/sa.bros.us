@@ -9,6 +9,7 @@
   =========================== */
 ?>
 <?
+	session_start();
 	
 	include("include/class.iniparser.php");
 

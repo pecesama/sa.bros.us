@@ -7,8 +7,7 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?
+
 $page=1;
 $rows = (isset($tagtag) ? contarenlaces($tagtag) : contarenlaces());   
 if($rows)

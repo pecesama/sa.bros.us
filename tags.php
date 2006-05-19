@@ -7,8 +7,7 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?php
+
 	$max_font = 30;
 	$min_font = 12;
 	$kw = array();

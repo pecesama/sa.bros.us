@@ -7,9 +7,7 @@
   sabrosus is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?	
-	session_start();
+
 	include("include/config.php");
 	include("include/conex.php");	
 	include("include/functions.php");
