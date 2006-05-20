@@ -21,7 +21,6 @@ if (esAdmin())
         }else{
           $isImporting=false;
         }
-        echo "Importando: ".$isImporting;
 	if ($isImporting) {
 		include "include/importdelicious.php";
         	$respImport=importdelicious($_POST["username"],$_POST["password"]);
