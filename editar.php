@@ -34,10 +34,10 @@
 		$result = mysql_query("select * from ".$prefix."sabrosus where id_enlace = ".$_GET["id"], $link);
 		if (mysql_num_rows($result)>0) {
 			$row = mysql_fetch_array($result);
-			$titulo = $row['title'];
-			$enlace = $row['enlace'];
-			$descripcion = limpiaHTML($row['descripcion']);
-			$tags = $row['tags'];
+			$titulo = htmlspecialchars($row['title']);
+			$enlace = htmlspecialchars($row['enlace']);
+			$descripcion = htmlspecialchars($row['descripcion']);
+			$tags = htmlspecialchars($row['tags']);
 		} else {
 			header("Location: cpanel.php");
 		}

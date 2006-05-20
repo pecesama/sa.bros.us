@@ -53,10 +53,10 @@ echo "<?xml version=\"1.0\" encoding=\"".$idioma[codificacion]."\"?>";
 <?
 
 while ($registro = mysql_fetch_array($result)) {
-	$titulo=limpiaHTML($registro["title"]);
-	$desc=$registro["descripcion"];
-	$tags=limpiaHTML($registro["tags"]);
-	$url=limpiaHTML($registro["enlace"]);
+	$titulo=htmlspecialchars($registro["title"]);
+	$desc=htmlspecialchars($registro["descripcion"]);
+	$tags=htmlspecialchars($registro["tags"]);
+	$url=htmlspecialchars($registro["enlace"]);
 
 	$fecha = gmdate("Y-m-d\TH:i:s\Z", strtotime($registro["fecha"]));
 

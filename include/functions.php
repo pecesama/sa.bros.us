@@ -39,16 +39,6 @@ function tiempospanish($tiempo) {
 	return $tiempo;
 }
 
-// Elimina caracteres extraños
-function limpiaHTML($str) {
-	$str=str_replace("&", "&amp;", $str);
-	$str=str_replace("\"", "&quot;", $str);
-	$str=str_replace("'", "&apos;", $str);
-	$str=str_replace(">", "&gt;", $str);
-	$str=str_replace("<", "&lt;", $str);
-	return $str;
-}
-
 function contarenlaces($tag="") {
 	global $prefix;
 	if ($tag){

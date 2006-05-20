@@ -49,7 +49,7 @@ $result = mysql_query($sqlStr,$link);
 		<?
 		while ($registro = mysql_fetch_array($result)) {
 			/* Control de Enlaces Privados */
-			$tags = limpiaHTML($registro["tags"]);
+			$tags = htmlspecialchars($registro["tags"]);
 			$privado = false;
 			$etiquetas = explode(" ", $tags);
 			foreach ($etiquetas as $etiqueta) {
@@ -59,9 +59,9 @@ $result = mysql_query($sqlStr,$link);
 			}
 
 			if (!$privado) {
-				$titulo = limpiaHTML($registro["title"]);
-				$desc = limpiaHTML($registro["descripcion"]);
-				$url = limpiaHTML($registro["enlace"]);
+				$titulo = htmlspecialchars($registro["title"]);
+				$desc = htmlspecialchars($registro["descripcion"]);
+				$url = htmlspecialchars($registro["enlace"]);
 				?>
 
 				<item>
