@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Videos de YouTube (Victor Bracco)
     * Reparacion de bugs menores. (Pecesama, Victor Bracco)
     * Importador de del.icio.us. (Pablo Viojo)
     * Incorporada una opcion para generar una nueva contraseña y enviarla por email (Victor Bracco)
