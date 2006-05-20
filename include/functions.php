@@ -198,6 +198,12 @@ function getFlickrPhotoUrl($photoUrl) {
 	return "http://flickr.com/delicious_thumb.gne?id=".$params[5];
 }
 
+function getYoutubeVideoUrl($videoUrl) {
+	$params = explode("?v=", $videoUrl);
+	$params2 = explode("&search=",$params[1]);
+	return $params2[0];
+}
+
 function generar_password($largo = 10) {
 	$caracteres_permitidos = "abcdefgijlmnoprtu1234567890ABCDEFGHIJLMNOPRTU";
 	$ps_len = strlen($caracteres_permitidos);
