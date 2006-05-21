@@ -12,18 +12,15 @@
 	include("include/conex.php");
 	include("include/functions.php");
 
-	$a=explode(';',$GLOBALS[HTTP_ACCEPT_LANGUAGE]);
-	if (preg_match('/es/',$a[0]))
-	{
+	$a = explode(';',$GLOBALS[HTTP_ACCEPT_LANGUAGE]);
+	if (preg_match('/es/',$a[0])) {
 		$archivoIdioma = "es-mx.php";
 	} else {
 		$archivoIdioma = "en.php";
 	}
 	include("lang/".$archivoIdioma);
-?>
-<?
-	if($Sabrosus->adminPass!="")
-	{
+
+	if($Sabrosus->adminPass!="") {
 		include("lang/".$Sabrosus->archivoIdioma);
 	?>
 	<!-- Sa.bros.us monousuario version <?=version();?> -->
@@ -32,11 +29,11 @@
 	<head>
 		<title><?=$idioma[up_titulo]?>/sa.bros.us</title>
 		<meta name="generator" content="Sa.bros.us <?=version();?>" />
-		<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />	
+		<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
 		<meta http-equiv="refresh" content="10;URL=index.php" />
-		<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />		
+		<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 		<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/instalar.css" type="text/css" />
-		<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />		
+		<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 	</head>
 	<body>
 	<div id="pagina">
@@ -46,8 +43,8 @@
 		<div id="contenido">
 			<?
 			/* Aqui se convirten los enlaces a utf-8 */
-			$cfg = new iniParser("include/config.ini");
-			$aux_codificado = $cfg->get("codificacion","utf");
+			$cfg = parse_ini_file("include/config.ini", true);
+			$aux_codificado = $cfg['codificacion']['utf'];
 			if($aux_codificado=="0")
 			{
 				if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -62,8 +59,8 @@
 						$sql_update = "UPDATE ".$prefix."sabrosus SET title='".$titulo_temp."', descripcion='".$descrip_temp."', tags = '".$tag_temp."'	WHERE `id_enlace` = ".$id." LIMIT 1";
 						mysql_query($sql_update);
 					}
-					$cfg->setValue("codificacion","utf", "1");
-					$cfg->save();
+					$cfg['codificacion']['utf'] = 1;
+					saveIni("include/config.ini",$cfg);
 					?>
 					<p><?=$idioma[up_act_correcta2]?></p>
 				<?
@@ -97,10 +94,10 @@
 <head>
 	<title><?=$idioma[up_titulo]?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
 	<link rel="stylesheet" href="<?=$sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="stylesheet" href="<?=$sabrUrl?>/instalar.css" type="text/css" />
-	<link rel="shortcut icon" href="<?=$sabrUrl?>/images/sabrosus_icon.png" />		
+	<link rel="shortcut icon" href="<?=$sabrUrl?>/images/sabrosus_icon.png" />
 </head>
 <body>
 <div id="pagina">
@@ -125,7 +122,7 @@
 				if (is_writable($fname)) {
 					$f = fopen($fname, "w");
 					fwrite($f,$cfg);
-					fclose($f);	
+					fclose($f);
 					//Actualiza la DB.
 					if(updatedb()){
 						echo "<p>".$idioma[up_act_correcta]."</p>";
@@ -144,7 +141,7 @@
 			<form method="post" action="update.php" id="config_form">
 				<fieldset>
 					<legend><?=$idioma[up_form_leyenda]?></legend>
-					  <div>
+					<div>
 						<?
 						if(!isset($adminPass)){
 							echo "<p>".$idioma[up_error_config2]."</p>";
@@ -153,7 +150,7 @@
 							echo "<p><input type=\"submit\" name=\"btnsubmit\" id=\"btnsubmit\" value=\"".$idioma[up_form_boton]."\" class=\"submit\"/><p>";
 						}
 						?>
-					  </div>
+					</div>
 				</fieldset>
 			<?
 		}
@@ -171,12 +168,12 @@
 		global $server,$dbUser,$dbPass,$dataBase,$prefix,$limit;
 		global $adminPass,$siteName,$siteTitle,$sabrUrl,$siteUrl,$usefriendlyurl,$archivoIdioma;
 		global $link;
-		if (!$link)  {
+		if (!$link) {
 			return false;
-		}  
+		}
 		$sqlStr = "ALTER TABLE `".$prefix."sabrosus` CHANGE `id_enlace` `id_enlace` INT( 11 ) NOT NULL AUTO_INCREMENT";
-		$result = mysql_query($sqlStr); 
-		
+		$result = mysql_query($sqlStr);
+
 		$sqlStr = "CREATE TABLE `".$prefix."config` (
 			`site_name` varchar(250) NOT NULL default '',
 			`site_title` varchar(250) NOT NULL default '',
@@ -187,11 +184,11 @@
 			`limite_enlaces` int(3) NOT NULL default '0',
 			`admin_email` varchar(250) NOT NULL default '',
 			`admin_pass` varchar(250) NOT NULL default '',
-			PRIMARY KEY  (`sabrosus_url`)
+			PRIMARY KEY (`sabrosus_url`)
 		) TYPE=MyISAM;";
-	  	$result = mysql_query($sqlStr);    
+		$result = mysql_query($sqlStr);
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$siteName."','".$siteTitle."','".$siteUrl."','".$sabrUrl."','".$usefriendlyurl."','".$archivoIdioma."','".$limit."','','".md5($adminPass)."');";
-		$result = mysql_query($sqlStr);   
+		$result = mysql_query($sqlStr);
 		return true;
 	}
 ?>
