@@ -14,6 +14,17 @@ function version() {
 	return "1.7";
 }
 
+function saveIni($fileName, $configOpts) {
+	$file = fopen($fileName, 'wb');
+	foreach ($configOpts as $section => $configLine) {
+		fwrite($file, "[".$section."]\n");
+		foreach ($configLine as $key => $value) {
+			fwrite($file, $key." = \"".$value."\"\n");
+		}
+	}
+	fclose($file);
+}
+
 function tiempospanish($tiempo) {
 	// Reemplazar los meses
 	$tiempo = str_replace("January", "Enero", $tiempo);
