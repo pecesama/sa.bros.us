@@ -8,57 +8,57 @@
 
   =========================== */
 
-	include("include/config.php");
-	include("include/conex.php");
-	include("include/functions.php");
-	include("lang/".$Sabrosus->archivoIdioma);
+include("include/config.php");
+include("include/conex.php");
+include("include/functions.php");
+include("lang/".$Sabrosus->archivoIdioma);
 
-	if (!esAdmin()) {
-		if (isset($_GET['id'])) {
-			header("Location: login.php?dirigir=".urlencode("editar.php?id=".$_GET['id']));
-		} elseif (isset($_GET['url'])) {
-			if (isset($_GET['titulo'])) {
-				if (get_magic_quotes_gpc()) {
-					$titulo = stripslashes($_GET['titulo']);
-				} else {
-					$titulo = $_GET['titulo'];
-				}
-			}
-			header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "")));
-		} else {
-			header("Location: login.php");
-		}	
-	}
-
-	if (isset($_GET["id"])) {
-		$result = mysql_query("select * from ".$prefix."sabrosus where id_enlace = ".$_GET["id"], $link);
-		if (mysql_num_rows($result)>0) {
-			$row = mysql_fetch_array($result);
-			$titulo = htmlspecialchars($row['title']);
-			$enlace = htmlspecialchars($row['enlace']);
-			$descripcion = htmlspecialchars($row['descripcion']);
-			$tags = htmlspecialchars($row['tags']);
-		} else {
-			header("Location: cpanel.php");
-		}
-	} elseif (isset($_GET["url"])) {
-		$etiquetas = @get_meta_tags($_GET['url']);
-	
-		if ($_GET['titulo']) {
+if (!esAdmin()) {
+	if (isset($_GET['id'])) {
+		header("Location: login.php?dirigir=".urlencode("editar.php?id=".$_GET['id']));
+	} elseif (isset($_GET['url'])) {
+		if (isset($_GET['titulo'])) {
 			if (get_magic_quotes_gpc()) {
 				$titulo = stripslashes($_GET['titulo']);
 			} else {
 				$titulo = $_GET['titulo'];
 			}
-		} else {
-			$titulo = "";
 		}
-		$enlace = $_GET['url'];
-		$descripcion = $etiquetas['description'];
-		$tags = comasxespacios($etiquetas['keywords']);
+		header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "")));
+	} else {
+		header("Location: login.php");
 	}
+}
 
-	$titulo = htmlentities($titulo);
+if (isset($_GET["id"])) {
+	$result = mysql_query("select * from ".$prefix."sabrosus where id_enlace = ".$_GET["id"], $link);
+	if (mysql_num_rows($result)>0) {
+		$row = mysql_fetch_array($result);
+		$titulo = htmlspecialchars($row['title']);
+		$enlace = htmlspecialchars($row['enlace']);
+		$descripcion = htmlspecialchars($row['descripcion']);
+		$tags = htmlspecialchars($row['tags']);
+	} else {
+		header("Location: cpanel.php");
+	}
+} elseif (isset($_GET["url"])) {
+	$etiquetas = @get_meta_tags($_GET['url']);
+
+	if ($_GET['titulo']) {
+		if (get_magic_quotes_gpc()) {
+			$titulo = stripslashes($_GET['titulo']);
+		} else {
+			$titulo = $_GET['titulo'];
+		}
+	} else {
+		$titulo = "";
+	}
+	$enlace = $_GET['url'];
+	$descripcion = $etiquetas['description'];
+	$tags = comasxespacios($etiquetas['keywords']);
+}
+
+$titulo = htmlentities($titulo);
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
