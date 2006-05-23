@@ -147,6 +147,20 @@
 						$id_video = getYoutubeVideoUrl($row["enlace"]);
 						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:212px;height:175px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
 					}
+					/* Videos de Google */
+					if (beginsWith($row["enlace"], "http://video.google.com/videoplay?docid=")) {
+						$html = trim(file_get_contents($row["enlace"]));
+						$inicio = strpos($html, "var flashObj =\n            \"");
+						$fin = strpos($html, "\";\n          flashObj = flashObj.replace");
+						$inicio = $inicio + strlen("var flashObj =\n            \"");
+						$codigo_video = substr($html, $inicio, $fin - $inicio);
+						$codigo_video = str_replace("\u003d", "=", $codigo_video);
+						$codigo_video = str_replace("\\\"", "\"", $codigo_video);
+						$codigo_video = str_replace("width:100%; height:100%;", "width:400px; height:326px;", $codigo_video);
+						$codigo_video = str_replace("/googleplayer.swf", "http://video.google.com/googleplayer.swf", $codigo_video);
+						$codigo_video = str_replace("FlashVars=\"playerMode=normal&playerId=gvuniqueid&clickUrl=\"", "FlashVars=\"playerMode=embedded\"", $codigo_video);
+						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";						
+					}
 				}
 				if ($row['descripcion']) {
 					echo "\t\t\t<p>".$row['descripcion']."</p>\n";
