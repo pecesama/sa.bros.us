@@ -163,8 +163,8 @@
 						$codigo_video = str_replace("src=", "data=", $codigo_video);
 						$codigo_video = str_replace("&", "&amp;", $codigo_video);
 						$codigo_video = str_replace("allowScriptAccess=\"sameDomain\" quality=\"best\" bgcolor=\"#ffffff\" scale=\"noScale\" wmode=\"window\" salign=\"TL\"  FlashVars=\"playerMode=objectded\"", "", $codigo_video);
-						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";
-						
+						$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);
+						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";						
 					}
 				}
 				if ($row['descripcion']) {
