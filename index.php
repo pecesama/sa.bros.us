@@ -159,7 +159,12 @@
 						$codigo_video = str_replace("width:100%; height:100%;", "width:400px; height:326px;", $codigo_video);
 						$codigo_video = str_replace("/googleplayer.swf", "http://video.google.com/googleplayer.swf", $codigo_video);
 						$codigo_video = str_replace("FlashVars=\"playerMode=normal&playerId=gvuniqueid&clickUrl=\"", "FlashVars=\"playerMode=embedded\"", $codigo_video);
-						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";						
+						$codigo_video = str_replace("embed", "object", $codigo_video);
+						$codigo_video = str_replace("src=", "data=", $codigo_video);
+						$codigo_video = str_replace("&", "&amp;", $codigo_video);
+						$codigo_video = str_replace("allowScriptAccess=\"sameDomain\" quality=\"best\" bgcolor=\"#ffffff\" scale=\"noScale\" wmode=\"window\" salign=\"TL\"  FlashVars=\"playerMode=objectded\"", "", $codigo_video);
+						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";
+						
 					}
 				}
 				if ($row['descripcion']) {
