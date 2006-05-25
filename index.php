@@ -120,7 +120,7 @@
 
 				if ($Sabrosus->multiCont=="1") {
 					/* Imagenes de Flickr */
-					if (beginsWith($row["enlace"], "http://www.flickr.com/photos")) {
+					if (beginsWith($row["enlace"], "http://www.flickr.com/photos") || beginsWith($row["enlace"], "http://flickr.com/photos")) {
 						if (isPhotoFlickr($row["enlace"])) {
 							echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
 						}
@@ -143,7 +143,7 @@
 						echo "\t\t\t<div class=\"enlacemp3\"><object type=\"application/x-shockwave-flash\" data=\"" . $playerUrl . "\" width=\"290\" height=\"24\"><param name=\"movie\" value=\"" . $playerUrl . "\" /><param name=\"quality\" value=\"high\" /><param name=\"menu\" value=\"false\" /><param name=\"wmode\" value=\"transparent\" /></object></div>\n";
 					}
 					/* Videos de You Tube */
-					if (beginsWith($row["enlace"], "http://youtube.com/watch?v=")) {
+					if (beginsWith($row["enlace"], "http://youtube.com/watch?v=") || beginsWith($row["enlace"], "http://www.youtube.com/watch?v=")) {
 						$id_video = getYoutubeVideoUrl($row["enlace"]);
 						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:212px;height:175px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
 					}
