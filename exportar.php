@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
+  sabrosus monousuario version 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -13,6 +13,9 @@
 	include("include/functions.php");
 	include("lang/".$Sabrosus->archivoIdioma);
 
+	if (!esAdmin()) {
+		header("Location: login.php");
+	}
 
 	$toFile = '<!DOCTYPE NETSCAPE-Bookmark-file-1>
 				<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">

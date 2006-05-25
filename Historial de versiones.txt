@@ -2,10 +2,10 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Permitir la exportacion completa solo a los administradores. (Pecesama)
     * Creacion del entorno visual para la creacion del BadgeTags. (Jorge Condomí)
     * Videos de Google (Pecesama)
     * Videos de YouTube (Victor Bracco)
-    * Reparacion de bugs menores. (Pecesama, Victor Bracco)
     * Importador de del.icio.us. (Pablo Viojo)
     * Incorporada una opcion para generar una nueva contraseña y enviarla por email (Victor Bracco)
     * Agregado soporte de sindicacion ATOM. (Kuer Mckee, Victor Bracco)
@@ -20,6 +20,7 @@ Despues de la v 1.6
     * Solucionado el Bug del bookmarlet cuando no esta legeado. (Victor Bracco, Kurt Mckee)
     * Corregido el bug que reemplazaba " por '. (Kurt Mckee)
     * Correccion de una funcion duplicada (Kurt McKee)
+    * Reparacion de bugs menores. (Pecesama, Victor Bracco)
 
 v 1.6
 
