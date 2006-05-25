@@ -132,7 +132,7 @@
 	$idioma[enlaces_privados] = "enlace privado:";
 
 	#generarBadge.php
-	$idioma[generar_badge] = "generar badge";
+	$idioma[generar_badge] = "generar badge de los enlaces";
 	$idioma[titulo_badge] = "Agrega los URLs de sa.bros.us a t&uacute; sitio.";
 	$idioma[descripcion_badge] = "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us";
 	$idioma[copiar_fuente] = "Copiar el c&oacute;digo fuente";
@@ -145,7 +145,7 @@
 	$idioma[personalizar_estilo] = "Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.";
 
 	#generarBadgeTags.php
-	$idioma[generar_badge_tags] = "generar nube de etiquetas";
+	$idioma[generar_badge_tags] = "generar badge de la nube de etiquetas";
 	$idioma[titulo_badge_tags] = "Agrega las Etiquetas de sa.bros.us a t&uacute; sitio.";
 	$idioma[descripcion_badge_tags] = "Si tienes un sitio web o un blog, puedes mostrar las Etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la Etiqueta m&aacute;s relevante se muestre m&aacute;s grande.";
 	$idioma[descripcion_funcionalidad_tags] = "Para mostrar las Etiquetas lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren las Etiquetas que tienen las URLs de tu sa.bros.us.";
@@ -156,7 +156,6 @@
 	$idioma[ejemplo_tags] = "Nube de ejemplo";
 	$idioma[generar_codigo_tags] = "Generar C&oacute;digo";
 	$idioma[personalizar_estilo_tags] = "Si deseas personalizar el estilo de la nube de Etiquetas de sa.bros.us, este es la estructura del XHTML generado por nube de Etiquetas de sa.bros.us .";
-
 
 	#redactar.php
 	$idioma[titulo_agregar] = "Escribe los datos de tu enlace.";
@@ -173,8 +172,8 @@
 	$idioma[que_es] = "&iquest;Qu&eacute; es sa.bros.us?";
 	$idioma[regresar_a] = "Regresar a sa.bros.us";
 	$idioma[sab_descripcion] = "<strong>sa.bros.us</strong> es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con <strong>sa.bros.us</strong> haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web.";
-	$idioma[proyecto_sab] = "El proyecto <strong>sa.bros.us</strong> es 'Open Source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabrosus.sourceforge.net/\" title=\"Sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"Proyecto sa.bros.us\">SourceForge.net</a>.";
-	$idioma[creadores_sab] = "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Equipo de sa.bros.us\">otros miembros</a>.";
+	$idioma[proyecto_sab] = "El proyecto <strong>sa.bros.us</strong> es 'Open Source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"Sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"Proyecto sa.bros.us\">SourceForge.net</a>.";
+	$idioma[creadores_sab] = "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Equipo de sa.bros.us\">otros miembros</a>.";
 	$idioma[funcionalidades] = "FUNCIONALIDADES:";
 	$idioma[func_1] = "Permite gestionar los bookmarks a trav&eacute;s de un panel de control.";
 	$idioma[func_2] = "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador.";
