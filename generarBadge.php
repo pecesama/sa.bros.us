@@ -72,8 +72,7 @@ if (esAdmin())
 		<h2>sa.bros.us/<span><?=$idioma[generar_badge];?></span></h2>
 			<p class="submenu">
 				<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
-				<a href="generarBadge.php"><?=$idioma[generar_badge];?></a> | 
-				<a href="generarBadgeTags.php"><?=$idioma[generar_badge_tags];?></a> | 
+				<a href="generarBadgeTags.php"><?=$idioma[generar_badge_tags];?></a>
 			</p>
 	</div>
 

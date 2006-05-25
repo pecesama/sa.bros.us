@@ -34,6 +34,7 @@
 	$idioma[etiquetas_contenidas] = "in";
 	$idioma[fecha_agregado] = "at";
 	$idioma[exportar_al_mio] = "Export to my Sa.bros.us";
+	$idioma[exportar_error] = "Imposible exportar enlaces";
 	$idioma[generado_con] = "Powered by";
 	$idioma[sabrosus_rss] = "RSS sa.bros.us";
 	$idioma[etiqueta_rss] = "RSS tag";
@@ -131,17 +132,30 @@
 	$idioma[enlaces_privados] = "private link:";
 	
 	#generarBadge.php
-	$idioma[generar_badge] = "generate badge";
+	$idioma[generar_badge] = "generate links badge";
 	$idioma[titulo_badge] = "Add to your web the sa.bros.us URL's.";
 	$idioma[descripcion_badge] = "If you have a blog or a web, you can show the newest URLs added to your sa.bros.us";
 	$idioma[copiar_fuente] = "Copy source code";
-	$idioma[descripcion_funcionalidad] = "In order to show the news URLs of your sa.bros.us, you must copy this code anywere of your blog or in a HTML page.";
+	$idioma[descripcion_funcionalidad] = "In order to show the new URLs of your sa.bros.us, you must copy this code anywhere of your blog or in a HTML page.";
 	$idioma[preferencias_titulo] = "Add your preferences to the generated code.";
-	$idioma[seleccionar_preferencias] = "Choose your preferences to My sa.bros.us deploy:";
+	$idioma[seleccionar_preferencias] = "Choose the preferences to display your sa.bros.us:";
 	$idioma[numero_enlaces] = "Number of links:";
 	$idioma[filtrar_etiqueta] = "Filter by tag:";
 	$idioma[estilo_titulo] = "Style sheet of My sa.bros.us";
-	$idioma[personalizar_estilo] = "If you want to personalize the sa.bros.us deply, this is used XMLT structure.";
+	$idioma[personalizar_estilo] = "If you want to personalize the sa.bros.us style, this is the XHTML structure used.";
+	
+	#generarBadgeTags.php
+	$idioma[generar_badge_tags] = "generate tag cloud badge";
+	$idioma[titulo_badge_tags] = "Add to your web the sa.bros.us tag cloud.";
+	$idioma[descripcion_badge_tags] = "If you have a blog or a web, you can show the sa.bros.us tag cloud.";
+	$idioma[descripcion_funcionalidad_tags] = "In order to show your sa.bros.us tag cloud, you must copy this code anywhere of your blog or in a HTML page.";
+	$idioma[preferencias_titulo_tags] = "Add your preferences:";
+	$idioma[seleccionar_preferencias_tags] = "Choose the preferences to display the sa.bros.us tag cloud:";
+	$idioma[min_size_tags] = "Maximun font size:";
+	$idioma[max_size_tags] = "Minimun font size:";
+	$idioma[ejemplo_tags] = "Nube de ejemplo";
+	$idioma[generar_codigo_tags] = "Generate code";
+	$idioma[personalizar_estilo_tags] = "If you want to personalize the sa.bros.us style, this is the XHTML structure used.";
 	
 	#redactar.php
 	$idioma[titulo_agregar] = "Write the data link.";
@@ -158,8 +172,8 @@
 	$idioma[que_es] = "What is sa.bros.us?";
 	$idioma[regresar_a] = "Back to sa.bros.us";
 	$idioma[sab_descripcion] = "<strong>sa.bros.us</strong> is a system to organize the bookmarks added to your web. Same as de.icio.us, you can manage your bookmars, but with <strong>sa.bros.us</strong> you can do it in your own web page.";
-	$idioma[proyecto_sab] = "<strong>sa.bros.us</strong> project is 'Open Source' (you can use and change the original code freely) and runs with PHP and MySQL. The official home page is <a href=\"http://sabrosus.sourceforge.net/\" title=\"Sa.bros.us\">this</a> and can be downloaded from <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project\">SourceForge.net</a>.";
-	$idioma[creadores_sab] = "<a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> and <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> started the sa.bros.us project in 2005, with the collaboration of <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Sa.bros.us team\">other members</a>.";
+	$idioma[proyecto_sab] = "<strong>sa.bros.us</strong> project is 'Open Source' (you can use and change the original code freely) and runs with PHP and MySQL. The official home page is <a href=\"http://sabros.us/\" title=\"Sa.bros.us\">this</a> and can be downloaded from <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project\">SourceForge.net</a>.";
+	$idioma[creadores_sab] = "<a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> and <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> started the sa.bros.us project in 2005, with the collaboration of <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Sa.bros.us team\">other members</a>.";
 	$idioma[funcionalidades] = "FUNCTIONALITIES:";
 	$idioma[func_1] = "Can manage the bookmarks through a control panel.";
 	$idioma[func_2] = "Allows to add bookmars quickly through your web browser.";
