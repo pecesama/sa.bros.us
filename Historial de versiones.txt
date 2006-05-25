@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Creacion del entorno visual para la creacion del BadgeTags. (Jorge Condomí)
     * Videos de Google (Pecesama)
     * Videos de YouTube (Victor Bracco)
     * Reparacion de bugs menores. (Pecesama, Victor Bracco)

@@ -34,6 +34,7 @@
 	$idioma[etiquetas_contenidas] = "en";
 	$idioma[fecha_agregado] = "el";
 	$idioma[exportar_al_mio] = "Exportar a mi Sa.bros.us";
+	$idioma[exportar_error] = "Imposible exportar enlaces";
 	$idioma[generado_con] = "Generado con:";
 	$idioma[sabrosus_rss] = "RSS de sa.bros.us";
 	$idioma[etiqueta_rss] = "RSS de la etiqueta";
@@ -142,6 +143,20 @@
 	$idioma[filtrar_etiqueta] = "Filtrar por etiqueta:";
 	$idioma[estilo_titulo] = "Hoja de estilo de Mi sa.bros.us";
 	$idioma[personalizar_estilo] = "Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.";
+
+	#generarBadgeTags.php
+	$idioma[generar_badge_tags] = "generar nube de etiquetas";
+	$idioma[titulo_badge_tags] = "Agrega las Etiquetas de sa.bros.us a t&uacute; sitio.";
+	$idioma[descripcion_badge_tags] = "Si tienes un sitio web o un blog, puedes mostrar las Etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la Etiqueta m&aacute;s relevante se muestre m&aacute;s grande.";
+	$idioma[descripcion_funcionalidad_tags] = "Para mostrar las Etiquetas lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren las Etiquetas que tienen las URLs de tu sa.bros.us.";
+	$idioma[preferencias_titulo_tags] = "Personalice la nube de Etiquetas:";
+	$idioma[seleccionar_preferencias_tags] = "Seleccione sus preferencias para desplegar su nube de Etiquetas de sa.bros.us:";
+	$idioma[min_size_tags] = "Tama&ntilde;o de fuente m&iacute;nimo:";
+	$idioma[max_size_tags] = "Tama&ntilde;o de fuente m&aacute;ximo:";
+	$idioma[ejemplo_tags] = "Nube de ejemplo";
+	$idioma[generar_codigo_tags] = "Generar C&oacute;digo";
+	$idioma[personalizar_estilo_tags] = "Si deseas personalizar el estilo de la nube de Etiquetas de sa.bros.us, este es la estructura del XHTML generado por nube de Etiquetas de sa.bros.us .";
+
 
 	#redactar.php
 	$idioma[titulo_agregar] = "Escribe los datos de tu enlace.";

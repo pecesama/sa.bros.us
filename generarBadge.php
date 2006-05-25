@@ -35,6 +35,7 @@ if (esAdmin())
 		function generaBadge()
 		{
 			var cuantos = document.getElementById('txtCuantos').value;	
+					if( cuantos == null || cuantos == "") cuantos = 10;
 			var tag = document.getElementById('txtTag').value;		
 			
 			
@@ -69,7 +70,11 @@ if (esAdmin())
 <div id="pagina">
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=$idioma[generar_badge];?></span></h2>
-			<p class="submenu"><a href="cpanel.php"><?=$idioma[panel_control];?></a></p>
+			<p class="submenu">
+				<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
+				<a href="generarBadge.php"><?=$idioma[generar_badge];?></a> | 
+				<a href="generarBadgeTags.php"><?=$idioma[generar_badge_tags];?></a> | 
+			</p>
 	</div>
 
 	<div id="contenido">	
@@ -89,6 +94,7 @@ if (esAdmin())
 		font-size: 13px;
 }
 </style>
+
 <script src="<?=$Sabrosus->sabrUrl?>/badge.php?cuantos=10" type="text/javascript"></script>
 <!-- Fin de sa.bros.us Badge -->
 					</textarea>
