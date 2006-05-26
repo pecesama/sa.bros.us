@@ -113,8 +113,10 @@ if (esAdmin())
 					<div id="ejemploHtml" style="margin-left:30px;color:#888;">
 					&lt;div id=&quot;mi_sabrosus&quot;&gt;<br />
 					<div id="ejemploHtmlInterno">&lt;strong&gt;Mi sa.bros.us&lt;/strong&gt;<br />
-					&lt;a title=&quot;&quot; href=&quot;&quot;&gt;#&lt;/a&gt;<br />
-					M&aacute;s en &lt;a title=&quot;Mi sa.bros.us&quot; href=&quot;&quot;&gt;mi sa.bros.us&lt;/a&gt;</div>
+					  &lt;ul&gt;<br />
+					  &nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a title=&quot;&quot; href=&quot;&quot;&gt;#&lt;/a&gt;&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&lt;li&gt;M&aacute;s en &lt;a title=&quot;Mi sa.bros.us&quot; href=&quot;&quot;&gt;mi sa.bros.us&lt;/a&gt;&lt;/li&gt;<br />
+					&lt;/ul&gt;</div>
 					&lt;/div&gt;
 					</div>
 				</fieldset>
