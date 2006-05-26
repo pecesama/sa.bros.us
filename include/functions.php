@@ -25,31 +25,6 @@ function saveIni($fileName, $configOpts) {
 	fclose($file);
 }
 
-function tiempospanish($tiempo) {
-	// Reemplazar los meses
-	$tiempo = str_replace("January", "Enero", $tiempo);
-	$tiempo = str_replace("February", "Febrero", $tiempo);
-	$tiempo = str_replace("March", "Marzo", $tiempo);
-	$tiempo = str_replace("April", "Abril", $tiempo);
-	$tiempo = str_replace("May", "Mayo", $tiempo);
-	$tiempo = str_replace("June", "Junio", $tiempo);
-	$tiempo = str_replace("July", "Julio", $tiempo);
-	$tiempo = str_replace("August", "Agosto", $tiempo);
-	$tiempo = str_replace("September", "Septiembre", $tiempo);
-	$tiempo = str_replace("October", "Octubre", $tiempo);
-	$tiempo = str_replace("November", "Noviembre", $tiempo);
-	$tiempo = str_replace("December", "Diciembre", $tiempo);
-	// Reemplazar los días
-	$tiempo = str_replace("Sunday", "Domingo", $tiempo);
-	$tiempo = str_replace("Monday", "Lunes", $tiempo);
-	$tiempo = str_replace("Tuesday", "Martes", $tiempo);
-	$tiempo = str_replace("Wednesday", "Miércoles", $tiempo);
-	$tiempo = str_replace("Thursday", "Jueves", $tiempo);
-	$tiempo = str_replace("Friday", "Viernes", $tiempo);
-	$tiempo = str_replace("Saturday", "Sabado", $tiempo);
-	return $tiempo;
-}
-
 function contarenlaces($tag="") {
 	global $prefix;
 	if ($tag){
