@@ -47,9 +47,11 @@
 			$row["descripcion"]=eregi_replace("\n"," ",$row["descripcion"]);
 			$row["descripcion"]=eregi_replace("\"","",$row["descripcion"]);
 			$row["descripcion"]=eregi_replace("\'","",$row["descripcion"]);
-			echo "		document.write(\"<a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><br />\");\n";			
-			/* Si deseas incluir la descripcion en el badge descomenta esta linea siguiente y comenta la anterior. */
-			//echo "          document.write(\"<a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><br/>".htmlentities($row["descripcion"])."<br />\");\n";
+			if ($Sabrosus->desc_badge=="1") {
+				echo "          document.write(\"<a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><br/>".htmlentities($row["descripcion"])."<br />\");\n";				
+			} else {
+				echo "		document.write(\"<a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><br />\");\n";
+			}
 		}
 		echo "		document.write(\"".$idioma[ver_mas]."<a title='".$idioma[mi_sabrosus]."' href='".$Sabrosus->sabrUrl."'>".strtolower($idioma[mi_sabrosus])."</a><br /><br />\");\n";
 		echo "document.write(\"</div>\");\n";	

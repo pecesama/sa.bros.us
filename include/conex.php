@@ -141,6 +141,7 @@ class clsSabrosus
 	var $multiCont;
 	var $tagsColor;
 	var $compartir;
+	var $desc_badge;
 
 	function clsSabrosus()
 	{
@@ -163,6 +164,7 @@ class clsSabrosus
 		$this->multiCont = $cfg['multimedia_content']['allow'];
 		$this->tagsColor = $cfg['tags_cloud']['color'];
 		$this->compartir = $cfg['exportar']['compartir'];
+		$this->desc_badge = $cfg['links_badge']['descripciones'];
 	}
 }
 

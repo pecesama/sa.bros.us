@@ -100,6 +100,7 @@
 	$idioma[op_conf_apariencia] ="Configuraci&oacute;n de la apariencia";
 	$idioma[op_limite_enlaces] = "Enlaces por p&aacute;gina: ";
 	$idioma[op_contenidos_multimedia] = "Mostrar contenidos multimedia: ";
+	$idioma[op_descripciones] = "Mostrar descripciones en el badge de enlaces: ";
 	$idioma[op_color_tags] = "Color para la nube de etiquetas: ";
 	$idioma[op_color_0] = "Naranja";
 	$idioma[op_color_1] = "Azul";

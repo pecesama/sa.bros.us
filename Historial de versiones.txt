@@ -2,6 +2,8 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Descripcion en el bagde configurable desde el panel de opciones. (Pecesama)
+    * Eliminada una funcion que no se usaba. (Pecesama)
     * Permitir la exportacion completa solo a los administradores. (Pecesama)
     * Creacion del entorno visual para la creacion del BadgeTags. (Jorge Condomí)
     * Videos de Google (Pecesama)

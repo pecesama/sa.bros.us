@@ -41,9 +41,11 @@ if (esAdmin()) {
 
 		$multi = (isset($_POST["contenidos_multi"]) ? "1" : "0");
 		$comp = (isset($_POST['compartir']) ? "1" : "0");
+		$descrip = (isset($_POST['descripciones']) ? "1" : "0");
 		$cfg['tags_cloud']['color'] = $_POST['color_tags'];
 		$cfg['multimedia_content']['allow'] = $multi;
 		$cfg['exportar']['compartir'] = $comp;
+		$cfg['links_badge']['descripciones'] = $descrip;
 
 		if (!is_writeable("include/config.ini")) {
 			$errores +=1;
@@ -158,8 +160,10 @@ if (esAdmin()) {
 
 					<? $multi = (($Sabrosus->multiCont=="1") ? "checked=\"true\"" : ""); ?>
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
+					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
 					<label for="contenidos_multi"><?=$idioma[op_contenidos_multimedia];?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
 					<label for="compartir"><?=$idioma[op_compartir];?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir"/><br />
+					<label for="descripciones"><?=$idioma[op_descripciones];?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=$idioma[op_conf_usuario]?></legend>
