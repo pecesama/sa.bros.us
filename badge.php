@@ -41,19 +41,23 @@
 		
 		echo "document.write(\"<div id='mi_sabrosus'>\");\n";
 		echo "	document.write(\"<strong>".$idioma[mi_sabrosus]."</strong><br />\");\n";
+		echo "	document.write(\"<ul>\");\n";
 		while ($row = mysql_fetch_array($result))
 		{
 			$row["descripcion"]=eregi_replace(chr(13)," ",$row["descripcion"]);
 			$row["descripcion"]=eregi_replace("\n"," ",$row["descripcion"]);
 			$row["descripcion"]=eregi_replace("\"","",$row["descripcion"]);
 			$row["descripcion"]=eregi_replace("\'","",$row["descripcion"]);
+			$row["descripcion"]=utf8_decode($row["descripcion"]);
+			$row["title"]=utf8_decode($row["title"]);
 			if ($Sabrosus->desc_badge=="1") {
-				echo "          document.write(\"<a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><br/>".htmlentities($row["descripcion"])."<br />\");\n";				
+				echo "          document.write(\"<li><a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><ul><li>".htmlentities($row["descripcion"])."</li></ul></li>\");\n";				
 			} else {
-				echo "		document.write(\"<a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a><br />\");\n";
+				echo "		document.write(\"<li><a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a></li>\");\n";
 			}
 		}
-		echo "		document.write(\"".$idioma[ver_mas]."<a title='".$idioma[mi_sabrosus]."' href='".$Sabrosus->sabrUrl."'>".strtolower($idioma[mi_sabrosus])."</a><br /><br />\");\n";
+		echo "		document.write(\"<li>".$idioma[ver_mas]."<a title='".$idioma[mi_sabrosus]."' href='".$Sabrosus->sabrUrl."'>".strtolower($idioma[mi_sabrosus])."</a></li>\");\n";
+		echo "	document.write(\"</ul>\");\n";
 		echo "document.write(\"</div>\");\n";	
 	}	
 ?>
