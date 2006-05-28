@@ -54,7 +54,7 @@
 	#badge.php
 	$idioma[mi_sabrosus] = "Mi sa.bro.sus";
 	$idioma[ver_mas] = "M&aacute;s en&nbsp;";
-	$idioma[mis_etiquetas] = "Mis etiquetas en sa.bro.sus";
+	$idioma[mis_etiquetas] = "Mis etiquetas en sa.bros.us";
 
 	#close.php
 	$idioma[terminar_sesion] = "terminar sesi&oacute;n";

@@ -132,7 +132,7 @@ if(isset($_POST['code_gen'])){
 					<br />
 					<div id="ejemploHtml" style="margin-left:30px;color:#888;">
 					&lt;div id=&quot;badgetags&quot;&gt;
-					<div id="ejemploHtmlInterno">&lt;p&gt;&lt;strong&gt;Mis etiquetas en sa.bro.sus&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;<br />
+					<div id="ejemploHtmlInterno">&lt;p&gt;&lt;strong&gt;<?=$idioma[mis_etiquetas]?>&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;<br />
 					&lt;ol&gt;<br />
 					&lt;li&gt;&lt;a title=&quot;&quot; style=&quot;&quot; href=&quot;&quot;&gt;#&lt;/a&gt;&lt;/li&gt;<br />
 					&lt;/ol&gt;<br />
