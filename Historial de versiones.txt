@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Correccion de errores menores del BadgeTags. (Jorge Condomí)
     * Lista estructural en el Badge. (Pecesama)
     * Descripcion en el bagde configurable desde el panel de opciones. (Pecesama)
     * Eliminada una funcion que no se usaba. (Pecesama)
