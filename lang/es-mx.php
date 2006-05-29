@@ -34,7 +34,7 @@
 	$idioma[etiquetas_contenidas] = "en";
 	$idioma[fecha_agregado] = "el";
 	$idioma[exportar_al_mio] = "Exportar a mi Sa.bros.us";
-	$idioma[exportar_error] = "Imposible exportar enlaces";
+	$idioma[exportar_error] = "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.";
 	$idioma[generado_con] = "Generado con:";
 	$idioma[sabrosus_rss] = "RSS de sa.bros.us";
 	$idioma[etiqueta_rss] = "RSS de la etiqueta";

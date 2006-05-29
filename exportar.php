@@ -47,6 +47,14 @@
 				</DL><p>';
 				
 	$archivoSalida = "lastExport.html";
+	if (!is_writeable("tmp/".$archivoSalida)) {
+		$_SESSION['error_exporting'] = '1';
+		if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
+			header("Location: cpanel.php");
+		}else{
+			header("Location: index.php");
+		}
+	}
 	if($fp = fopen('tmp/'.$archivoSalida,"w+")){
 		fwrite($fp, $toFile);
 		fclose($fp);
@@ -56,7 +64,6 @@
 		$fp = fopen('tmp/'.$archivoSalida,"r");
 		fpassthru($fp);
 	}else{
-		$_SESSION['error_exporting'] = '1';
 		if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
 			header("Location: cpanel.php");
 		}else{

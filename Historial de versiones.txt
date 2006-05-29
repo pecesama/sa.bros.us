@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Parche a la verificacion previa para permitir la exportacion (Pecesama)
     * Cambio de LastExport.html a tmp/LastExport.html para facilitar la modificacion de permisos de escritura. (Jorge Condomí)
     * Verificacion previa para permitir la exportacion. (Jorge Condomí)
     * Agregado mensaje de error para cuando falla el Exportar. (Jorge Condomí)
