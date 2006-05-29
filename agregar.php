@@ -28,6 +28,13 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 	if(!isInSabrosus($enlace)) {
 		$Sql="insert into ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha) values ('".$titulo."','".$etiquetas."','".$enlace."','".$_POST["descripcion"]."', now())";
 		mysql_query($Sql,$link);
+	} else {
+		// Link already exist in the DB, so let user edit that link.
+		$sql = "SELECT id_enlace FROM ".$prefix."sabrosus WHERE enlace='".$enlace."' LIMIT 1";
+		$result = mysql_query($sql, $link);
+		$en = mysql_fetch_array($result);
+		header("Location: editar.php?id=".$en['id_enlace']);
+		die();
 	}
 	if (isset($_POST["regresa"])) {
 		$url="Location: ".urldecode($_POST["regresa"]);
