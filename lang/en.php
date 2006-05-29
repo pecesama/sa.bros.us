@@ -34,7 +34,7 @@
 	$idioma[etiquetas_contenidas] = "in";
 	$idioma[fecha_agregado] = "at";
 	$idioma[exportar_al_mio] = "Export to my Sa.bros.us";
-	$idioma[exportar_error] = "Impossible to export";
+	$idioma[exportar_error] = "The folder <code>tmp</code> is not writable.";
 	$idioma[generado_con] = "Powered by";
 	$idioma[sabrosus_rss] = "RSS sa.bros.us";
 	$idioma[etiqueta_rss] = "RSS tag";
