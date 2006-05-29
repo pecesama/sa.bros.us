@@ -162,7 +162,13 @@ if (esAdmin()) {
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
 					<label for="contenidos_multi"><?=$idioma[op_contenidos_multimedia];?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
-					<label for="compartir"><?=$idioma[op_compartir];?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir"/><br />
+					<?
+					 $compartible = is_writable("tmp");
+					 ?>
+					<label for="compartir"><?=$idioma[op_compartir];?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" <? if(!$compartible){ echo 'disabled="disabled"'; }?> /><br />
+					<? if(!$compartible) {?>
+					<div class="ejemplo error"><?=$idioma[op_compartir_error]?></div>
+					<? } ?>
 					<label for="descripciones"><?=$idioma[op_descripciones];?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 				</fieldset>
 				<fieldset>

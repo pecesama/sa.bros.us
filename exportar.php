@@ -13,9 +13,6 @@
 	include("include/functions.php");
 	include("lang/".$Sabrosus->archivoIdioma);
 
-	if (!esAdmin()) {
-		header("Location: login.php");
-	}
 
 	$toFile = '<!DOCTYPE NETSCAPE-Bookmark-file-1>
 				<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
@@ -29,7 +26,11 @@
 		
 	$sqlStr = 'SELECT title, enlace FROM '.$prefix.'sabrosus  ';
 		
-	if(isset($_POST['enviar_links']) && count($_POST['links_sel'])>0){
+	if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
+		if (!esAdmin()) {
+			header("Location: login.php");
+		}
+	}else{
 		$link_id = $_POST['links_sel'];
 		$sqlStr .=	'WHERE id_enlace = '.$link_id[0];
 		for($i = 1; $i < count($link_id); $i++){
@@ -46,13 +47,20 @@
 				</DL><p>';
 				
 	$archivoSalida = "lastExport.html";
-	$fp = fopen($archivoSalida,"w+");
-	fwrite($fp, $toFile);
-	fclose($fp);
-	header ("Content-Disposition: attachment; filename=\"".$archivoSalida."\"");
-	header ("Content-Type: application/octet-stream");
-	header ("Content-Length: ".filesize($archivoSalida));
-    $fp = fopen($archivoSalida,"r");
-	fpassthru($fp);
-	
+	if($fp = fopen('tmp/'.$archivoSalida,"w+")){
+		fwrite($fp, $toFile);
+		fclose($fp);
+		header ("Content-Disposition: attachment; filename=\"".$archivoSalida."\"");
+		header ("Content-Type: application/octet-stream");
+		header ("Content-Length: ".filesize('tmp/'.$archivoSalida));
+		$fp = fopen('tmp/'.$archivoSalida,"r");
+		fpassthru($fp);
+	}else{
+		$_SESSION['error_exporting'] = '1';
+		if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
+			header("Location: cpanel.php");
+		}else{
+			header("Location: index.php");
+		}
+	}
 ?>

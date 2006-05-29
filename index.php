@@ -25,6 +25,19 @@
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=$Sabrosus->sabrUrl?>/rss.php" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 0.92" href="<?=$Sabrosus->sabrUrl?>/rss92.php" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?=$Sabrosus->sabrUrl?>/atom.php" />
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.js"></script>
+	<script type="text/javascript">
+		var contenedor;
+		window.onload = function() {
+			contenedor = new fx.Opacity('divContenedor', {duration: 5000, onComplete:
+				function() {
+					document.getElementById('divContenedor').style.display="none";
+				}
+			});
+			contenedor.toggle();
+		}
+	</script>
 </head>
 <body>
 <?
@@ -72,6 +85,14 @@
 	</div>
 
 	<div id="contenido">
+		<? if (isset($_SESSION['error_exporting'])) {
+				unset($_SESSION['error_exporting']);
+		?>
+		<div id="divContenedor" class="error">
+			<p><?=$idioma[exportar_error];?></p>
+		</div>
+		<? } ?>
+
 		<?
 		echo ($Sabrosus->compartir=="1")? "<form action=\"".$Sabrosus->sabrUrl."/exportar.php\" method=\"post\" >" : '';
 

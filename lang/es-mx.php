@@ -109,6 +109,7 @@
 	$idioma[op_color_4] = "Gris";
 	$idioma[op_color_5] = "Aleatorio";
 	$idioma[op_compartir] = "Permitir que se exporten los enlaces:";
+	$idioma[op_compartir_error] = "Debe modificar los permisos de escritura del directorio <em>tmp/</em> para poder exportar los enlaces.";
 	$idioma[op_conf_usuario] = "Configuraci&oacute;n del Administrador";
 	$idioma[op_pass] = "Contrase&ntilde;a para el <strong>panel de control</strong>:";
 	$idioma[op_repite_pass] = "Reescribe la contrase&ntilde;a:";

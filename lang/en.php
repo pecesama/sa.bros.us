@@ -34,7 +34,7 @@
 	$idioma[etiquetas_contenidas] = "in";
 	$idioma[fecha_agregado] = "at";
 	$idioma[exportar_al_mio] = "Export to my Sa.bros.us";
-	$idioma[exportar_error] = "Imposible exportar enlaces";
+	$idioma[exportar_error] = "Impossible to export";
 	$idioma[generado_con] = "Powered by";
 	$idioma[sabrosus_rss] = "RSS sa.bros.us";
 	$idioma[etiqueta_rss] = "RSS tag";
@@ -109,6 +109,7 @@
 	$idioma[op_color_4] = "Gray";
 	$idioma[op_color_5] = "Random";
 	$idioma[op_compartir] = "Allow links export:";
+	$idioma[op_compartir_error] = "You must modify the writing permission of the folder <em>tmp/</em> in order to allow export";
 	$idioma[op_conf_usuario] = "Administrator configuration";
 	$idioma[op_pass] = "<strong>Control panel's</strong> password:";
 	$idioma[op_repite_pass] = "Confirm password:";
