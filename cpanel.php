@@ -25,6 +25,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.js"></script>
+
 	<script language="JavaScript" type="text/javascript">
 		<!--			
 			function elimina(id_enlace)
@@ -33,6 +36,17 @@
 				x=window.confirm("<?=$idioma[desea_eliminar];?>");				 
 				if (x) { location="eliminar.php?id="+id_enlace+"&confirm=0"; }
 			}
+				
+			var contenedor;
+			window.onload = function() {
+				contenedor = new fx.Opacity('divContenedor', {duration: 5000, onComplete:
+					function() {
+						document.getElementById('divContenedor').style.display="none";
+					}
+				});
+				contenedor.toggle();
+			}
+
 		-->
 		</script>
 </head>
@@ -53,6 +67,14 @@
 	</div>
 	
 	<div id="contenido">
+			<? if (isset($_SESSION['error_exporting'])) {
+				unset($_SESSION['error_exporting']);
+		?>
+		<div id="divContenedor" class="error">
+			<p><?=$idioma[exportar_error];?></p>
+		</div>
+		<? } ?>
+
 		<div id="formulario">
 			<form action="cpanel.php" method="get" name="buscar">
 				<fieldset>
