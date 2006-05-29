@@ -110,9 +110,7 @@
 		<table cellspacing="0">
 			<thead>
 				<th><?=$idioma[control_contenidos];?></th>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>
+				<th colspan="3">&nbsp;</th>
 			</thead>
 			
 <?			while ($row = mysql_fetch_array($result))
