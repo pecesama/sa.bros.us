@@ -118,18 +118,10 @@
 <?			while ($row = mysql_fetch_array($result))
 				{	?>					
 			<tr>
-				<td class="objeto">
-<? 					echo $row["title"];	?>
-				</td>
-				<td class="ver">
-					<a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=$idioma[ver_enlace];?></a>
-				</td>
-				<td class="edita">
-					<a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=$idioma[editar];?></a>
-				</td>
-				<td class="elimina">
-					<a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=$idioma[eliminar];?></a>
-				</td>
+				<td class="objeto"><?=$row["title"]?></td>
+				<td class="ver"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=$idioma[ver_enlace]?></a></td>
+				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=$idioma[editar]?></a></td>
+				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=$idioma[eliminar]?></a></td>
 			</tr>
 <?				}	?>
 			<tr>
