@@ -85,12 +85,10 @@
 	</div>
 
 	<div id="contenido">
-		<? if (isset($_SESSION['error_exporting'])) {
-				unset($_SESSION['error_exporting']);
-		?>
-		<div id="divContenedor" class="error">
-			<p><?=$idioma[exportar_error];?></p>
-		</div>
+		<? if (isset($_GET["er"])) { ?>
+			<div id="divContenedor" class="error">
+				<p><?=$idioma[exportar_error];?></p>
+			</div>
 		<? } ?>
 
 		<?

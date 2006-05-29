@@ -50,9 +50,9 @@
 	if (!is_writeable("tmp/".$archivoSalida)) {
 		$_SESSION['error_exporting'] = '1';
 		if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
-			header("Location: cpanel.php");
+			header("Location: cpanel.php?er=1");
 		}else{
-			header("Location: index.php");
+			header("Location: index.php?er=1");
 		}
 	}
 	if($fp = fopen('tmp/'.$archivoSalida,"w+")){
