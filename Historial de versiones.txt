@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Incorporados videos de Vimeo (Victor Bracco)
     * El tag caracteristico de los enlaces privados ya no se muestran en el BadgeTags. (Jorge Condomí)
     * Parche a la verificacion previa para permitir la exportacion. (Pecesama)
     * Cambio de LastExport.html a tmp/LastExport.html para facilitar la modificacion de permisos de escritura. (Jorge Condomí)
