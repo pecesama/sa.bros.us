@@ -93,8 +93,10 @@ echo "document.write(\"<div id='badgetags'> \");\n";
 
 		
 			$size = round((($kw[$key] - $min)*$step) + $min_font,0);
+			if ($key!=":sab:privado") {
 			echo "document.write (\"<li><a title='".$kw[$key].$idioma[enlaces_con_etiqueta]."' style='font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."'>".$key."</a></li> \");\n";
-		}	    
+			}	   
+		} 
 		echo "document.write(\"</ol>\");\n";
 	}
 	echo "document.write(\"</div> \");\n";
