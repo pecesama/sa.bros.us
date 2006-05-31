@@ -164,7 +164,7 @@
 					/* Videos de You Tube */
 					if (beginsWith($row["enlace"], "http://youtube.com/watch?v=") || beginsWith($row["enlace"], "http://www.youtube.com/watch?v=")) {
 						$id_video = getYoutubeVideoUrl($row["enlace"]);
-						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:425px;height:350px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
+						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:330px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
 					}
 					/* Videos de Google */
 					if (beginsWith($row["enlace"], "http://video.google.com/videoplay?docid=")) {
@@ -185,6 +185,13 @@
 						$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);						
 						$codigo_video = str_replace("&amp;autoPlay=true", "", $codigo_video);
 						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";						
+					}
+					/*  Videos de Vimeo */
+					if (beginsWith($row["enlace"], "http://vimeo.com/clip") || beginsWith($row["enlace"], "http://www.vimeo.com/clip")) {
+						$id_vid = explode("clip",$row["enlace"]);
+						$id_video = str_replace(":","",$id_vid[1]);
+						$id_video = str_replace("=","",$id_video);
+						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:300px\" data=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\"><param name=\"movie\" value=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\" /></object></div>\n";
 					}
 				}
 				if ($row['descripcion']) {
