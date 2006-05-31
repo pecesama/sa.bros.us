@@ -164,7 +164,7 @@
 					/* Videos de You Tube */
 					if (beginsWith($row["enlace"], "http://youtube.com/watch?v=") || beginsWith($row["enlace"], "http://www.youtube.com/watch?v=")) {
 						$id_video = getYoutubeVideoUrl($row["enlace"]);
-						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:212px;height:175px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
+						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:425px;height:350px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
 					}
 					/* Videos de Google */
 					if (beginsWith($row["enlace"], "http://video.google.com/videoplay?docid=")) {
