@@ -45,8 +45,7 @@
 		}
 		$i = 0;
 		echo "\n\t\t<ol id=\"cloud\">\n";
-		foreach($keys as $key)
-		{		
+		
 			/*  color tags */
 			$colores[0][r] = 0.1;
 			$colores[0][g] = 2;
@@ -67,6 +66,10 @@
 			$colores[4][r] = 1.5;
 			$colores[4][g] = 1.5;
 			$colores[4][b] = 1.5;
+			
+			foreach($keys as $key)
+		{		
+
 		
 			$colores[5][r] = (rand(5,40)) / 10;
 			$colores[5][g] = (rand(5,40)) / 10;
