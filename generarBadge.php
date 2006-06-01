@@ -18,11 +18,11 @@ if (esAdmin())
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=$idioma[generar_badge];?>/sa.bros.us</title>
+	<title><?=__("generar badge de los enlaces");?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8?>" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 		<script type="text/javascript">
@@ -69,10 +69,10 @@ if (esAdmin())
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=$idioma[generar_badge];?></span></h2>
+		<h2>sa.bros.us/<span><?=__("generar badge de los enlaces");?></span></h2>
 			<p class="submenu">
-				<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
-				<a href="generarBadgeTags.php"><?=$idioma[generar_badge_tags];?></a>
+				<a href="cpanel.php"><?=__("Panel de control");?></a> |
+				<a href="generarBadgeTags.php"><?=__("generar badge de la nube de etiquetas");?></a>
 			</p>
 	</div>
 
@@ -80,12 +80,12 @@ if (esAdmin())
 		<div id="formulario">
 			<form name="frmBadge" id="frmBagde" action="#" method="post">
 				<fieldset>
-					<legend><?=$idioma[titulo_badge];?></legend>		
-					<p><?=$idioma[descripcion_badge];?></p>
+					<legend><?=__("Agrega los URLs de sa.bros.us a t&uacute; sitio.");?></legend>		
+					<p><?=__("Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us");?></p>
 				</fieldset>
 				<fieldset>
-					<legend><?=$idioma[copiar_fuente];?></legend>
-					<p><?=$idioma[descripcion_funcionalidad];?></p><br />
+					<legend><?=__("Copiar el c&oacute;digo fuente");?></legend>
+					<p><?=__("Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
 					<textarea class="textarea_oscuro" rows="10" cols="90" name="txtBadge" id="txtBadge">
 <!-- Inicio de sa.bros.us Badge -->
 <style type="text/css">
@@ -93,22 +93,21 @@ if (esAdmin())
 		font-size: 13px;
 }
 </style>
-
 <script src="<?=$Sabrosus->sabrUrl?>/badge.php?cuantos=10" type="text/javascript"></script>
 <!-- Fin de sa.bros.us Badge -->
 					</textarea>
 				</fieldset>
 				<fieldset>
-					<legend><?=$idioma[preferencias_titulo];?></legend>
-					<p><?=$idioma[seleccionar_preferencias];?></p><br />
-					<label><?=$idioma[numero_enlaces];?></label><br />
+					<legend><?=__("Agregue sus preferencias al c&oacute;digo generado.");?></legend>
+					<p><?=__("Seleccione sus preferencias para desplegar su sa.bros.us:");?></p><br />
+					<label><?=__("N&uacute;mero de enlaces:");?></label><br />
 					<input name="txtCuantos" id="txtCuantos" onKeypress="if (event.keyCode < 45 || event.keyCode > 58) event.returnValue = false;" onKeyUp="generaBadge()" /><br />
-					<label><?=$idioma[filtrar_etiqueta];?></label><br />
+					<label><?=__("Filtrar por etiqueta:");?></label><br />
 					<input name="txtTag" id="txtTag" onKeyUp="generaBadge()" />
 				</fieldset>
 				<fieldset>
-					<legend><?=$idioma[estilo_titulo];?></legend>
-					<p><?=$idioma[personalizar_estilo];?></p>				
+					<legend><?=__("Hoja de estilo de Mi sa.bros.us");?></legend>
+					<p><?=__("Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
 					<br />
 					<div id="ejemploHtml" style="margin-left:30px;color:#888;">
 					&lt;div id=&quot;mi_sabrosus&quot;&gt;<br />
@@ -125,7 +124,7 @@ if (esAdmin())
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 
 </div>

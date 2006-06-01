@@ -62,11 +62,11 @@ $titulo = htmlentities($titulo);
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><? echo (isset($_GET["id"]) ? $idioma[editar_enlace] : $idioma[agregar_enlace]); ?>/sa.bros.us</title>
+	<title><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl?>/include/addtags.js"></script>
@@ -75,8 +75,8 @@ $titulo = htmlentities($titulo);
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><? echo (isset($_GET["id"]) ? $idioma[editar_enlace] : $idioma[agregar_enlace]); ?></span></h2>
-		<p class="submenu"><a href="cpanel.php"><?=$idioma[panel_control];?></a> | <a href="editar.php"><?=$idioma[agregar_enlace];?></a></p>
+		<h2>sa.bros.us/<span><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?></span></h2>
+		<p class="submenu"><a href="cpanel.php"><?=__("Panel de control");?></a> | <a href="editar.php"><?=__("agregar enlace");?></a></p>
 	</div>
 
 	<div id="contenido">
@@ -92,41 +92,41 @@ $titulo = htmlentities($titulo);
 			<? } ?>
 
 			<fieldset>
-				<legend><? echo (isset($_GET["id"]) ? $idioma[titulo_editar] : $idioma[titulo_agregar]); ?></legend>
-				<label for="title"><?=$idioma[titulo];?></label><br />
-				<input class="input_morado" type="text" name="title" value="<? echo $titulo; ?>" size="86" /><br />
+				<legend><?=(isset($_GET["id"]) ? __("Edita los datos de tu enlace.") : __("Escribe los datos de tu enlace."));?></legend>
+				<label for="title"><?=__("t&iacute;tulo:");?></label><br />
+				<input class="input_morado" type="text" name="title" value="<?=$titulo;?>" size="86" /><br />
 
-				<label for="enlace"><?=$idioma[enlace];?></label><br />
+				<label for="enlace"><?=__("enlace:");?></label><br />
 				<input class="input_morado" type="text" name="enlace" value="<? echo $enlace; ?>" size="86" /><br />
 
-				<label for="descripcion"><?=$idioma[descripcion];?></label>
+				<label for="descripcion"><?=__("descripci&oacute;n:");?></label>
 				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><? echo $descripcion; ?></textarea><br />
 
-				<label for="etiquetas"><?=$idioma[etiquetas];?></label><br />
+				<label for="etiquetas"><?=__("etiquetas:");?></label><br />
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
-				<p><?=$idioma[ayuda_editar];?></p>
+				<p><?=__("escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
-					<legend><?=$idioma[agregar_etiquetas];?></legend>
+					<legend><?=__("Agregar etiquetas");?></legend>
 					<?php include("insertags.php");?>
 				</fieldset>
 
-				<label for="privado"><?=$idioma[enlaces_privados];?></label>
+				<label for="privado"><?=__("enlace privado:");?></label>
 				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
 				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
 
-				<input class="submit" type="submit" name="accion" value="<? echo (isset($_GET['id']) ? $idioma[boton_editar] : $idioma[boton_agregar]); ?>" /><br />
+				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("editar") : __("agregar")); ?>" /><br />
 
 			</fieldset>
 			</form>
 		</div>
 		<fieldset>
-			<legend><?=$idioma[titulo_bookmarklet];?></legend>
-			<label><?=$idioma[descripcion_bookmarklet];?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=$idioma[agregar_a_sabrosus];?>" class="bookmarklet"><?=$idioma[agregar_a_sabrosus];?></a></label>
+			<legend><?=__("Instalar el Bookmarklet.");?></legend>
+			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sa.bros.us");?>" class="bookmarklet"><?=__("agregar a sa.bros.us");?></a></label>
 		</fieldset>
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:")?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

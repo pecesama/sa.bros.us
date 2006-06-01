@@ -14,8 +14,8 @@
 	include("lang/".$Sabrosus->archivoIdioma);
 
 	header("Content-type: application/x-javascript" );
-echo "document.write(\"<div id='badgetags'> \");\n";
-	echo "document.write(\"<p><strong>".$idioma[mis_etiquetas]."</strong></p>\");\n";
+	echo "document.write(\"<div id='badgetags'> \");\n";
+	echo "document.write(\"<p><strong>".__("Mis etiquetas en sa.bro.sus")."</strong></p>\");\n";
 	$max_font = (isset($_GET['max']) && eregi("^[0-9]+$",$_GET['max']))? $_GET['max'] : 25;
 	$min_font = (isset($_GET['min']) && eregi("^[0-9]+$",$_GET['min']))? $_GET['min'] : 10;
 	$kw = array();
@@ -98,7 +98,7 @@ echo "document.write(\"<div id='badgetags'> \");\n";
 		
 			$size = round((($kw[$key] - $min)*$step) + $min_font,0);
 			if ($key!=":sab:privado") {
-			echo "document.write (\"<li><a title='".$kw[$key].$idioma[enlaces_con_etiqueta]."' style='font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."'>".$key."</a></li> \");\n";
+			echo "document.write (\"<li><a title='".$kw[$key].__("enlaces con esta etiqueta")."' style='font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."'>".$key."</a></li> \");\n";
 			}	   
 		} 
 		echo "document.write(\"</ol>\");\n";

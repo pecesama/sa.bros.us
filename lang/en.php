@@ -100,7 +100,7 @@
 	$idioma[op_conf_apariencia] ="Look and feel configuration";
 	$idioma[op_limite_enlaces] = "Links by page: ";
 	$idioma[op_contenidos_multimedia] = "Show multimedia content:";
-	$idioma[op_descripciones] = "Show descriptions on the links badge: ";
+	$idioma[op_descripciones] = "Show descriptions on the links badge:";
 	$idioma[op_color_tags] = "Tags cloud's color: ";
 	$idioma[op_color_0] = "Orange";
 	$idioma[op_color_1] = "Blue";

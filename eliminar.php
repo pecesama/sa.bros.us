@@ -30,11 +30,11 @@
 		?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=$idioma[eli_eliminar_enlace];?>/sa.bros.us</title>
+	<title><?=__("eliminar enlace");?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 </head>
@@ -42,24 +42,24 @@
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=$idioma[eli_eliminar_enlace];?></span></h2>
-		<p class="submenu"><a href="cpanel.php"><?=$idioma[panel_control];?></a></p>
+		<h2>sa.bros.us/<span><?=__("eliminar enlace");?></span></h2>
+		<p class="submenu"><a href="cpanel.php"><?=__("Panel de control");?></a></p>
 	</div>
 
 	<div id="contenido">
 		<div id="formulario">
 			<form method="get" action="eliminar.php">
-				<p><?=$idioma[eli_desea_eliminar1];?></p>
-				<p><?=$idioma[eli_desea_eliminar2];?></p>
+				<p><?=__("&iquest;Realmente desea eliminar este enlace de su sa.bros.us?");?></p>
+				<p><?=__("Esta acci&oacute;n no se puede deshacer!");?></p>
 				<input type="hidden" class="no_style" name="confirm" value="0" />
 				<input type="hidden" class="no_style" name="id" value="<?=$_GET['id'];?>" />
-				<input class="submit" type="submit" name="accion" value="<?=$idioma[eliminar];?>" />
+				<input class="submit" type="submit" name="accion" value="<?=__("Eliminar");?>" />
 			</form>
 		</div>
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

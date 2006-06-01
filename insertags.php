@@ -82,7 +82,7 @@ if(esAdmin()){
 			
 				if ($key!=":sab:privado") {
 					$size = (($kw[$key] - $min)*$step) + $min_font;
-					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".$key."')\" title=\"".$idioma[click_tag]." '".$key."'\">".$key."</a> "; 
+					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".$key."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".$key."'\">".$key."</a> "; 
 				}
 			}
 		}

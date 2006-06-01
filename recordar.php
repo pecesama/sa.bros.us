@@ -26,7 +26,7 @@
 				$sqlStr = "UPDATE ".$prefix."config SET `admin_pass`='".md5($nuevo_password)."' WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
 			
 				/* Armamos el email */
-				$msg = $idioma[rec_msg_email]. $nuevo_password;
+				$msg = __("La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contraseña para ingresar al panel de sa.bros.us es:") . $nuevo_password;
 				$asunto = $idioma[rec_email_asunto];
 				if(enviaMail($Sabrosus->emailAdmin, $asunto, $msg, $Sabrosus->emailAdmin))
 				{
@@ -43,11 +43,11 @@
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=$idioma[rec_titulo];?>/sa.bros.us</title>
+	<title><?=__("recordar contrase&ntilde;a");?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl?>/include/prototype.lite.js"></script>
@@ -68,36 +68,42 @@
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=$idioma[rec_titulo];?></span></h2>
+		<h2>sa.bros.us/<span><?=__("recordar contrase&ntilde;a");?></span></h2>
 			<p class="submenu">
-				<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
-				<a href="index.php"><?=$idioma[ir_inicio];?></a>
+				<a href="cpanel.php"><?=__("Panel de control");?></a> |
+				<a href="index.php"><?=__("ir a sa.bros.us");?></a>
 			</p>
 	</div>
 	<div id="contenido">
     	<? if (isset($_GET["ex"])) { ?>
 		<div id="divContenedor" class="exito">
-			<p><?=$idioma[rec_exito];?></p>
+			<p><?=__("La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones");?></p>
 		</div>
 		<? } ?>
 		<? if (isset($_GET["er"])) { ?>
 		<div id="divContenedor" class="error">
-			<p><?=$idioma[rec_error.$_GET["er"]]?></p>
+			<? if ($_GET["er"] == "1") { ?>
+				<p><?=__("Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador");?></p>
+			<? } else if ($_GET["er"] == "2") { ?>
+				<p><?=__("El email ingresado en el formulario es distinto al que esta guardado en la base de datos");?></p>
+			<? } else if ($_GET["er"] == "3") { ?>
+				<p><?=__("Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde");?></p>
+			<? } ?>
 		</div>
 		<? } ?>
 		<div id="formulario">
 			<form name="form" id="form" action="recordar.php" method="post">
 				<fieldset>
-					<legend><?=$idioma[rec_legend];?></legend>
-					<p><?=$idioma[rec_descrip]?></p>
-					<label for="email"><?=$idioma[rec_email]?></label><input type="text" name="email" id="email" /><br />
-					<input class="submit" type="submit" name="btnsubmit" value="<?=$idioma[rec_solicitar]?>" />
+					<legend><?=__("Nueva Contrase&ntilde;a");?></legend>
+					<p><?=__("Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.");?></p>
+					<label for="email"><?=__("Email:");?></label><input type="text" name="email" id="email" /><br />
+					<input class="submit" type="submit" name="btnsubmit" value="<?=__("solicitar nueva");?>" />
 				</fieldset>
 			</form>
 		</div>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>
