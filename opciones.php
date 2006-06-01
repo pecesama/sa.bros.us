@@ -27,7 +27,7 @@ if (esAdmin()) {
 					`limite_enlaces` = '".$_POST['limit']."',
 					`admin_email` = '".$_POST['email']."'";
 		if ($_POST[pass1]!=$_POST[pass2]){
-			echo $idioma[op_pass_iguales];
+			echo __("Las contrase&ntilde;as deben ser iguales");
 			$errores += 1;
 		} else {
 			if ($_POST[pass1] != "") {
@@ -66,11 +66,11 @@ if (esAdmin()) {
 
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=$idioma[op_opciones];?>/sa.bros.us</title>
+	<title><?=__("opciones");?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion];?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl;?>/instalar.css" type="text/css" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl;?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl;?>/images/sabrosus_icon.png" />
@@ -92,37 +92,42 @@ if (esAdmin()) {
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=$idioma[op_opciones];?></span></h2>
+		<h2>sa.bros.us/<span><?=__("opciones");?></span></h2>
 			<p class="submenu">
-				<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
-				<a href="index.php"><?=$idioma[ir_inicio];?></a>
+				<a href="cpanel.php"><?=__("Panel de control");?></a> |
+				<a href="index.php"><?=__("ir a sa.bros.us");?></a>
 			</p>
 	</div>
 	<div id="contenido">
 		<? if (isset($_GET["ex"])) { ?>
 			<div id="divContenedor" class="exito">
-				<p><?=$idioma[op_exito];?></p>
+				<p><?=__("Los cambios se han almacenado con &eacute;xito");?></p>
 			</div>
 		<? } ?>
-		<? if (isset($_GET["er"])) { ?>
+		<? if (isset($_GET["er"]) && $_GET["er"] == "1") { ?>
 			<div id="divContenedor" class="error">
-				<p><?=$idioma[op_error.$_GET["er"]]?></p>
+				<p><?=__("Ha ocurrido un error al almacenar los cambios");?></p>
+			</div>
+		<? } ?>
+		<? if (isset($_GET["er"]) && $_GET["er"] == "2") { ?>
+			<div id="divContenedor" class="error">
+				<p><?=__("El archivo <code>include/config.ini</code> no tiene permisos de escritura");?></p>
 			</div>
 		<? } ?>
 		<div id="formulario">
 			<form name="config_form" id="config_form" action="opciones.php" method="post">
 				<fieldset>
-					<legend><?=$idioma[op_titulo_opciones];?></legend>
-					<label for="sname"><?=$idioma[op_nombre];?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
-					<label for="stitle"><?=$idioma[op_titulo];?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
-					<label for="surl"><?=$idioma[op_siteurl];?></label><input type="text" name="surl" id="surl" value="<?=$Sabrosus->siteUrl?>" /><br />
-					<label for="saburl"><?=$idioma[op_sabrurl];?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
-					<label for="useFriendlyUrl"><?=$idioma[op_urlfriend];?></label>
+					<legend><?=__("Configuraci&oacute;n de sa.bros.us");?></legend>
+					<label for="sname"><?=__("Nombre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
+					<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
+					<label for="surl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?></label><input type="text" name="surl" id="surl" value="<?=$Sabrosus->siteUrl?>" /><br />
+					<label for="saburl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:");?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
+					<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> Amigable:");?></label>
 						<select name="useFriendlyUrl" id="useFriendlyUrl">
-							<option value="1" <? if($Sabrosus->usefriendlyurl) echo "selected"; ?>><?=$idioma[op_activado];?></option>
-							<option value="0" <? if(!$Sabrosus->usefriendlyurl) echo "selected"; ?>><?=$idioma[op_desactivado];?></option>
+							<option value="1" <? if($Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("Activado");?></option>
+							<option value="0" <? if(!$Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("Desactivado");?></option>
 						</select><br />
-					<label for="selIdioma"><?=$idioma[op_idioma];?></label>
+					<label for="selIdioma"><?=__("Idioma:");?></label>
 						<select name="selIdioma">
 						<?
 						$idiomas = obtenerIdiomas();
@@ -140,18 +145,19 @@ if (esAdmin()) {
 						</select><br />
 				</fieldset>
 				<fieldset>
-					<legend><?=$idioma[op_conf_apariencia]?></legend>
+					<legend><?=__("Configuraci&oacute;n de la apariencia");?></legend>
 
-					<label for="limit"><?=$idioma[op_limite_enlaces];?></label><input type="text" name="limit" id="limit" value="<?=$Sabrosus->limit?>" /><br />
-					<label for="color_tags"><?=$idioma[op_color_tags];?></label>
+					<label for="limit"><?=__("Enlaces por p&aacute;gina:");?></label><input type="text" name="limit" id="limit" value="<?=$Sabrosus->limit?>" /><br />
+					<label for="color_tags"><?=__("Color para la nube de etiquetas:");?></label>
 					<select name="color_tags" id="color_tags">
 
 					<?
-					$i = 0;
-					while (isset($idioma["op_color_{$i}"])) {
+					$colors = array(__("Naranja"), __("Azul"), __("Verde"), __("Rojo"), __("Gris"), __("Aleatorio"));
+
+					foreach ($colors as $i => $color) {
 						echo "<option value=\"{$i}\"";
 						echo ($Sabrosus->tagsColor == $i)? " selected=\"selected\"" : "";
-						echo ">{$idioma['op_color_'.$i]}</option>";
+						echo ">{$color}</option>";
 						$i++;
 					}
 					?>
@@ -161,28 +167,28 @@ if (esAdmin()) {
 					<? $multi = (($Sabrosus->multiCont=="1") ? "checked=\"true\"" : ""); ?>
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
-					<label for="contenidos_multi"><?=$idioma[op_contenidos_multimedia];?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
+					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
 					<?
 					 $compartible = is_writable("tmp");
 					 ?>
-					<label for="compartir"><?=$idioma[op_compartir];?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" <? if(!$compartible){ echo 'disabled="disabled"'; }?> /><br />
+					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" <? if(!$compartible){ echo 'disabled="disabled"'; }?> /><br />
 					<? if(!$compartible) {?>
-					<div class="ejemplo error"><?=$idioma[op_compartir_error]?></div>
+					<div class="ejemplo error"><?=__("Debe modificar los permisos de escritura del directorio <em>tmp/</em> para poder exportar los enlaces.");?></div>
 					<? } ?>
-					<label for="descripciones"><?=$idioma[op_descripciones];?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
+					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 				</fieldset>
 				<fieldset>
-					<legend><?=$idioma[op_conf_usuario]?></legend>
-					<label for="pass1"><?=$idioma[op_pass];?></label><input type="password" name="pass1" id="pass1" value=""/><br />
-					<label for="pass2"><?=$idioma[op_repite_pass];?></label><input type="password" name="pass2" id="pass2" value=""/><br /><div class="ejemplo"><?=$idioma[op_deje_blanco]?></div>
-					<label for="email"><?=$idioma[op_emailadmin];?></label><input type="text" name="email" id="email" value="<?=$Sabrosus->emailAdmin?>"/><br />
-					<input class="submit" type="submit" name="accion" value="<?=$idioma[op_actualizar];?>" />
+					<legend><?=__("Configuraci&oacute;n del Administrador")?></legend>
+					<label for="pass1"><?=__("Contrase&ntilde;a para el <strong>panel de control</strong>:");?></label><input type="password" name="pass1" id="pass1" value=""/><br />
+					<label for="pass2"><?=__("Reescribe la contrase&ntilde;a:");?></label><input type="password" name="pass2" id="pass2" value=""/><br /><div class="ejemplo"><?=__("Deje en blanco para no cambiar la contrase&ntilde;a");?></div>
+					<label for="email"><?=__("E-mail:");?></label><input type="text" name="email" id="email" value="<?=$Sabrosus->emailAdmin?>"/><br />
+					<input class="submit" type="submit" name="accion" value="<?=__("actualizar");?>" />
 				</fieldset>
 			</form>
 		</div>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

@@ -40,7 +40,7 @@
 		$result = mysql_query($sqlStr);
 		
 		echo "document.write(\"<div id='mi_sabrosus'>\");\n";
-		echo "	document.write(\"<strong>".$idioma[mi_sabrosus]."</strong><br />\");\n";
+		echo "	document.write(\"<strong>".__("Mi sa.bro.sus")."</strong><br />\");\n";
 		echo "	document.write(\"<ul>\");\n";
 		while ($row = mysql_fetch_array($result))
 		{
@@ -56,7 +56,7 @@
 				echo "		document.write(\"<li><a title='".strip_tags($row["descripcion"])."' href='".$row["enlace"]."'>".htmlentities($row["title"])."</a></li>\");\n";
 			}
 		}
-		echo "		document.write(\"<li>".$idioma[ver_mas]."<a title='".$idioma[mi_sabrosus]."' href='".$Sabrosus->sabrUrl."'>".strtolower($idioma[mi_sabrosus])."</a></li>\");\n";
+		echo "		document.write(\"<li>".__("M&aacute;s en")."<a title='".__("Mi sa.bro.sus")."' href='".$Sabrosus->sabrUrl."'>".strtolower(__("Mi sa.bro.sus"))."</a></li>\");\n";
 		echo "	document.write(\"</ul>\");\n";
 		echo "document.write(\"</div>\");\n";	
 	}	

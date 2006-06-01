@@ -14,7 +14,7 @@ include("include/functions.php");
 include("lang/".$Sabrosus->archivoIdioma);
 
 header("Content-type: text/xml; charset=utf-8");
-echo "<?xml version=\"1.0\""." encoding=\"".$idioma[codificacion]."\"?>\n";
+echo "<?xml version=\"1.0\""." encoding=\"UTF-8\"?>\n";
 
 if (isset($_GET["tag"])) {
 	$navegador = strtolower( $_SERVER['HTTP_USER_AGENT'] );
@@ -42,8 +42,8 @@ $result = mysql_query($sqlStr,$link);
 	<channel>
 		<title>sa.bros.us/<?=$Sabrosus->siteName;?></title>
 		<link><?=$Sabrosus->sabrUrl;?></link>
-		<description><?=$idioma[enlaces_de]." ".$Sabrosus->siteName;?></description>
-		<language><?=$idioma[nombre_estandar];?></language>
+		<description><?=__("Enlaces de")." ".$Sabrosus->siteName;?></description>
+		<language><?=$locale;?></language>
 		<docs>http://backend.userland.com/rss092</docs>
 
 		<?

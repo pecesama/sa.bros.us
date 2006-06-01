@@ -36,11 +36,11 @@ if(isset($cuantos)) {
 $result = mysql_query($sqlStr,$link);
 
 header("Content-type: text/xml; charset=utf-8");
-echo "<?xml version=\"1.0\" encoding=\"".$idioma[codificacion]."\"?>";
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
 ?>
 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="<?=$idioma[nombre_estandar];?>">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="<?=$locale;?>">
 	<title><?=$Sabrosus->siteName;?></title>
 	<author><name><?=$Sabrosus->siteName;?></name></author>
 	<id><?=$Sabrosus->sabrUrl;?></id>

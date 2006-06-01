@@ -15,11 +15,11 @@
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
 	<title>sa.bros.us/<?=$Sabrosus->siteName?><? if((isset($_GET["tag"])) && (!eregi("$ *^",$_GET["tag"]))){ $tag=$_GET["tag"]; echo" - ".$tag; } ?></title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=$Sabrosus->sabrUrl?>/rss.php" />
@@ -64,7 +64,7 @@
 		<?
 		echo "\t<a title=\"".$Sabrosus->siteTitle."\" href=\"".$Sabrosus->siteUrl."\">".$Sabrosus->siteName."</a>/";
 		if (isset($tagtag) || isset($_GET["pag"])) {
-			echo "<a title=\"$idioma[inicio_sabrosus]\" href=\"".$Sabrosus->sabrUrl."\">sa.bros.us</a>/";
+			echo "<a title=\"".__("Inicio Sa.bros.us")."\" href=\"".$Sabrosus->sabrUrl."\">sa.bros.us</a>/";
 			if(isset($tagtag)) {
 				if(isset($_GET["pag"])) {
 					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/".$tagtag,"?tag=".$tagtag)."\">".$tagtag."</a>/<span>".$_GET["pag"]."</span>";
@@ -80,14 +80,14 @@
 		?>
 		</h2>
 		<p class="submenu_derecho">
-			<a href="<?=$Sabrosus->sabrUrl;?>/sabrosus.php" title="<?=$idioma[que_es_sabrosus]?>"><?=$idioma[que_es_sabrosus]?></a> | <a href="<?=$Sabrosus->sabrUrl;?>/cpanel.php" title="<?=$idioma[panel_control]?>"><?=$idioma[panel_control]?></a>
+			<a href="<?=$Sabrosus->sabrUrl;?>/sabrosus.php" title="<?=__("&iquest;Qu&eacute; es sa.bros.us?");?>"><?=__("&iquest;Qu&eacute; es sa.bros.us?");?></a> | <a href="<?=$Sabrosus->sabrUrl;?>/cpanel.php" title="<?=__("Panel de control");?>"><?=__("Panel de control");?></a>
 		</p>
 	</div>
 
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
-				<p><?=$idioma[exportar_error];?></p>
+				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
 
@@ -105,12 +105,12 @@
 		$nenlaces=(isset($tagtag) ? contarenlaces($tagtag) : contarenlaces());
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 
-		$pag_text = str_replace("%no_enlaces%",$nenlaces,$idioma[numero_enlaces_index]);
+		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
 		$pag_text = str_replace("%desde%",($desde+1),$pag_text);
 		$pag_text = str_replace("%total%",(($desde+$Sabrosus->limit>=$nenlaces)?$nenlaces:$desde+$Sabrosus->limit),$pag_text);
 
 		if (!$nenlaces) {
-			$pag_text = $idioma[no_hay_enlaces];
+			$pag_text = "<strong>" . __("No hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a.") . "</strong>";
 		}
 		echo "<div id=\"indicador_pagina\">".$pag_text."</div>\n";
 
@@ -129,7 +129,7 @@
 					$privado=true;
 				}
 				if ($etiqueta!=="") {
-					$tags.= "<a title=\"$idioma[ordenar_por_etiqueta] '".$etiqueta."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".$etiqueta,$Sabrosus->sabrUrl."/index.php?tag=".$etiqueta)."\">".$etiqueta."</a> ";
+					$tags.= "<a title=\"".__("Ordena por la etiqueta")." '".$etiqueta."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".$etiqueta,$Sabrosus->sabrUrl."/index.php?tag=".$etiqueta)."\">".$etiqueta."</a> ";
 				}
 			}
 
@@ -151,7 +151,7 @@
 				echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 
 				if (esAdmin()) {
-					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".$idioma[editar]." - ".htmlspecialchars($row['title'])."\">".$idioma[editar]." &raquo;</a>";
+					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\">".__("Editar")." &raquo;</a>";
 				}
 				echo "</h3>\n";
 				if ($Sabrosus->multiCont=="1") {
@@ -199,14 +199,14 @@
 				}
 				echo "\t\t\t<p class=\"pie\">";
 				if ($row['tags']) {
-					echo $idioma[etiquetas_contenidas]." <span class=\"link_tags\">".$tags."</span> ";
+					echo __("en")." <span class=\"link_tags\">".$tags."</span> ";
 				}
-				echo $idioma[fecha_agregado]." ".date("d.m.y", strtotime($row["fecha"]))."</p>\n";
+				echo __("el")." ".date("d.m.y", strtotime($row["fecha"]))."</p>\n";
 				echo "\t\t</div>\n";
 			}
 		}
 
-		echo ($Sabrosus->compartir=="1") ? "<input type=\"submit\" name=\"enviar_links\" value=\"".$idioma[exportar_al_mio]."\" id=\"enviar_links\"/>
+		echo ($Sabrosus->compartir=="1") ? "<input type=\"submit\" name=\"enviar_links\" value=\"".__("Exportar a mi Sa.bros.us")."\" id=\"enviar_links\"/>
 		</form>" : '';
 		?>
 	</div>
@@ -220,11 +220,11 @@
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
-				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=$idioma[sabrosus_rss]?>" title="<?=$idioma[sabrosus_rss]?>" /></a></p>
+				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sa.bros.us");?>" title="<?=__("RSS de sa.bros.us");?>" /></a></p>
 		<? } else { ?>
-				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss/','/rss.php?tag=').$tagtag;?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=$idioma[etiqueta_rss]?> '<?=$tagtag?>'" title="<?=$idioma[etiqueta_rss]?> '<?=$tagtag?>'" /></a></p>
+				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss/','/rss.php?tag=').$tagtag;?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de la etiqueta");?> '<?=$tagtag?>'" title="<?=__("RSS de la etiqueta");?> '<?=$tagtag?>'" /></a></p>
 		<? } ?>
 	</div>
 

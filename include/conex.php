@@ -8,6 +8,8 @@
 
   =========================== */
 
+require_once('gettext.inc');
+
 session_start();
 
 $link = Conectarse($server, $dbUser, $dbPass, $dataBase);
@@ -165,6 +167,28 @@ class clsSabrosus
 		$this->tagsColor = $cfg['tags_cloud']['color'];
 		$this->compartir = $cfg['exportar']['compartir'];
 		$this->desc_badge = $cfg['links_badge']['descripciones'];
+
+		if (!isset($_GET['lang'])) {
+			if ($row['idioma'] == "en.php") {
+				$locale = "en";
+			} else if ($row['idioma'] == "es-mx.php") {
+				$locale = "es_MX";
+			} else {
+				$locale = $row['idioma'];
+			}
+		} else {
+			// Easily internationalize the installation
+			$locale = $_GET['lang'];
+		}
+
+		// gettext setup
+		$encoding = 'UTF-8';
+		$domain = 'messages';
+		T_setlocale(LC_MESSAGES, $locale);
+		T_bindtextdomain($domain, './locale');
+		T_bind_textdomain_codeset($domain, $encoding);
+		T_textdomain($domain);
+
 	}
 }
 

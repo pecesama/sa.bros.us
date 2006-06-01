@@ -89,7 +89,7 @@
 			/* color tags */
 			$size = (($kw[$key] - $min)*$step) + $min_font;
 			if ($key!=":sab:privado") { 				
-				echo "\t\t\t<li><a title=\"".$kw[$key].$idioma[enlaces_con_etiqueta]."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."\">".$key."</a></li>\n";
+				echo "\t\t\t<li><a title=\"".$kw[$key]." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."\">".$key."</a></li>\n";
 			}
 		}
 		echo "\t\t</ol>\n";

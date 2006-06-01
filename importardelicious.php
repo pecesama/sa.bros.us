@@ -28,21 +28,21 @@ if (esAdmin())
 ?>
 <!-- Sa.bros.us monousuario <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$idioma[nombre_estandar]?>" lang="<?=$idioma[nombre_estandar]?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=$idioma[deli_titulo]?>/sa.bros.us</title>
+	<title><?=__("importar de delicious");?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=<?=$idioma[codificacion]?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 </head>	
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=$idioma[deli_titulo];?></span></h2>
+		<h2>sa.bros.us/<span><?=__("importar de delicious");?></span></h2>
 			<p class="submenu">
-				<a href="cpanel.php"><?=$idioma[panel_control];?></a> |
-				<a href="importar.php"><?=$idioma[deli_imp_archivo];?></a>
+				<a href="cpanel.php"><?=__("Panel de control");?></a> |
+				<a href="importar.php"><?=__("importar desde un archivo");?></a>
 			</p>
 	</div>
 	<div id="contenido">
@@ -54,8 +54,8 @@ if (esAdmin())
         ?>
         <div class="ok">
         <p>
-		<?=str_replace("%no_importados%",$respImport["imported"],$idioma[deli_act_correcta])?> 
-        <?=str_replace("%no_noimportadosrepetidos%",$respImport["total"]-$respImport["imported"],$idioma[deli_enlaces_repe])?>
+		<?=str_replace("%no_importados%",$respImport["imported"],__("Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."))?> 
+        <?=str_replace("%no_noimportadosrepetidos%",$respImport["total"]-$respImport["imported"],__("No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."))?>
 		</p>
         </div>
 		<?
@@ -64,12 +64,12 @@ if (esAdmin())
 			{
 				case ($respImport["responseCode"]=="401"):
 				?>
-					<div class="error"><?=$idioma[deli_e401];?></div>
+					<div class="error"><?=__("El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente.");?></div>
 				<?
 				break;
 				default:
 				?>
-				<div class="error"><?=str_replace("%no_error%",$respImport["responseCode"],$idioma[deli_error_desc]);?></div>
+				<div class="error"><?=str_replace("%no_error%",$respImport["responseCode"],__("Ha ocurrido un error no especificado (Error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."));?></div>
 				<?
 			}
 			$mostrarform=true;
@@ -79,15 +79,15 @@ if (esAdmin())
 	{
 	?>
 		<div id="formulario">
-			<p><?=$idioma[deli_instruc]?></p>
+			<p><?=__("Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta.");?></p>
 			<form action="importardelicious.php" method="post">
 				<fieldset>
-					<legend><?=$idioma[deli_legend];?></legend>
-					<label for="username"><?=$idioma[deli_usuario];?></label><br />
+					<legend><?=__("Datos de del.icio.us");?></legend>
+					<label for="username"><?=__("Usuario:");?></label><br />
 					<input type="text" name="username" /><br />	
-					<label for="password"><?=$idioma[deli_pass];?></label><br />
+					<label for="password"><?=__("Contrase&ntilde;a:");?></label><br />
 					<input type="password" name="password" /><br />
-					<input class="submit" type="submit" name="accion" value="<?=$idioma[deli_boton];?>" />
+					<input class="submit" type="submit" name="accion" value="<?=__("Importar");?>" />
 				</fieldset>
 			</form>	
 		</div>
@@ -96,7 +96,7 @@ if (esAdmin())
 	?>	
 	</div>
 	<div id="pie">
-		<p class="powered"><?=$idioma["generado_con"]?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>
