@@ -19,7 +19,7 @@ Despues de la v 1.6
     * Videos de YouTube (Victor Bracco)
     * Importador de del.icio.us. (Pablo Viojo)
     * Incorporada una opcion para generar una nueva contraseña y enviarla por email (Victor Bracco)
-    * Agregado soporte de sindicacion ATOM. (Kuer Mckee, Victor Bracco)
+    * Agregado soporte de sindicacion Atom 1.0. (Kurt McKee, Victor Bracco)
     * Agregado el elemento <guid> al RSS. (Victor Bracco, Kurt McKee)
     * Incorporado al cpanel la opcion para visitar al link. (Victor Bracco)
     * Incorporada una pagina ir.php que redireccion al link indicado por id. (Victor Bracco)
