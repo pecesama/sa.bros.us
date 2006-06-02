@@ -151,7 +151,7 @@ function comasxespacios($text) {
 }
 
 function beginsWith($str, $sub) {
-	return (substr($str, 0, strlen($sub)) === $sub);
+	return (strpos($str, $sub) === 0);
 }
 
 function endsWith($str, $sub) {
@@ -169,25 +169,50 @@ function isInSabrosus($url) {
 	}
 }
 
-function isPhotoFlickr($photoUrl) {
-	$params = explode("/", $photoUrl);
-	if (count($params)<6 || !is_numeric($params[5])) {
-		return false;
-	} else {
-		return true;
+function esFlickrPhoto($photoUrl) {
+	if (beginsWith($photoUrl, "http://www.flickr.com/photos") || beginsWith($photoUrl, "http://flickr.com/photos")) {
+		$params = explode("/", $photoUrl);
+		if (count($params)==7 && is_numeric($params[5])) {
+			return true;
+		}
 	}
+	return false;
 }
 
-//Para usar esta funcion se debe llamar primero a isPhotoFlickr()
 function getFlickrPhotoUrl($photoUrl) {
 	$params = explode("/", $photoUrl);
 	return "http://flickr.com/delicious_thumb.gne?id=".$params[5];
 }
 
+function esVimeoVideo($videoUrl) {
+	if (beginsWith($videoUrl, "http://vimeo.com/clip:") || beginsWith($videoUrl, "http://www.vimeo.com/clip:"))
+		return true;
+	else
+		return false;
+}
+
+function getVimeoVideoUrl($videoUrl) {
+	return array_pop(explode("clip:",$videoUrl));
+}
+
+function esYoutubeVideo($videoUrl) {
+	if (beginsWith($videoUrl, "http://youtube.com/watch?v=") || beginsWith($videoUrl, "http://www.youtube.com/watch?v="))
+		return true;
+	else
+		return false;
+}
+
 function getYoutubeVideoUrl($videoUrl) {
 	$params = explode("?v=", $videoUrl);
-	$params2 = explode("&search=",$params[1]);
+	$params2 = explode("&",$params[1]);
 	return $params2[0];
+}
+
+function esGoogleVideo($videoUrl) {
+	if (beginsWith($videoUrl, "http://video.google.com/videoplay?docid="))
+		return true;
+	else
+		return false;
 }
 
 function generar_password($largo = 10) {
