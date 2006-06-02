@@ -168,13 +168,7 @@ if (esAdmin()) {
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
 					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
-					<?
-					 $compartible = is_writable("tmp");
-					 ?>
-					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" <? if(!$compartible){ echo 'disabled="disabled"'; }?> /><br />
-					<? if(!$compartible) {?>
-					<div class="ejemplo error"><?=__("Debe modificar los permisos de escritura del directorio <em>tmp/</em> para poder exportar los enlaces.");?></div>
-					<? } ?>
+					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
 					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 				</fieldset>
 				<fieldset>
