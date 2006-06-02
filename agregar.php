@@ -15,15 +15,15 @@ include("lang/".$Sabrosus->archivoIdioma);
 
 if (!esAdmin()) {
 	header("Location: login.php");
+	exit();
 }
 
 if($_SERVER["REQUEST_METHOD"]=="POST") {
 	$titulo = htmlentities($_POST["title"]);
 	$enlace = $_POST["enlace"];
+	$etiquetas = normalizeTags($_POST["etiquetas"]);
 	if (isset($_POST["privado"])) {
-		$etiquetas = ":sab:privado ".$_POST["etiquetas"];
-	} else {
-		$etiquetas = $_POST["etiquetas"];
+		$etiquetas = ":sab:privado ".$etiquetas;
 	}
 	if(!isInSabrosus($enlace)) {
 		$Sql="insert into ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha) values ('".$titulo."','".$etiquetas."','".$enlace."','".$_POST["descripcion"]."', now())";

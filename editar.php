@@ -16,6 +16,7 @@ include("lang/".$Sabrosus->archivoIdioma);
 if (!esAdmin()) {
 	if (isset($_GET['id'])) {
 		header("Location: login.php?dirigir=".urlencode("editar.php?id=".$_GET['id']));
+		exit();
 	} elseif (isset($_GET['url'])) {
 		if (isset($_GET['titulo'])) {
 			if (get_magic_quotes_gpc()) {
@@ -25,8 +26,10 @@ if (!esAdmin()) {
 			}
 		}
 		header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "")));
+		exit();
 	} else {
 		header("Location: login.php");
+		exit();
 	}
 }
 

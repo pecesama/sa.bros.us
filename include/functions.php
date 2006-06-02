@@ -14,6 +14,15 @@ function version() {
 	return "1.7";
 }
 
+function normalizeTags($etiquetas) {
+	foreach (explode(" ", $etiquetas) as $etiqueta) {
+		if ($etiqueta!="") {
+			$tags = $tags . " " . $etiqueta;
+		}
+	}
+	return trim($tags);
+}
+
 function saveIni($fileName, $configOpts) {
 	$file = fopen($fileName, 'wb');
 	foreach ($configOpts as $section => $configLine) {
