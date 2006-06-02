@@ -139,10 +139,8 @@
 
 				if ($Sabrosus->multiCont=="1") {
 					/* Imagenes de Flickr */
-					if (beginsWith($row["enlace"], "http://www.flickr.com/photos") || beginsWith($row["enlace"], "http://flickr.com/photos")) {
-						if (isPhotoFlickr($row["enlace"])) {
-							echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
-						}
+					if (esFlickrPhoto($row["enlace"])) {
+						echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
 					}
 				}
 
@@ -161,13 +159,13 @@
 						$playerUrl = $Sabrosus->sabrUrl."/include/player.swf?soundFile=".$row["enlace"];
 						echo "\t\t\t<div class=\"enlacemp3\"><object type=\"application/x-shockwave-flash\" data=\"" . $playerUrl . "\" width=\"290\" height=\"24\"><param name=\"movie\" value=\"" . $playerUrl . "\" /><param name=\"quality\" value=\"high\" /><param name=\"menu\" value=\"false\" /><param name=\"wmode\" value=\"transparent\" /></object></div>\n";
 					}
-					/* Videos de You Tube */
-					if (beginsWith($row["enlace"], "http://youtube.com/watch?v=") || beginsWith($row["enlace"], "http://www.youtube.com/watch?v=")) {
+					/* Videos de YouTube */
+					if (esYoutubeVideo($row["enlace"])) {
 						$id_video = getYoutubeVideoUrl($row["enlace"]);
 						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:330px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
 					}
 					/* Videos de Google */
-					if (beginsWith($row["enlace"], "http://video.google.com/videoplay?docid=")) {
+					if (esGoogleVideo($row["enlace"])) {
 						$html = trim(file_get_contents($row["enlace"]));
 						$inicio = strpos($html, "var flashObj =\n            \"");
 						$fin = strpos($html, "\";\n          flashObj = flashObj.replace");
@@ -182,15 +180,13 @@
 						$codigo_video = str_replace("src=", "data=", $codigo_video);
 						$codigo_video = str_replace("&", "&amp;", $codigo_video);
 						$codigo_video = str_replace("allowScriptAccess=\"sameDomain\" quality=\"best\" bgcolor=\"#ffffff\" scale=\"noScale\" wmode=\"window\" salign=\"TL\"  FlashVars=\"playerMode=objectded\"", "", $codigo_video);
-						$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);						
+						$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);
 						$codigo_video = str_replace("&amp;autoPlay=true", "", $codigo_video);
-						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";						
+						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";
 					}
-					/*  Videos de Vimeo */
-					if (beginsWith($row["enlace"], "http://vimeo.com/clip") || beginsWith($row["enlace"], "http://www.vimeo.com/clip")) {
-						$id_vid = explode("clip",$row["enlace"]);
-						$id_video = str_replace(":","",$id_vid[1]);
-						$id_video = str_replace("=","",$id_video);
+					/* Videos de Vimeo */
+					if (esVimeoVideo($row["enlace"])) {
+						$id_video = getVimeoVideoUrl($row["enlace"]);
 						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:300px\" data=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\"><param name=\"movie\" value=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\" /></object></div>\n";
 					}
 				}
