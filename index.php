@@ -135,8 +135,11 @@
 
 			if (!esAdmin() && $privado) { //Aqui no imprime nada por ser privado
 			} else {
-				echo "\n\t\t<div class=\"enlace\">\n";
-
+				if($privado){
+					echo "\n\t\t<div class=\"enlace privado\">\n";
+				} else {
+					echo "\n\t\t<div class=\"enlace\">\n";
+				}
 				if ($Sabrosus->multiCont=="1") {
 					/* Imagenes de Flickr */
 					if (esFlickrPhoto($row["enlace"])) {

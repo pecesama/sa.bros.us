@@ -12,9 +12,16 @@ body {
 .enlace {
 	color: #444444;
 	font: normal 13.5px/17px georgia, "times new roman", serif;
+	margin-bottom: 5px;
 }
 .enlacevideo{
 	margin: 5px 0px 5px 0px;
+}
+.privado{
+	background-color: #f7f7f7;
+	border: 1px solid #CCC;
+	border-width: 1px 0px 1px 0px;
+	padding-bottom: 5px;
 }
 .enlace a:link {
 	color: #8F58AB;
@@ -69,6 +76,8 @@ body {
 
 #contenido h3 {
 	font: normal 17.5px/17px georgia, "times new roman", serif;
+	margin-top: 5px;
+	padding-top: 5px;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
