@@ -47,11 +47,11 @@ if (isset($_GET["id"])) {
 } elseif (isset($_GET["url"])) {
 	$etiquetas = @get_meta_tags($_GET['url']);
 
-	if ($_GET['titulo']) {
+	if (isset($_GET['titulo'])) {
 		if (get_magic_quotes_gpc()) {
-			$titulo = stripslashes($_GET['titulo']);
+			$titulo = htmlspecialchars(stripslashes($_GET['titulo']));
 		} else {
-			$titulo = $_GET['titulo'];
+			$titulo = htmlspecialchars($_GET['titulo']);
 		}
 	} else {
 		$titulo = "";
@@ -61,7 +61,6 @@ if (isset($_GET["id"])) {
 	$tags = comasxespacios($etiquetas['keywords']);
 }
 
-$titulo = htmlentities($titulo);
 ?>
 <!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
