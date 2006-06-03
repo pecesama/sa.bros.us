@@ -19,7 +19,7 @@ if (!esAdmin()) {
 }
 
 if($_SERVER["REQUEST_METHOD"]=="POST") {
-	$titulo = htmlentities($_POST["title"]);
+	$titulo = htmlspecialchars($_POST["title"]);
 	$enlace = $_POST["enlace"];
 	$etiquetas = normalizeTags($_POST["etiquetas"]);
 	if (isset($_POST["privado"])) {
