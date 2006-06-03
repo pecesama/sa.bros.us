@@ -33,7 +33,7 @@
 			function elimina(id_enlace)
 			{	// Algo de JavaScript para aquello de que no se quiera borrar.
 				var x;
-				x=window.confirm("<?=__("Desea eliminar el enlace?");?>\n\n<?=__("No se puede deshacer!!");?>");				 
+				x=window.confirm("<?=__("&iquest;Realmente desea eliminar este enlace de su sa.bros.us?");?>\n\n<?=__("Esta acci&oacute;n no se puede deshacer!");?>");				 
 				if (x) { location="eliminar.php?id="+id_enlace+"&confirm=0"; }
 			}
 				

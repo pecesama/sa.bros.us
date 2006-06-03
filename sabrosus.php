@@ -53,12 +53,11 @@
 		:: <?=__("Es sencillo y r&aacute;pido de instalar.");?><br />
 		:: <?=__("Tiene un atractivo dise&ntilde;o.");?><br />
 		:: <?=__("Es 'Open Source'.");?><br />
-		:: <?=__("Est&aacute; en espa&ntilde;ol.");?>
 		</p>
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">Sa.bros.us</a></p>
 		<p><a href="<?=$Sabrosus->sabrUrl.chequearURLFriendly('rss','rss.php')?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sa.bros.us");?>" title="<?=__("RSS de sa.bros.us");?>" /></a></p>
 	</div>
 </div>

@@ -117,7 +117,7 @@ $titulo = htmlentities($titulo);
 				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
 				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
 
-				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("editar") : __("agregar")); ?>" /><br />
+				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("Editar") : __("agregar")); ?>" /><br />
 
 			</fieldset>
 			</form>
