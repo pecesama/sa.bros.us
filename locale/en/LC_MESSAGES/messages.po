@@ -1,6 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# English translation of Sa.bros.us, a web-based bookmark manager.
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the GPL v2.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Sa.bros.us 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-05-26 19:27-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2006-06-02 21:36-0500\n"
 "Last-Translator: Kurt McKee <kurtmckee@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,13 @@ msgid "Debe modificar los permisos de escritura del directorio <em>tmp/</em> par
 msgstr "You must modify the writing permission of the folder <em>tmp/</em> in order to allow export."
 
 msgid "Escribe los datos de tu enlace."
-msgstr "Write the data link."
+msgstr "Create a new bookmark."
+
+msgid "Edita los datos de tu enlace."
+msgstr "Edit the bookmark data."
+
+msgid "editar enlace"
+msgstr "Edit bookmark"
 
 msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
 msgstr "<strong>Control panel's</strong> password:"
@@ -44,7 +50,7 @@ msgid "enlace:"
 msgstr "Link:"
 
 msgid "escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
-msgstr "A space-separated list of tags describing this content (ex: xhtml css php)."
+msgstr "A space-separated list of tags describing this bookmark (ex: xhtml css php)."
 
 msgid "enlace privado:"
 msgstr "Private link:"
@@ -53,7 +59,7 @@ msgid "agregar a sa.bros.us"
 msgstr "Add to sa.bros.us"
 
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
-msgstr "Drag to \"Bookmarks Toolbar\" the next link:"
+msgstr "Drag this link to the \"Bookmarks Toolbar\":"
 
 msgid "Agregar etiquetas"
 msgstr "Add tags"
@@ -107,7 +113,7 @@ msgid "terminar la sesi&oacute;n"
 msgstr "Log out"
 
 msgid "generar badge"
-msgstr "Create links badge"
+msgstr "Create badge"
 
 msgid "generar badge de los enlaces"
 msgstr "Create links badge"
@@ -118,7 +124,7 @@ msgstr "Home Sa.bros.us"
 
 #: es-mx.php:29
 msgid "&iquest;Qu&eacute; es sa.bros.us?"
-msgstr "What is sa.bros.us?"
+msgstr "What is Sa.bros.us?"
 
 #: es-mx.php:30
 msgid "Panel de control"
@@ -150,11 +156,11 @@ msgstr "Powered by:"
 
 #: es-mx.php:38
 msgid "RSS de sa.bros.us"
-msgstr "RSS sa.bros.us"
+msgstr "Sa.bros.us feed"
 
 #: es-mx.php:39
 msgid "RSS de la etiqueta"
-msgstr "RSS tag"
+msgstr "Tag feed"
 
 #: es-mx.php:43
 msgid "Ir a la p&aacute;gina:"
@@ -174,7 +180,7 @@ msgstr "links with that tag"
 
 #: es-mx.php:55
 msgid "Mi sa.bros.us"
-msgstr "My sa.bros.us"
+msgstr "My Sa.bros.us"
 
 #: es-mx.php:56
 msgid "M&aacute;s en"
@@ -182,7 +188,7 @@ msgstr "More in"
 
 #: es-mx.php:57
 msgid "Mis etiquetas en sa.bro.sus"
-msgstr "My tags on sa.bros.us"
+msgstr "My tags on Sa.bros.us"
 
 #: es-mx.php:70
 msgid "ir a sa.bros.us"
@@ -208,7 +214,7 @@ msgstr "Description of the website:"
 msgid ""
 "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
 msgstr ""
-"Web site's main <abbr title=\"Uniform Resource Locator\">URL</abbr>:"
+"Website's main <abbr title=\"Uniform Resource Locator\">URL</abbr>:"
 
 #: es-mx.php:95
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:"
@@ -273,7 +279,7 @@ msgstr "Random"
 
 #: es-mx.php:110
 msgid "Permitir que se exporten los enlaces:"
-msgstr "Allow links export:"
+msgstr "Allow visitors to export links:"
 
 #: es-mx.php:111
 msgid "Configuraci&oacute;n del Administrador"
@@ -337,7 +343,7 @@ msgid ""
 "o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en "
 "tu sa.bros.us."
 msgstr ""
-"In order to show the new URLs of your sa.bros.us, you must copy this code "
+"In order to show the new URLs of your Sa.bros.us, you must copy this code "
 "anywhere of your blog or in a HTML page."
 
 #: es-mx.php:141
@@ -358,7 +364,7 @@ msgstr "Filter by tag:"
 
 #: es-mx.php:145
 msgid "Hoja de estilo de Mi sa.bros.us"
-msgstr "Style sheet of My sa.bros.us"
+msgstr "Style sheet of my Sa.bros.us"
 
 #: es-mx.php:146
 msgid ""
@@ -368,11 +374,11 @@ msgstr "If you want to personalize the sa.bros.us style, this is the XHTML struc
 
 #: es-mx.php:149
 msgid "generar badge de la nube de etiquetas"
-msgstr "generate tag cloud badge"
+msgstr "Generate tag cloud badge"
 
 #: es-mx.php:150
 msgid "Agrega las Etiquetas de sa.bros.us a t&uacute; sitio."
-msgstr "Add to your web the sa.bros.us tag cloud."
+msgstr "Add the Sa.bros.us tag cloud to your website."
 
 #: es-mx.php:151
 msgid ""
@@ -423,9 +429,9 @@ msgid ""
 "en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas "
 "est&aacute;n en tu propio sitio web."
 msgstr ""
-"Sa.bros.us is a system to organize the bookmarks added to your web. "
-"Same as de.icio.us, you can manage your bookmars, but with Sa.bros.us you "
-"can do it in your own web page."
+"Sa.bros.us is a web-based bookmarking system to organize your bookmarks on your website. "
+"It is similar to Del.icio.us in that you can manage your bookmarks online, but with Sa.bros.us you "
+"can do it on your own website."
 
 #: es-mx.php:176
 msgid ""
@@ -436,9 +442,9 @@ msgid ""
 "sourceforge.net/projects/sabrosus/\" title=\"Proyecto sa.bros.us"
 "\">SourceForge.net</a>."
 msgstr ""
-"Sa.bros.us project is 'Open Source' (you can use and change the original "
-"code freely) and runs with PHP and MySQL. The official home page is "
-"<a href=\"http://sabros.us/\" title=\"Sa.bros.us\">this</a> and can be "
+"The Sa.bros.us project is 'Open Source' (you can use and change the original "
+"source code freely) and runs with PHP and MySQL. The official home page is "
+"<a href=\"http://sabros.us/\" title=\"Sa.bros.us\">Sabros.us</a> and the software can be "
 "downloaded from <a href=\"http://sourceforge.net/projects/sabrosus/\" "
 "title=\"sa.bros.us project\">SourceForge.net</a>."
 
@@ -451,11 +457,10 @@ msgid ""
 "memberlist.php?group_id=143603\" title=\"Equipo de sa.bros.us\">otros "
 "miembros</a>."
 msgstr ""
-"<a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> "
-"and <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro "
-"Santana</a> started the sa.bros.us project in 2005, with the collaboration "
-"of <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" "
-"title=\"Sa.bros.us team\">other members</a>."
+"<a href=\"http://www.stanmx.com/\">Estanislao Vizcarra</a> "
+"and <a href=\"http://www.pecesama.net/\">Pedro "
+"Santana</a> started the Sa.bros.us project in 2005, with the collaboration "
+"of <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\">other members</a>."
 
 #: es-mx.php:178
 msgid "FUNCIONALIDADES:"
@@ -463,34 +468,35 @@ msgstr "Features:"
 
 #: es-mx.php:179
 msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
-msgstr "Can manage the bookmarks through a control panel."
+msgstr "Manage your bookmarks through a control panel."
 
 #: es-mx.php:180
 msgid ""
 "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se "
 "puede a&ntilde;adir a tu navegador."
-msgstr "Allows to add bookmars quickly through your web browser."
+msgstr "Quickly add bookmarks using your web browser."
 
 #: es-mx.php:181
 msgid ""
 "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda "
 "servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
 msgstr ""
-"Allows add tags of each bookmark, and you can use it to find other "
-"bookmarks with the same category."
+"Add tags to each bookmark, and use each tag to find similar bookmarks."
 
 #: es-mx.php:182
 msgid ""
 "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
-msgstr "Allows the RSS feed of all your bookmarks or a selected tag."
+msgstr ""
+"RSS and Atom feeds of either your newest bookmarks, "
+"or the newest bookmarks filtered by tag."
 
 #: es-mx.php:183
 msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
-msgstr "Allows to create a 'cloud of tags' of all the tags inserted."
+msgstr "Automatic generation of a 'tag cloud' of all available tags."
 
 #: es-mx.php:184
 msgid "Es sencillo y r&aacute;pido de instalar."
-msgstr "It's easy and simple to install."
+msgstr "Easy and simple to install."
 
 #: es-mx.php:185
 msgid "Tiene un atractivo dise&ntilde;o."
@@ -498,11 +504,7 @@ msgstr "Has a fashionable design."
 
 #: es-mx.php:186
 msgid "Es 'Open Source'."
-msgstr "It's open source."
-
-#: es-mx.php:187
-msgid "Est&aacute; en espa&ntilde;ol."
-msgstr "It's in English."
+msgstr "It's Open Source."
 
 #: es-mx.php:190
 msgid "Actualizaci&oacute;n"
