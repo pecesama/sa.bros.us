@@ -13,6 +13,8 @@
 	include("include/functions.php");
 	include("lang/".$Sabrosus->archivoIdioma);
 
+	header("Content-type: text/html; charset=UTF-8");
+
 	if (esAdmin())
 	{
 ?>

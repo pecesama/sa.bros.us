@@ -13,6 +13,8 @@ include("include/conex.php");
 include("include/functions.php");
 include("lang/".$Sabrosus->archivoIdioma);
 
+header("Content-type: text/html; charset=UTF-8");
+
 if (!esAdmin()) {
 	if (isset($_GET['id'])) {
 		header("Location: login.php?dirigir=".urlencode("editar.php?id=".$_GET['id']));
