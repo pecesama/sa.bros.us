@@ -1,5 +1,13 @@
 <?php
+/* ===========================
 
+  sabrosus monousuario versión 1.7
+  http://sabrosus.sourceforge.net/
+
+  sabrosus is a free software licensed under GPL (General public license)
+
+  =========================== */
+  
 	include_once("include/parsing.php");
 	include_once("include/get.php");
 
@@ -43,7 +51,7 @@
 				$bookmark["tags"] = $tags;
 				$bookmark["enlace"] = $url;
 				$bookmark["descripcion"] = $description;
-				$bookmark["fecha"] = date("Y-m-d H:i:s",strtotime($time));
+				$bookmark["fecha"] = getGMTDate($time,"Y-m-d H:i:s");
 				if ($bookmark["enlace"])
 				{
 					if(!isInSabrosus($bookmark["enlace"]))
@@ -66,4 +74,16 @@
 			return array("responseCode"=>$src_obj->responseCode());
 		}
 	}
+        
+		function getGMTDate($time,$format){
+			if (substr($time,strlen($time)-1,1)!="Z") {
+				$difh=substr(($time),strpos($time,"Z")+1,3);
+			} else {
+				$difh=0;
+			}
+			$timeLoc=substr(($time),0,10)." ".substr(($time),11,8);
+			$timeGMT=strtotime($timeLoc)-($difh*60*60);
+			$pDGMT=date ($format,$timeGMT);
+			return $pDGMT;
+		}        
 ?>
