@@ -8,10 +8,9 @@
 
   =========================== */
 
+include("include/functions.php");
 include("include/config.php");
 include("include/conex.php");
-include("include/functions.php");
-include("lang/".$Sabrosus->archivoIdioma);
 
 header("Content-type: text/html; charset=UTF-8");
 

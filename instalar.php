@@ -15,7 +15,7 @@ include("include/functions.php");
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
 	<title>sa.bros.us/Instalaci&oacute;n</title>
-<?php  
+<?php
 	$errors_d=array();
 	$errors_d[11]="Debes introducir el servidor de base de datos";
 	$errors_d[12]="Debes introducir el usuario para la base de datos";
@@ -28,11 +28,11 @@ include("include/functions.php");
 	$errors_d[102]="Los passwords introducidos no coinciden";
 	$errors_d[201]="No fue posible conectarse a la base de datos. Por favor revisa los valores introducidos e intentalo nuevamente";
 	$errors_d[301]="No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador.";
-  
+
 
 	$accion="";
 	$errors="";
-  
+
 	if (isset($_POST['accion'])){
 		$accion=$_POST['accion'];
 	}
@@ -41,11 +41,10 @@ include("include/functions.php");
 	}else{
 	$mostrarform = false;
 ?>
-<meta http-equiv="refresh" content="4;URL=index.php" /> 
+<meta http-equiv="refresh" content="4;URL=index.php" />
 <?php
-	}  
-	if ($accion=="config")
-	{
+	}
+	if ($accion=="config") {
 		//Validar entradas
 		$server=$_POST['dbserver'];
 		$dbUser=$_POST['dbuser'];
@@ -53,13 +52,13 @@ include("include/functions.php");
 		$dbPass2=$_POST['dbpass2'];
 		$dbName=$_POST['dbname'];
 		$limite=$_POST['limite'];
-      
+
 		$admPass=$_POST['admpass'];
 		$admPass2=$_POST['admpass2'];
 		$email=$_POST['email'];
 		$sname=$_POST['sname'];
 		$stitle=$_POST['stitle'];
-		$sabrUrl=$_POST['sabrurl'];      
+		$sabrUrl=$_POST['sabrurl'];
 		$siteUrl=$_POST['siteUrl'];
 		$prefix=$_POST['prefix'];
 		$useFriendlyUrl = $_POST['useFriendlyUrl'];
@@ -126,20 +125,20 @@ include("include/functions.php");
 				$errors=$errors.$sep_err."301";
 				$sep_err="|";
 				$mostrarform=true;
-			}	         
+			}
 		} else {
 			$mostrarform=true;
 		}
-    }
+	}
 
         require_once("include/config.php");
 ?>
 
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UFT-8" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=UFT-8" />
 	<link rel="stylesheet" href="sabor.css" type="text/css" />
 	<link rel="stylesheet" href="instalar.css" type="text/css" />
-	<link rel="shortcut icon" href="images/sabrosus_icon.png" />		
+	<link rel="shortcut icon" href="images/sabrosus_icon.png" />
 </head>
 <body>
 <div id="pagina">
@@ -148,7 +147,7 @@ include("include/functions.php");
 		<h2>sa.bros.us/<span>Instalaci&oacute;n</span></h2>
 	</div>
 	<div id="contenido">
-  
+
 <?php
   if ($mostrarform) {
 
@@ -162,7 +161,7 @@ include("include/functions.php");
           <fieldset>
            <legend>Configuraci&oacute;n de la base de datos</legend>
            <div>
-		    <label for="dbserver">Servidor:</label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
+		<label for="dbserver">Servidor:</label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
             <label for="dbuser">Usuario:</label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
             <label for="dbpass">Password:</label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
             <label for="dbpass2">Reescribe el password:</label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
@@ -173,39 +172,36 @@ include("include/functions.php");
           <fieldset>
            <legend>Configuraci&oacute;n de sa.bros.us</legend>
            <div>
-		     <label for="admpass">Password para el <strong>control panel</strong>:</label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
-             <label for="admpass2">Reescribe el password:</label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/> 
-             <label for="email">Email:</label><input type="text" name="email" id="email" value=""/><br/> 
-             <label for="sname">Nombre de tu sitio:</label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/> 
+		<label for="admpass">Password para el <strong>control panel</strong>:</label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
+             <label for="admpass2">Reescribe el password:</label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
+             <label for="email">Email:</label><input type="text" name="email" id="email" value=""/><br/>
+             <label for="sname">Nombre de tu sitio:</label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
              <label for="stitle">Descripci&oacute;n del sitio:</label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
              <label for="sabrurl"><acronym title="Uniform Resource Locator">URL</acronym> de sa.bros.us:<br/>(sin <q>/</q> al final)</label><input type="text" name="sabrurl" id="sabrurl" value="<?=$sabrUrl?>"/><?=mostrarerror($errors,$errors_d,"31")?><br/>
              <label for="siteUrl"><acronym title="Uniform Resource Locator">URL</acronym> del sitio principal:<br/>(sin <q>/</q> al final)</label><input type="text" name="siteUrl" id="siteUrl" value="<?=$siteUrl?>"/><?=mostrarerror($errors,$errors_d,"32")?><br/>
              <label for="limite">Número de enlaces por página:</label><input type="text" name="limite" id="limite" value="10"/><br/>
-			 <label for="useFriendlyUrl"><acronym title="Uniform Resource Locator">URL</acronym> Amigable:</label>
-		  <select name="useFriendlyUrl" id="useFriendlyUrl">
-		  	<option value="1">Activado</option>
+		<label for="useFriendlyUrl"><acronym title="Uniform Resource Locator">URL</acronym> Amigable:</label>
+		<select name="useFriendlyUrl" id="useFriendlyUrl">
+			<option value="1">Activado</option>
 			<option value="0" selected>Desactivado</option>
-		  </select><br/>
-			 <label for="lang"/>Idioma</label>
-             <select id="lang" name="lang">
-          <?
-			$idiomas = obtenerIdiomas();
-			$numelentos = count($idiomas);
-			for ($i=0; $i < $numelentos; $i++)	
-			{
-				include("lang/".$idiomas[$i]);
-					if($idiomas[$i]=="es-mx.php")
-						echo "<option value=\"".$idiomas[$i]."\" selected>".$idioma[nombre]."</option>\n";	
-					else
-						echo "<option value=\"".$idiomas[$i]."\">".$idioma[nombre]."</option>\n";	
-			}	
-          ?>
-          </select>
-		  <p><input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>	
+		</select><br/>
+			<label for="lang"/>Idioma</label>
+		<select id="lang" name="lang">
+	<?
+			foreach ($idiomas as $idioma => $nombre) {
+				if($idioma=="es_MX") {
+					echo "<option value=\"".$idioma."\" selected=\"true\">".$nombre."</option>\n";
+				} else {
+					echo "<option value=\"".$idioma."\">".$nombre."</option>\n";
+				}
+			}
+	?>
+	</select>
+		<p><input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>
 			<input type="submit" name="btnsubmit" id="btnsubmit" value="Configurar" class="submit"/></p>
-		   </div>           
-		  </fieldset>
-        </form>
+		</div>
+		</fieldset>
+	</form>
 <?php
   } else {
     echo "<p>La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"".$sabrUrl."/cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"".$sabrUrl."/index.php\">ver el sitio</a>.";
@@ -217,7 +213,7 @@ include("include/functions.php");
 	</div>
 </div>
 </body>
-</html> 
+</html>
 
 <?
   function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $sname, $siteUrl, $sabrUrl, $useFriendlyUrl, $lang, $limite, $email, $admPass){
@@ -227,7 +223,7 @@ include("include/functions.php");
 		if (!mysql_select_db($dataBase,$link)) {
 			return false;
 		}
-      
+
 		$sqlStr = "CREATE TABLE `".$prefix."sabrosus` (
 			`id_enlace` int(3) NOT NULL auto_increment,
 			`title` varchar(100) NOT NULL default '',
@@ -250,34 +246,31 @@ include("include/functions.php");
 			`admin_pass` varchar(250) NOT NULL default '',
 			PRIMARY KEY  (`sabrosus_url`)
 		) TYPE=MyISAM;";
-	  	$result = mysql_query($sqlStr);    
-		
+		$result = mysql_query($sqlStr);
+
 		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','P&aacute;gina de Estanislao Vizcarra, autor de sa.bro.sus.','css xhtml dise&ntilde;o web estandares cine php','2005-07-10 00:41:06');";
-		$result = mysql_query($sqlStr);   
+		$result = mysql_query($sqlStr);
 		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','P&aacute;gina de Pedro Santana, co-autor de sa.bros.us','php programaci&oacute;n web java javascript','2005-07-10 00:42:04');";
-		$result = mysql_query($sqlStr);   
-		
+		$result = mysql_query($sqlStr);
+
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$sname."','".$stitle."','".$siteUrl."','".$sabrUrl."','".$useFriendlyUrl."','".$lang."','".$limite."','".$email."','".md5($admPass)."');";
-		$result = mysql_query($sqlStr);   	  
-	  
+		$result = mysql_query($sqlStr);
+
 		return true;
   }
 
-  function inerrors($errors,$n){
-    
-    if (strpos($errors,$n)===false){
-      return false;
-    }else{
-      return true;
-      
-    }
-  }
-  function mostrarerror($errors,$errors_d,$n){
-    if (inerrors($errors,$n)){
-      return $errors_d[$n];
-    }else{
-      return "";
-    }
-  }
+function inerrors($errors,$n) {
+	if (strpos($errors,$n)===false)
+		return false;
+	else
+		return true;
+}
+
+function mostrarerror($errors,$errors_d,$n) {
+	if (inerrors($errors,$n)) {
+		return $errors_d[$n];
+	else
+		return "";
+}
 
 ?>

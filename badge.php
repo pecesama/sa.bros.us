@@ -11,7 +11,6 @@
 	include("include/config.php");
 	include("include/conex.php");
 	include("include/functions.php");
-	include("lang/".$Sabrosus->archivoIdioma);
 
 	header("Content-type: application/x-javascript" );
     /* PATCH Bug #1242025 */
