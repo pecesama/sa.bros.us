@@ -12,7 +12,6 @@ ob_start();
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
-include("lang/".$Sabrosus->archivoIdioma);
 
 if (esAdmin()) {
 	if (isset($_POST["accion"])) {
@@ -64,7 +63,6 @@ if (esAdmin()) {
 	} else {
 ?>
 
-<!-- Sa.bros.us monousuario version <?=version();?> -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
@@ -130,17 +128,13 @@ if (esAdmin()) {
 					<label for="selIdioma"><?=__("Idioma:");?></label>
 						<select name="selIdioma">
 						<?
-						$idiomas = obtenerIdiomas();
-						$numelentos = count($idiomas);
-						for ($i=0; $i < $numelentos; $i++) {
-							include("lang/".$idiomas[$i]);
-							if ($idiomas[$i]==$Sabrosus->archivoIdioma) {
-								echo "<option value=\"".$idiomas[$i]."\" selected=\"true\">".$idioma[nombre]."</option>\n";
+						foreach ($idiomas as $idioma => $nombre) {
+							if ($idioma==$Sabrosus->archivoIdioma) {
+								echo "<option value=\"".$idioma."\" selected=\"true\">".$nombre."</option>\n";
 							} else {
-								echo "<option value=\"".$idiomas[$i]."\">".$idioma[nombre]."</option>\n";
+								echo "<option value=\"".$idioma."\">".$nombre."</option>\n";
 							}
 						}
-						include("lang/".$Sabrosus->archivoIdioma);
 						?>
 						</select><br />
 				</fieldset>

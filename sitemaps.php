@@ -27,7 +27,6 @@
 	include("include/config.php");
 	include("include/conex.php");
 	include("include/functions.php");
-	include("lang/".$Sabrosus->archivoIdioma);
 
 	$result = mysql_query("SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC LIMIT 1",$link);
 	$principal = mysql_fetch_array($result);

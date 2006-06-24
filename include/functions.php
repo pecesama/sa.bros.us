@@ -14,6 +14,14 @@ function version() {
 	return "1.7";
 }
 
+function esIdioma($test) {
+	global $idiomas;
+	if (isset($idiomas[$test]))
+		return true;
+	else
+		return false;
+}
+
 function normalizeTags($etiquetas) {
 	foreach (explode(" ", $etiquetas) as $etiqueta) {
 		if ($etiqueta!="") {
@@ -131,27 +139,6 @@ function etiquetasRelacionadas ($tags) {
 		}
 	echo "</div>";
 	}
-}
-
-function obtenerIdiomas() {
-	$lang_dir="lang"; // Directorio de los idiomas
-	// Extension valida para idiomas
-	$exts['php']=true;
-	$files=array();
-	$ruta = getcwd();
-	$dire = $ruta."/".$lang_dir;
-	$handle = opendir($dire);
-	$i=0;
-	while ($filename = readdir($handle)) {
-		$ext=explode(".", $filename);
-		$ext=$ext[count($ext)-1]; $ext=strtolower($ext);
-		if ($filename != "." && $filename != ".." && isset($exts[$ext])) {
-			$files[$i]=trim($filename);
-			$i++;
-		}
-	}
-	closedir($handle);
-	return $files;
 }
 
 function comasxespacios($text) {

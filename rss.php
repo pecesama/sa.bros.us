@@ -11,7 +11,6 @@
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
-include("lang/".$Sabrosus->archivoIdioma);
 
 header("Content-type: text/xml; charset=utf-8");
 echo "<?xml version=\"1.0\""." encoding=\"UTF-8\"?>\n";

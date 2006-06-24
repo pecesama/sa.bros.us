@@ -11,7 +11,6 @@
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
-include("lang/".$Sabrosus->archivoIdioma);
 
 $_SESSION = array();
 setcookie("pass_sabrosus_cookie","",time()-1);
