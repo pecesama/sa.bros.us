@@ -9,6 +9,7 @@
   =========================== */
 
 require_once('gettext.inc');
+include('lang.php');
 
 session_start();
 
@@ -147,7 +148,7 @@ class clsSabrosus
 
 	function clsSabrosus()
 	{
-		global $link,$prefix;
+		global $link,$prefix,$locale;
 		$sql = "SELECT * FROM ".$prefix."config LIMIT 1";
 		$result = @mysql_query($sql);
 		$row = @mysql_fetch_array($result);
@@ -176,9 +177,11 @@ class clsSabrosus
 			} else {
 				$locale = $row['idioma'];
 			}
-		} else {
+		} elseif (esIdioma($_GET['lang'])) {
 			// Easily internationalize the installation
 			$locale = $_GET['lang'];
+		} else {
+			$locale = "es_MX";
 		}
 
 		// gettext setup
