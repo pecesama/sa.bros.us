@@ -90,7 +90,7 @@ msgstr ""
 
 #: cpanel.php:133 cpanel.php:135 pagination.php:25 pagination.php:27
 msgid "Anterior"
-msgstr ""
+msgstr "anterior"
 
 #: importar.php:97
 msgid "Archivo:"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: cpanel.php:81
 msgid "Buscar:"
-msgstr ""
+msgstr "buscar:"
 
 #: importar.php:119
 msgid "Clic <kbd>Examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
@@ -142,7 +142,7 @@ msgstr ""
 
 #: cpanel.php:114
 msgid "Control de Contenidos"
-msgstr ""
+msgstr "control de contenidos"
 
 #: generarBadge.php:87 generarBadgeTags.php:122
 msgid "Copiar el c&oacute;digo fuente"
@@ -178,7 +178,7 @@ msgstr ""
 
 #: cpanel.php:123 editar.php:121 index.php:158
 msgid "Editar"
-msgstr ""
+msgstr "editar"
 
 #: opciones.php:114
 msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
@@ -202,7 +202,7 @@ msgstr ""
 
 #: cpanel.php:124 eliminar.php:56
 msgid "Eliminar"
-msgstr ""
+msgstr "eliminar"
 
 #: recordar.php:99
 msgid "Email:"
@@ -234,7 +234,7 @@ msgstr ""
 
 #: cpanel.php:64
 msgid "Exportar"
-msgstr ""
+msgstr "exportar"
 
 #: index.php:211
 msgid "Exportar a mi Sa.bros.us"
@@ -257,7 +257,7 @@ msgstr ""
 #: index.php:225 instalar.php:216 login.php:69 opciones.php:185
 #: recordar.php:106 sabrosus.php:60 update.php:84 update.php:162
 msgid "Generado con:"
-msgstr ""
+msgstr "generado con:"
 
 #: generarBadgeTags.php:99
 msgid "Generar C&oacute;digo"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: cpanel.php:63 importardelicious.php:90 importar.php:96 importar.php:105
 msgid "Importar"
-msgstr ""
+msgstr "importar"
 
 #: recordar.php:86
 msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
@@ -431,7 +431,7 @@ msgstr ""
 #: generarBadge.php:74 generarBadgeTags.php:64 importardelicious.php:44
 #: importar.php:87 index.php:86 opciones.php:97 recordar.php:73
 msgid "Panel de control"
-msgstr ""
+msgstr "panel de control"
 
 #: importardelicious.php:82
 msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
@@ -543,7 +543,7 @@ msgstr ""
 
 #: cpanel.php:140 cpanel.php:142 pagination.php:56 pagination.php:58
 msgid "Siguiente"
-msgstr ""
+msgstr "siguiente"
 
 #: generarBadgeTags.php:83
 msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
@@ -567,7 +567,7 @@ msgstr ""
 
 #: cpanel.php:122
 msgid "Ver"
-msgstr ""
+msgstr "ver"
 
 #: generarBadgeTags.php:90 opciones.php:155
 msgid "Verde"
