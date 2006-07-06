@@ -557,3 +557,12 @@ a:active {
 	margin: 0 auto;
 	padding: 5px 20px 5px 45px;
 }
+.powered,
+.submenu_derecho,
+#indicador_pagina,
+#pagination,
+.submenu,
+.ver, .edita, .elimina,
+label, .submit_normal {
+	text-transform: lowercase;
+}
