@@ -14,14 +14,6 @@ function version() {
 	return "1.7";
 }
 
-function esIdioma($test) {
-	global $idiomas;
-	if (isset($idiomas[$test]))
-		return true;
-	else
-		return false;
-}
-
 function normalizeTags($etiquetas) {
 	foreach (explode(" ", $etiquetas) as $etiqueta) {
 		if ($etiqueta!="") {
