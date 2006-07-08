@@ -8,7 +8,6 @@
 
   =========================== */
 
-require_once('gettext.inc');
 include('lang.php');
 
 session_start();
@@ -49,13 +48,11 @@ function MostrarErrorConexion($mensaje)
 {
 	header('Content-Type: text/html;');
 	?>
-
-	<!-- Sa.bros.us monousuario version 1.7 -->
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 	<head>
 		<title>error/sa.bros.us</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<style media="screen" type="text/css">
 		<!--
 		body {
@@ -169,29 +166,19 @@ class clsSabrosus
 		$this->compartir = $cfg['exportar']['compartir'];
 		$this->desc_badge = $cfg['links_badge']['descripciones'];
 
-		if (!isset($_GET['lang'])) {
+		if (!isset($locale)) {
 			if ($row['idioma'] == "en.php") {
 				$locale = "en";
 			} else if ($row['idioma'] == "es-mx.php") {
 				$locale = "es_MX";
-			} else {
+			} else if (esIdioma($row['idioma'])) {
 				$locale = $row['idioma'];
+			} else {
+				$locale = "es_MX";
 			}
-		} elseif (esIdioma($_GET['lang'])) {
-			// Easily internationalize the installation
-			$locale = $_GET['lang'];
-		} else {
-			$locale = "es_MX";
+
+			initIdioma($locale);
 		}
-
-		// gettext setup
-		$encoding = 'UTF-8';
-		$domain = 'messages';
-		T_setlocale(LC_MESSAGES, $locale);
-		T_bindtextdomain($domain, './locale');
-		T_bind_textdomain_codeset($domain, $encoding);
-		T_textdomain($domain);
-
 	}
 }
 
