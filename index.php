@@ -11,6 +11,7 @@
 include("include/functions.php");
 include("include/config.php");
 include("include/conex.php");
+include("tags.php");
 
 header("Content-type: text/html; charset=UTF-8");
 
@@ -216,7 +217,7 @@ header("Content-type: text/html; charset=UTF-8");
 	</div>
 
 	<div id="tagsx">
-	<? include("tags.php"); /* Muestra los tags */ ?>
+	<?php getTags("html"); ?>
 	</div>
 
 	<div id="pie">
