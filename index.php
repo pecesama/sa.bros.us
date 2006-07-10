@@ -11,7 +11,7 @@
 include("include/functions.php");
 include("include/config.php");
 include("include/conex.php");
-include("tags.php");
+include("include/tags.php");
 
 header("Content-type: text/html; charset=UTF-8");
 
