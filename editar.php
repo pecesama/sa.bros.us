@@ -11,6 +11,7 @@
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
+include("tags.php");
 
 header("Content-type: text/html; charset=UTF-8");
 
@@ -109,7 +110,7 @@ if (isset($_GET["id"])) {
 				<p><?=__("escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
 					<legend><?=__("Agregar etiquetas");?></legend>
-					<?php include("insertags.php");?>
+					<?php getTags("javascript"); ?>
 				</fieldset>
 
 				<label for="privado"><?=__("enlace privado:");?></label>
