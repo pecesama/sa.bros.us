@@ -8,16 +8,14 @@
 
   =========================== */
 
-// $output = ("html" | "javascript")
-function getTags($output="html") {
+// $output = ("html" | "javascript" | "badge")
+function getTags($output="html", $max_font=30, $min_font=12) {
 	global $prefix, $Sabrosus;
 
-	if ($output!="html" && $output!="javascript") {
+	if ($output!="html" && $output!="javascript" && $output!="badge") {
 		$output = "html";
 	}
 
-	$max_font = 30;
-	$min_font = 12;
 	$kw = array();
 	$keys = array();
 	$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags <> ''");
@@ -53,8 +51,10 @@ function getTags($output="html") {
 
 		if ($output=="html") {
 			echo "<ol id=\"cloud\">";
-		} else {
+		} else if ($output=="javascript") {
 			echo "<div id=\"reltags\">";
+		} else if ($output=="badge") {
+			echo "document.write(\"<ol>\");\n";
 		}
 
 		/* color tags */
@@ -83,7 +83,11 @@ function getTags($output="html") {
 			$colores[5][g] = (rand(5,40)) / 10;
 			$colores[5][b] = (rand(5,40)) / 10;
 
-			$selectedColor = $Sabrosus->tagsColor;
+			if ($output=="badge") {
+				$selectedColor = (isset($_GET['color']) && eregi("^[0-9]+$",$_GET['color']))? $_GET['color'] : 0;
+			} else {
+				$selectedColor = $Sabrosus->tagsColor;
+			}
 
 			$color = round(255 - ($prop * $kw[$key]),0);
 			$r = round(($color/$colores[$selectedColor][r]),0);
@@ -98,15 +102,19 @@ function getTags($output="html") {
 				$size = (($kw[$key] - $min)*$step) + $min_font;
 				if ($output=="html") {
 					echo "<li><a title=\"".$kw[$key]." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."\">".$key."</a></li> ";
-				} else {
+				} else if ($output=="javascript") {
 					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".$key."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".$key."'\">".$key."</a> ";
+				} else if ($output=="badge") {
+					echo "document.write(\"<li><a title='".$kw[$key]." ".__("enlaces con esta etiqueta")."' style='font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').$key."'>".$key."</a></li>\");\n";
 				}
 			}
 		}
 		if ($output=="html") {
 			echo "</ol>";
-		} else {
+		} else if ($output=="javascript") {
 			echo "</div>";
+		} else if ($output=="badge") {
+			echo "document.write(\"</ol>\");\n";
 		}
 	}
 }
