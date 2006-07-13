@@ -38,8 +38,11 @@ if ((isset($_POST["pass"]) && md5($_POST["pass"])==$Sabrosus->adminPass)) {
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
+	<script type="text/javascript"><!--
+		function focusPassword() { document.valida.pass.focus(); }
+	// --></script>
 </head>
-<body>
+<body onLoad="focusPassword();">
 <div id="pagina">
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=__("ingreso");?></span></h2>
