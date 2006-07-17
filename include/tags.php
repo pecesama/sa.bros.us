@@ -84,7 +84,7 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 			$colores[5][b] = (rand(5,40)) / 10;
 
 			if ($output=="badge") {
-				$selectedColor = (isset($_GET['color']) && eregi("^[0-9]+$",$_GET['color']))? $_GET['color'] : 0;
+				$selectedColor = (isset($_GET['color']) && isset($colores[$_GET['color']]))? $_GET['color'] : 0;
 			} else {
 				$selectedColor = $Sabrosus->tagsColor;
 			}
