@@ -22,9 +22,9 @@ if($rows)
 		{
 			if (isset($tagtag))
 			{
-				echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.($pag-1) , '?tag='.$tagtag.'&amp;pag='.($pag-1) ) ."\">" . __("Anterior") . "</a>\n ";
+				echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.($pag-1) , '/?tag='.$tagtag.'&amp;pag='.($pag-1) ) ."\">" . __("Anterior") . "</a>\n ";
 			} else {
-				echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.($pag-1) , '?pag='.($pag-1) ) . "\">" . __("Anterior") ."</a>\n ";
+				echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.($pag-1) , '/?pag='.($pag-1) ) . "\">" . __("Anterior") ."</a>\n ";
 			}
 		}
 
@@ -40,9 +40,9 @@ if($rows)
 		}
 		if (isset($tagtag))
 		{
-	  		echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$page,'?tag='.$tagtag.'&amp;pag='.$page). "\">". $act_open . $page . $act_close . "</a>\n ";
+	  		echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$page,'/?tag='.$tagtag.'&amp;pag='.$page). "\">". $act_open . $page . $act_close . "</a>\n ";
 		} else {
-	  		echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$page,'?pag='.$page). "\">" . $act_open . $page . $act_close . "</a>\n ";
+	  		echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$page,'/?pag='.$page). "\">" . $act_open . $page . $act_close . "</a>\n ";
 		}
   		$since = $since + $Sabrosus->limit;
   		$page++;
@@ -53,9 +53,9 @@ if($rows)
 	{
   		if (isset($tagtag))
 		{
-        	echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl.chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.($pag+1),'tag='.$tagtag.'&amp;pag='.($pag+1)). "\">" . __("Siguiente") ." </a>\n ";
+        	echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl.chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.($pag+1),'/?tag='.$tagtag.'&amp;pag='.($pag+1)). "\">" . __("Siguiente") ." </a>\n ";
         } else {
-        	echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl.chequearURLFriendly( '/pag/'.($pag+1) , '?pag='.($pag+1) ). "\">" . __("Siguiente") ."</a>\n ";
+        	echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl.chequearURLFriendly( '/pag/'.($pag+1) , '/?pag='.($pag+1) ). "\">" . __("Siguiente") ."</a>\n ";
         }
 	}
 	?>
