@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Correcion bug de la paginacion (Pablo Viojo)
     * Sa.bros.us ahora utiliza la biblioteca del gettext.
     * Colores en los tags del panel del admin. (Jorge Condomí)
     * Incorporados videos de Vimeo (Victor Bracco)
@@ -27,12 +28,12 @@ Despues de la v 1.6
     * Corregido el idioma lang/en.php (Kurt McKee)
     * Corregida la forma de mostrar la fecha en el RSS 2.0 (Victor Bracco)
     * Corregido un bug en agregar al momento de redirigir a una URL extendida. (Victor Bracco)
-    * Por defecto, se muestran desactivas las URL Friendly para instalarlo. (Victor Bracco)
+    * Por defecto, se muestran desactivadas las URL Friendly al instalarlo. (Victor Bracco)
     * Modificado el instalador para que sea posible instalarlo sin password para la DB. (Pablo Viojo)
-    * Solucionado el Bug del bookmarlet cuando no esta legeado. (Victor Bracco, Kurt McKee)
+    * Solucionado el Bug del bookmarlet cuando no esta logueado. (Victor Bracco, Kurt McKee)
     * Corregido el bug que reemplazaba " por '. (Kurt McKee)
     * Correccion de una funcion duplicada (Kurt McKee)
-    * Reparacion de bugs menores. (Pecesama, Victor Bracco)
+    * Reparacion de bugs menores. (Pecesama, Victor Bracco, Kurt McKee)
 
 v 1.6
 
