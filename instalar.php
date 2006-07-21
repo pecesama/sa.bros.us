@@ -11,10 +11,10 @@
 include("include/lang.php");
 include("include/functions.php");
 
-if (isset($_GET['lang'])) {
-	initIdioma($_GET['lang']);
-} else if (isset($_POST['lang'])) {
-	initIdioma($_POST['lang']);
+if (isset($_GET['instalarlang'])) {
+	initIdioma($_GET['instalarlang']);
+} else if (isset($_POST['instalarlang'])) {
+	initIdioma($_POST['instalarlang']);
 } else {
 	initIdioma();
 }
@@ -136,7 +136,7 @@ require_once("include/config.php");
 <head>
 	<title>sa.bros.us/<?=__("Instalaci&oacute;n");?></title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UFT-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="sabor.css" type="text/css" />
 	<link rel="stylesheet" href="instalar.css" type="text/css" />
 	<link rel="shortcut icon" href="images/sabrosus_icon.png" />
@@ -146,10 +146,10 @@ require_once("include/config.php");
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=__("Instalaci&oacute;n");?></span></h2>
 	</div>
-	<div id="lang">
+	<div id="instalarlang">
 		<?php
 			foreach ($idiomas as $idioma => $nombre) {
-				echo "<a href=\"instalar.php?lang=".$idioma."\">".$nombre."</a> ";
+				echo "<a href=\"instalar.php?instalarlang=".$idioma."\">".$nombre."</a> ";
 			}
 		?>
 	</div>
@@ -165,18 +165,18 @@ if ($mostrarform) {
 		echo "<div class=\"error\">".mostrarerror($errors,$errors_d,"301")."</div>";
 	}?>
 	<form method="post" action="instalar.php" id="config_form">
-		<?php if (isset($_GET['lang']) || isset($_POST['lang'])) {
-			$setLang=isset($_GET['lang'])?$_GET['lang']:$_POST['lang'];
-			echo "<input type=\"hidden\" name=\"lang\" value=\"".$setLang."\" />";
+		<?php if (isset($_GET['instalarlang']) || isset($_POST['instalarlang'])) {
+			$setLang=isset($_GET['instalarlang'])?$_GET['instalarlang']:$_POST['instalarlang'];
+			echo "<input style=\"display:none;\" type=\"hidden\" name=\"instalarlang\" value=\"".$setLang."\" />";
 		} ?>
 		<fieldset>
-			<legend><?__("Configuraci&oacute;n de la base de datos");?></legend>
+			<legend><?=__("Configuraci&oacute;n de la base de datos");?></legend>
 			<div>
-				<label for="dbserver">Servidor:</label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
+				<label for="dbserver"><?=__("Servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
 				<label for="dbuser"><?=__("Usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
 				<label for="dbpass"><?=__("Password:");?></label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
 				<label for="dbpass2"><?=__("Reescribe el password:");?></label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
-				<label for="dbname"><?=__("Base de datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?>
+				<label for="dbname"><?=__("Base de datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
 				<label for="prefix"><?=__("Prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=$prefix?>"/>
 			</div>
 		</fieldset>
@@ -187,33 +187,33 @@ if ($mostrarform) {
 				<label for="admpass2"><?=__("Reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
 				<label for="email"><?=__("Email:");?></label><input type="text" name="email" id="email" value=""/><br/>
 				<label for="sname"><?=__("Nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
-				<label for="stitle"><?__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
+				<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
 				<label for="sabrurl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="sabrurl" id="sabrurl" value="<?=$sabrUrl?>"/><?=mostrarerror($errors,$errors_d,"31")?><br/>
 				<label for="siteUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="siteUrl" id="siteUrl" value="<?=$siteUrl?>"/><?=mostrarerror($errors,$errors_d,"32")?><br/>
 				<label for="limite"><?=__("N&uacute;mero de enlaces por p&aacute;gina:");?></label><input type="text" name="limite" id="limite" value="10"/><br/>
 				<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> Amigable:");?></label>
 				<select name="useFriendlyUrl" id="useFriendlyUrl">
 					<option value="1"><?=__("Activado");?></option>
-					<option value="0" selected><?=__("Desactivado");?></option>
+					<option value="0" selected="selected"><?=__("Desactivado");?></option>
 				</select><br/>
-				<label for="lang"/><?=__("Idioma");?></label>
+				<label for="lang"><?=__("Idioma");?></label>
 				<select id="lang" name="lang">
 					<?php
 						foreach ($idiomas as $idioma => $nombre) {
 							if($idioma=="es_MX") {
-								echo "<option value=\"".$idioma."\" selected=\"true\">".$nombre."</option>\n";
+								echo "<option value=\"".$idioma."\" selected=\"selected\">".$nombre."</option>\n";
 							} else {
 								echo "<option value=\"".$idioma."\">".$nombre."</option>\n";
 							}
 						}
 					?>
 				</select>
-				<p>
-					<input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>
-					<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("Configurar");?>" class="submit"/>
-				</p>
 			</div>
 		</fieldset>
+		<p>
+			<input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>
+			<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("Configurar");?>" class="submit"/>
+		</p>
 	</form>
 <?php
 } else {
