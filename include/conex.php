@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
+  sabrosus monousuario versin 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -165,6 +165,7 @@ class clsSabrosus
 		$this->tagsColor = $cfg['tags_cloud']['color'];
 		$this->compartir = $cfg['exportar']['compartir'];
 		$this->desc_badge = $cfg['links_badge']['descripciones'];
+		$this->ping = $cfg['sopasabrosa']['ping'];
 
 		if (!isset($locale)) {
 			if ($row['idioma'] == "en.php") {

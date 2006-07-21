@@ -2,6 +2,7 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Integracion con el sistema automatico de ping a SopaSabrosa. (Jorge Condomí)
     * Correcion bug de la paginacion (Pablo Viojo)
     * Sa.bros.us ahora utiliza la biblioteca del gettext.
     * Colores en los tags del panel del admin. (Jorge Condomí)

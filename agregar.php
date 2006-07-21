@@ -20,12 +20,20 @@ if (!esAdmin()) {
 if($_SERVER["REQUEST_METHOD"]=="POST") {
 	$titulo = htmlspecialchars($_POST["title"]);
 	$enlace = $_POST["enlace"];
+	$descripcion = $_POST["descripcion"];
 	$etiquetas = normalizeTags($_POST["etiquetas"]);
 	if (isset($_POST["privado"])) {
 		$etiquetas = ":sab:privado ".$etiquetas;
+	}else{
+		if($Sabrosus->ping){
+			include("sopa_ping.php");
+		}
 	}
+	
+	
+	
 	if(!isInSabrosus($enlace)) {
-		$Sql="insert into ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha) values ('".$titulo."','".$etiquetas."','".$enlace."','".$_POST["descripcion"]."', now())";
+		$Sql="insert into ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha) values ('".$titulo."','".$etiquetas."','".$enlace."','".$descripcion."', now())";
 		mysql_query($Sql,$link);
 	} else {
 		// Link already exist in the DB, so let user edit that link.
