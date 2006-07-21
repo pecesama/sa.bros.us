@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
+  sabrosus monousuario versin 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -41,10 +41,12 @@ if (esAdmin()) {
 		$multi = (isset($_POST["contenidos_multi"]) ? "1" : "0");
 		$comp = (isset($_POST['compartir']) ? "1" : "0");
 		$descrip = (isset($_POST['descripciones']) ? "1" : "0");
+		$ping = (isset($_POST['ping']) ? "1" : "0");
 		$cfg['tags_cloud']['color'] = $_POST['color_tags'];
 		$cfg['multimedia_content']['allow'] = $multi;
 		$cfg['exportar']['compartir'] = $comp;
 		$cfg['links_badge']['descripciones'] = $descrip;
+		$cfg['sopasabrosa']['ping'] = $ping;
 
 		if (!is_writeable("include/config.ini")) {
 			$errores +=1;
@@ -137,6 +139,8 @@ if (esAdmin()) {
 						}
 						?>
 						</select><br />
+						<? $ping = (($Sabrosus->ping=="1") ? "checked=\"true\"" : ""); ?>
+						<label for="ping_sopa"><?=__("Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n de la apariencia");?></legend>
