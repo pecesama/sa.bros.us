@@ -217,7 +217,7 @@ if ($mostrarform) {
 	</form>
 <?php
 } else {
-	echo "<p>".__("La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.");
+	echo "<p>".__("La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
 }
 ?>
 	</div>

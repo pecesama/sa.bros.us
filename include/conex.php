@@ -38,8 +38,8 @@ function Conectarse($server, $dbUser, $dbPass, $dataBase)
 		<ul>
 			<li>Are you sure you have the correct username and password?</li>
 			<li>Are you sure that you have typed the correct hostname?</li>
-			<li>Are you sure that the database server is running?<ul>
-		<ul>";
+			<li>Are you sure that the database server is running?</li>
+		</ul>";
 		MostrarErrorConexion($mensaje);
 	}
 }
