@@ -4,7 +4,7 @@ Despues de la v 1.6
 
     * Integración con el sistema automático de ping a SopaSabrosa. (Jorge Condomí)
     * Corrección de un bug de la paginación (Pablo Viojo)
-    * Cambio del motor de lenguaje a PHP-gettext. (Kurt McKee)
+    * Cambio del motor de lenguaje a PHP-gettext.
     * Colores en las etiquetas del panel del admin. (Jorge Condomí)
     * Incorporados vídeos de Vimeo (Víctor Bracco)
     * La etiqueta característica de los enlaces privados ya no se muestra en el BadgeTags. (Jorge Condomí)
