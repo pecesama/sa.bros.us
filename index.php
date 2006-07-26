@@ -69,9 +69,9 @@ header("Content-type: text/html; charset=UTF-8");
 			echo "<a title=\"".__("Inicio Sa.bros.us")."\" href=\"".$Sabrosus->sabrUrl."\">sa.bros.us</a>/";
 			if(isset($tagtag)) {
 				if(isset($_GET["pag"])) {
-					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/".$tagtag,"?tag=".$tagtag)."\">".$tagtag."</a>/<span>".$_GET["pag"]."</span>";
+					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/".$tagtag,"?tag=".urlencode($tagtag))."\">".htmlentities($tagtag)."</a>/<span>".$_GET["pag"]."</span>";
 				} else {
-					echo "<span>".$tagtag."</span>";
+					echo "<span>".htmlentities($tagtag)."</span>";
 				}
 			} else {
 				echo "<span>".$_GET["pag"]."</span>";
@@ -131,7 +131,7 @@ header("Content-type: text/html; charset=UTF-8");
 					$privado=true;
 				}
 				if ($etiqueta!=="") {
-					$tags.= "<a title=\"".__("Ordena por la etiqueta")." '".$etiqueta."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".$etiqueta,$Sabrosus->sabrUrl."/index.php?tag=".$etiqueta)."\">".$etiqueta."</a> ";
+					$tags.= "<a title=\"".__("Ordena por la etiqueta")." '".htmlentities($etiqueta)."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".urlencode($etiqueta),$Sabrosus->sabrUrl."/index.php?tag=".urlencode($etiqueta))."\">".htmlentities($etiqueta)."</a> ";
 				}
 			}
 
