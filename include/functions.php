@@ -80,12 +80,15 @@ function etiquetasRelacionadas ($tags) {
 	}
 
 	# Hacemos una copia de la etiqueta original
-	$tags_orig = urlencode($tags);
+	$tags_orig = $tags;
 
 	# Busqueda para encontrar todas las etiquetas que se relacionan con la etiqueta actual
-	$tags_explode = preg_match("/,/", $tags) ? "," : " ";
-	$tags = explode($tags_explode, $tags);
+	$tags = explode(" ", $tags);
 	foreach ($tags as $tag) {
+		/* This is a sub-optimal solution */
+		$tag = str_replace("+", "[+]", $tag); 
+		$tag = str_replace("*", "[*]", $tag);
+
 		$query .= $i++ > 0 ? " or " : "";
 		$query .= "tags REGEXP '[[:<:]]".$tag."[[:>:]]'";
 	}
@@ -97,8 +100,7 @@ function etiquetasRelacionadas ($tags) {
 	# despues hacemos un arsort() con el que se hara un ordenamiento inverso basado en los valores (hits),
 	# lo cual nos dara las etiquetas relacionadas mas populares/comunes primero.
 	while ($t = mysql_fetch_array($result)) {
-		$tags_explode = preg_match("/,/", $t['tags']) ? "," : " ";
-		$tags = explode($tags_explode, $t['tags']);
+		$tags = explode(" ", $t['tags']);
 		foreach ($tags as $tag) {
 			if ($tag == $tags_orig) {
 				continue;
