@@ -221,11 +221,11 @@ header("Content-type: text/html; charset=UTF-8");
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("Generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
 				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sa.bros.us");?>" title="<?=__("RSS de sa.bros.us");?>" /></a></p>
 		<? } else { ?>
-				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss/','/rss.php?tag=').$tagtag;?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de la etiqueta");?> '<?=$tagtag?>'" title="<?=__("RSS de la etiqueta");?> '<?=$tagtag?>'" /></a></p>
+				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss/','/rss.php?tag=').htmlspecialchars($tagtag);?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de la etiqueta");?> '<?=htmlspecialchars($tagtag);?>'" title="<?=__("RSS de la etiqueta");?> '<?=htmlspecialchars($tagtag);?>'" /></a></p>
 		<? } ?>
 	</div>
 
