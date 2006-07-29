@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-29 03:57-0500\n"
+"POT-Creation-Date: 2006-07-29 15:56-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -289,6 +289,12 @@ msgid "escribe los datos de tu enlace."
 msgstr ""
 
 msgid "esta acci&oacute;n no se puede deshacer!"
+msgstr ""
+
+msgid "etiquetas relacionadas"
+msgstr ""
+
+msgid "etiquetas relacionadas buscar"
 msgstr ""
 
 msgid "etiquetas:"

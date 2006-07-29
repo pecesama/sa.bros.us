@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-29 04:02-0500\n"
+"POT-Creation-Date: 2006-07-29 15:58-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alexander Drechsel <adrechsel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -330,6 +330,12 @@ msgstr "angaben zum lesezeichen"
 #, fuzzy
 msgid "esta acci&oacute;n no se puede deshacer!"
 msgstr "dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!"
+
+msgid "etiquetas relacionadas"
+msgstr ""
+
+msgid "etiquetas relacionadas buscar"
+msgstr ""
 
 msgid "etiquetas:"
 msgstr "tags:"
