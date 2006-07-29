@@ -79,7 +79,7 @@ if (isset($_GET["id"])) {
 <div id="pagina">
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?></span></h2>
-		<p class="submenu"><a href="cpanel.php"><?=__("Panel de control");?></a> | <a href="editar.php"><?=__("agregar enlace");?></a></p>
+		<p class="submenu"><a href="cpanel.php"><?=__("panel de control");?></a> | <a href="editar.php"><?=__("agregar enlace");?></a></p>
 	</div>
 
 	<div id="contenido">
@@ -95,7 +95,7 @@ if (isset($_GET["id"])) {
 			<? } ?>
 
 			<fieldset>
-				<legend><?=(isset($_GET["id"]) ? __("Edita los datos de tu enlace.") : __("Escribe los datos de tu enlace."));?></legend>
+				<legend><?=(isset($_GET["id"]) ? __("edita los datos de tu enlace.") : __("escribe los datos de tu enlace."));?></legend>
 				<label for="title"><?=__("t&iacute;tulo:");?></label><br />
 				<input class="input_morado" type="text" name="title" value="<?=$titulo;?>" size="86" /><br />
 
@@ -109,7 +109,7 @@ if (isset($_GET["id"])) {
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
 				<p><?=__("escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
-					<legend><?=__("Agregar etiquetas");?></legend>
+					<legend><?=__("agregar etiquetas");?></legend>
 					<?php getTags("javascript"); ?>
 				</fieldset>
 
@@ -117,19 +117,19 @@ if (isset($_GET["id"])) {
 				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
 				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
 
-				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("Editar") : __("agregar")); ?>" /><br />
+				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("editar") : __("agregar")); ?>" /><br />
 
 			</fieldset>
 			</form>
 		</div>
 		<fieldset>
-			<legend><?=__("Instalar el Bookmarklet.");?></legend>
+			<legend><?=__("instalar el bookmarklet.");?></legend>
 			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sa.bros.us");?>" class="bookmarklet"><?=__("agregar a sa.bros.us");?></a></label>
 		</fieldset>
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:")?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:")?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

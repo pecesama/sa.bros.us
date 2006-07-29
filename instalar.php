@@ -20,17 +20,17 @@ if (isset($_GET['instalarlang'])) {
 }
 
 $errors_d=array();
-$errors_d[11]=__("Debes introducir el servidor de base de datos");
-$errors_d[12]=__("Debes introducir el usuario para la base de datos");
-$errors_d[13]=__("Debes introducir el password para la base de datos");
-$errors_d[14]=__("Debes introducir el nombre de la base de datos a utilizar");
-$errors_d[21]=__("Debes introducir el password para el usuario admin");
-$errors_d[31]=__("Debes introducir la URL para sa.bros.us");
-$errors_d[32]=__("Debes introducir la URL para el sitio");
-$errors_d[101]=__("Los passwords introducidos no coinciden");
-$errors_d[102]=__("Los passwords introducidos no coinciden");
-$errors_d[201]=__("No fue posible conectarse a la base de datos. Por favor revisa los valores introducidos e intentalo nuevamente");
-$errors_d[301]=__("No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador.");
+$errors_d[11]=__("debes introducir el servidor de base de datos");
+$errors_d[12]=__("debes introducir el usuario para la base de datos");
+$errors_d[13]=__("debes introducir el password para la base de datos");
+$errors_d[14]=__("debes introducir el nombre de la base de datos a utilizar");
+$errors_d[21]=__("debes introducir el password para el usuario admin");
+$errors_d[31]=__("debes introducir la URL para sa.bros.us");
+$errors_d[32]=__("debes introducir la URL para el sitio");
+$errors_d[101]=__("los passwords introducidos no coinciden");
+$errors_d[102]=__("los passwords introducidos no coinciden");
+$errors_d[201]=__("no fue posible conectarse a la base de datos. por favor revisa los valores introducidos e intentalo nuevamente");
+$errors_d[301]=__("no es posible escribir el archivo <code>include/config.php</code>. debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador.");
 
 $accion="";
 $errors="";
@@ -134,7 +134,7 @@ require_once("include/config.php");
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title>sa.bros.us/<?=__("Instalaci&oacute;n");?></title>
+	<title>sa.bros.us/<?=__("instalaci&oacute;n");?></title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="sabor.css" type="text/css" />
@@ -144,7 +144,7 @@ require_once("include/config.php");
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("Instalaci&oacute;n");?></span></h2>
+		<h2>sa.bros.us/<span><?=__("instalaci&oacute;n");?></span></h2>
 	</div>
 	<div id="instalarlang">
 		<?php
@@ -170,33 +170,33 @@ if ($mostrarform) {
 			echo "<input style=\"display:none;\" type=\"hidden\" name=\"instalarlang\" value=\"".$setLang."\" />";
 		} ?>
 		<fieldset>
-			<legend><?=__("Configuraci&oacute;n de la base de datos");?></legend>
+			<legend><?=__("configuraci&oacute;n de la base de datos");?></legend>
 			<div>
-				<label for="dbserver"><?=__("Servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
-				<label for="dbuser"><?=__("Usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
-				<label for="dbpass"><?=__("Password:");?></label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
-				<label for="dbpass2"><?=__("Reescribe el password:");?></label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
-				<label for="dbname"><?=__("Base de datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
-				<label for="prefix"><?=__("Prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=$prefix?>"/>
+				<label for="dbserver"><?=__("servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
+				<label for="dbuser"><?=__("usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
+				<label for="dbpass"><?=__("password:");?></label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
+				<label for="dbpass2"><?=__("reescribe el password:");?></label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
+				<label for="dbname"><?=__("base de datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
+				<label for="prefix"><?=__("prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=$prefix?>"/>
 			</div>
 		</fieldset>
 		<fieldset>
-			<legend><?=__("Configuraci&oacute;n de sa.bros.us");?></legend>
+			<legend><?=__("configuraci&oacute;n de sa.bros.us");?></legend>
 			<div>
-				<label for="admpass"><?=__("Password para el control panel:");?></label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
-				<label for="admpass2"><?=__("Reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
-				<label for="email"><?=__("Email:");?></label><input type="text" name="email" id="email" value=""/><br/>
-				<label for="sname"><?=__("Nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
-				<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
+				<label for="admpass"><?=__("password para el control panel:");?></label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
+				<label for="admpass2"><?=__("reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
+				<label for="email"><?=__("email:");?></label><input type="text" name="email" id="email" value=""/><br/>
+				<label for="sname"><?=__("nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
+				<label for="stitle"><?=__("descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
 				<label for="sabrurl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="sabrurl" id="sabrurl" value="<?=$sabrUrl?>"/><?=mostrarerror($errors,$errors_d,"31")?><br/>
 				<label for="siteUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="siteUrl" id="siteUrl" value="<?=$siteUrl?>"/><?=mostrarerror($errors,$errors_d,"32")?><br/>
-				<label for="limite"><?=__("N&uacute;mero de enlaces por p&aacute;gina:");?></label><input type="text" name="limite" id="limite" value="10"/><br/>
-				<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> Amigable:");?></label>
+				<label for="limite"><?=__("n&uacute;mero de enlaces por p&aacute;gina:");?></label><input type="text" name="limite" id="limite" value="10"/><br/>
+				<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:");?></label>
 				<select name="useFriendlyUrl" id="useFriendlyUrl">
-					<option value="1"><?=__("Activado");?></option>
-					<option value="0" selected="selected"><?=__("Desactivado");?></option>
+					<option value="1"><?=__("activado");?></option>
+					<option value="0" selected="selected"><?=__("desactivado");?></option>
 				</select><br/>
-				<label for="lang"><?=__("Idioma");?></label>
+				<label for="lang"><?=__("idioma");?></label>
 				<select id="lang" name="lang">
 					<?php
 						foreach ($idiomas as $idioma => $nombre) {
@@ -212,17 +212,17 @@ if ($mostrarform) {
 		</fieldset>
 		<p>
 			<input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>
-			<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("Configurar");?>" class="submit"/>
+			<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("configurar");?>" class="submit"/>
 		</p>
 	</form>
 <?php
 } else {
-	echo "<p>".__("La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
+	echo "<p>".__("la instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
 }
 ?>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>
