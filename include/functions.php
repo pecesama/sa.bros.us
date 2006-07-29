@@ -73,7 +73,6 @@ function etiquetasRelacionadas ($tags) {
 	# codigo basado en el propuesto en http://hellojoseph.com/tags-howto.php
 	global $Sabrosus;
 	global $prefix;
-	global $idioma;
 
 	if (empty($tags)) {
 		return;
@@ -117,7 +116,7 @@ function etiquetasRelacionadas ($tags) {
 	}
 
 	if (!empty($pop)) {
-		echo "<div class=\"tags_relacionados\"><strong>$idioma[etiquetas_relacionadas]</strong>";
+		echo "<div class=\"tags_relacionados\"><strong>".__("etiquetas relacionadas")."</strong> ";
 		arsort ($pop);
 		foreach ($pop as $tag => $num) {
 			# Asegurarse que no sea la misma etiqueta
@@ -129,7 +128,7 @@ function etiquetasRelacionadas ($tags) {
 			if ($i++ > 4) {
 				continue;
 			}
-			echo chequearURLFriendly("<a title=\"$idioma[etiquetas_relacionadas_buscar] 'htmlentities($tag)'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlentities($tag)."</a> ", "<a title=\"$idioma[etiquetas_relacionadas_buscar] 'htmlentities($tag)'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlentities($tag)."</a> ");
+			echo chequearURLFriendly("<a title=\"".__("etiquetas relacionadas buscar")." '".htmlentities($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlentities($tag)."</a> ", "<a title=\"".__("etiquetas relacionadas buscar")." '".htmlentities($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlentities($tag)."</a> ");
 		}
 	echo "</div>";
 	}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sa.bros.us 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-29 04:02-0500\n"
+"POT-Creation-Date: 2006-07-29 15:58-0500\n"
 "PO-Revision-Date: 2006-06-02 21:36-0500\n"
 "Last-Translator: Kurt McKee <kurtmckee@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -269,7 +269,7 @@ msgid "enlaces por p&aacute;gina:"
 msgstr "links by page:"
 
 msgid "enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
-msgstr ""
+msgstr "send links to SopaSabrosa"
 
 msgid "es 'open source'."
 msgstr "it's open source."
@@ -285,6 +285,12 @@ msgstr "create a new bookmark."
 
 msgid "esta acci&oacute;n no se puede deshacer!"
 msgstr "there's no undo here!"
+
+msgid "etiquetas relacionadas"
+msgstr "related tags"
+
+msgid "etiquetas relacionadas buscar"
+msgstr "find links tagged with"
 
 msgid "etiquetas:"
 msgstr "tags:"
