@@ -28,7 +28,7 @@
 	color: #999;
 	text-align: right;
 	padding-right: 10px;
-    width:300px;
+	width:300px;
 }
 
 #config_form input {
@@ -54,16 +54,16 @@ br {
 }
 
 .error {
-  color:#c00;
-  font: bold 14px/15px georgia, "times new roman", serif;
-  margin:1em;
+	color:#c00;
+	font: bold 14px/15px georgia, "times new roman", serif;
+	margin:1em;
 }
 
 .ejemplo {
-  font-size:.8em;
-  font-variant:italic;
-  margin-left:310px;
-  margin-top:0px;
-  clear:both;
-  margin-bottom:10px!important;
+	font-size:.8em;
+	font-variant:italic;
+	margin-left:310px;
+	margin-top:0px;
+	clear:both;
+	margin-bottom:10px!important;
 }
