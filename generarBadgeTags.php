@@ -59,7 +59,7 @@ if(isset($_POST['code_gen'])){
 	
 		<h2>sa.bros.us/<span><?=__("generar badge de los enlaces");?></span></h2>
 			<p class="submenu">
-				<a href="cpanel.php"><?=__("Panel de control");?></a> |
+				<a href="cpanel.php"><?=__("panel de control");?></a> |
 				<a href="generarBadge.php"><?=__("generar badge de los enlaces");?></a>
 			</p>
 	</div>
@@ -69,23 +69,23 @@ if(isset($_POST['code_gen'])){
 		<div id="formulario">
 			<form name="frmBadge" id="frmBagde" action="<?=$_SERVER['PHP_SELF']?>" method="post">
 				<fieldset>
-					<legend><?=__("Agrega las Etiquetas de sa.bros.us a t&uacute; sitio.");?></legend>		
-					<p><?=__("Si tienes un sitio web o un blog, puedes mostrar las Etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la Etiqueta m&aacute;s relevante se muestre m&aacute;s grande.");?></p>
+					<legend><?=__("agrega las etiquetas de sa.bros.us a t&uacute; sitio.");?></legend>		
+					<p><?=__("si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande.");?></p>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("Personalice la nube de Etiquetas:");?></legend>
-					<p><?=__("Seleccione sus preferencias para desplegar su nube de Etiquetas de sa.bros.us:");?></p><br />
+					<legend><?=__("personalice la nube de etiquetas:");?></legend>
+					<p><?=__("seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:");?></p><br />
 					
-					<label for=""><?=__("Tama&ntilde;o de fuente m&iacute;nimo:");?></label>
+					<label for=""><?=__("tama&ntilde;o de fuente m&iacute;nimo:");?></label>
 					<input name="min_font" id="txtFMin" value="<?=$min_font?>" /><br />
-					<label for="txtFMax"><?=__("Tama&ntilde;o de fuente m&aacute;ximo:");?></label>
+					<label for="txtFMax"><?=__("tama&ntilde;o de fuente m&aacute;ximo:");?></label>
 					<input name="max_font" id="txtFMax" value="<?=$max_font?>" /><br />
 
-					<label for="color_tags"><?=__("Color para la nube de etiquetas:");?></label>
+					<label for="color_tags"><?=__("color para la nube de etiquetas:");?></label>
 					<select name="color_tags" id="color_tags">
 
 					<?
-					$colors = array(__("Naranja"), __("Azul"), __("Verde"), __("Rojo"), __("Gris"), __("Aleatorio"));
+					$colors = array(__("naranja"), __("azul"), __("verde"), __("rojo"), __("gris"), __("aleatorio"));
 					foreach ($colors as $i => $color) {
 						echo "<option value=\"{$i}\"";
 						echo ($color_font == $i)? " selected=\"selected\"" : "";
@@ -94,13 +94,13 @@ if(isset($_POST['code_gen'])){
 					?>
 					
 					</select><br />	
-					<input type="submit" name="code_gen" value="<?=__("Generar C&oacute;digo");?>"/>
+					<input type="submit" name="code_gen" value="<?=__("generar c&oacute;digo");?>"/>
 
 				</fieldset>
 				
 				<? if ($show_code){ ?>
 				<fieldset>
-					<legend><?=__("Nube de ejemplo");?></legend>
+					<legend><?=__("nube de ejemplo");?></legend>
 						<?='					
 <!-- Inicio de sa.bros.us Badge -->
 	<style type="text/css">
@@ -117,19 +117,19 @@ if(isset($_POST['code_gen'])){
 						?>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("Copiar el c&oacute;digo fuente");?></legend>
-					<p><?=__("Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
+					<legend><?=__("copiar el c&oacute;digo fuente");?></legend>
+					<p><?=__("para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
 					<textarea class="textarea_oscuro" rows="16" cols="90" name="txtBadge" id="txtBadge">
 <?=trim($code_base)?>
 					</textarea>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("Hoja de estilo de Mi sa.bros.us");?></legend>
-					<p><?=__("Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
+					<legend><?=__("hoja de estilo de mi sa.bros.us");?></legend>
+					<p><?=__("si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
 					<br />
 					<div id="ejemploHtml" style="margin-left:30px;color:#888;">
 					&lt;div id=&quot;badgetags&quot;&gt;
-					<div id="ejemploHtmlInterno">&lt;p&gt;&lt;strong&gt;<?=__("Mis etiquetas en sa.bros.us");?>&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;<br />
+					<div id="ejemploHtmlInterno">&lt;p&gt;&lt;strong&gt;<?=__("mis etiquetas en sa.bros.us");?>&lt;/strong&gt;&lt;/p&gt;&lt;br /&gt;<br />
 					&lt;ol&gt;<br />
 					&lt;li&gt;&lt;a title=&quot;&quot; style=&quot;&quot; href=&quot;&quot;&gt;#&lt;/a&gt;&lt;/li&gt;<br />
 					&lt;/ol&gt;<br />
@@ -143,7 +143,7 @@ if(isset($_POST['code_gen'])){
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 
 </div>

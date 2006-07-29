@@ -41,23 +41,23 @@
 <div id="pagina">
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=__("eliminar enlace");?></span></h2>
-		<p class="submenu"><a href="cpanel.php"><?=__("Panel de control");?></a></p>
+		<p class="submenu"><a href="cpanel.php"><?=__("panel de control");?></a></p>
 	</div>
 
 	<div id="contenido">
 		<div id="formulario">
 			<form method="get" action="eliminar.php">
-				<p><?=__("&iquest;Realmente desea eliminar este enlace de su sa.bros.us?");?></p>
-				<p><?=__("Esta acci&oacute;n no se puede deshacer!");?></p>
+				<p><?=__("&iquest;realmente desea eliminar este enlace de su sa.bros.us?");?></p>
+				<p><?=__("esta acci&oacute;n no se puede deshacer!");?></p>
 				<input type="hidden" class="no_style" name="confirm" value="0" />
 				<input type="hidden" class="no_style" name="id" value="<?=$_GET['id'];?>" />
-				<input class="submit" type="submit" name="accion" value="<?=__("Eliminar");?>" />
+				<input class="submit" type="submit" name="accion" value="<?=__("eliminar");?>" />
 			</form>
 		</div>
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

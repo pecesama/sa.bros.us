@@ -20,7 +20,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale?>" lang="<?=$locale?>">
 <head>
-	<title><?=__("Panel de control");?>/sa.bros.us</title>
+	<title><?=__("panel de control");?>/sa.bros.us</title>
 	<meta name="generator" content="Sa.bros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8?>" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
@@ -33,7 +33,7 @@
 			function elimina(id_enlace)
 			{	// Algo de JavaScript para aquello de que no se quiera borrar.
 				var x;
-				x=window.confirm("<?=__("&iquest;Realmente desea eliminar este enlace de su sa.bros.us?");?>\n\n<?=__("Esta acci&oacute;n no se puede deshacer!");?>");				 
+				x=window.confirm("<?=__("&iquest;realmente desea eliminar este enlace de su sa.bros.us?");?>\n\n<?=__("esta acci&oacute;n no se puede deshacer!");?>");				 
 				if (x) { location="eliminar.php?id="+id_enlace+"&confirm=0"; }
 			}
 				
@@ -54,12 +54,12 @@
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("Panel de control");?></span></h2>
+		<h2>sa.bros.us/<span><?=__("panel de control");?></span></h2>
 		<p class="submenu">
 			<a href="editar.php"><?=__("agregar enlace");?></a> | 
 			<a href="generarBadge.php"><?=__("generar badge");?></a> | 
-			<a href="importar.php"><?=__("Importar");?></a> |
-			<a href="exportar.php"><?=__("Exportar");?></a> | 
+			<a href="importar.php"><?=__("importar");?></a> |
+			<a href="exportar.php"><?=__("exportar");?></a> | 
 			<a href="opciones.php"><?=__("ir a opciones");?></a> | 
 			<a href="index.php"><?=__("ir a sa.bros.us");?></a> | 
 			<a href="close.php"><?=__("terminar la sesi&oacute;n");?></a>
@@ -69,14 +69,14 @@
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
-				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
+				<p><?=__("no es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
 
 		<div id="formulario">
 			<form action="cpanel.php" method="get" name="buscar">
 				<fieldset>
-					<label for="buscar"><?=__("Buscar:");?></label>				
+					<label for="buscar"><?=__("buscar:");?></label>				
 					<input class="input_naranja" id="buscar" name="buscar" type="text" />				
 					<input class="submit_normal" type="submit" value="<?=__("buscar");?>" name="btnBuscar" />
 				</fieldset>
@@ -109,7 +109,7 @@
 ?>
 		<table cellspacing="0">
 			<thead>
-				<th><?=__("Control de Contenidos");?></th>
+				<th><?=__("control de contenidos");?></th>
 				<th colspan="3">&nbsp;</th>
 			</thead>
 			
@@ -117,9 +117,9 @@
 				{	?>					
 			<tr>
 				<td class="objeto"><?=$row["title"]?></td>
-				<td class="ver"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Ver");?></a></td>
-				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Editar");?></a></td>
-				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=__("Eliminar");?></a></td>
+				<td class="ver"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=__("ver");?></a></td>
+				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=__("editar");?></a></td>
+				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=__("eliminar");?></a></td>
 			</tr>
 <?				}	?>
 			<tr>
@@ -128,16 +128,16 @@
 					if(isset($pag)&&$pag>0)
 					{
 						if(isset($_GET['buscar']))
-							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."&amp;buscar=".$_GET['buscar']."\">&laquo; ".__("Anterior")."</a>";				
+							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."&amp;buscar=".$_GET['buscar']."\">&laquo; ".__("anterior")."</a>";				
 						else
-							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."\">&laquo; ".__("Anterior")."</a>";
+							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."\">&laquo; ".__("anterior")."</a>";
 					}
 					if(mysql_num_rows($result_next)>0)
 					{
 						if(isset($_GET['buscar']))
-							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."&amp;buscar=".$_GET['buscar']."\">".__("Siguiente")." &raquo;</a> ";
+							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."&amp;buscar=".$_GET['buscar']."\">".__("siguiente")." &raquo;</a> ";
 						else
-							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."\">".__("Siguiente")." &raquo;</a>";
+							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."\">".__("siguiente")." &raquo;</a>";
 					}
 				?>
 				</td>
@@ -146,7 +146,7 @@
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:")?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:")?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 
 </div>

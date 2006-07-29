@@ -82,7 +82,7 @@ if (esAdmin())
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=__("importar marcadores");?></span></h2>
 		<p class="submenu">
-			<a href="cpanel.php"><?=__("Panel de control");?></a> |
+			<a href="cpanel.php"><?=__("panel de control");?></a> |
 			<a href="importardelicious.php"><?=__("importar de del.icio.us");?></a>
 		</p>
 	</div>
@@ -91,37 +91,37 @@ if (esAdmin())
 		<div id="bookmarks">
 			<form id="import" enctype="multipart/form-data" action="importar.php" method="post">
 				<fieldset>
-					<legend><?=__("Importar");?></legend>
-					<label for="userfile"><?=__("Archivo:");?></label>
+					<legend><?=__("importar");?></legend>
+					<label for="userfile"><?=__("archivo:");?></label>
 						<input class="no_style" type="hidden" name="MAX_FILE_SIZE" value="1024000" />
 						<input class="input_morado" type="file" name="userfile" size="50" /><br />
-					<label for="status"><?=__("Privacidad:");?></label>
+					<label for="status"><?=__("privacidad:");?></label>
 						<select name="status">
-							<option value="0"><?=__("P&uacute;blico");?></option>
-							<option value="1"><?=__("Privado");?></option>
+							<option value="0"><?=__("p&uacute;blico");?></option>
+							<option value="1"><?=__("privado");?></option>
 						</select><br />
-					<input class="submit" type="submit" value="<?__("Importar");?>" />
+					<input class="submit" type="submit" value="<?__("importar");?>" />
 				</fieldset>
 			</form>
 		
-			<h3><?=__("Instrucciones");?></h3>
+			<h3><?=__("instrucciones");?></h3>
 			<ol>
 				<li>
-					<p><?=__("Exportar tus marcadores de tu navegador a un archivo");?>:</p>
+					<p><?=__("exportar tus marcadores de tu navegador a un archivo");?>:</p>
 					<ul>
-						<li><?=__("Internet Explorer: <kbd>Archivo &gt; Importar y Exportar... &gt; Exportar Favoritos</kbd>");?></li>
-						<li><?=__("Mozilla Firefox: <kbd>Marcadores &gt; Administrar Marcadores... &gt; Archivo &gt; Exportar...</kbd>");?></li>
-						<li><?=__("Netscape: <kbd>Marcadores &gt; Administrar Marcadores... &gt; Herramientas &gt; Exportar...</kbd>");?></li>
+						<li><?=__("internet explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>");?></li>
+						<li><?=__("mozilla firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>");?></li>
+						<li><?=__("netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>");?></li>
 					</ul>
 				</li>
-				<li><?__("Clic <kbd>Examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB");?>.</li>
-				<li><?__("Seleccionar la privacidad por defecto asignada a los marcadores importados");?>.</li>
-				<li><?__("Clic <kbd>Importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo");?>.</li>
+				<li><?__("clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. el tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB");?>.</li>
+				<li><?__("seleccionar la privacidad por defecto asignada a los marcadores importados");?>.</li>
+				<li><?__("clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo");?>.</li>
 			</ol>
 		</div>
 	</div>
 		<div id="pie">
-			<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+			<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 		</div>
 	</div>
 </body>

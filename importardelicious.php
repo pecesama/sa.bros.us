@@ -39,7 +39,7 @@ if (esAdmin())
 	<div id="titulo">
 		<h2>sa.bros.us/<span><?=__("importar de delicious");?></span></h2>
 			<p class="submenu">
-				<a href="cpanel.php"><?=__("Panel de control");?></a> |
+				<a href="cpanel.php"><?=__("panel de control");?></a> |
 				<a href="importar.php"><?=__("importar desde un archivo");?></a>
 			</p>
 	</div>
@@ -52,8 +52,8 @@ if (esAdmin())
         ?>
         <div class="ok">
         <p>
-		<?=str_replace("%no_importados%",$respImport["imported"],__("Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."))?> 
-        <?=str_replace("%no_noimportadosrepetidos%",$respImport["total"]-$respImport["imported"],__("No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."))?>
+		<?=str_replace("%no_importados%",$respImport["imported"],__("se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. en total se importaron <strong>%no_importados%</strong> enlaces."))?> 
+        <?=str_replace("%no_noimportadosrepetidos%",$respImport["total"]-$respImport["imported"],__("no se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."))?>
 		</p>
         </div>
 		<?
@@ -62,12 +62,12 @@ if (esAdmin())
 			{
 				case ($respImport["responseCode"]=="401"):
 				?>
-					<div class="error"><?=__("El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente.");?></div>
+					<div class="error"><?=__("el usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente.");?></div>
 				<?
 				break;
 				default:
 				?>
-				<div class="error"><?=str_replace("%no_error%",$respImport["responseCode"],__("Ha ocurrido un error no especificado (Error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."));?></div>
+				<div class="error"><?=str_replace("%no_error%",$respImport["responseCode"],__("ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."));?></div>
 				<?
 			}
 			$mostrarform=true;
@@ -77,15 +77,15 @@ if (esAdmin())
 	{
 	?>
 		<div id="formulario">
-			<p><?=__("Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta.");?></p>
+			<p><?=__("para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta.");?></p>
 			<form action="importardelicious.php" method="post">
 				<fieldset>
-					<legend><?=__("Datos de del.icio.us");?></legend>
-					<label for="username"><?=__("Usuario:");?></label><br />
+					<legend><?=__("datos de del.icio.us");?></legend>
+					<label for="username"><?=__("usuario:");?></label><br />
 					<input type="text" name="username" /><br />	
-					<label for="password"><?=__("Contrase&ntilde;a:");?></label><br />
+					<label for="password"><?=__("contrase&ntilde;a:");?></label><br />
 					<input type="password" name="password" /><br />
-					<input class="submit" type="submit" name="accion" value="<?=__("Importar");?>" />
+					<input class="submit" type="submit" name="accion" value="<?=__("importar");?>" />
 				</fieldset>
 			</form>	
 		</div>
@@ -94,7 +94,7 @@ if (esAdmin())
 	?>	
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

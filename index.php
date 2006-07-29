@@ -66,7 +66,7 @@ header("Content-type: text/html; charset=UTF-8");
 		<?
 		echo "\t<a title=\"".$Sabrosus->siteTitle."\" href=\"".$Sabrosus->siteUrl."\">".$Sabrosus->siteName."</a>/";
 		if (isset($tagtag) || isset($_GET["pag"])) {
-			echo "<a title=\"".__("Inicio Sa.bros.us")."\" href=\"".$Sabrosus->sabrUrl."\">sa.bros.us</a>/";
+			echo "<a title=\"".__("inicio sa.bros.us")."\" href=\"".$Sabrosus->sabrUrl."\">sa.bros.us</a>/";
 			if(isset($tagtag)) {
 				if(isset($_GET["pag"])) {
 					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/".$tagtag,"?tag=".urlencode($tagtag))."\">".htmlspecialchars($tagtag)."</a>/<span>".$_GET["pag"]."</span>";
@@ -82,14 +82,14 @@ header("Content-type: text/html; charset=UTF-8");
 		?>
 		</h2>
 		<p class="submenu_derecho">
-			<a href="<?=$Sabrosus->sabrUrl;?>/sabrosus.php" title="<?=__("&iquest;Qu&eacute; es sa.bros.us?");?>"><?=__("&iquest;Qu&eacute; es sa.bros.us?");?></a> | <a href="<?=$Sabrosus->sabrUrl;?>/cpanel.php" title="<?=__("Panel de control");?>"><?=__("Panel de control");?></a>
+			<a href="<?=$Sabrosus->sabrUrl;?>/sabrosus.php" title="<?=__("&iquest;qu&eacute; es sa.bros.us?");?>"><?=__("&iquest;qu&eacute; es sa.bros.us?");?></a> | <a href="<?=$Sabrosus->sabrUrl;?>/cpanel.php" title="<?=__("panel de control");?>"><?=__("panel de control");?></a>
 		</p>
 	</div>
 
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
-				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
+				<p><?=__("no es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
 
@@ -107,12 +107,12 @@ header("Content-type: text/html; charset=UTF-8");
 		$nenlaces=(isset($tagtag) ? contarenlaces($tagtag) : contarenlaces());
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 
-		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
+		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("hay <strong>%no_enlaces%</strong> enlaces. est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
 		$pag_text = str_replace("%desde%",($desde+1),$pag_text);
 		$pag_text = str_replace("%total%",(($desde+$Sabrosus->limit>=$nenlaces)?$nenlaces:$desde+$Sabrosus->limit),$pag_text);
 
 		if (!$nenlaces) {
-			$pag_text = "<strong>" . __("No hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a.") . "</strong>";
+			$pag_text = "<strong>" . __("no hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a.") . "</strong>";
 		}
 		echo "<div id=\"indicador_pagina\">".$pag_text."</div>\n";
 
@@ -131,7 +131,7 @@ header("Content-type: text/html; charset=UTF-8");
 					$privado=true;
 				}
 				if ($etiqueta!=="") {
-					$tags.= "<a title=\"".__("Ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".urlencode($etiqueta),$Sabrosus->sabrUrl."/index.php?tag=".urlencode($etiqueta))."\">".htmlspecialchars($etiqueta)."</a> ";
+					$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".urlencode($etiqueta),$Sabrosus->sabrUrl."/index.php?tag=".urlencode($etiqueta))."\">".htmlspecialchars($etiqueta)."</a> ";
 				}
 			}
 
@@ -154,7 +154,7 @@ header("Content-type: text/html; charset=UTF-8");
 				echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 
 				if (esAdmin()) {
-					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\">".__("Editar")." &raquo;</a>";
+					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("editar")." - ".htmlspecialchars($row['title'])."\">".__("editar")." &raquo;</a>";
 				}
 				echo "</h3>\n";
 				if ($Sabrosus->multiCont=="1") {
@@ -207,7 +207,7 @@ header("Content-type: text/html; charset=UTF-8");
 			}
 		}
 
-		echo ($Sabrosus->compartir=="1") ? "<input type=\"submit\" name=\"enviar_links\" value=\"".__("Exportar a mi Sa.bros.us")."\" id=\"enviar_links\"/>
+		echo ($Sabrosus->compartir=="1") ? "<input type=\"submit\" name=\"enviar_links\" value=\"".__("exportar a mi sa.bros.us")."\" id=\"enviar_links\"/>
 		</form>" : '';
 		?>
 	</div>
@@ -221,7 +221,7 @@ header("Content-type: text/html; charset=UTF-8");
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=__("Generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
 				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sa.bros.us");?>" title="<?=__("RSS de sa.bros.us");?>" /></a></p>
 		<? } else { ?>
