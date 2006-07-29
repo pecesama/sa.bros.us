@@ -100,7 +100,7 @@ if (esAdmin())
 							<option value="0"><?=__("p&uacute;blico");?></option>
 							<option value="1"><?=__("privado");?></option>
 						</select><br />
-					<input class="submit" type="submit" value="<?__("importar");?>" />
+					<input class="submit" type="submit" value="<?=__("importar");?>" />
 				</fieldset>
 			</form>
 		
@@ -114,9 +114,9 @@ if (esAdmin())
 						<li><?=__("netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>");?></li>
 					</ul>
 				</li>
-				<li><?__("clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. el tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB");?>.</li>
-				<li><?__("seleccionar la privacidad por defecto asignada a los marcadores importados");?>.</li>
-				<li><?__("clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo");?>.</li>
+				<li><?=__("clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. el tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB");?>.</li>
+				<li><?=__("seleccionar la privacidad por defecto asignada a los marcadores importados");?>.</li>
+				<li><?=__("clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo");?>.</li>
 			</ol>
 		</div>
 	</div>
