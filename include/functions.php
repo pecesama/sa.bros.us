@@ -116,7 +116,7 @@ function etiquetasRelacionadas ($tags) {
 	}
 
 	if (!empty($pop)) {
-		echo "<div class=\"tags_relacionados\"><strong>".__("etiquetas relacionadas")."</strong> ";
+		echo "<div class=\"tags_relacionados\"><strong>".__("Etiquetas relacionadas:")."</strong> ";
 		arsort ($pop);
 		foreach ($pop as $tag => $num) {
 			# Asegurarse que no sea la misma etiqueta
@@ -128,7 +128,7 @@ function etiquetasRelacionadas ($tags) {
 			if ($i++ > 4) {
 				continue;
 			}
-			echo chequearURLFriendly("<a title=\"".__("etiquetas relacionadas buscar")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ", "<a title=\"".__("etiquetas relacionadas buscar")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ");
+			echo chequearURLFriendly("<a title=\"".__("Buscar enlaces con")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ", "<a title=\"".__("Buscar enlaces con")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ");
 		}
 	echo "</div>";
 	}
