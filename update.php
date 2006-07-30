@@ -138,13 +138,13 @@
 			?>
 			<form method="post" action="update.php" id="config_form">
 				<fieldset>
-					<legend><?=__("actualizaci&oacute;n de sabrosus");?></legend>
+					<legend><?=__("Actualizaci&oacute;n de sabrosus");?></legend>
 					<div>
 						<?
 						if(!isset($adminPass)){
-							echo "<p>".__("<strong>atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n.")."</p>";
+							echo "<p>".__("<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n.")."</p>";
 						} else {
-							echo "<p>".__("se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente.")."</p>";
+							echo "<p>".__("Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente.")."</p>";
 							echo "<p><input type=\"submit\" name=\"btnsubmit\" id=\"btnsubmit\" value=\"".__("actualizar")."\" class=\"submit\"/><p>";
 						}
 						?>

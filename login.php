@@ -48,14 +48,14 @@ if ((isset($_POST["pass"]) && md5($_POST["pass"])==$Sabrosus->adminPass)) {
 		<div id="formulario">
 			<form action="login.php" method="post" name="valida">
 				<fieldset>
-					<legend><?=__("introduzca su contrase&ntilde;a");?></legend>
-					<label><?=__("contrase&ntilde;a:");?></label>
+					<legend><?=__("Introduzca su contrase&ntilde;a");?></legend>
+					<label><?=__("Contrase&ntilde;a:");?></label>
 					<input class="input_rojo" name="pass" type="password" /><br />
 					<input name="guardar_pass" type="checkbox" /> <label><?=__("guardar contrase&ntilde;a");?></label><br />
 					<? if (isset($_GET['dirigir']) || isset($_POST['dirigir'])) { ?>
 						<input type="hidden" name="dirigir" value="<?=urlencode(isset($_GET['dirigir']) ? $_GET['dirigir'] : $_POST['dirigir']);?>" />
 					<? } ?>
-					<p><a href="recordar.php" title="<?=__("&iquest;olvidaste tu contrase&ntilde;a?");?>"><?=__("&iquest;olvidaste tu contrase&ntilde;a?");?></a></p>
+					<p><a href="recordar.php" title="<?=__("&iquest;Olvidaste tu contrase&ntilde;a?");?>"><?=__("&iquest;olvidaste tu contrase&ntilde;a?");?></a></p>
 					<input class="submit" name="btnEntrar" type="submit" value="<?=__("ingresar");?>" />
 
 				</fieldset>

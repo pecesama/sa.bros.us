@@ -33,7 +33,7 @@
 			function elimina(id_enlace)
 			{	// Algo de JavaScript para aquello de que no se quiera borrar.
 				var x;
-				x=window.confirm("<?=__("&iquest;realmente desea eliminar este enlace de su sa.bros.us?");?>\n\n<?=__("esta acci&oacute;n no se puede deshacer!");?>");				 
+				x=window.confirm("<?=__("&iquest;Realmente desea eliminar este enlace de su sa.bros.us?");?>\n\n<?=__("esta acci&oacute;n no se puede deshacer!");?>");				 
 				if (x) { location="eliminar.php?id="+id_enlace+"&confirm=0"; }
 			}
 				
@@ -69,7 +69,7 @@
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
-				<p><?=__("no es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
+				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
 
@@ -109,7 +109,7 @@
 ?>
 		<table cellspacing="0">
 			<thead>
-				<th><?=__("control de contenidos");?></th>
+				<th><?=__("Control de contenidos");?></th>
 				<th colspan="3">&nbsp;</th>
 			</thead>
 			
@@ -117,9 +117,9 @@
 				{	?>					
 			<tr>
 				<td class="objeto"><?=$row["title"]?></td>
-				<td class="ver"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=__("ver");?></a></td>
-				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=__("editar");?></a></td>
-				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=__("eliminar");?></a></td>
+				<td class="ver"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Ver");?></a></td>
+				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Editar");?></a></td>
+				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=__("Eliminar");?></a></td>
 			</tr>
 <?				}	?>
 			<tr>
@@ -128,16 +128,16 @@
 					if(isset($pag)&&$pag>0)
 					{
 						if(isset($_GET['buscar']))
-							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."&amp;buscar=".$_GET['buscar']."\">&laquo; ".__("anterior")."</a>";				
+							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."&amp;buscar=".$_GET['buscar']."\">&laquo; ".__("Anterior")."</a>";				
 						else
-							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."\">&laquo; ".__("anterior")."</a>";
+							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."\">&laquo; ".__("Anterior")."</a>";
 					}
 					if(mysql_num_rows($result_next)>0)
 					{
 						if(isset($_GET['buscar']))
-							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."&amp;buscar=".$_GET['buscar']."\">".__("siguiente")." &raquo;</a> ";
+							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."&amp;buscar=".$_GET['buscar']."\">".__("Siguiente")." &raquo;</a> ";
 						else
-							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."\">".__("siguiente")." &raquo;</a>";
+							echo "<a class=\"alignright\" href=\"cpanel.php?pag=".($page+1)."\">".__("Siguiente")." &raquo;</a>";
 					}
 				?>
 				</td>

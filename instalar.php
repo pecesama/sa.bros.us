@@ -20,17 +20,17 @@ if (isset($_GET['instalarlang'])) {
 }
 
 $errors_d=array();
-$errors_d[11]=__("debes introducir el servidor de base de datos");
-$errors_d[12]=__("debes introducir el usuario para la base de datos");
-$errors_d[13]=__("debes introducir el password para la base de datos");
-$errors_d[14]=__("debes introducir el nombre de la base de datos a utilizar");
-$errors_d[21]=__("debes introducir el password para el usuario admin");
-$errors_d[31]=__("debes introducir la URL para sa.bros.us");
-$errors_d[32]=__("debes introducir la URL para el sitio");
-$errors_d[101]=__("los passwords introducidos no coinciden");
-$errors_d[102]=__("los passwords introducidos no coinciden");
-$errors_d[201]=__("no fue posible conectarse a la base de datos. por favor revisa los valores introducidos e intentalo nuevamente");
-$errors_d[301]=__("no es posible escribir el archivo <code>include/config.php</code>. debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador.");
+$errors_d[11]=__("Debes introducir el servidor de base de datos");
+$errors_d[12]=__("Debes introducir el usuario para la base de datos");
+$errors_d[13]=__("Debes introducir el password para la base de datos");
+$errors_d[14]=__("Debes introducir el nombre de la base de datos a utilizar");
+$errors_d[21]=__("Debes introducir el password para el usuario admin");
+$errors_d[31]=__("Debes introducir la URL para sa.bros.us");
+$errors_d[32]=__("Debes introducir la URL para el sitio");
+$errors_d[101]=__("Los passwords introducidos no coinciden");
+$errors_d[102]=__("Los passwords introducidos no coinciden");
+$errors_d[201]=__("No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente");
+$errors_d[301]=__("No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador.");
 
 $accion="";
 $errors="";
@@ -170,7 +170,7 @@ if ($mostrarform) {
 			echo "<input style=\"display:none;\" type=\"hidden\" name=\"instalarlang\" value=\"".$setLang."\" />";
 		} ?>
 		<fieldset>
-			<legend><?=__("configuraci&oacute;n de la base de datos");?></legend>
+			<legend><?=__("Configuraci&oacute;n de la base de datos");?></legend>
 			<div>
 				<label for="dbserver"><?=__("servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
 				<label for="dbuser"><?=__("usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
@@ -181,7 +181,7 @@ if ($mostrarform) {
 			</div>
 		</fieldset>
 		<fieldset>
-			<legend><?=__("configuraci&oacute;n de sa.bros.us");?></legend>
+			<legend><?=__("Configuraci&oacute;n de sa.bros.us");?></legend>
 			<div>
 				<label for="admpass"><?=__("password para el control panel:");?></label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
 				<label for="admpass2"><?=__("reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
@@ -217,7 +217,7 @@ if ($mostrarform) {
 	</form>
 <?php
 } else {
-	echo "<p>".__("la instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
+	echo "<p>".__("La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
 }
 ?>
 	</div>

@@ -89,7 +89,7 @@ header("Content-type: text/html; charset=UTF-8");
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
-				<p><?=__("no es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
+				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
 
@@ -107,12 +107,12 @@ header("Content-type: text/html; charset=UTF-8");
 		$nenlaces=(isset($tagtag) ? contarenlaces($tagtag) : contarenlaces());
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 
-		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("hay <strong>%no_enlaces%</strong> enlaces. est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
+		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
 		$pag_text = str_replace("%desde%",($desde+1),$pag_text);
 		$pag_text = str_replace("%total%",(($desde+$Sabrosus->limit>=$nenlaces)?$nenlaces:$desde+$Sabrosus->limit),$pag_text);
 
 		if (!$nenlaces) {
-			$pag_text = "<strong>" . __("no hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a.") . "</strong>";
+			$pag_text = "<strong>" . __("No hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a.") . "</strong>";
 		}
 		echo "<div id=\"indicador_pagina\">".$pag_text."</div>\n";
 

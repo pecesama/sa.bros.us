@@ -26,7 +26,7 @@ if (esAdmin()) {
 					`limite_enlaces` = '".$_POST['limit']."',
 					`admin_email` = '".$_POST['email']."'";
 		if ($_POST[pass1]!=$_POST[pass2]){
-			echo __("las contrase&ntilde;as deben ser iguales");
+			echo __("Las contrase&ntilde;as deben ser iguales");
 			$errores += 1;
 		} else {
 			if ($_POST[pass1] != "") {
@@ -101,23 +101,23 @@ if (esAdmin()) {
 	<div id="contenido">
 		<? if (isset($_GET["ex"])) { ?>
 			<div id="divContenedor" class="exito">
-				<p><?=__("los cambios se han almacenado con &eacute;xito");?></p>
+				<p><?=__("Los cambios se han almacenado con &eacute;xito");?></p>
 			</div>
 		<? } ?>
 		<? if (isset($_GET["er"]) && $_GET["er"] == "1") { ?>
 			<div id="divContenedor" class="error">
-				<p><?=__("ha ocurrido un error al almacenar los cambios");?></p>
+				<p><?=__("Ha ocurrido un error al almacenar los cambios");?></p>
 			</div>
 		<? } ?>
 		<? if (isset($_GET["er"]) && $_GET["er"] == "2") { ?>
 			<div id="divContenedor" class="error">
-				<p><?=__("el archivo <code>include/config.ini</code> no tiene permisos de escritura");?></p>
+				<p><?=__("El archivo <code>include/config.ini</code> no tiene permisos de escritura");?></p>
 			</div>
 		<? } ?>
 		<div id="formulario">
 			<form name="config_form" id="config_form" action="opciones.php" method="post">
 				<fieldset>
-					<legend><?=__("configuraci&oacute;n de sa.bros.us");?></legend>
+					<legend><?=__("Configuraci&oacute;n de sa.bros.us");?></legend>
 					<label for="sname"><?=__("nombre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
 					<label for="stitle"><?=__("descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
 					<label for="surl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?></label><input type="text" name="surl" id="surl" value="<?=$Sabrosus->siteUrl?>" /><br />
@@ -143,7 +143,7 @@ if (esAdmin()) {
 						<label for="ping_sopa"><?=__("enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
 				</fieldset>
 				<fieldset>
-					<legend><?=__("configuraci&oacute;n de la apariencia");?></legend>
+					<legend><?=__("Configuraci&oacute;n de la apariencia");?></legend>
 
 					<label for="limit"><?=__("enlaces por p&aacute;gina:");?></label><input type="text" name="limit" id="limit" value="<?=$Sabrosus->limit?>" /><br />
 					<label for="color_tags"><?=__("color para la nube de etiquetas:");?></label>
@@ -170,9 +170,9 @@ if (esAdmin()) {
 					<label for="descripciones"><?=__("mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 				</fieldset>
 				<fieldset>
-					<legend><?=__("configuraci&oacute;n del administrador")?></legend>
+					<legend><?=__("Configuraci&oacute;n del administrador")?></legend>
 					<label for="pass1"><?=__("contrase&ntilde;a para el <strong>panel de control</strong>:");?></label><input type="password" name="pass1" id="pass1" value=""/><br />
-					<label for="pass2"><?=__("reescribe la contrase&ntilde;a:");?></label><input type="password" name="pass2" id="pass2" value=""/><br /><div class="ejemplo"><?=__("deje en blanco para no cambiar la contrase&ntilde;a");?></div>
+					<label for="pass2"><?=__("reescribe la contrase&ntilde;a:");?></label><input type="password" name="pass2" id="pass2" value=""/><br /><div class="ejemplo"><?=__("Deje en blanco para no cambiar la contrase&ntilde;a");?></div>
 					<label for="email"><?=__("e-mail:");?></label><input type="text" name="email" id="email" value="<?=$Sabrosus->emailAdmin?>"/><br />
 					<input class="submit" type="submit" name="accion" value="<?=__("actualizar");?>" />
 				</fieldset>

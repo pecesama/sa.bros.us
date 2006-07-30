@@ -69,12 +69,12 @@ if(isset($_POST['code_gen'])){
 		<div id="formulario">
 			<form name="frmBadge" id="frmBagde" action="<?=$_SERVER['PHP_SELF']?>" method="post">
 				<fieldset>
-					<legend><?=__("agrega las etiquetas de sa.bros.us a t&uacute; sitio.");?></legend>		
-					<p><?=__("si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande.");?></p>
+					<legend><?=__("Agrega las etiquetas de sa.bros.us a t&uacute; sitio.");?></legend>		
+					<p><?=__("Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande.");?></p>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("personalice la nube de etiquetas:");?></legend>
-					<p><?=__("seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:");?></p><br />
+					<legend><?=__("Personalice la nube de etiquetas:");?></legend>
+					<p><?=__("Seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:");?></p><br />
 					
 					<label for=""><?=__("tama&ntilde;o de fuente m&iacute;nimo:");?></label>
 					<input name="min_font" id="txtFMin" value="<?=$min_font?>" /><br />
@@ -94,7 +94,7 @@ if(isset($_POST['code_gen'])){
 					?>
 					
 					</select><br />	
-					<input type="submit" name="code_gen" value="<?=__("generar c&oacute;digo");?>"/>
+					<input class="submit" type="submit" name="code_gen" value="<?=__("generar c&oacute;digo");?>"/>
 
 				</fieldset>
 				
@@ -117,15 +117,15 @@ if(isset($_POST['code_gen'])){
 						?>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("copiar el c&oacute;digo fuente");?></legend>
-					<p><?=__("para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
+					<legend><?=__("Copiar el c&oacute;digo fuente");?></legend>
+					<p><?=__("Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
 					<textarea class="textarea_oscuro" rows="16" cols="90" name="txtBadge" id="txtBadge">
 <?=trim($code_base)?>
 					</textarea>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("hoja de estilo de mi sa.bros.us");?></legend>
-					<p><?=__("si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
+					<legend><?=__("Hoja de estilo de mi sa.bros.us");?></legend>
+					<p><?=__("Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
 					<br />
 					<div id="ejemploHtml" style="margin-left:30px;color:#888;">
 					&lt;div id=&quot;badgetags&quot;&gt;
