@@ -128,7 +128,7 @@ function etiquetasRelacionadas ($tags) {
 			if ($i++ > 4) {
 				continue;
 			}
-			echo chequearURLFriendly("<a title=\"".__("etiquetas relacionadas buscar")." '".htmlentities($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlentities($tag)."</a> ", "<a title=\"".__("etiquetas relacionadas buscar")." '".htmlentities($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlentities($tag)."</a> ");
+			echo chequearURLFriendly("<a title=\"".__("etiquetas relacionadas buscar")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ", "<a title=\"".__("etiquetas relacionadas buscar")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ");
 		}
 	echo "</div>";
 	}
