@@ -118,8 +118,8 @@ if (esAdmin()) {
 			<form name="config_form" id="config_form" action="opciones.php" method="post">
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n de sa.bros.us");?></legend>
-					<label for="sname"><?=__("nombre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
-					<label for="stitle"><?=__("descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
+					<label for="sname"><?=__("Nmbre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
+					<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
 					<label for="surl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?></label><input type="text" name="surl" id="surl" value="<?=$Sabrosus->siteUrl?>" /><br />
 					<label for="saburl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:");?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
 					<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:");?></label>
@@ -127,7 +127,7 @@ if (esAdmin()) {
 							<option value="1" <? if($Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("activado");?></option>
 							<option value="0" <? if(!$Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("desactivado");?></option>
 						</select><br />
-					<label for="selIdioma"><?=__("idioma:");?></label>
+					<label for="selIdioma"><?=__("Idioma:");?></label>
 						<select name="selIdioma">
 						<?
 						foreach ($idiomas as $idioma => $nombre) {
@@ -140,17 +140,17 @@ if (esAdmin()) {
 						?>
 						</select><br />
 						<? $ping = (($Sabrosus->ping=="1") ? "checked=\"true\"" : ""); ?>
-						<label for="ping_sopa"><?=__("enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
+						<label for="ping_sopa"><?=__("Eviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n de la apariencia");?></legend>
 
-					<label for="limit"><?=__("enlaces por p&aacute;gina:");?></label><input type="text" name="limit" id="limit" value="<?=$Sabrosus->limit?>" /><br />
-					<label for="color_tags"><?=__("color para la nube de etiquetas:");?></label>
+					<label for="limit"><?=__("Enlaces por p&aacute;gina:");?></label><input type="text" name="limit" id="limit" value="<?=$Sabrosus->limit?>" /><br />
+					<label for="color_tags"><?=__("Color para la nube de etiquetas:");?></label>
 					<select name="color_tags" id="color_tags">
 
 					<?
-					$colors = array(__("naranja"), __("azul"), __("verde"), __("rojo"), __("gris"), __("aleatorio"));
+					$colors = array(__("Naranja"), __("Azul"), __("Verde"), __("Rojo"), __("Gris"), __("Aleatorio"));
 
 					foreach ($colors as $i => $color) {
 						echo "<option value=\"{$i}\"";
@@ -165,15 +165,15 @@ if (esAdmin()) {
 					<? $multi = (($Sabrosus->multiCont=="1") ? "checked=\"true\"" : ""); ?>
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
-					<label for="contenidos_multi"><?=__("mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
-					<label for="compartir"><?=__("permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
-					<label for="descripciones"><?=__("mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
+					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
+					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
+					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n del administrador")?></legend>
-					<label for="pass1"><?=__("contrase&ntilde;a para el <strong>panel de control</strong>:");?></label><input type="password" name="pass1" id="pass1" value=""/><br />
-					<label for="pass2"><?=__("reescribe la contrase&ntilde;a:");?></label><input type="password" name="pass2" id="pass2" value=""/><br /><div class="ejemplo"><?=__("Deje en blanco para no cambiar la contrase&ntilde;a");?></div>
-					<label for="email"><?=__("e-mail:");?></label><input type="text" name="email" id="email" value="<?=$Sabrosus->emailAdmin?>"/><br />
+					<label for="pass1"><?=__("Contrase&ntilde;a para el <strong>panel de control</strong>:");?></label><input type="password" name="pass1" id="pass1" value=""/><br />
+					<label for="pass2"><?=__("Reescribe la contrase&ntilde;a:");?></label><input type="password" name="pass2" id="pass2" value=""/><br /><div class="ejemplo"><?=__("Deje en blanco para no cambiar la contrase&ntilde;a");?></div>
+					<label for="email"><?=__("E-mail:");?></label><input type="text" name="email" id="email" value="<?=$Sabrosus->emailAdmin?>"/><br />
 					<input class="submit" type="submit" name="accion" value="<?=__("actualizar");?>" />
 				</fieldset>
 			</form>

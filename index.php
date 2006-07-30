@@ -154,7 +154,7 @@ header("Content-type: text/html; charset=UTF-8");
 				echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 
 				if (esAdmin()) {
-					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("editar")." - ".htmlspecialchars($row['title'])."\">".__("editar")." &raquo;</a>";
+					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\">".__("Editar")." &raquo;</a>";
 				}
 				echo "</h3>\n";
 				if ($Sabrosus->multiCont=="1") {
