@@ -78,12 +78,12 @@ if (esAdmin())
 		<div id="formulario">
 			<form name="frmBadge" id="frmBagde" action="#" method="post">
 				<fieldset>
-					<legend><?=__("agrega los URLs de sa.bros.us a t&uacute; sitio.");?></legend>		
-					<p><?=__("si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us");?></p>
+					<legend><?=__("Agrega los URLs de sa.bros.us a t&uacute; sitio.");?></legend>		
+					<p><?=__("Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us");?></p>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("copiar el c&oacute;digo fuente");?></legend>
-					<p><?=__("para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
+					<legend><?=__("Copiar el c&oacute;digo fuente");?></legend>
+					<p><?=__("Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us.");?></p><br />
 					<textarea class="textarea_oscuro" rows="10" cols="90" name="txtBadge" id="txtBadge">
 <!-- Inicio de sa.bros.us Badge -->
 <style type="text/css">
@@ -96,16 +96,16 @@ if (esAdmin())
 					</textarea>
 				</fieldset>
 				<fieldset>
-					<legend><?=__("agregue sus preferencias al c&oacute;digo generado.");?></legend>
-					<p><?=__("seleccione sus preferencias para desplegar su sa.bros.us:");?></p><br />
+					<legend><?=__("Agregue sus preferencias al c&oacute;digo generado.");?></legend>
+					<p><?=__("Seleccione sus preferencias para desplegar su sa.bros.us:");?></p><br />
 					<label><?=__("n&uacute;mero de enlaces:");?></label><br />
 					<input name="txtCuantos" id="txtCuantos" onKeypress="if (event.keyCode < 45 || event.keyCode > 58) event.returnValue = false;" onKeyUp="generaBadge()" /><br />
 					<label><?=__("filtrar por etiqueta:");?></label><br />
 					<input name="txtTag" id="txtTag" onKeyUp="generaBadge()" />
 				</fieldset>
 				<fieldset>
-					<legend><?=__("hoja de estilo de mi sa.bros.us");?></legend>
-					<p><?=__("si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
+					<legend><?=__("Hoja de estilo de mi sa.bros.us");?></legend>
+					<p><?=__("Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge.");?></p>
 					<br />
 					<div id="ejemploHtml" style="margin-left:30px;color:#888;">
 					&lt;div id=&quot;mi_sabrosus&quot;&gt;<br />

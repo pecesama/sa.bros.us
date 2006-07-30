@@ -104,19 +104,19 @@ if (esAdmin())
 				</fieldset>
 			</form>
 		
-			<h3><?=__("instrucciones");?></h3>
+			<h3><?=__("Instrucciones");?></h3>
 			<ol>
 				<li>
-					<p><?=__("exportar tus marcadores de tu navegador a un archivo");?>:</p>
+					<p><?=__("Exportar tus marcadores de tu navegador a un archivo");?>:</p>
 					<ul>
-						<li><?=__("internet explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>");?></li>
-						<li><?=__("mozilla firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>");?></li>
-						<li><?=__("netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>");?></li>
+						<li><?=__("Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>");?></li>
+						<li><?=__("Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>");?></li>
+						<li><?=__("Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>");?></li>
 					</ul>
 				</li>
-				<li><?=__("clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. el tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB");?>.</li>
-				<li><?=__("seleccionar la privacidad por defecto asignada a los marcadores importados");?>.</li>
-				<li><?=__("clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo");?>.</li>
+				<li><?=__("Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB");?>.</li>
+				<li><?=__("Seleccionar la privacidad por defecto asignada a los marcadores importados");?>.</li>
+				<li><?=__("Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo");?>.</li>
 			</ol>
 		</div>
 	</div>

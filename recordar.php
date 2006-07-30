@@ -25,7 +25,7 @@
 				$sqlStr = "UPDATE ".$prefix."config SET `admin_pass`='".md5($nuevo_password)."' WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
 			
 				/* Armamos el email */
-				$msg = __("la nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />la nueva contraseña para ingresar al panel de sa.bros.us es:") . $nuevo_password;
+				$msg = __("La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contraseña para ingresar al panel de sa.bros.us es:") . $nuevo_password;
 				$asunto = $idioma[rec_email_asunto];
 				if(enviaMail($Sabrosus->emailAdmin, $asunto, $msg, $Sabrosus->emailAdmin))
 				{
@@ -75,25 +75,25 @@
 	<div id="contenido">
     	<? if (isset($_GET["ex"])) { ?>
 		<div id="divContenedor" class="exito">
-			<p><?=__("la nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones");?></p>
+			<p><?=__("La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones");?></p>
 		</div>
 		<? } ?>
 		<? if (isset($_GET["er"])) { ?>
 		<div id="divContenedor" class="error">
 			<? if ($_GET["er"] == "1") { ?>
-				<p><?=__("imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador");?></p>
+				<p><?=__("Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador");?></p>
 			<? } else if ($_GET["er"] == "2") { ?>
-				<p><?=__("el email ingresado en el formulario es distinto al que esta guardado en la base de datos");?></p>
+				<p><?=__("El email ingresado en el formulario es distinto al que esta guardado en la base de datos");?></p>
 			<? } else if ($_GET["er"] == "3") { ?>
-				<p><?=__("se produjo un error al intentar enviar el correo electr&oacute;nico. vuelva a intentarlo m&aacute;s tarde");?></p>
+				<p><?=__("Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde");?></p>
 			<? } ?>
 		</div>
 		<? } ?>
 		<div id="formulario">
 			<form name="form" id="form" action="recordar.php" method="post">
 				<fieldset>
-					<legend><?=__("nueva contrase&ntilde;a");?></legend>
-					<p><?=__("si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.");?></p>
+					<legend><?=__("Nueva contrase&ntilde;a");?></legend>
+					<p><?=__("Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.");?></p>
 					<label for="email"><?=__("email:");?></label><input type="text" name="email" id="email" /><br />
 					<input class="submit" type="submit" name="btnsubmit" value="<?=__("solicitar nueva");?>" />
 				</fieldset>

@@ -95,7 +95,7 @@ if (isset($_GET["id"])) {
 			<? } ?>
 
 			<fieldset>
-				<legend><?=(isset($_GET["id"]) ? __("edita los datos de tu enlace.") : __("escribe los datos de tu enlace."));?></legend>
+				<legend><?=(isset($_GET["id"]) ? __("Edita los datos de tu enlace.") : __("Escribe los datos de tu enlace."));?></legend>
 				<label for="title"><?=__("t&iacute;tulo:");?></label><br />
 				<input class="input_morado" type="text" name="title" value="<?=$titulo;?>" size="86" /><br />
 
@@ -109,7 +109,7 @@ if (isset($_GET["id"])) {
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
 				<p><?=__("escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
-					<legend><?=__("agregar etiquetas");?></legend>
+					<legend><?=__("Agregar etiquetas");?></legend>
 					<?php getTags("javascript"); ?>
 				</fieldset>
 
@@ -123,7 +123,7 @@ if (isset($_GET["id"])) {
 			</form>
 		</div>
 		<fieldset>
-			<legend><?=__("instalar el bookmarklet.");?></legend>
+			<legend><?=__("Instalar el bookmarklet.");?></legend>
 			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sa.bros.us");?>" class="bookmarklet"><?=__("agregar a sa.bros.us");?></a></label>
 		</fieldset>
 	</div>

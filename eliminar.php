@@ -47,8 +47,8 @@
 	<div id="contenido">
 		<div id="formulario">
 			<form method="get" action="eliminar.php">
-				<p><?=__("&iquest;realmente desea eliminar este enlace de su sa.bros.us?");?></p>
-				<p><?=__("esta acci&oacute;n no se puede deshacer!");?></p>
+				<p><?=__("&iquest;Realmente desea eliminar este enlace de su sa.bros.us?");?></p>
+				<p><?=__("Esta acci&oacute;n no se puede deshacer!");?></p>
 				<input type="hidden" class="no_style" name="confirm" value="0" />
 				<input type="hidden" class="no_style" name="id" value="<?=$_GET['id'];?>" />
 				<input class="submit" type="submit" name="accion" value="<?=__("eliminar");?>" />
