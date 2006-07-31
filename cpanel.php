@@ -109,8 +109,7 @@
 ?>
 		<table cellspacing="0">
 			<thead>
-				<th><?=__("Control de contenidos");?></th>
-				<th colspan="3">&nbsp;</th>
+				<th colspan="4"><?=__("Control de contenidos");?></th>
 			</thead>
 			
 <?			while ($row = mysql_fetch_array($result))
