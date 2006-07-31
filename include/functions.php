@@ -36,10 +36,18 @@ function saveIni($fileName, $configOpts) {
 
 function contarenlaces($tag="") {
 	global $prefix;
-	if ($tag){
-		$recordCount = "select count(*) from ".$prefix."sabrosus where tags LIKE '% $tag %' OR tags LIKE '$tag %' OR tags LIKE '% $tag' OR tags = '$tag'";
+	if(esAdmin()){
+		if ($tag){
+			$recordCount = "select count(*) from ".$prefix."sabrosus where (tags LIKE '% $tag %' OR tags LIKE '$tag %' OR tags LIKE '% $tag' OR tags = '$tag')";
+		} else {
+			$recordCount = "select count(*) from ".$prefix."sabrosus";
+		}
 	} else {
-		$recordCount = "select count(*) from ".$prefix."sabrosus";
+		if ($tag){
+			$recordCount = "select count(*) from ".$prefix."sabrosus where (tags LIKE '% $tag %' OR tags LIKE '$tag %' OR tags LIKE '% $tag' OR tags = '$tag') AND (tags NOT LIKE '%:sab:privado%')";
+		} else {
+			$recordCount = "select count(*) from ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%')";
+		}
 	}
 	$totalRowsResult = mysql_query($recordCount);
 	$totalRows = mysql_fetch_row($totalRowsResult);
@@ -92,8 +100,12 @@ function etiquetasRelacionadas ($tags) {
 		$query .= "tags REGEXP '[[:<:]]".$tag."[[:>:]]'";
 	}
 	unset($i);
-	$result = mysql_query("select tags from ".$prefix."sabrosus where $query");
-
+	if(esAdmin())
+	{
+		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE $query");
+	} else {
+		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE ($query) AND tags NOT LIKE '%:sab:privado%'");
+	}
 	# buscar en todas las entradas para encontrar las etiquetas que no sean la que tenemos.
 	# se crea un erreglo con la etiqueta como llave y el numero de "hits" como valor.
 	# despues hacemos un arsort() con el que se hara un ordenamiento inverso basado en los valores (hits),
@@ -122,6 +134,9 @@ function etiquetasRelacionadas ($tags) {
 			# Asegurarse que no sea la misma etiqueta
 			$tag_match = str_replace("+", "\+", urlencode($tag));
 			if (preg_match("/$tag_match/i", $tags_orig)) {
+				continue;
+			}
+			if($tag == ":sab:privado"){
 				continue;
 			}
 			# solo mostramos 5.
