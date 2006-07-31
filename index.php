@@ -199,7 +199,7 @@ header("Content-type: text/html; charset=UTF-8");
 					echo "\t\t\t<p>".$row['descripcion']."</p>\n";
 				}
 				echo "\t\t\t<p class=\"pie\">";
-				if ($row['tags']) {
+				if ($tags) {
 					echo __("en")." <span class=\"link_tags\">".$tags."</span> ";
 				}
 				echo __("el")." ".date("d.m.y", strtotime($row["fecha"]))."</p>\n";
