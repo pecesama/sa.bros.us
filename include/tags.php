@@ -18,7 +18,12 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 
 	$kw = array();
 	$keys = array();
-	$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags <> ''");
+	if(esAdmin())
+	{
+		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags != ''");
+	} else {
+		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags NOT LIKE '%:sab:privado%'");
+	}
 	while ($row = mysql_fetch_array($result)){
 		/* Solucionado si hoy 2 espacios entre tags */
 		$art_keys = str_replace("  "," ",$row['tags']);
