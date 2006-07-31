@@ -105,6 +105,10 @@ if (isset($_GET["id"])) {
 				<label for="descripcion"><?=__("descripci&oacute;n:");?></label>
 				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><? echo $descripcion; ?></textarea><br />
 
+				<label for="privado"><?=__("enlace privado:");?></label>
+				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
+				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
+
 				<label for="etiquetas"><?=__("etiquetas:");?></label><br />
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
 				<p><?=__("escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
@@ -113,11 +117,7 @@ if (isset($_GET["id"])) {
 					<?php getTags("javascript"); ?>
 				</fieldset>
 
-				<label for="privado"><?=__("enlace privado:");?></label>
-				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
-				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
-
-				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("editar") : __("agregar")); ?>" /><br />
+				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("editar") : __("agregar")); ?>" /><br /> <?=(isset($_GET['id']) ? "<a href=\"".$Sabrosus->sabrUrl."/eliminar.php?id=".$row['id_enlace']."\" title=\" ".__("Eliminar enlace")."\">".__("Eliminar enlace")." &raquo;</a>" : ""); ?><br />
 
 			</fieldset>
 			</form>
