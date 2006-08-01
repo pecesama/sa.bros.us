@@ -55,7 +55,7 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 		$i = 0;
 
 		if ($output=="html") {
-			echo "<ol id=\"cloud\">";
+			echo "\t<ol id=\"cloud\">\n";
 		} else if ($output=="javascript") {
 			echo "<div id=\"reltags\">";
 		} else if ($output=="badge") {
@@ -106,7 +106,7 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 			if ($key!=":sab:privado") {
 				$size = (($kw[$key] - $min)*$step) + $min_font;
 				if ($output=="html") {
-					echo "<li><a title=\"".$kw[$key]." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\">".htmlspecialchars($key)."</a></li> ";
+					echo "\t\t\t<li><a title=\"".$kw[$key]." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\">".htmlspecialchars($key)."</a></li>\n ";
 				} else if ($output=="javascript") {
 					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".$key."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".urlencode($key)."'\">".htmlspecialchars($key)."</a> ";
 				} else if ($output=="badge") {
@@ -115,7 +115,7 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 			}
 		}
 		if ($output=="html") {
-			echo "</ol>";
+			echo "\t\t</ol>\n";
 		} else if ($output=="javascript") {
 			echo "</div>";
 		} else if ($output=="badge") {
