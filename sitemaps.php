@@ -50,10 +50,12 @@
 	
 	$kw = array();
 	$keys = array();
-	$result = mysql_query("select tags from ".$prefix."sabrosus where tags <> ''");
+	$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags NOT LIKE '%:sab:privado%'");
 	while ($row = mysql_fetch_array($result))
 	{
-		$art_keys = explode(" ",$row['tags']);
+		/* Solucionado si hoy 2 espacios entre tags */
+		$art_keys = str_replace("  "," ",$row['tags']);
+		$art_keys = explode(" ",trim($art_keys));
 		foreach($art_keys as $key)
 		{
 			if(isset($kw[$key]))
@@ -73,7 +75,7 @@
 		sort($keys);
 		foreach($keys as $key)
 		{
-			$sql_tag = "SELECT fecha FROM ".$prefix."sabrosus WHERE tags LIKE '% ".$key."%' OR tags LIKE '%".$key." %' ORDER BY fecha DESC LIMIT 1";
+			$sql_tag = "SELECT fecha FROM ".$prefix."sabrosus WHERE (tags LIKE '% ".$key."%' OR tags LIKE '%".$key." %') AND (tags NOT LIKE '%:sab:privado%')ORDER BY fecha DESC LIMIT 1";
 			$result_tag = mysql_query($sql_tag);
 			$fetch_tag = mysql_fetch_array($result_tag);
 			
@@ -84,7 +86,7 @@
 			
 			echo "	<!-- Debug: Tag: ".$key.". Repeticion: ".$kw[$key]." / ".$total_tags." -->\n";
 			echo "	<url>\n";
-			echo "		<loc>".$Sabrosus->sabrUrl."/".chequearURLFriendly('tag/','index.php?tag=').strtolower($key)."</loc>\n";
+			echo "		<loc>".$Sabrosus->sabrUrl."/".chequearURLFriendly('tag/','index.php?tag=').urlencode($key)."</loc>\n";
 			echo "		<lastmod>".cambiar_fecha($fetch_tag[fecha])."</lastmod>\n";
 			echo "		<changefreq>daily</changefreq>\n";
 			echo "		<priority>".$prioridad."</priority>\n";
