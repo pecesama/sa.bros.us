@@ -26,7 +26,7 @@ if (esAdmin()) {
 					`limite_enlaces` = '".$_POST['limit']."',
 					`admin_email` = '".$_POST['email']."'";
 		if ($_POST[pass1]!=$_POST[pass2]){
-			echo __("Las contrase&ntilde;as deben ser iguales");
+			die __("Las contrase&ntilde;as deben ser iguales");
 			$errores += 1;
 		} else {
 			if ($_POST[pass1] != "") {
@@ -124,8 +124,8 @@ if (esAdmin()) {
 					<label for="saburl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:");?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
 					<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:");?></label>
 						<select name="useFriendlyUrl" id="useFriendlyUrl">
-							<option value="1" <? if($Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("activado");?></option>
-							<option value="0" <? if(!$Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("desactivado");?></option>
+							<option value="1" <? if($Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("Activado");?></option>
+							<option value="0" <? if(!$Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("Desactivado");?></option>
 						</select><br />
 					<label for="selIdioma"><?=__("Idioma:");?></label>
 						<select name="selIdioma">
