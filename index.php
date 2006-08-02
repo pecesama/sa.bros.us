@@ -142,12 +142,6 @@ header("Content-type: text/html; charset=UTF-8");
 				} else {
 					echo "\n\t\t<div class=\"enlace\">\n";
 				}
-				if ($Sabrosus->multiCont=="1") {
-					/* Imagenes de Flickr */
-					if (esFlickrPhoto($row["enlace"])) {
-						echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
-					}
-				}
 
 				echo "\t\t\t<h3>";
 				echo ($Sabrosus->compartir=="1")? '<input type="checkbox" name="links_sel[]" value="'.$row["id_enlace"].'" />' : '';
@@ -158,6 +152,11 @@ header("Content-type: text/html; charset=UTF-8");
 				}
 				echo "</h3>\n";
 				if ($Sabrosus->multiCont=="1") {
+					/* Imagenes de Flickr */
+					if (esFlickrPhoto($row["enlace"])) {
+						echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
+					}
+					
 					/* Reproductor MP3 */
 					if (endsWith($row["enlace"], ".mp3"))
 					{
