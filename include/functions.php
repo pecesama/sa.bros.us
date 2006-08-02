@@ -67,7 +67,6 @@ function chequearURLFriendly ($friendlyurl, $nofriendlyurl) {
 // Verificamos si el usuario es Admin
 function esAdmin() {
 	global $Sabrosus;
-	session_start();
 	if (isset($_COOKIE["pass_sabrosus_cookie"]) && $_COOKIE["pass_sabrosus_cookie"] && $_COOKIE["pass_sabrosus_cookie"]==$Sabrosus->adminPass) {
 		$_SESSION["sabrosus"]["usuario"]="Si";
 	}
