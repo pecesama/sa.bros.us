@@ -26,7 +26,7 @@ if (esAdmin()) {
 					`limite_enlaces` = '".$_POST['limit']."',
 					`admin_email` = '".$_POST['email']."'";
 		if ($_POST[pass1]!=$_POST[pass2]){
-			die __("Las contrase&ntilde;as deben ser iguales");
+			echo __("Las contrase&ntilde;as deben ser iguales");
 			$errores += 1;
 		} else {
 			if ($_POST[pass1] != "") {
