@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
+  sabrosus monousuario versin 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -121,91 +121,93 @@ header("Content-type: text/html; charset=UTF-8");
 		etiquetasRelacionadas($tagtag);
 
 		$result = mysql_query($sqlStr);
-		while ($row = mysql_fetch_array($result)) {
-			$privado=false;
-			$etiquetas = explode(" ",$row["tags"]);
-			$tags="";
-			foreach ($etiquetas as $etiqueta) {
-				if ($etiqueta==":sab:privado") {
-					$etiqueta="";
-					$privado=true;
+		if(mysql_num_rows($sqlStr))
+		{
+			while ($row = mysql_fetch_array($result)) {
+				$privado=false;
+				$etiquetas = explode(" ",$row["tags"]);
+				$tags="";
+				foreach ($etiquetas as $etiqueta) {
+					if ($etiqueta==":sab:privado") {
+						$etiqueta="";
+						$privado=true;
+					}
+					if ($etiqueta!=="") {
+						$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".urlencode($etiqueta),$Sabrosus->sabrUrl."/index.php?tag=".urlencode($etiqueta))."\">".htmlspecialchars($etiqueta)."</a> ";
+					}
 				}
-				if ($etiqueta!=="") {
-					$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".urlencode($etiqueta),$Sabrosus->sabrUrl."/index.php?tag=".urlencode($etiqueta))."\">".htmlspecialchars($etiqueta)."</a> ";
-				}
-			}
 
-			if (!esAdmin() && $privado) { //Aqui no imprime nada por ser privado
-			} else {
-				if($privado){
-					echo "\n\t\t<div class=\"enlace privado\">\n";
+				if (!esAdmin() && $privado) { //Aqui no imprime nada por ser privado
 				} else {
-					echo "\n\t\t<div class=\"enlace\">\n";
-				}
+					if($privado){
+						echo "\n\t\t<div class=\"enlace privado\">\n";
+					} else {
+						echo "\n\t\t<div class=\"enlace\">\n";
+					}
 
-				echo "\t\t\t<h3>";
-				echo ($Sabrosus->compartir=="1")? '<input type="checkbox" name="links_sel[]" value="'.$row["id_enlace"].'" />' : '';
-				echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
+					echo "\t\t\t<h3>";
+					echo ($Sabrosus->compartir=="1")? '<input type="checkbox" name="links_sel[]" value="'.$row["id_enlace"].'" />' : '';
+					echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 
-				if (esAdmin()) {
-					echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\">".__("Editar")." &raquo;</a>";
+					if (esAdmin()) {
+						echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\">".__("Editar")." &raquo;</a>";
+					}
+					echo "</h3>\n";
+					if ($Sabrosus->multiCont=="1") {
+						/* Imagenes de Flickr */
+						if (esFlickrPhoto($row["enlace"])) {
+							echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
+						}
+						
+						/* Reproductor MP3 */
+						if (endsWith($row["enlace"], ".mp3"))
+						{
+							$playerUrl = $Sabrosus->sabrUrl."/include/player.swf?soundFile=".$row["enlace"];
+							echo "\t\t\t<div class=\"enlacemp3\"><object type=\"application/x-shockwave-flash\" data=\"" . $playerUrl . "\" width=\"290\" height=\"24\"><param name=\"movie\" value=\"" . $playerUrl . "\" /><param name=\"quality\" value=\"high\" /><param name=\"menu\" value=\"false\" /><param name=\"wmode\" value=\"transparent\" /></object></div>\n";
+						}
+						/* Videos de YouTube */
+						if (esYoutubeVideo($row["enlace"])) {
+							$id_video = getYoutubeVideoUrl($row["enlace"]);
+							echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:330px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
+						}
+						/* Videos de Google */
+						if (esGoogleVideo($row["enlace"])) {
+							$html = trim(file_get_contents($row["enlace"]));
+							$inicio = strpos($html, "var flashObj =\n            \"");
+							$fin = strpos($html, "\";\n          flashObj = flashObj.replace");
+							$inicio = $inicio + strlen("var flashObj =\n            \"");
+							$codigo_video = substr($html, $inicio, $fin - $inicio);
+							$codigo_video = str_replace("\u003d", "=", $codigo_video);
+							$codigo_video = str_replace("\\\"", "\"", $codigo_video);
+							$codigo_video = str_replace("width:100%; height:100%;", "width:400px; height:326px;", $codigo_video);
+							$codigo_video = str_replace("/googleplayer.swf", "http://video.google.com/googleplayer.swf", $codigo_video);
+							$codigo_video = str_replace("FlashVars=\"playerMode=normal&playerId=gvuniqueid&clickUrl=\"", "FlashVars=\"playerMode=embedded\"", $codigo_video);
+							$codigo_video = str_replace("embed", "object", $codigo_video);
+							$codigo_video = str_replace("src=", "data=", $codigo_video);
+							$codigo_video = str_replace("&", "&amp;", $codigo_video);
+							$codigo_video = str_replace("allowScriptAccess=\"sameDomain\" quality=\"best\" bgcolor=\"#ffffff\" scale=\"noScale\" wmode=\"window\" salign=\"TL\"  FlashVars=\"playerMode=objectded\"", "", $codigo_video);
+							$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);
+							$codigo_video = str_replace("&amp;autoPlay=true", "", $codigo_video);
+							echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";
+						}
+						/* Videos de Vimeo */
+						if (esVimeoVideo($row["enlace"])) {
+							$id_video = getVimeoVideoUrl($row["enlace"]);
+							echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:300px\" data=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\"><param name=\"movie\" value=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\" /></object></div>\n";
+						}
+					}
+					if ($row['descripcion']) {
+						echo "\t\t\t<p>".$row['descripcion']."</p>\n";
+					}
+					echo "\t\t\t<p class=\"pie\">";
+					if ($tags) {
+						echo __("en")." <span class=\"link_tags\">".$tags."</span> ";
+					}
+					echo __("el")." ".date("d.m.y", strtotime($row["fecha"]))."</p>\n";
+					echo "\t\t</div>\n";
 				}
-				echo "</h3>\n";
-				if ($Sabrosus->multiCont=="1") {
-					/* Imagenes de Flickr */
-					if (esFlickrPhoto($row["enlace"])) {
-						echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
-					}
-					
-					/* Reproductor MP3 */
-					if (endsWith($row["enlace"], ".mp3"))
-					{
-						$playerUrl = $Sabrosus->sabrUrl."/include/player.swf?soundFile=".$row["enlace"];
-						echo "\t\t\t<div class=\"enlacemp3\"><object type=\"application/x-shockwave-flash\" data=\"" . $playerUrl . "\" width=\"290\" height=\"24\"><param name=\"movie\" value=\"" . $playerUrl . "\" /><param name=\"quality\" value=\"high\" /><param name=\"menu\" value=\"false\" /><param name=\"wmode\" value=\"transparent\" /></object></div>\n";
-					}
-					/* Videos de YouTube */
-					if (esYoutubeVideo($row["enlace"])) {
-						$id_video = getYoutubeVideoUrl($row["enlace"]);
-						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:330px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
-					}
-					/* Videos de Google */
-					if (esGoogleVideo($row["enlace"])) {
-						$html = trim(file_get_contents($row["enlace"]));
-						$inicio = strpos($html, "var flashObj =\n            \"");
-						$fin = strpos($html, "\";\n          flashObj = flashObj.replace");
-						$inicio = $inicio + strlen("var flashObj =\n            \"");
-						$codigo_video = substr($html, $inicio, $fin - $inicio);
-						$codigo_video = str_replace("\u003d", "=", $codigo_video);
-						$codigo_video = str_replace("\\\"", "\"", $codigo_video);
-						$codigo_video = str_replace("width:100%; height:100%;", "width:400px; height:326px;", $codigo_video);
-						$codigo_video = str_replace("/googleplayer.swf", "http://video.google.com/googleplayer.swf", $codigo_video);
-						$codigo_video = str_replace("FlashVars=\"playerMode=normal&playerId=gvuniqueid&clickUrl=\"", "FlashVars=\"playerMode=embedded\"", $codigo_video);
-						$codigo_video = str_replace("embed", "object", $codigo_video);
-						$codigo_video = str_replace("src=", "data=", $codigo_video);
-						$codigo_video = str_replace("&", "&amp;", $codigo_video);
-						$codigo_video = str_replace("allowScriptAccess=\"sameDomain\" quality=\"best\" bgcolor=\"#ffffff\" scale=\"noScale\" wmode=\"window\" salign=\"TL\"  FlashVars=\"playerMode=objectded\"", "", $codigo_video);
-						$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);
-						$codigo_video = str_replace("&amp;autoPlay=true", "", $codigo_video);
-						echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";
-					}
-					/* Videos de Vimeo */
-					if (esVimeoVideo($row["enlace"])) {
-						$id_video = getVimeoVideoUrl($row["enlace"]);
-						echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:300px\" data=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\"><param name=\"movie\" value=\"http://www.vimeo.com/moogaloop.swf?clip_id=".$id_video."\" /></object></div>\n";
-					}
-				}
-				if ($row['descripcion']) {
-					echo "\t\t\t<p>".$row['descripcion']."</p>\n";
-				}
-				echo "\t\t\t<p class=\"pie\">";
-				if ($tags) {
-					echo __("en")." <span class=\"link_tags\">".$tags."</span> ";
-				}
-				echo __("el")." ".date("d.m.y", strtotime($row["fecha"]))."</p>\n";
-				echo "\t\t</div>\n";
 			}
 		}
-
 		echo ($Sabrosus->compartir=="1") ? "<input type=\"submit\" name=\"enviar_links\" value=\"".__("exportar a mi sa.bros.us")."\" id=\"enviar_links\"/>
 		</form>" : '';
 		?>
@@ -220,7 +222,7 @@ header("Content-type: text/html; charset=UTF-8");
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?> <a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
 				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sa.bros.us");?>" title="<?=__("RSS de sa.bros.us");?>" /></a></p>
 		<? } else { ?>
