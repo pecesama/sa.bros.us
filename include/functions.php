@@ -50,7 +50,7 @@ function contarenlaces($tag="") {
 		}
 	}
 	$totalRowsResult = mysql_query($recordCount);
-	if (!$result) {
+	if (!$totalRowsResult) {
 		echo __("Error al ejecutar la consulta en la DB");
 	} else {
 		if(mysql_num_rows($totalRowsResult)>0) {
@@ -113,22 +113,26 @@ function etiquetasRelacionadas ($tags) {
 	} else {
 		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE ($query) AND tags NOT LIKE '%:sab:privado%'");
 	}
-	# buscar en todas las entradas para encontrar las etiquetas que no sean la que tenemos.
-	# se crea un erreglo con la etiqueta como llave y el numero de "hits" como valor.
-	# despues hacemos un arsort() con el que se hara un ordenamiento inverso basado en los valores (hits),
-	# lo cual nos dara las etiquetas relacionadas mas populares/comunes primero.
-	while ($t = mysql_fetch_array($result)) {
-		$tags = explode(" ", $t['tags']);
-		foreach ($tags as $tag) {
-			if ($tag == $tags_orig) {
-				continue;
-			}
-			if (!empty($tag)) {
-				$tag = strtolower($tag);
-				if (isset($pop[$tag])) {
-					$pop[$tag]++;
-				} else {
-					$pop[$tag] = 1;
+	if (!$result) {
+		echo __("Error al ejecutar la consulta en la DB");
+	} else {
+		# buscar en todas las entradas para encontrar las etiquetas que no sean la que tenemos.
+		# se crea un erreglo con la etiqueta como llave y el numero de "hits" como valor.
+		# despues hacemos un arsort() con el que se hara un ordenamiento inverso basado en los valores (hits),
+		# lo cual nos dara las etiquetas relacionadas mas populares/comunes primero.
+		while ($t = mysql_fetch_array($result)) {
+			$tags = explode(" ", $t['tags']);
+			foreach ($tags as $tag) {
+				if ($tag == $tags_orig) {
+					continue;
+				}
+				if (!empty($tag)) {
+					$tag = strtolower($tag);
+					if (isset($pop[$tag])) {
+						$pop[$tag]++;
+					} else {
+						$pop[$tag] = 1;
+					}
 				}
 			}
 		}
@@ -152,7 +156,7 @@ function etiquetasRelacionadas ($tags) {
 			}
 			echo chequearURLFriendly("<a title=\"".__("Buscar enlaces con")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ", "<a title=\"".__("Buscar enlaces con")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ");
 		}
-	echo "</div>";
+		echo "</div>";
 	}
 }
 
