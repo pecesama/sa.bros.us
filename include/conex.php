@@ -145,9 +145,20 @@ class clsSabrosus
 
 	function clsSabrosus()
 	{
-		global $link,$prefix,$locale;
+		global $link,$prefix,$locale,$feeds;
 		$sql = "SELECT * FROM ".$prefix."config LIMIT 1";
 		$result = @mysql_query($sql);
+		if(!$result)
+		{
+			if(isset($feeds))
+			{
+				header("HTTP/1.0 503 Service Unavailable"); 
+				header("Retry-After: 60"); 
+				exit();
+			} else {
+				MostrarErrorConexion("<p>Imposible obtener los datos de configuraci&oacute;n de sa.bros.us</p>");
+			}
+		}
 		$row = @mysql_fetch_array($result);
 		$this->siteName       = $row['site_name'];
 		$this->siteTitle      = $row['site_title'];
