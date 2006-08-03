@@ -18,24 +18,27 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 
 	$kw = array();
 	$keys = array();
-	if(esAdmin())
-	{
+	if(esAdmin()) {
 		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags != ''");
 	} else {
 		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE tags NOT LIKE '%:sab:privado%'");
 	}
-	if(mysql_num_rows($result)>0)
-	{
-		while ($row = mysql_fetch_array($result)){
-			/* Solucionado si hoy 2 espacios entre tags */
-			$art_keys = str_replace("  "," ",$row['tags']);
-			$art_keys = explode(" ",trim($art_keys));
-			foreach($art_keys as $key){
-				if(isset($kw[$key])){
-					$kw[$key]++;
-				}else{
-					$kw[$key] = 1;
-					$keys[count($keys)] = $key;
+	if (!$result) {
+		echo __("Error al ejecutar la consulta en la DB");
+	} else {
+		if(mysql_num_rows($result)>0)
+		{
+			while ($row = mysql_fetch_array($result)){
+				/* Solucionado si hoy 2 espacios entre tags */
+				$art_keys = str_replace("  "," ",$row['tags']);
+				$art_keys = explode(" ",trim($art_keys));
+				foreach($art_keys as $key){
+					if(isset($kw[$key])){
+						$kw[$key]++;
+					}else{
+						$kw[$key] = 1;
+						$keys[count($keys)] = $key;
+					}
 				}
 			}
 		}
