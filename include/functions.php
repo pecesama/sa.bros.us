@@ -50,12 +50,16 @@ function contarenlaces($tag="") {
 		}
 	}
 	$totalRowsResult = mysql_query($recordCount);
-	if(mysql_num_rows($totalRowsResult)>0) {
-		$totalRows = mysql_fetch_row($totalRowsResult);
-		$rows = $totalRows[0];
-		return $rows;
+	if (!$result) {
+		echo __("Error al ejecutar la consulta en la DB");
 	} else {
-		return 0;
+		if(mysql_num_rows($totalRowsResult)>0) {
+			$totalRows = mysql_fetch_row($totalRowsResult);
+			$rows = $totalRows[0];
+			return $rows;
+		} else {
+			return 0;
+		}
 	}
 }
 
