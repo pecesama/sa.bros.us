@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
+  sabrosus monousuario versin 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -63,7 +63,7 @@
 					?>
 					<p><?=__("la actualizaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>");?></p>
 				<?
-				} else { /* No se realizó la codificación y no viene por POST -> Muestro el form para convertir */
+				} else { /* No se realiz la codificacin y no viene por POST -> Muestro el form para convertir */
 				?>
 					<p><?=__("si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo.");?></p>
 						<form method="post" action="update.php" id="config_form">
@@ -71,14 +71,14 @@
 						</form>
 				<?
 				}
-			} else { /* Ya se realizó una vez la codificación -> Muestro un mensaje y nada mas */
+			} else { /* Ya se realiz una vez la codificacin -> Muestro un mensaje y nada mas */
 			?><p><?=__("<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla.");?></p>
 			<?
 			}
 			?>
 		</div>
 		<div id="pie">
-			<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+			<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 		</div>
 	</div>
 	</body>
@@ -130,11 +130,11 @@
 				}
 			}
 		} else {
-			//Form de Bienvenida a la Instalación.
-			//No es necesario que llene ningun dato escencial para poder realizar la instalción.
-			//Aunque podría ser un form parecido a la Instalación, solo que los datos, aparezcan completados automaticamente y solo tenga que apretar el boton "Actualizar" y listo.
+			//Form de Bienvenida a la Instalacin.
+			//No es necesario que llene ningun dato escencial para poder realizar la instalcin.
+			//Aunque podra ser un form parecido a la Instalacin, solo que los datos, aparezcan completados automaticamente y solo tenga que apretar el boton "Actualizar" y listo.
 
-			//Antes de mostrar el form, se debería controlar que el archivo config tenga permiso de escritura.
+			//Antes de mostrar el form, se debera controlar que el archivo config tenga permiso de escritura.
 			?>
 			<form method="post" action="update.php" id="config_form">
 				<fieldset>
@@ -155,7 +155,7 @@
 	?>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

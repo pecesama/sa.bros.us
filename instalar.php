@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
+  sabrosus monousuario versin 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
@@ -222,7 +222,7 @@ if ($mostrarform) {
 ?>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?> <a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?> <a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>

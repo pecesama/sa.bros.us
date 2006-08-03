@@ -50,9 +50,13 @@ function contarenlaces($tag="") {
 		}
 	}
 	$totalRowsResult = mysql_query($recordCount);
-	$totalRows = mysql_fetch_row($totalRowsResult);
-	$rows = $totalRows[0];
-	return $rows;
+	if(mysql_num_rows($totalRowsResult)>0) {
+		$totalRows = mysql_fetch_row($totalRowsResult);
+		$rows = $totalRows[0];
+		return $rows;
+	} else {
+		return 0;
+	}
 }
 
 function chequearURLFriendly ($friendlyurl, $nofriendlyurl) {

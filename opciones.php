@@ -180,7 +180,7 @@ if (esAdmin()) {
 		</div>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="https://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
 	</div>
 </div>
 </body>
