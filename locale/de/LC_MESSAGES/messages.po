@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-29 15:58-0500\n"
+"POT-Creation-Date: 2006-08-03 22:37-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alexander Drechsel <adrechsel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, fuzzy
+msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
+msgstr "bitte gib dein passwort ein"
+
+#, fuzzy
+msgid "&iquest;Realmente desea eliminar este enlace de su sa.bros.us?"
+msgstr "willst du diesen link wirklich l&ouml;schen?"
+
+#, fuzzy
 msgid "&iquest;olvidaste tu contrase&ntilde;a?"
 msgstr "bitte gib dein passwort ein"
 
 #, fuzzy
 msgid "&iquest;qu&eacute; es sa.bros.us?"
 msgstr "was ist sa.bros.us?"
-
-#, fuzzy
-msgid "&iquest;realmente desea eliminar este enlace de su sa.bros.us?"
-msgstr "willst du diesen link wirklich l&ouml;schen?"
 
 msgid "(sin <q>/</q> al final)"
 msgstr ""
@@ -42,16 +46,44 @@ msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
 msgstr "haupt-<abbr title=\"Uniform Resource Locator\">url</abbr> deiner website:"
 
 #, fuzzy
+msgid "<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
+msgstr "<strong>warnung</strong>: die f&uuml;r die aktualisierung notwendigen informationen konnten nicht gelesen werden. bitte &uuml;berpr&uuml;fe, ob die datei <code>include/config.php</code> nicht versehentlich ersetzt wurde und dass sie nicht daten einer vorhergehenden version enth&auml;lt."
+
+#, fuzzy
 msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
 msgstr "<strong>warnung</strong>: die aktualisierung wurde schon durchgef&uuml;hrt. sie muss nicht erneut durchgef&uuml;hrt werden."
 
 #, fuzzy
-msgid "<strong>atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
-msgstr "<strong>warnung</strong>: die f&uuml;r die aktualisierung notwendigen informationen konnten nicht gelesen werden. bitte &uuml;berpr&uuml;fe, ob die datei <code>include/config.php</code> nicht versehentlich ersetzt wurde und dass sie nicht daten einer vorhergehenden version enth&auml;lt."
-
-#, fuzzy
 msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
 msgstr "<strong>fehler</strong>: die datei <code>include/config.php</code> hat nicht die erforderlichen schreibrechte. bitte &auml;ndere sie und f&uuml;hre die aktualisierung erneut durch."
+
+#, fuzzy
+msgid "Activado"
+msgstr "aktiviert"
+
+#, fuzzy
+msgid "Actualizaci&oacute;n de sabrosus"
+msgstr "sa.bros.us-aktualisierung"
+
+#, fuzzy
+msgid "Agrega las etiquetas de sa.bros.us a t&uacute; sitio."
+msgstr "meine tags bei sa.bros.us"
+
+#, fuzzy
+msgid "Agrega los URLs de sa.bros.us a t&uacute; sitio."
+msgstr "meine tags bei sa.bros.us"
+
+#, fuzzy
+msgid "Agregar etiquetas"
+msgstr "vergebene tags (per klick hinzuf&uuml;gen)"
+
+#, fuzzy
+msgid "Agregue sus preferencias al c&oacute;digo generado."
+msgstr "code anpassen"
+
+#, fuzzy
+msgid "Aleatorio"
+msgstr "zuf&auml;llig"
 
 msgid "Anterior"
 msgstr "zur&uuml;ck"
@@ -59,20 +91,241 @@ msgstr "zur&uuml;ck"
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
 msgstr "f&uuml;ge einfach den folgenden link zu deinen lesezeichen hinzu:"
 
+#, fuzzy
+msgid "Azul"
+msgstr "blau"
+
+msgid "Buscar enlaces con"
+msgstr ""
+
+#, fuzzy
+msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
+msgstr "klicke auf <kbd>durchsuchen</kbd>, um die gespeicherte lesezeichen-datei auf deinem computer zu finden. diese darf h&ouml;chstens 1 mb gro&szlig; sein."
+
+#, fuzzy
+msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
+msgstr "klicke auf <kbd>importieren</kbd> und los geht's. der import kann ein paar augenblicke dauern."
+
+#, fuzzy
+msgid "Color para la nube de etiquetas:"
+msgstr "farbe der tag-wolke:"
+
+#, fuzzy
+msgid "Configuraci&oacute;n de la apariencia"
+msgstr "konfiguration und aussehen"
+
+#, fuzzy
+msgid "Configuraci&oacute;n de la base de datos"
+msgstr "konfiguration und aussehen"
+
+#, fuzzy
+msgid "Configuraci&oacute;n de sa.bros.us"
+msgstr "sa.bros.us-konfiguration"
+
+#, fuzzy
+msgid "Configuraci&oacute;n del administrador"
+msgstr "administratorenkonfiguration"
+
+#, fuzzy
+msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
+msgstr "passwort f&uuml;r die <strong>konsole</strong>"
+
+#, fuzzy
+msgid "Contrase&ntilde;a:"
+msgstr "passwort:"
+
+#, fuzzy
+msgid "Control de contenidos"
+msgstr "gespeicherte links"
+
+#, fuzzy
+msgid "Copiar el c&oacute;digo fuente"
+msgstr "quelltext"
+
 msgid "Da clic para etiquetar esta entrada con"
 msgstr "den link per klick mit diesem tag versehen"
+
+msgid "Datos de del.icio.us"
+msgstr ""
+
+msgid "Debes introducir el nombre de la base de datos a utilizar"
+msgstr ""
+
+msgid "Debes introducir el password para el usuario admin"
+msgstr ""
+
+msgid "Debes introducir el password para la base de datos"
+msgstr ""
+
+msgid "Debes introducir el servidor de base de datos"
+msgstr ""
+
+msgid "Debes introducir el usuario para la base de datos"
+msgstr ""
+
+msgid "Debes introducir la URL para el sitio"
+msgstr ""
+
+msgid "Debes introducir la URL para sa.bros.us"
+msgstr ""
+
+#, fuzzy
+msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
+msgstr "bitte freilassen, wenn die passw&ouml;rtern nicht ge&auml;ndert werden sollen."
+
+#, fuzzy
+msgid "Desactivado"
+msgstr "deaktiviert"
+
+#, fuzzy
+msgid "Descripci&oacute;n del sitio:"
+msgstr "beschreibung deiner website:"
+
+#, fuzzy
+msgid "E-mail:"
+msgstr "e-mail:"
+
+#, fuzzy
+msgid "Edita los datos de tu enlace."
+msgstr "linkdaten bearbeiten"
+
+#, fuzzy
+msgid "Editar"
+msgstr "bearbeiten"
+
+#, fuzzy
+msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
+msgstr "die datei <code>include/config.ini</code> kann nicht bearbeitet werden (fehlende schreibrechte)."
+
+msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
+msgstr ""
+
+#, fuzzy
+msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sa.bros.us\">otros miembros</a>."
+msgstr "<a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> und <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">pedro santana</a> haben das sa.bros.us-projekt 2005 begonnen, zusammen mit <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Sa.bros.us team\">anderen mitarbeitern</a>."
+
+#, fuzzy
+msgid "El proyecto sa.bros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sa.bros.us\">SourceForge.net</a>."
+msgstr "sa.bros.us ist 'open source' (du kannst es also benutzen und den original-code bearbeiten) und l&auml;uft mit PHP und MySQL. die offizielle homepage findest du <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us\">hier</a>; herunterladen kannst du das programm bei <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project\">sourceforge.net</a>."
+
+msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
+msgstr ""
+
+#, fuzzy
+msgid "Eliminar"
+msgstr "l&ouml;schen"
+
+#, fuzzy
+msgid "Eliminar enlace"
+msgstr "link l&ouml;schen"
 
 msgid "Enlaces de"
 msgstr "links von"
 
+#, fuzzy
+msgid "Enlaces por p&aacute;gina:"
+msgstr "links pro seite:"
+
+msgid "Error al ejecutar la consulta en la DB"
+msgstr ""
+
+#, fuzzy
+msgid "Es 'open source'."
+msgstr "open source"
+
+#, fuzzy
+msgid "Es sencillo y r&aacute;pido de instalar."
+msgstr "einfache installation"
+
+#, fuzzy
+msgid "Escribe los datos de tu enlace."
+msgstr "angaben zum lesezeichen"
+
+#, fuzzy
+msgid "Esta acci&oacute;n no se puede deshacer!"
+msgstr "dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!"
+
+msgid "Etiquetas relacionadas:"
+msgstr ""
+
+msgid "Eviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+msgstr ""
+
+#, fuzzy
+msgid "Exportar tus marcadores de tu navegador a un archivo"
+msgstr "exportiere deine lesezeichen vom browser in eine datei"
+
 msgid "FUNCIONALIDADES:"
 msgstr "funktionen:"
+
+#, fuzzy
+msgid "Gris"
+msgstr "grau"
+
+#, fuzzy
+msgid "Ha ocurrido un error al almacenar los cambios"
+msgstr "ein fehler ist aufgetreten."
+
+msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
+msgstr ""
 
 msgid "Ha ocurrido un error."
 msgstr "fehler"
 
+#, fuzzy
+msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
+msgstr "es sind <strong>%no_enlaces%</strong> links gespeichert. angezeigt werden die links <strong>%desde%</strong> bis1 <strong>%total%</strong>."
+
+#, fuzzy
+msgid "Hoja de estilo de mi sa.bros.us"
+msgstr "style-sheet f&uuml;r mein sa.bros.us"
+
+#, fuzzy
+msgid "Idioma:"
+msgstr "sprache:"
+
+msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
+msgstr ""
+
+#, fuzzy
+msgid "Instalar el bookmarklet."
+msgstr "bookmarklet installieren"
+
+#, fuzzy
+msgid "Instrucciones"
+msgstr "anleitung"
+
+#, fuzzy
+msgid "Introduzca su contrase&ntilde;a"
+msgstr "bitte gib dein passwort ein"
+
 msgid "Ir a la p&aacute;gina:"
 msgstr "gehe zu:"
+
+#, fuzzy
+msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
+msgstr "internet explorer: <kbd>datei &gt; import und export... &gt; favoriten exportieren</kbd>"
+
+#, fuzzy
+msgid "La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
+msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
+
+msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
+msgstr ""
+
+msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sa.bros.us es:"
+msgstr ""
+
+#, fuzzy
+msgid "Las contrase&ntilde;as deben ser iguales"
+msgstr "die passw&ouml;rter stimmen nicht &uuml;berein."
+
+#, fuzzy
+msgid "Los cambios se han almacenado con &eacute;xito"
+msgstr "&auml;nderungen wurden aktualisiert."
+
+msgid "Los passwords introducidos no coinciden"
+msgstr ""
 
 msgid "M&aacute;s en"
 msgstr "mehr in"
@@ -83,17 +336,154 @@ msgstr "mein sa.bro.sus"
 msgid "Mis etiquetas en sa.bro.sus"
 msgstr "meine tags bei sa.bros.us"
 
+#, fuzzy
+msgid "Mostrar contenidos multimedia:"
+msgstr "multimedia-inhalte anzeigen:"
+
+msgid "Mostrar descripciones en el badge de enlaces:"
+msgstr ""
+
+#, fuzzy
+msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
+msgstr "mozilla firefox: <kbd>lesezeichen &gt; lesezeichen-manager... &gt; datei &gt; export...</kbd>"
+
+#, fuzzy
+msgid "Naranja"
+msgstr "orange"
+
+#, fuzzy
+msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
+msgstr "netscape: <kbd>lesezeichen &gt; lesezeichen verwalten... &gt; extras &gt; export...</kbd>"
+
+#, fuzzy
+msgid "Nmbre del sitio:"
+msgstr "name deiner website:"
+
+msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
+msgstr ""
+
+msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
+msgstr ""
+
+msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
+msgstr ""
+
+#, fuzzy
+msgid "No hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a."
+msgstr "in diesem sa.bros.us wurden noch keine links gespeichert."
+
+msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."
+msgstr ""
+
+#, fuzzy
+msgid "Nueva contrase&ntilde;a"
+msgstr "passwort speichern"
+
+msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
+msgstr ""
+
+#, fuzzy
+msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us."
+msgstr "kopiere diesen code und f&uuml;ge ihn an der gew&uuml;nschten stelle in deinem blog oder deiner website ein."
+
+#, fuzzy
+msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
+msgstr "lesezeichen schnell per browser hinzuf&uuml;gen"
+
+#, fuzzy
+msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
+msgstr "rss-feeds f&uuml;r alle lesezeichen oder einzelne tags"
+
+#, fuzzy
+msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
+msgstr "tag-wolke f&uuml;r alle tags m&ouml;glich"
+
+#, fuzzy
+msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
+msgstr "lesezeichen per konsole organisieren"
+
+#, fuzzy
+msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
+msgstr "jedes lesezeichen mit tags versehen, damit auch andere lesezeichen mit dem gleichen tag finden"
+
+#, fuzzy
+msgid "Permitir que se exporten los enlaces:"
+msgstr "link-export erlauben:"
+
+#, fuzzy
+msgid "Personalice la nube de etiquetas:"
+msgstr "farbe der tag-wolke:"
+
 msgid "RSS de la etiqueta"
 msgstr "rss-feed f&uuml;r aktuellen tag"
 
 msgid "RSS de sa.bros.us"
 msgstr "rss-feed f&uuml;r dieses sa.bros.us"
 
+#, fuzzy
+msgid "Reescribe la contrase&ntilde;a:"
+msgstr "passwort best&auml;tigen:"
+
+#, fuzzy
+msgid "Rojo"
+msgstr "rot"
+
+#, fuzzy
+msgid "Sa.bros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
+msgstr "sa.bros.us ist ein cms, mit dem du lesezeichen auf deiner website organisieren kannst - genau so wie bei de.licio.us. aber mit sa.bros.us kannst du das auf deiner eigenen website machen."
+
+msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
+msgstr ""
+
+#, fuzzy
+msgid "Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
+msgstr "die aktualisierung kann nun beginnen. klicke einfach auf die schaltfl&auml;che 'aktualisieren' und sie wird automatisch durchgef&uuml;hrt."
+
+msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
+msgstr ""
+
+#, fuzzy
+msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
+msgstr "w&auml;hle den standard-status f&uuml;r deine importierten lesezeichen aus."
+
+#, fuzzy
+msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:"
+msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
+
+#, fuzzy
+msgid "Seleccione sus preferencias para desplegar su sa.bros.us:"
+msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
+
+#, fuzzy
+msgid "Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge."
+msgstr "wenn du den code anpassen willst, dies ist die verwendete xmlt-struktur."
+
+msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
+msgstr ""
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+msgstr ""
+
+#, fuzzy
+msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us"
+msgstr "wenn du ein blog oder eine website hast, kannst du die neuesten links in deinem sa.bros.us dort anzeigen."
+
 msgid "Siguiente"
 msgstr "vorw&auml;rts"
 
 msgid "Terminando sesi&oacute;n..."
 msgstr "du bist ausgeloggt."
+
+#, fuzzy
+msgid "Tiene un atractivo dise&ntilde;o."
+msgstr "modernes design"
+
+msgid "Ver"
+msgstr ""
+
+#, fuzzy
+msgid "Verde"
+msgstr "gr&uuml;n"
 
 #, fuzzy
 msgid "activado"
@@ -103,19 +493,8 @@ msgstr "aktiviert"
 msgid "actualizaci&oacute;n"
 msgstr "aktualisierung"
 
-#, fuzzy
-msgid "actualizaci&oacute;n de sabrosus"
-msgstr "sa.bros.us-aktualisierung"
-
 msgid "actualizar"
 msgstr "aktualisieren"
-
-#, fuzzy
-msgid "agrega las etiquetas de sa.bros.us a t&uacute; sitio."
-msgstr "meine tags bei sa.bros.us"
-
-msgid "agrega los URLs de sa.bros.us a t&uacute; sitio."
-msgstr ""
 
 msgid "agregar"
 msgstr "hinzuf&uuml;gen"
@@ -127,20 +506,8 @@ msgid "agregar enlace"
 msgstr "link hinzuf&uuml;gen"
 
 #, fuzzy
-msgid "agregar etiquetas"
-msgstr "vergebene tags (per klick hinzuf&uuml;gen)"
-
-#, fuzzy
-msgid "agregue sus preferencias al c&oacute;digo generado."
-msgstr "code anpassen"
-
-#, fuzzy
 msgid "aleatorio"
 msgstr "zuf&auml;llig"
-
-#, fuzzy
-msgid "anterior"
-msgstr "zur&uuml;ck"
 
 #, fuzzy
 msgid "archivo:"
@@ -161,79 +528,15 @@ msgid "buscar:"
 msgstr "suche"
 
 #, fuzzy
-msgid "clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. el tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
-msgstr "klicke auf <kbd>durchsuchen</kbd>, um die gespeicherte lesezeichen-datei auf deinem computer zu finden. diese darf h&ouml;chstens 1 mb gro&szlig; sein."
-
-#, fuzzy
-msgid "clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
-msgstr "klicke auf <kbd>importieren</kbd> und los geht's. der import kann ein paar augenblicke dauern."
-
-#, fuzzy
 msgid "color para la nube de etiquetas:"
 msgstr "farbe der tag-wolke:"
-
-#, fuzzy
-msgid "configuraci&oacute;n de la apariencia"
-msgstr "konfiguration und aussehen"
-
-#, fuzzy
-msgid "configuraci&oacute;n de la base de datos"
-msgstr "konfiguration und aussehen"
-
-#, fuzzy
-msgid "configuraci&oacute;n de sa.bros.us"
-msgstr "sa.bros.us-konfiguration"
-
-#, fuzzy
-msgid "configuraci&oacute;n del administrador"
-msgstr "administratorenkonfiguration"
 
 msgid "configurar"
 msgstr ""
 
 #, fuzzy
-msgid "contrase&ntilde;a para el <strong>panel de control</strong>:"
-msgstr "passwort f&uuml;r die <strong>konsole</strong>"
-
-#, fuzzy
 msgid "contrase&ntilde;a:"
 msgstr "passwort:"
-
-#, fuzzy
-msgid "control de contenidos"
-msgstr "gespeicherte links"
-
-#, fuzzy
-msgid "copiar el c&oacute;digo fuente"
-msgstr "quelltext"
-
-msgid "datos de del.icio.us"
-msgstr ""
-
-msgid "debes introducir el nombre de la base de datos a utilizar"
-msgstr ""
-
-msgid "debes introducir el password para el usuario admin"
-msgstr ""
-
-msgid "debes introducir el password para la base de datos"
-msgstr ""
-
-msgid "debes introducir el servidor de base de datos"
-msgstr ""
-
-msgid "debes introducir el usuario para la base de datos"
-msgstr ""
-
-msgid "debes introducir la URL para el sitio"
-msgstr ""
-
-msgid "debes introducir la URL para sa.bros.us"
-msgstr ""
-
-#, fuzzy
-msgid "deje en blanco para no cambiar la contrase&ntilde;a"
-msgstr "bitte freilassen, wenn die passw&ouml;rtern nicht ge&auml;ndert werden sollen."
 
 #, fuzzy
 msgid "desactivado"
@@ -247,14 +550,6 @@ msgid "descripci&oacute;n:"
 msgstr "beschreibung:"
 
 #, fuzzy
-msgid "e-mail:"
-msgstr "e-mail:"
-
-#, fuzzy
-msgid "edita los datos de tu enlace."
-msgstr "linkdaten bearbeiten"
-
-#, fuzzy
 msgid "editar"
 msgstr "bearbeiten"
 
@@ -263,24 +558,6 @@ msgstr "link bearbeiten"
 
 msgid "el"
 msgstr "um"
-
-#, fuzzy
-msgid "el archivo <code>include/config.ini</code> no tiene permisos de escritura"
-msgstr "die datei <code>include/config.ini</code> kann nicht bearbeitet werden (fehlende schreibrechte)."
-
-msgid "el email ingresado en el formulario es distinto al que esta guardado en la base de datos"
-msgstr ""
-
-#, fuzzy
-msgid "el proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"pedro santana\">pedro santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sa.bros.us\">otros miembros</a>."
-msgstr "<a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> und <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">pedro santana</a> haben das sa.bros.us-projekt 2005 begonnen, zusammen mit <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Sa.bros.us team\">anderen mitarbeitern</a>."
-
-#, fuzzy
-msgid "el proyecto sa.bros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. la p&aacute;gina oficial del proyecto es <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"proyecto sa.bros.us\">SourceForge.net</a>."
-msgstr "sa.bros.us ist 'open source' (du kannst es also benutzen und den original-code bearbeiten) und l&auml;uft mit PHP und MySQL. die offizielle homepage findest du <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us\">hier</a>; herunterladen kannst du das programm bei <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project\">sourceforge.net</a>."
-
-msgid "el usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
-msgstr ""
 
 #, fuzzy
 msgid "eliminar"
@@ -305,37 +582,12 @@ msgstr ""
 msgid "enlaces con esta etiqueta"
 msgstr "links mit diesem tag"
 
-#, fuzzy
-msgid "enlaces por p&aacute;gina:"
-msgstr "links pro seite:"
-
-msgid "enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
-msgstr ""
-
-#, fuzzy
-msgid "es 'open source'."
-msgstr "open source"
-
-#, fuzzy
-msgid "es sencillo y r&aacute;pido de instalar."
-msgstr "einfache installation"
-
 msgid "escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
 msgstr "eine liste von tags zur beschreibung des links, getrennt durch leerzeichen (bsp.: xhtml css php)"
 
 #, fuzzy
-msgid "escribe los datos de tu enlace."
-msgstr "angaben zum lesezeichen"
-
-#, fuzzy
 msgid "esta acci&oacute;n no se puede deshacer!"
 msgstr "dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!"
-
-msgid "etiquetas relacionadas"
-msgstr ""
-
-msgid "etiquetas relacionadas buscar"
-msgstr ""
 
 msgid "etiquetas:"
 msgstr "tags:"
@@ -347,10 +599,6 @@ msgstr "exportieren"
 #, fuzzy
 msgid "exportar a mi sa.bros.us"
 msgstr "in mein sa.bros.us kopieren"
-
-#, fuzzy
-msgid "exportar tus marcadores de tu navegador a un archivo"
-msgstr "exportiere deine lesezeichen vom browser in eine datei"
 
 #, fuzzy
 msgid "filtrar por etiqueta:"
@@ -382,26 +630,7 @@ msgid "guardar contrase&ntilde;a"
 msgstr "passwort speichern"
 
 #, fuzzy
-msgid "ha ocurrido un error al almacenar los cambios"
-msgstr "ein fehler ist aufgetreten."
-
-msgid "ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
-msgstr ""
-
-#, fuzzy
-msgid "hay <strong>%no_enlaces%</strong> enlaces. est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
-msgstr "es sind <strong>%no_enlaces%</strong> links gespeichert. angezeigt werden die links <strong>%desde%</strong> bis1 <strong>%total%</strong>."
-
-#, fuzzy
-msgid "hoja de estilo de mi sa.bros.us"
-msgstr "style-sheet f&uuml;r mein sa.bros.us"
-
-#, fuzzy
 msgid "idioma"
-msgstr "sprache:"
-
-#, fuzzy
-msgid "idioma:"
 msgstr "sprache:"
 
 #, fuzzy
@@ -420,9 +649,6 @@ msgstr ""
 msgid "importar marcadores"
 msgstr "lesezeichen importieren"
 
-msgid "imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
-msgstr ""
-
 #, fuzzy
 msgid "ingresar"
 msgstr "einloggen"
@@ -437,22 +663,6 @@ msgstr "sa.bros.us-startseite"
 #, fuzzy
 msgid "instalaci&oacute;n"
 msgstr "aktualisierung"
-
-#, fuzzy
-msgid "instalar el bookmarklet."
-msgstr "bookmarklet installieren"
-
-#, fuzzy
-msgid "instrucciones"
-msgstr "anleitung"
-
-#, fuzzy
-msgid "internet explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
-msgstr "internet explorer: <kbd>datei &gt; import und export... &gt; favoriten exportieren</kbd>"
-
-#, fuzzy
-msgid "introduzca su contrase&ntilde;a"
-msgstr "bitte gib dein passwort ein"
 
 msgid "ir a opciones"
 msgstr "einstellungen"
@@ -469,40 +679,8 @@ msgid "la actualizaci&oacute;n de sa.bros.us se realiz&oacute; satisfactoriament
 msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
 
 #, fuzzy
-msgid "la instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
-msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
-
-msgid "la nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
-msgstr ""
-
-msgid "la nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />la nueva contraseña para ingresar al panel de sa.bros.us es:"
-msgstr ""
-
-#, fuzzy
-msgid "las contrase&ntilde;as deben ser iguales"
-msgstr "die passw&ouml;rter stimmen nicht &uuml;berein."
-
-#, fuzzy
-msgid "los cambios se han almacenado con &eacute;xito"
-msgstr "&auml;nderungen wurden aktualisiert."
-
-msgid "los passwords introducidos no coinciden"
-msgstr ""
-
-#, fuzzy
 msgid "mis etiquetas en sa.bros.us"
 msgstr "meine tags bei sa.bros.us"
-
-#, fuzzy
-msgid "mostrar contenidos multimedia:"
-msgstr "multimedia-inhalte anzeigen:"
-
-msgid "mostrar descripciones en el badge de enlaces:"
-msgstr ""
-
-#, fuzzy
-msgid "mozilla firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
-msgstr "mozilla firefox: <kbd>lesezeichen &gt; lesezeichen-manager... &gt; datei &gt; export...</kbd>"
 
 #, fuzzy
 msgid "n&uacute;mero de enlaces por p&aacute;gina:"
@@ -517,39 +695,11 @@ msgid "naranja"
 msgstr "orange"
 
 #, fuzzy
-msgid "netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
-msgstr "netscape: <kbd>lesezeichen &gt; lesezeichen verwalten... &gt; extras &gt; export...</kbd>"
-
-msgid "no es posible escribir el archivo <code>include/config.php</code>. debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
-msgstr ""
-
-msgid "no es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
-msgstr ""
-
-msgid "no fue posible conectarse a la base de datos. por favor revisa los valores introducidos e intentalo nuevamente"
-msgstr ""
-
-#, fuzzy
-msgid "no hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a."
-msgstr "in diesem sa.bros.us wurden noch keine links gespeichert."
-
-msgid "no se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."
-msgstr ""
-
-#, fuzzy
 msgid "nombre de tu sitio:"
-msgstr "name deiner website:"
-
-#, fuzzy
-msgid "nombre del sitio:"
 msgstr "name deiner website:"
 
 msgid "nube de ejemplo"
 msgstr ""
-
-#, fuzzy
-msgid "nueva contrase&ntilde;a"
-msgstr "passwort speichern"
 
 msgid "opciones"
 msgstr "einstellungen"
@@ -566,46 +716,11 @@ msgstr "&ouml;ffentlich"
 msgid "panel de control"
 msgstr "konsole"
 
-msgid "para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
-msgstr ""
-
-#, fuzzy
-msgid "para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us."
-msgstr "kopiere diesen code und f&uuml;ge ihn an der gew&uuml;nschten stelle in deinem blog oder deiner website ein."
-
 msgid "password para el control panel:"
 msgstr ""
 
 msgid "password:"
 msgstr ""
-
-#, fuzzy
-msgid "permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
-msgstr "lesezeichen schnell per browser hinzuf&uuml;gen"
-
-#, fuzzy
-msgid "permite crear un feed RSS de todos los bookmarks o de un tag en especial."
-msgstr "rss-feeds f&uuml;r alle lesezeichen oder einzelne tags"
-
-#, fuzzy
-msgid "permite crear una 'nube de tags' de todas las etiquetas insertadas."
-msgstr "tag-wolke f&uuml;r alle tags m&ouml;glich"
-
-#, fuzzy
-msgid "permite gestionar los bookmarks a trav&eacute;s de un panel de control."
-msgstr "lesezeichen per konsole organisieren"
-
-#, fuzzy
-msgid "permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
-msgstr "jedes lesezeichen mit tags versehen, damit auch andere lesezeichen mit dem gleichen tag finden"
-
-#, fuzzy
-msgid "permitir que se exporten los enlaces:"
-msgstr "link-export erlauben:"
-
-#, fuzzy
-msgid "personalice la nube de etiquetas:"
-msgstr "farbe der tag-wolke:"
 
 msgid "prefijo para las tablas:"
 msgstr ""
@@ -626,10 +741,6 @@ msgid "reescribe el password:"
 msgstr "passwort best&auml;tigen:"
 
 #, fuzzy
-msgid "reescribe la contrase&ntilde;a:"
-msgstr "passwort best&auml;tigen:"
-
-#, fuzzy
 msgid "regresar a sa.bros.us"
 msgstr "zur&uuml;ck zu sa.bros.us"
 
@@ -637,56 +748,12 @@ msgstr "zur&uuml;ck zu sa.bros.us"
 msgid "rojo"
 msgstr "rot"
 
-#, fuzzy
-msgid "sa.bros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr "sa.bros.us ist ein cms, mit dem du lesezeichen auf deiner website organisieren kannst - genau so wie bei de.licio.us. aber mit sa.bros.us kannst du das auf deiner eigenen website machen."
-
-msgid "se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. en total se importaron <strong>%no_importados%</strong> enlaces."
-msgstr ""
-
-#, fuzzy
-msgid "se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
-msgstr "die aktualisierung kann nun beginnen. klicke einfach auf die schaltfl&auml;che 'aktualisieren' und sie wird automatisch durchgef&uuml;hrt."
-
-msgid "se produjo un error al intentar enviar el correo electr&oacute;nico. vuelva a intentarlo m&aacute;s tarde"
-msgstr ""
-
-#, fuzzy
-msgid "seleccionar la privacidad por defecto asignada a los marcadores importados"
-msgstr "w&auml;hle den standard-status f&uuml;r deine importierten lesezeichen aus."
-
-#, fuzzy
-msgid "seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:"
-msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
-
-#, fuzzy
-msgid "seleccione sus preferencias para desplegar su sa.bros.us:"
-msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
-
 msgid "servidor:"
 msgstr ""
 
 #, fuzzy
 msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
 msgstr "wenn die zeichen eher selten zu sein scheinen, klicke auf die schaltfl&auml;che, um den fehler zu beheben."
-
-#, fuzzy
-msgid "si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge."
-msgstr "wenn du den code anpassen willst, dies ist die verwendete xmlt-struktur."
-
-msgid "si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
-msgstr ""
-
-msgid "si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
-msgstr ""
-
-#, fuzzy
-msgid "si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us"
-msgstr "wenn du ein blog oder eine website hast, kannst du die neuesten links in deinem sa.bros.us dort anzeigen."
-
-#, fuzzy
-msgid "siguiente"
-msgstr "vorw&auml;rts"
 
 msgid "solicitar nueva"
 msgstr ""
@@ -707,15 +774,8 @@ msgid "terminar sesi&oacute;n"
 msgstr "ausloggen"
 
 #, fuzzy
-msgid "tiene un atractivo dise&ntilde;o."
-msgstr "modernes design"
-
-#, fuzzy
 msgid "usuario:"
 msgstr "suche:"
-
-msgid "ver"
-msgstr ""
 
 #, fuzzy
 msgid "verde"
@@ -723,3 +783,11 @@ msgstr "gr&uuml;n"
 
 #~ msgid "Actualizar"
 #~ msgstr "aktualisieren"
+
+#, fuzzy
+#~ msgid "anterior"
+#~ msgstr "zur&uuml;ck"
+
+#, fuzzy
+#~ msgid "siguiente"
+#~ msgstr "vorw&auml;rts"
