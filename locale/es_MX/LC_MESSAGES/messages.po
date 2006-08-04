@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-07-29 15:56-0500\n"
+"POT-Creation-Date: 2006-08-03 22:37-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
+msgstr ""
+
+msgid "&iquest;Realmente desea eliminar este enlace de su sa.bros.us?"
+msgstr ""
+
 msgid "&iquest;olvidaste tu contrase&ntilde;a?"
 msgstr ""
 
 msgid "&iquest;qu&eacute; es sa.bros.us?"
-msgstr ""
-
-msgid "&iquest;realmente desea eliminar este enlace de su sa.bros.us?"
 msgstr ""
 
 msgid "(sin <q>/</q> al final)"
@@ -37,13 +40,34 @@ msgstr ""
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
 msgstr ""
 
+msgid "<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
+msgstr ""
+
 msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
 msgstr ""
 
-msgid "<strong>atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
+msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
 msgstr ""
 
-msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
+msgid "Activado"
+msgstr ""
+
+msgid "Actualizaci&oacute;n de sabrosus"
+msgstr ""
+
+msgid "Agrega las etiquetas de sa.bros.us a t&uacute; sitio."
+msgstr ""
+
+msgid "Agrega los URLs de sa.bros.us a t&uacute; sitio."
+msgstr ""
+
+msgid "Agregar etiquetas"
+msgstr ""
+
+msgid "Agregue sus preferencias al c&oacute;digo generado."
+msgstr ""
+
+msgid "Aleatorio"
 msgstr ""
 
 msgid "Anterior"
@@ -52,19 +76,203 @@ msgstr "anterior"
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
 msgstr ""
 
+msgid "Azul"
+msgstr ""
+
+msgid "Buscar enlaces con"
+msgstr ""
+
+msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
+msgstr ""
+
+msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
+msgstr ""
+
+msgid "Color para la nube de etiquetas:"
+msgstr ""
+
+msgid "Configuraci&oacute;n de la apariencia"
+msgstr ""
+
+msgid "Configuraci&oacute;n de la base de datos"
+msgstr ""
+
+msgid "Configuraci&oacute;n de sa.bros.us"
+msgstr ""
+
+msgid "Configuraci&oacute;n del administrador"
+msgstr ""
+
+msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
+msgstr ""
+
+msgid "Contrase&ntilde;a:"
+msgstr ""
+
+#, fuzzy
+msgid "Control de contenidos"
+msgstr "control de contenidos"
+
+msgid "Copiar el c&oacute;digo fuente"
+msgstr ""
+
 msgid "Da clic para etiquetar esta entrada con"
 msgstr ""
 
+msgid "Datos de del.icio.us"
+msgstr ""
+
+msgid "Debes introducir el nombre de la base de datos a utilizar"
+msgstr ""
+
+msgid "Debes introducir el password para el usuario admin"
+msgstr ""
+
+msgid "Debes introducir el password para la base de datos"
+msgstr ""
+
+msgid "Debes introducir el servidor de base de datos"
+msgstr ""
+
+msgid "Debes introducir el usuario para la base de datos"
+msgstr ""
+
+msgid "Debes introducir la URL para el sitio"
+msgstr ""
+
+msgid "Debes introducir la URL para sa.bros.us"
+msgstr ""
+
+msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
+msgstr ""
+
+msgid "Desactivado"
+msgstr ""
+
+msgid "Descripci&oacute;n del sitio:"
+msgstr ""
+
+msgid "E-mail:"
+msgstr ""
+
+msgid "Edita los datos de tu enlace."
+msgstr ""
+
+#, fuzzy
+msgid "Editar"
+msgstr "editar"
+
+msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
+msgstr ""
+
+msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
+msgstr ""
+
+msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sa.bros.us\">otros miembros</a>."
+msgstr ""
+
+msgid "El proyecto sa.bros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sa.bros.us\">SourceForge.net</a>."
+msgstr ""
+
+msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
+msgstr ""
+
+#, fuzzy
+msgid "Eliminar"
+msgstr "eliminar"
+
+#, fuzzy
+msgid "Eliminar enlace"
+msgstr "eliminar"
+
 msgid "Enlaces de"
+msgstr ""
+
+msgid "Enlaces por p&aacute;gina:"
+msgstr ""
+
+msgid "Error al ejecutar la consulta en la DB"
+msgstr ""
+
+msgid "Es 'open source'."
+msgstr ""
+
+msgid "Es sencillo y r&aacute;pido de instalar."
+msgstr ""
+
+msgid "Escribe los datos de tu enlace."
+msgstr ""
+
+msgid "Esta acci&oacute;n no se puede deshacer!"
+msgstr ""
+
+msgid "Etiquetas relacionadas:"
+msgstr ""
+
+msgid "Eviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+msgstr ""
+
+msgid "Exportar tus marcadores de tu navegador a un archivo"
 msgstr ""
 
 msgid "FUNCIONALIDADES:"
 msgstr ""
 
+msgid "Gris"
+msgstr ""
+
+msgid "Ha ocurrido un error al almacenar los cambios"
+msgstr ""
+
+msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
+msgstr ""
+
 msgid "Ha ocurrido un error."
 msgstr ""
 
+msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
+msgstr ""
+
+msgid "Hoja de estilo de mi sa.bros.us"
+msgstr ""
+
+msgid "Idioma:"
+msgstr ""
+
+msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
+msgstr ""
+
+msgid "Instalar el bookmarklet."
+msgstr ""
+
+msgid "Instrucciones"
+msgstr ""
+
+msgid "Introduzca su contrase&ntilde;a"
+msgstr ""
+
 msgid "Ir a la p&aacute;gina:"
+msgstr ""
+
+msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
+msgstr ""
+
+msgid "La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
+msgstr ""
+
+msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
+msgstr ""
+
+msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sa.bros.us es:"
+msgstr ""
+
+msgid "Las contrase&ntilde;as deben ser iguales"
+msgstr ""
+
+msgid "Los cambios se han almacenado con &eacute;xito"
+msgstr ""
+
+msgid "Los passwords introducidos no coinciden"
 msgstr ""
 
 msgid "M&aacute;s en"
@@ -76,10 +284,112 @@ msgstr ""
 msgid "Mis etiquetas en sa.bro.sus"
 msgstr ""
 
+msgid "Mostrar contenidos multimedia:"
+msgstr ""
+
+msgid "Mostrar descripciones en el badge de enlaces:"
+msgstr ""
+
+msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
+msgstr ""
+
+msgid "Naranja"
+msgstr ""
+
+msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
+msgstr ""
+
+msgid "Nmbre del sitio:"
+msgstr ""
+
+msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
+msgstr ""
+
+msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
+msgstr ""
+
+msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
+msgstr ""
+
+msgid "No hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a."
+msgstr ""
+
+msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."
+msgstr ""
+
+msgid "Nueva contrase&ntilde;a"
+msgstr ""
+
+msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
+msgstr ""
+
+msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us."
+msgstr ""
+
+msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
+msgstr ""
+
+msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
+msgstr ""
+
+msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
+msgstr ""
+
+msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
+msgstr ""
+
+msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
+msgstr ""
+
+msgid "Permitir que se exporten los enlaces:"
+msgstr ""
+
+msgid "Personalice la nube de etiquetas:"
+msgstr ""
+
 msgid "RSS de la etiqueta"
 msgstr ""
 
 msgid "RSS de sa.bros.us"
+msgstr ""
+
+msgid "Reescribe la contrase&ntilde;a:"
+msgstr ""
+
+msgid "Rojo"
+msgstr ""
+
+msgid "Sa.bros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
+msgstr ""
+
+msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
+msgstr ""
+
+msgid "Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
+msgstr ""
+
+msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
+msgstr ""
+
+msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
+msgstr ""
+
+msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:"
+msgstr ""
+
+msgid "Seleccione sus preferencias para desplegar su sa.bros.us:"
+msgstr ""
+
+msgid "Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge."
+msgstr ""
+
+msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
+msgstr ""
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+msgstr ""
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us"
 msgstr ""
 
 msgid "Siguiente"
@@ -88,22 +398,23 @@ msgstr "siguiente"
 msgid "Terminando sesi&oacute;n..."
 msgstr ""
 
+msgid "Tiene un atractivo dise&ntilde;o."
+msgstr ""
+
+#, fuzzy
+msgid "Ver"
+msgstr "ver"
+
+msgid "Verde"
+msgstr ""
+
 msgid "activado"
 msgstr ""
 
 msgid "actualizaci&oacute;n"
 msgstr ""
 
-msgid "actualizaci&oacute;n de sabrosus"
-msgstr ""
-
 msgid "actualizar"
-msgstr ""
-
-msgid "agrega las etiquetas de sa.bros.us a t&uacute; sitio."
-msgstr ""
-
-msgid "agrega los URLs de sa.bros.us a t&uacute; sitio."
 msgstr ""
 
 msgid "agregar"
@@ -115,18 +426,8 @@ msgstr ""
 msgid "agregar enlace"
 msgstr ""
 
-msgid "agregar etiquetas"
-msgstr ""
-
-msgid "agregue sus preferencias al c&oacute;digo generado."
-msgstr ""
-
 msgid "aleatorio"
 msgstr ""
-
-#, fuzzy
-msgid "anterior"
-msgstr "anterior"
 
 msgid "archivo:"
 msgstr ""
@@ -144,68 +445,13 @@ msgstr ""
 msgid "buscar:"
 msgstr "buscar:"
 
-msgid "clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. el tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
-msgstr ""
-
-msgid "clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
-msgstr ""
-
 msgid "color para la nube de etiquetas:"
-msgstr ""
-
-msgid "configuraci&oacute;n de la apariencia"
-msgstr ""
-
-msgid "configuraci&oacute;n de la base de datos"
-msgstr ""
-
-msgid "configuraci&oacute;n de sa.bros.us"
-msgstr ""
-
-msgid "configuraci&oacute;n del administrador"
 msgstr ""
 
 msgid "configurar"
 msgstr ""
 
-msgid "contrase&ntilde;a para el <strong>panel de control</strong>:"
-msgstr ""
-
 msgid "contrase&ntilde;a:"
-msgstr ""
-
-#, fuzzy
-msgid "control de contenidos"
-msgstr "control de contenidos"
-
-msgid "copiar el c&oacute;digo fuente"
-msgstr ""
-
-msgid "datos de del.icio.us"
-msgstr ""
-
-msgid "debes introducir el nombre de la base de datos a utilizar"
-msgstr ""
-
-msgid "debes introducir el password para el usuario admin"
-msgstr ""
-
-msgid "debes introducir el password para la base de datos"
-msgstr ""
-
-msgid "debes introducir el servidor de base de datos"
-msgstr ""
-
-msgid "debes introducir el usuario para la base de datos"
-msgstr ""
-
-msgid "debes introducir la URL para el sitio"
-msgstr ""
-
-msgid "debes introducir la URL para sa.bros.us"
-msgstr ""
-
-msgid "deje en blanco para no cambiar la contrase&ntilde;a"
 msgstr ""
 
 msgid "desactivado"
@@ -217,12 +463,6 @@ msgstr ""
 msgid "descripci&oacute;n:"
 msgstr ""
 
-msgid "e-mail:"
-msgstr ""
-
-msgid "edita los datos de tu enlace."
-msgstr ""
-
 #, fuzzy
 msgid "editar"
 msgstr "editar"
@@ -231,21 +471,6 @@ msgid "editar enlace"
 msgstr ""
 
 msgid "el"
-msgstr ""
-
-msgid "el archivo <code>include/config.ini</code> no tiene permisos de escritura"
-msgstr ""
-
-msgid "el email ingresado en el formulario es distinto al que esta guardado en la base de datos"
-msgstr ""
-
-msgid "el proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"pedro santana\">pedro santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sa.bros.us\">otros miembros</a>."
-msgstr ""
-
-msgid "el proyecto sa.bros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. la p&aacute;gina oficial del proyecto es <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"proyecto sa.bros.us\">SourceForge.net</a>."
-msgstr ""
-
-msgid "el usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
 msgstr ""
 
 #, fuzzy
@@ -270,31 +495,10 @@ msgstr ""
 msgid "enlaces con esta etiqueta"
 msgstr ""
 
-msgid "enlaces por p&aacute;gina:"
-msgstr ""
-
-msgid "enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
-msgstr ""
-
-msgid "es 'open source'."
-msgstr ""
-
-msgid "es sencillo y r&aacute;pido de instalar."
-msgstr ""
-
 msgid "escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
 msgstr ""
 
-msgid "escribe los datos de tu enlace."
-msgstr ""
-
 msgid "esta acci&oacute;n no se puede deshacer!"
-msgstr ""
-
-msgid "etiquetas relacionadas"
-msgstr ""
-
-msgid "etiquetas relacionadas buscar"
 msgstr ""
 
 msgid "etiquetas:"
@@ -305,9 +509,6 @@ msgid "exportar"
 msgstr "exportar"
 
 msgid "exportar a mi sa.bros.us"
-msgstr ""
-
-msgid "exportar tus marcadores de tu navegador a un archivo"
 msgstr ""
 
 msgid "filtrar por etiqueta:"
@@ -335,22 +536,7 @@ msgstr ""
 msgid "guardar contrase&ntilde;a"
 msgstr ""
 
-msgid "ha ocurrido un error al almacenar los cambios"
-msgstr ""
-
-msgid "ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
-msgstr ""
-
-msgid "hay <strong>%no_enlaces%</strong> enlaces. est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
-msgstr ""
-
-msgid "hoja de estilo de mi sa.bros.us"
-msgstr ""
-
 msgid "idioma"
-msgstr ""
-
-msgid "idioma:"
 msgstr ""
 
 #, fuzzy
@@ -369,9 +555,6 @@ msgstr ""
 msgid "importar marcadores"
 msgstr ""
 
-msgid "imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
-msgstr ""
-
 msgid "ingresar"
 msgstr ""
 
@@ -382,18 +565,6 @@ msgid "inicio sa.bros.us"
 msgstr ""
 
 msgid "instalaci&oacute;n"
-msgstr ""
-
-msgid "instalar el bookmarklet."
-msgstr ""
-
-msgid "instrucciones"
-msgstr ""
-
-msgid "internet explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
-msgstr ""
-
-msgid "introduzca su contrase&ntilde;a"
 msgstr ""
 
 msgid "ir a opciones"
@@ -408,34 +579,7 @@ msgstr ""
 msgid "la actualizaci&oacute;n de sa.bros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
 msgstr ""
 
-msgid "la instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
-msgstr ""
-
-msgid "la nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
-msgstr ""
-
-msgid "la nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />la nueva contraseña para ingresar al panel de sa.bros.us es:"
-msgstr ""
-
-msgid "las contrase&ntilde;as deben ser iguales"
-msgstr ""
-
-msgid "los cambios se han almacenado con &eacute;xito"
-msgstr ""
-
-msgid "los passwords introducidos no coinciden"
-msgstr ""
-
 msgid "mis etiquetas en sa.bros.us"
-msgstr ""
-
-msgid "mostrar contenidos multimedia:"
-msgstr ""
-
-msgid "mostrar descripciones en el badge de enlaces:"
-msgstr ""
-
-msgid "mozilla firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
 msgstr ""
 
 msgid "n&uacute;mero de enlaces por p&aacute;gina:"
@@ -447,34 +591,10 @@ msgstr ""
 msgid "naranja"
 msgstr ""
 
-msgid "netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
-msgstr ""
-
-msgid "no es posible escribir el archivo <code>include/config.php</code>. debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
-msgstr ""
-
-msgid "no es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
-msgstr ""
-
-msgid "no fue posible conectarse a la base de datos. por favor revisa los valores introducidos e intentalo nuevamente"
-msgstr ""
-
-msgid "no hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a."
-msgstr ""
-
-msgid "no se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."
-msgstr ""
-
 msgid "nombre de tu sitio:"
 msgstr ""
 
-msgid "nombre del sitio:"
-msgstr ""
-
 msgid "nube de ejemplo"
-msgstr ""
-
-msgid "nueva contrase&ntilde;a"
 msgstr ""
 
 msgid "opciones"
@@ -490,37 +610,10 @@ msgstr ""
 msgid "panel de control"
 msgstr "panel de control"
 
-msgid "para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
-msgstr ""
-
-msgid "para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us."
-msgstr ""
-
 msgid "password para el control panel:"
 msgstr ""
 
 msgid "password:"
-msgstr ""
-
-msgid "permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
-msgstr ""
-
-msgid "permite crear un feed RSS de todos los bookmarks o de un tag en especial."
-msgstr ""
-
-msgid "permite crear una 'nube de tags' de todas las etiquetas insertadas."
-msgstr ""
-
-msgid "permite gestionar los bookmarks a trav&eacute;s de un panel de control."
-msgstr ""
-
-msgid "permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
-msgstr ""
-
-msgid "permitir que se exporten los enlaces:"
-msgstr ""
-
-msgid "personalice la nube de etiquetas:"
 msgstr ""
 
 msgid "prefijo para las tablas:"
@@ -538,34 +631,10 @@ msgstr ""
 msgid "reescribe el password:"
 msgstr ""
 
-msgid "reescribe la contrase&ntilde;a:"
-msgstr ""
-
 msgid "regresar a sa.bros.us"
 msgstr ""
 
 msgid "rojo"
-msgstr ""
-
-msgid "sa.bros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr ""
-
-msgid "se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. en total se importaron <strong>%no_importados%</strong> enlaces."
-msgstr ""
-
-msgid "se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
-msgstr ""
-
-msgid "se produjo un error al intentar enviar el correo electr&oacute;nico. vuelva a intentarlo m&aacute;s tarde"
-msgstr ""
-
-msgid "seleccionar la privacidad por defecto asignada a los marcadores importados"
-msgstr ""
-
-msgid "seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:"
-msgstr ""
-
-msgid "seleccione sus preferencias para desplegar su sa.bros.us:"
 msgstr ""
 
 msgid "servidor:"
@@ -573,22 +642,6 @@ msgstr ""
 
 msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
 msgstr ""
-
-msgid "si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge."
-msgstr ""
-
-msgid "si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
-msgstr ""
-
-msgid "si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
-msgstr ""
-
-msgid "si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us"
-msgstr ""
-
-#, fuzzy
-msgid "siguiente"
-msgstr "siguiente"
 
 msgid "solicitar nueva"
 msgstr ""
@@ -608,16 +661,17 @@ msgstr ""
 msgid "terminar sesi&oacute;n"
 msgstr ""
 
-msgid "tiene un atractivo dise&ntilde;o."
-msgstr ""
-
 #, fuzzy
 msgid "usuario:"
 msgstr "buscar:"
 
-#, fuzzy
-msgid "ver"
-msgstr "ver"
-
 msgid "verde"
 msgstr ""
+
+#, fuzzy
+#~ msgid "anterior"
+#~ msgstr "anterior"
+
+#, fuzzy
+#~ msgid "siguiente"
+#~ msgstr "siguiente"
