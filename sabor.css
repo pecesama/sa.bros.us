@@ -14,13 +14,15 @@ body {
 	font: normal 13.5px/17px georgia, "times new roman", serif;
 	margin-bottom: 5px;
 }
+
 .enlacevideo{
 	margin: 5px 0px 5px 0px;
 }
-.privado{
-	background-color: #f7f7f7;
+.enlace_privado{
+	background-color: #F7F7F7;
 	border: 1px solid #CCC;
 	border-width: 1px 0px 1px 0px;
+	font: normal 13.5px/17px georgia, "times new roman", serif;
 	padding-bottom: 5px;
 }
 .enlace a:link {
