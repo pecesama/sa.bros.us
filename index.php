@@ -164,36 +164,18 @@ header("Content-type: text/html; charset=UTF-8");
 							}
 							
 							/* Reproductor MP3 */
-							if (endsWith($row["enlace"], ".mp3"))
+							if (esMP3($row["enlace"]))
 							{
 								$playerUrl = $Sabrosus->sabrUrl."/include/player.swf?soundFile=".$row["enlace"];
 								echo "\t\t\t<div class=\"enlacemp3\"><object type=\"application/x-shockwave-flash\" data=\"" . $playerUrl . "\" width=\"290\" height=\"24\"><param name=\"movie\" value=\"" . $playerUrl . "\" /><param name=\"quality\" value=\"high\" /><param name=\"menu\" value=\"false\" /><param name=\"wmode\" value=\"transparent\" /></object></div>\n";
 							}
+							
 							/* Videos de YouTube */
 							if (esYoutubeVideo($row["enlace"])) {
 								$id_video = getYoutubeVideoUrl($row["enlace"]);
 								echo "\t\t\t<div class=\"enlacevideo\"><object type=\"application/x-shockwave-flash\" style=\"width:400px;height:330px\" data=\"http://www.youtube.com/v/".$id_video."\"><param name=\"movie\" value=\"http://www.youtube.com/v/".$id_video."\" /></object></div>\n";
 							}
-							/* Videos de Google */
-							if (esGoogleVideo($row["enlace"])) {
-								$html = trim(file_get_contents($row["enlace"]));
-								$inicio = strpos($html, "var flashObj =\n            \"");
-								$fin = strpos($html, "\";\n          flashObj = flashObj.replace");
-								$inicio = $inicio + strlen("var flashObj =\n            \"");
-								$codigo_video = substr($html, $inicio, $fin - $inicio);
-								$codigo_video = str_replace("\u003d", "=", $codigo_video);
-								$codigo_video = str_replace("\\\"", "\"", $codigo_video);
-								$codigo_video = str_replace("width:100%; height:100%;", "width:400px; height:326px;", $codigo_video);
-								$codigo_video = str_replace("/googleplayer.swf", "http://video.google.com/googleplayer.swf", $codigo_video);
-								$codigo_video = str_replace("FlashVars=\"playerMode=normal&playerId=gvuniqueid&clickUrl=\"", "FlashVars=\"playerMode=embedded\"", $codigo_video);
-								$codigo_video = str_replace("embed", "object", $codigo_video);
-								$codigo_video = str_replace("src=", "data=", $codigo_video);
-								$codigo_video = str_replace("&", "&amp;", $codigo_video);
-								$codigo_video = str_replace("allowScriptAccess=\"sameDomain\" quality=\"best\" bgcolor=\"#ffffff\" scale=\"noScale\" wmode=\"window\" salign=\"TL\"  FlashVars=\"playerMode=objectded\"", "", $codigo_video);
-								$codigo_video = str_replace("id=\"VideoPlayback\"", "", $codigo_video);
-								$codigo_video = str_replace("&amp;autoPlay=true", "", $codigo_video);
-								echo "\t\t\t<div class=\"enlacevideo\">".$codigo_video."</div>\n";
-							}
+							
 							/* Videos de Vimeo */
 							if (esVimeoVideo($row["enlace"])) {
 								$id_video = getVimeoVideoUrl($row["enlace"]);
