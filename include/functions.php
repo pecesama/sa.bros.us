@@ -196,7 +196,7 @@ function esFlickrPhoto($photoUrl) {
 
 function getFlickrPhotoUrl($photoUrl) {
 	$params = explode("/", $photoUrl);
-	return "http://flickr.com/delicious_thumb.gne?id=".$params[5];
+	return "&#104;&#116;&#116;&#112;://&#102;&#108;&#105;&#99;&#107;&#114;&#46;&#99;&#111;&#109;/&#100;&#101;&#108;&#105;&#99;&#105;&#111;&#117;&#115;_&#116;&#104;&#117;&#109;&#98;&#46;&#103;&#110;&#101;?&#105;&#100;=".$params[5];
 }
 
 function esVimeoVideo($videoUrl) {
