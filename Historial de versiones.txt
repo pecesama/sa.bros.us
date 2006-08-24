@@ -2,6 +2,8 @@ Historial de versiones
 
 Despues de la v 1.6
 
+    * Controlar desde el panel de control el mostrar solo la nube de etiquetas en portada (Pecesama)
+    * Detección de nuevos idiomas automaticamente (Victor Bracco)
     * Integración con el sistema automático de ping a SopaSabrosa. (Jorge Condomí)
     * Corrección de un bug de la paginación (Pablo Viojo)
     * Cambio del motor de lenguaje a PHP-gettext. (Kurt McKee)
