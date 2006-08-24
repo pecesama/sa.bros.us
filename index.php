@@ -86,6 +86,8 @@ header("Content-type: text/html; charset=UTF-8");
 		</p>
 	</div>
 
+	<? if ($Sabrosus->soloNube=="1" && !isset($_GET["tag"])) { } else { ?>
+
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
@@ -219,6 +221,8 @@ header("Content-type: text/html; charset=UTF-8");
 	<div id="pagination">
 	<? include "pagination.php"; /* Muestra el paginador */ ?>
 	</div>
+
+	<? } ?>
 
 	<div id="tagsx">
 	<?php getTags("html"); ?>

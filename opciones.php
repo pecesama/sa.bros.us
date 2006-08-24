@@ -43,12 +43,14 @@ if (esAdmin()) {
 		$comp = (isset($_POST['compartir']) ? "1" : "0");
 		$descrip = (isset($_POST['descripciones']) ? "1" : "0");
 		$ping = (isset($_POST['ping']) ? "1" : "0");
+		$soloNubeIndex = (isset($_POST['nube_tags']) ? "1" : "0");
 		$cfg['tags_cloud']['color'] = $_POST['color_tags'];
 		$cfg['multimedia_content']['allow'] = $multi;
 		$cfg['exportar']['compartir'] = $comp;
 		$cfg['links_badge']['descripciones'] = $descrip;
 		$cfg['sopasabrosa']['ping'] = $ping;
-
+		$cfg['tags_cloud']['alone_index'] = $soloNubeIndex;
+		
 		if (!is_writeable("include/config.ini")) {
 			$errores +=1;
 		}
@@ -166,9 +168,11 @@ if (esAdmin()) {
 					<? $multi = (($Sabrosus->multiCont=="1") ? "checked=\"true\"" : ""); ?>
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
+					<? $soloNube = (($Sabrosus->soloNube=="1") ? "checked=\"true\"" : ""); ?>
 					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
 					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
 					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
+					<label for="nube_tags"><?=__("Mostrar solo la nube de etiquetas en la portada:");?></label><input name="nube_tags" type="checkbox" <? echo $soloNube; ?> id="nube_tags"/><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n del administrador")?></legend>

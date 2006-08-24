@@ -176,6 +176,7 @@ class clsSabrosus
 		$this->compartir = $cfg['exportar']['compartir'];
 		$this->desc_badge = $cfg['links_badge']['descripciones'];
 		$this->ping = $cfg['sopasabrosa']['ping'];
+		$this->soloNube = $cfg['tags_cloud']['alone_index'];
 		
 		get_laguajes();
 		
