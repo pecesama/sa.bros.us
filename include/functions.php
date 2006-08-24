@@ -217,17 +217,27 @@ function esYoutubeVideo($videoUrl) {
 		return false;
 }
 
+function esMP3($archivoUrl) {
+	if (endsWith($archivoUrl, ".mp3"))
+		return true;
+	else
+		return false;
+}
+
 function getYoutubeVideoUrl($videoUrl) {
 	$params = explode("?v=", $videoUrl);
 	$params2 = explode("&",$params[1]);
 	return $params2[0];
 }
 
-function esGoogleVideo($videoUrl) {
-	if (beginsWith($videoUrl, "http://video.google.com/videoplay?docid="))
-		return true;
-	else
-		return false;
+//Actualizar esta funcion cada que se agregue un tipo especial
+//de reproduccion
+function ocupaReproduccionEspecial($url) {
+if (esFlickrPhoto($url)) { return true; }
+elseif (esMP3($url)) { return true; }
+elseif (esYoutubeVideo($url)) { return true; }
+elseif (esVimeoVideo($url)) { return true; }
+else { return false; }
 }
 
 function generar_password($largo = 10) {

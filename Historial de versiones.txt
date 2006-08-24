@@ -20,7 +20,6 @@ Despues de la v 1.6
     * Eliminada una función que no se usaba. (Pecesama)
     * Permitir la exportación completa solo a los administradores. (Pecesama)
     * Creación del entorno visual para la creación del BadgeTags. (Jorge Condomí)
-    * Videos de Google (Pecesama)
     * Videos de YouTube (Victor Bracco)
     * Importador de del.icio.us. (Pablo Viojo)
     * Incorporada una opción para generar una nueva contraseña y enviarla por e-mail (Victor Bracco)
