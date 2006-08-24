@@ -145,7 +145,7 @@ class clsSabrosus
 
 	function clsSabrosus()
 	{
-		global $link,$prefix,$locale,$feeds;
+		global $link,$prefix,$locale,$feeds,$idiomas;
 		$sql = "SELECT * FROM ".$prefix."config LIMIT 1";
 		$result = @mysql_query($sql);
 		if(!$result)
@@ -171,20 +171,21 @@ class clsSabrosus
 		$this->adminPass      = $row['admin_pass'];
 
 		$cfg = parse_ini_file("include/config.ini", true);
-
 		$this->multiCont = $cfg['multimedia_content']['allow'];
 		$this->tagsColor = $cfg['tags_cloud']['color'];
 		$this->compartir = $cfg['exportar']['compartir'];
 		$this->desc_badge = $cfg['links_badge']['descripciones'];
 		$this->ping = $cfg['sopasabrosa']['ping'];
-
+		
+		get_laguajes();
+		
 		if (!isset($locale)) {
-			if ($row['idioma'] == "en.php") {
+			if ($this->archivoIdioma == "en.php") {
 				$locale = "en";
-			} else if ($row['idioma'] == "es-mx.php") {
+			} else if ($this->archivoIdioma == "es-mx.php") {
 				$locale = "es_MX";
-			} else if (esIdioma($row['idioma'])) {
-				$locale = $row['idioma'];
+			} else if (esIdioma($this->archivoIdioma)) {
+				$locale = $this->archivoIdioma;
 			} else {
 				$locale = "es_MX";
 			}
