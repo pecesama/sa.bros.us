@@ -144,7 +144,7 @@ header("Content-type: text/html; charset=UTF-8");
 					if (!esAdmin() && $privado) { //Aqui no imprime nada por ser privado
 					} else {
 						if($privado){
-							echo "\n\t\t<div class=\"enlace privado\">\n";
+							echo "\n\t\t<div class=\"enlace_privado\">\n";
 						} else {
 							echo "\n\t\t<div class=\"enlace\">\n";
 						}
