@@ -1,11 +1,10 @@
 <?
 /* ===========================
-  PRUEBAS!! NO OFICIAL!!
-  sabrosus monousuario versión 1.X
+
+  sabrosus monousuario versión 1.7
   http://sabrosus.sourceforge.net/
 
   sabrosus is a free software licensed under GPL (General public license)
-  Desarrollado por: Victor Bracco (vbracco@gmail.com)
   =========================== */
 ?>
 <?
@@ -33,8 +32,10 @@
 
 	function cambiar_fecha($timestamp)
 	{
-		return $fecha = str_replace(" ","T",$timestamp)."+00:00";
+		$fecha = str_replace(" ","T",$timestamp)."+00:00";
+		return $fecha;
 	}
+	
 	header("Content-type: text/xml; charset=utf-8");
 	echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?".">\n";
 	echo "<urlset xmlns=\"http://www.google.com/schemas/sitemap/0.84\">\n";
@@ -75,8 +76,8 @@
 		sort($keys);
 		foreach($keys as $key)
 		{
-			$sql_tag = "SELECT fecha FROM ".$prefix."sabrosus WHERE (tags LIKE '% ".$key."%' OR tags LIKE '%".$key." %') AND (tags NOT LIKE '%:sab:privado%')ORDER BY fecha DESC LIMIT 1";
-			$result_tag = mysql_query($sql_tag);
+			$sql_tag = "SELECT fecha FROM ".$prefix."sabrosus WHERE (tags LIKE '% $key %' OR tags LIKE '$key %' OR tags LIKE '% $key' OR tags = '$key') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT 1";
+			$result_tag = mysql_query($sql_tag,$link);
 			$fetch_tag = mysql_fetch_array($result_tag);
 			
 			/* Formula para determinar la importancia entre tags */	
@@ -86,8 +87,8 @@
 			
 			echo "	<!-- Debug: Tag: ".$key.". Repeticion: ".$kw[$key]." / ".$total_tags." -->\n";
 			echo "	<url>\n";
-			echo "		<loc>".$Sabrosus->sabrUrl."/".chequearURLFriendly('tag/','index.php?tag=').urlencode($key)."</loc>\n";
-			echo "		<lastmod>".cambiar_fecha($fetch_tag[fecha])."</lastmod>\n";
+			echo "		<loc>".$Sabrosus->sabrUrl."/".chequearURLFriendly('tag/','index.php?tag=').urlencode(trim($key))."</loc>\n";
+			echo "		<lastmod>".cambiar_fecha($fetch_tag['fecha'])."</lastmod>\n";
 			echo "		<changefreq>daily</changefreq>\n";
 			echo "		<priority>".$prioridad."</priority>\n";
 			echo "	</url>\n";
@@ -95,15 +96,4 @@
 	}
 	echo "  <!-- Debug: Finalizan los tags -->\n";
 	echo "</urlset>\n";
-	
-	/* Para enviar un ping a Google cuando se actualiza el sitemap 
-	$pingUrl="http://www.google.com/webmasters/sitemaps/ping?sitemap=" . urlencode($pingUrl);
-	$pingres=@wp_remote_fopen($pingUrl);
-
-	if($pingres==NULL || $pingres===false) {
-		$messages[count($messages)]=str_replace("%s","<a href=\"$pingUrl\">$pingUrl</a>",__("Could not ping to Google at %s",'sitemap'));			
-	} else {
-		$messages[count($messages)]=str_replace("%s","<a href=\"$pingUrl\">$pingUrl</a>",__("Successfully pinged Google at %s",'sitemap'));
-	}
-	*/
 ?>
