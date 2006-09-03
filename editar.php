@@ -84,7 +84,6 @@ if (isset($_GET["id"])) {
 
 	<div id="contenido">
 		<div id="formulario">
-		<? print_r($_GET); ?>
 			<form method="post" action="<? echo (isset($_GET["id"]) ? "modifica.php" : "agregar.php"); ?>">
 
 			<? if (!isset($_GET["id"]) && (isset($_GET["titulo"]) && isset($_GET["url"]))) { ?>
