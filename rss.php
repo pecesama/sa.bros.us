@@ -43,7 +43,7 @@ $result = mysql_query($sqlStr,$link);
 		<title>sa.bros.us/<?=$Sabrosus->siteName;?></title>
 		<link><?=$Sabrosus->sabrUrl;?></link>
 		<description><?=__("Enlaces de")." ".$Sabrosus->siteName;?></description>
-		<language><?=$locale;?></language>
+		<language><?=strtolower(str_replace("_","-",$locale));?></language>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<generator>Sa.bros.us <?=version();?></generator>
 		<image>
