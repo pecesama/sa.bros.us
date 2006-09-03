@@ -27,7 +27,7 @@ if (!esAdmin()) {
 				$titulo = $_GET['titulo'];
 			}
 		}
-		header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "")));
+		header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "") . (isset($_GET['ret'])? "&ret=".$_GET['ret'] : "")));
 		exit();
 	} else {
 		header("Location: login.php");
