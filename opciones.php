@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -71,8 +71,8 @@ if (esAdmin()) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=__("opciones");?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us <?=version();?>" />
+	<title><?=__("opciones");?>/sabros.us</title>
+	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl;?>/instalar.css" type="text/css" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl;?>/sabor.css" type="text/css" />
@@ -95,10 +95,10 @@ if (esAdmin()) {
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("opciones");?></span></h2>
+		<h2>sabros.us/<span><?=__("opciones");?></span></h2>
 			<p class="submenu">
 				<a href="cpanel.php"><?=__("panel de control");?></a> |
-				<a href="index.php"><?=__("ir a sa.bros.us");?></a>
+				<a href="index.php"><?=__("ir a sabros.us");?></a>
 			</p>
 	</div>
 	<div id="contenido">
@@ -120,11 +120,11 @@ if (esAdmin()) {
 		<div id="formulario">
 			<form name="config_form" id="config_form" action="opciones.php" method="post">
 				<fieldset>
-					<legend><?=__("Configuraci&oacute;n de sa.bros.us");?></legend>
+					<legend><?=__("Configuraci&oacute;n de sabros.us");?></legend>
 					<label for="sname"><?=__("Nmbre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
 					<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
 					<label for="surl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?></label><input type="text" name="surl" id="surl" value="<?=$Sabrosus->siteUrl?>" /><br />
-					<label for="saburl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:");?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
+					<label for="saburl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:");?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
 					<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:");?></label>
 						<select name="useFriendlyUrl" id="useFriendlyUrl">
 							<option value="1" <? if($Sabrosus->usefriendlyurl) echo "selected"; ?>><?=__("Activado");?></option>
@@ -185,7 +185,7 @@ if (esAdmin()) {
 		</div>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 	</div>
 </div>
 </body>

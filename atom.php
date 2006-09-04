@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario versión 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -23,7 +23,7 @@ if (isset($_GET["tag"])) {
 }
 
 if(isset($cuantos)) {
-	//Parametro $cuantos=todos para que devuelvas una sindicación completa de Sabrosus.
+	//Parametro $cuantos=todos para que devuelvas una sindicación completa de sabros.us.
 	if($cuantos=='todos') {
 		$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC " : "SELECT * FROM ".$prefix."sabrosus WHERE tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC");
 	} else {
@@ -47,7 +47,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 	<updated><?=gmdate("Y-m-d\TH:i:s\Z");?></updated>
 	<link rel="self" href="<?=$Sabrosus->sabrUrl;?>/atom.php" />
 	<link href="<?=$Sabrosus->sabrUrl;?>" />
-	<generator uri="http://sabros.us/wiki/" version="<?=version();?>">Sa.bros.us</generator>
+	<generator uri="http://sabros.us/wiki/" version="<?=version();?>">sabros.us</generator>
 	<icon><?=$Sabrosus->sabrUrl;?>/images/sabrosus_icon.png</icon>
 
 <?

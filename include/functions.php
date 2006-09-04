@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario versión 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 ?>
@@ -253,8 +253,8 @@ function generar_password($largo = 10) {
 
 function enviaMail($to, $title, $body, $from) {
 	$rp     = trim($from);
-	$org    = "Sa.bros.us";
-	$mailer = "Sa.bros.us Mailer";
+	$org    = "sabros.us";
+	$mailer = "sabros.us Mailer";
 
 	$head   = '';
 	$head  .= "Content-Type: text/html \r\n";

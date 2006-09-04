@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario versión 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -26,7 +26,7 @@ if (isset($_GET["tag"])) {
 }
 
 if (isset($cuantos)) {
-	//Parametro $cuantos=todos para que devuelvas una sindicación completa de Sabrosus.
+	//Parametro $cuantos=todos para que devuelvas una sindicación completa de sabros.us.
 	if($cuantos=='todos')
 		$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC " : "SELECT * FROM ".$prefix."sabrosus WHERE tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC");
 	else
@@ -40,12 +40,12 @@ $result = mysql_query($sqlStr,$link);
 
 <rss version="2.0">
 	<channel>
-		<title>sa.bros.us/<?=$Sabrosus->siteName;?></title>
+		<title>sabros.us/<?=$Sabrosus->siteName;?></title>
 		<link><?=$Sabrosus->sabrUrl;?></link>
 		<description><?=__("Enlaces de")." ".$Sabrosus->siteName;?></description>
 		<language><?=strtolower(str_replace("_","-",$locale));?></language>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
-		<generator>Sa.bros.us <?=version();?></generator>
+		<generator>sabros.us <?=version();?></generator>
 		<image>
 			<url><?=$Sabrosus->sabrUrl;?>/images/sabrosus_icon.png</url>
 			<title><?=__("Enlaces de")." ".$Sabrosus->siteName;?></title>

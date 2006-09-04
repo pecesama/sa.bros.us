@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versión 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario versión 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
   =========================== */
 ?>
 <?
@@ -12,7 +12,7 @@
 	/*
 	Este archivo, debería ir junto al panel de control.
 	Debería generar un archivo aparte .xml que pueda acceder google tranquilamente.
-	¿Es necesario que esté en el raiz del sitio general, o puede estar dentro de la carpeta de sabrosus?
+	¿Es necesario que esté en el raiz del sitio general, o puede estar dentro de la carpeta de sabros.us?
 	*/
 	
 	/* EDITABLE */

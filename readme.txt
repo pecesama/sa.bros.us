@@ -1,8 +1,8 @@
-sa.bros.us 1.7 version
+sabros.us 1.7 version
 
-- What is sa.bros.us?
+- What is sabros.us?
 
-	sa.bros.us is a CMS to put your bookmarks online with folksonomy support; just like del.icio.us, but the big diference is you will have the complete control of the source code and written on PHP with multiple database support we make it cross platform.
+	sabros.us is a CMS to put your bookmarks online with folksonomy support; just like del.icio.us, but the big diference is you will have the complete control of the source code and written on PHP with multiple database support we make it cross platform.
 
 - Where can I download it?
 
@@ -17,13 +17,13 @@ sa.bros.us 1.7 version
 
 - Extra data?
 
-       sa.bros.us is on development stage, we are still fixing bugs on the engine, the idea behind the sa.bros.us release is to allow the general public to test it, report any bugs and features they would like to see in the next release.
+       sabros.us is on development stage, we are still fixing bugs on the engine, the idea behind the sabros.us release is to allow the general public to test it, report any bugs and features they would like to see in the next release.
 
        Any doubt, suggestion or comment, you can post on the forum or on the mailing list:
 
 	http://sourceforge.net/projects/sabrosus/
 
-       You can see some installed sa.bros.us:
+       You can see some installed sabros.us:
 
 	    * Stanmx				http://www.stanmx.com/sabrosus/
 	    * Pecesama.Net			http://www.pecesama.net/sabrosus/
@@ -32,7 +32,7 @@ sa.bros.us 1.7 version
 
 - More info?
 
-        For more info, visit the product oficial webpage at http://sabrosus.sourceforge.net/
+        For more info, visit the product oficial webpage at http://sabros.us/
 
 - Credits:
 

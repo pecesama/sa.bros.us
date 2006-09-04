@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 ?>
@@ -28,8 +28,8 @@ if (esAdmin())
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=__("importar de delicious");?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us <?=version();?>" />
+	<title><?=__("importar de delicious");?>/sabros.us</title>
+	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
@@ -37,7 +37,7 @@ if (esAdmin())
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("importar de delicious");?></span></h2>
+		<h2>sabros.us/<span><?=__("importar de delicious");?></span></h2>
 			<p class="submenu">
 				<a href="cpanel.php"><?=__("panel de control");?></a> |
 				<a href="importar.php"><?=__("importar desde un archivo");?></a>
@@ -53,7 +53,7 @@ if (esAdmin())
         <div class="ok">
         <p>
 		<?=str_replace("%no_importados%",$respImport["imported"],__("Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."))?> 
-        <?=str_replace("%no_noimportadosrepetidos%",$respImport["total"]-$respImport["imported"],__("No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."))?>
+        <?=str_replace("%no_noimportadosrepetidos%",$respImport["total"]-$respImport["imported"],__("No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."))?>
 		</p>
         </div>
 		<?
@@ -94,7 +94,7 @@ if (esAdmin())
 	?>	
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 	</div>
 </div>
 </body>

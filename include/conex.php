@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -51,7 +51,7 @@ function MostrarErrorConexion($mensaje)
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 	<head>
-		<title>error/sa.bros.us</title>
+		<title>error/sabros.us</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<style media="screen" type="text/css">
 		<!--
@@ -115,7 +115,7 @@ function MostrarErrorConexion($mensaje)
 	<body>
 		<div id="pagina">
 			<div id="titulo">
-				<h2>Sa.bros.us/<span>error</span></h2>
+				<h2>sabros.us/<span>error</span></h2>
 			</div>
 			<div id="contenido">
 				<?=$mensaje;?>
@@ -156,7 +156,7 @@ class clsSabrosus
 				header("Retry-After: 60"); 
 				exit();
 			} else {
-				MostrarErrorConexion("<p>Imposible obtener los datos de configuraci&oacute;n de sa.bros.us</p>");
+				MostrarErrorConexion("<p>Imposible obtener los datos de configuraci&oacute;n de sabros.us</p>");
 			}
 		}
 		$row = @mysql_fetch_array($result);

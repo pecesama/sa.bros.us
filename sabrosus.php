@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -15,8 +15,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=__("&iquest;qu&eacute; es sa.bros.us?");?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us <?=version();?>" />
+	<title><?=__("&iquest;qu&eacute; es sabros.us?");?>/sabros.us</title>
+	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
@@ -28,18 +28,18 @@
 <div id="pagina">
 
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("&iquest;qu&eacute; es sa.bros.us?");?></span></h2>
+		<h2>sabros.us/<span><?=__("&iquest;qu&eacute; es sabros.us?");?></span></h2>
 		<p class="submenu_derecho">
-		<a title="<?=__("inicio sa.bros.us");?>" href="<?=$Sabrosus->sabrUrl?>"><?=__("regresar a sa.bros.us");?></a>
+		<a title="<?=__("inicio sabros.us");?>" href="<?=$Sabrosus->sabrUrl?>"><?=__("regresar a sabros.us");?></a>
 		</p>
 	</div>
 
 	<div id="contenido">
-		<p><?=__("Sa.bros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web.");?></p>
+		<p><?=__("sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web.");?></p>
 		<p>&nbsp;</p>
-		<p><?=__("El proyecto sa.bros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sa.bros.us\">SourceForge.net</a>.");?></p>
+		<p><?=__("El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>.");?></p>
 		<p>&nbsp;</p>
-		<p><?=__("El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sa.bros.us\">otros miembros</a>.");?></p>
+		<p><?=__("El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>.");?></p>
 		<p>&nbsp;</p>
 		<p><strong><?=__("FUNCIONALIDADES:");?></strong></p>
 		<p>
@@ -55,8 +55,8 @@
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">Sa.bros.us</a></p>
-		<p><a href="<?=$Sabrosus->sabrUrl.chequearURLFriendly('rss','rss.php')?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sa.bros.us");?>" title="<?=__("RSS de sa.bros.us");?>" /></a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
+		<p><a href="<?=$Sabrosus->sabrUrl.chequearURLFriendly('rss','rss.php')?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sabros.us");?>" title="<?=__("RSS de sabros.us");?>" /></a></p>
 	</div>
 </div>
 </body>
