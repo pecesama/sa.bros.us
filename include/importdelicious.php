@@ -1,10 +1,10 @@
 <?php
 /* ===========================
 
-  sabrosus monousuario versión 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario versión 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
   

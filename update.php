@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -26,8 +26,8 @@
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 	<head>
-		<title><?=__("actualizaci&oacute;n");?>/sa.bros.us</title>
-		<meta name="generator" content="Sa.bros.us <?=version();?>" />
+		<title><?=__("actualizaci&oacute;n");?>/sabros.us</title>
+		<meta name="generator" content="sabros.us <?=version();?>" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="refresh" content="10;URL=index.php" />
 		<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
@@ -37,7 +37,7 @@
 	<body>
 	<div id="pagina">
 		<div id="titulo">
-			<h2>sa.bros.us/<span><?=__("actualizaci&oacute;n");?></span></h2>
+			<h2>sabros.us/<span><?=__("actualizaci&oacute;n");?></span></h2>
 		</div>
 		<div id="contenido">
 			<?
@@ -61,7 +61,7 @@
 					$cfg['codificacion']['utf'] = 1;
 					saveIni("include/config.ini",$cfg);
 					?>
-					<p><?=__("la actualizaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>");?></p>
+					<p><?=__("la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>");?></p>
 				<?
 				} else { /* No se realiz la codificacin y no viene por POST -> Muestro el form para convertir */
 				?>
@@ -78,7 +78,7 @@
 			?>
 		</div>
 		<div id="pie">
-			<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+			<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 		</div>
 	</div>
 	</body>
@@ -90,8 +90,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=__("actualizaci&oacute;n");?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us <?=version();?>" />
+	<title><?=__("actualizaci&oacute;n");?>/sabros.us</title>
+	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="stylesheet" href="<?=$sabrUrl?>/instalar.css" type="text/css" />
@@ -101,7 +101,7 @@
 <div id="pagina">
 
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("actualizaci&oacute;n");?></span></h2>
+		<h2>sabros.us/<span><?=__("actualizaci&oacute;n");?></span></h2>
 	</div>
 	<div id="contenido">
 	<?
@@ -123,7 +123,7 @@
 					fclose($f);
 					//Actualiza la DB.
 					if(updatedb()){
-						echo "<p>".__("la actualizaci&oacute;n de sa.bros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>")."</p>";
+						echo "<p>".__("la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>")."</p>";
 					}
 				} else {
 					echo "<p>".__("<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n.")."</p>";
@@ -138,7 +138,7 @@
 			?>
 			<form method="post" action="update.php" id="config_form">
 				<fieldset>
-					<legend><?=__("Actualizaci&oacute;n de sabrosus");?></legend>
+					<legend><?=__("Actualizaci&oacute;n de sabros.us");?></legend>
 					<div>
 						<?
 						if(!isset($adminPass)){
@@ -155,7 +155,7 @@
 	?>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 	</div>
 </div>
 </body>

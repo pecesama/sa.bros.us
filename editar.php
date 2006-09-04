@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -67,8 +67,8 @@ if (isset($_GET["id"])) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us <?=version();?>" />
+	<title><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?>/sabros.us</title>
+	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
@@ -78,7 +78,7 @@ if (isset($_GET["id"])) {
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?></span></h2>
+		<h2>sabros.us/<span><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?></span></h2>
 		<p class="submenu"><a href="cpanel.php"><?=__("panel de control");?></a> | <a href="editar.php"><?=__("agregar enlace");?></a></p>
 	</div>
 
@@ -124,12 +124,12 @@ if (isset($_GET["id"])) {
 		</div>
 		<fieldset>
 			<legend><?=__("Instalar el bookmarklet.");?></legend>
-			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sa.bros.us");?>" class="bookmarklet"><?=__("agregar a sa.bros.us");?></a></label>
+			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sabros.us");?>" class="bookmarklet"><?=__("agregar a sabros.us");?></a></label>
 		</fieldset>
 	</div>
 
 	<div id="pie">
-		<p class="powered"><?=__("generado con:")?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:")?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 	</div>
 </div>
 </body>

@@ -1,6 +1,6 @@
 Historial de versiones
 
-Despues de la v 1.6
+v 1.7
 
     * Generador de Sitemaps (Victor Bracco)
     * Controlar desde el panel de control el mostrar solo la nube de etiquetas en portada (Pecesama)
@@ -72,7 +72,7 @@ v 1.5
 
     * Creado el archivo login.php. (Victor Bracco)
     * Solucion de problemas menores (Pecesama, Victor Bracco)
-    * Agregado al RSS una opcion para que devuelva todos los enlaces del sabrosus. (Victor Bracco)
+    * Agregado al RSS una opcion para que devuelva todos los enlaces del sabros.us. (Victor Bracco)
     * Agregado Soporte RSS 2.0 (Victor Bracco)
     * Creada una clase clsSabrosus que administra los valores de la tabla de opciones. (Victor Bracco)
     * Creado un archivo conex.php que controla si tiene acceso a la BD. En caso de que no, muestra un mensaje de error. (Victor Bracco)
@@ -101,10 +101,10 @@ v 1.0
     * Agregado paquete de idioma Catalan (Javier Leiva)
     * Agregado paquete de idioma Español de Urguay (Pablo Viojo)
     * Agregado paquete de idioma Español de México (Pecesama)
-    * Integracion completa del motor de lenguaje en todo sabrosus (Pecesama)
+    * Integracion completa del motor de lenguaje en todo sabros.us (Pecesama)
     * Parche a badge.php relacionado con el bug del filtrado de etiquetas (Pecesama)
     * Parche a badge.php para el bug del UTF-8 (Pecesama)
-    * Agregada una pagina de '¿Qué es sa.bros.us?' (Miguel Cuesta)
+    * Agregada una pagina de '¿Qué es sabros.us?' (Miguel Cuesta)
     * Integracion del script de busqueda en el panel de control (Pecesama)
     * Asistentente para cambiar el idioma de manera grafica (Pecesama)
     * Modificado la forma en que se muestra en tittle de la pagina (Victor)
@@ -117,7 +117,7 @@ v 1.0
     * Cambiado el id=tags ya que es reservado (Pablo Viojo)
     * Funcion esAdmin() para corregir una vulnerabilidad de seguridad  (Miguel Cuesta)
     * Mejoras en el motor del manejo de etiquetas (Pecesama)
-    * Creado motor para el multilenguaje de sabrosus (Pecesama)
+    * Creado motor para el multilenguaje de sabros.us (Pecesama)
     * Creación del CSS de las etiquetas relacionadas (Stan)
     * Etiquetas relacionadas (Pecesama)
     * Cambios en el CSS de paginado (Stan)
@@ -134,16 +134,16 @@ Beta 1.3
 
     * Mejoras al paginador (Pablo Viojo)
     * Parchado el bug en IE y Opera con el UTF-8. (pecesama, Federico (de 511) )
-    * Posibilidad de mostrar tus nube de tags de sabrosus en cualquier sitio HTML con el Sabrosus tags badge (Victor).
-    * Solucionado bug en la paginacion de sa.bros.us (Pablo Viojo)
-    * Solucionado bug con el generador de sa.bros.us badge que apuntaba a pecesama.net siempre (Pablo Viojo)
+    * Posibilidad de mostrar tus nube de tags de sabros.us en cualquier sitio HTML con el sabros.us tags badge (Victor).
+    * Solucionado bug en la paginacion de sabros.us (Pablo Viojo)
+    * Solucionado bug con el generador de sabros.us badge que apuntaba a pecesama.net siempre (Pablo Viojo)
     * solucionado bug con la cookie en el cpanel y en agregar nuevo enlace (Pablo Viojo, pecesama).
 
 Beta 1.2
 
-    * Posibilidad de mostrar tus enlaces de sabrosus en cualquier sitio HTML con el Sabrosus badge. (pecesama)
-    * Generador del sabrosus badge de manera grafica. (pecesama)
-    * Enlace en el control panel para acceder al generador de sa.bros.us badge. (pecesama)
+    * Posibilidad de mostrar tus enlaces de sabros.us en cualquier sitio HTML con el sabros.us badge. (pecesama)
+    * Generador del sabros.us badge de manera grafica. (pecesama)
+    * Enlace en el control panel para acceder al generador de sabros.us badge. (pecesama)
     * Mostrar todos los enlaces en el panel de control. (Pablo Viojo)
     * Solucionado el bug que confundia la etiqueta RSS con el feed RSS. (Pablo Viojo)
     * Agregada la cabecera con el titulo del proyecto y la licencia GPL a los scripts (pecesama)
@@ -159,8 +159,8 @@ Beta 1
 Alpha 0.3
 
     * Opción de agregar un prefijo a las tablas de modo de hacer varias instalaciones en una sola base de datos (Pablo Viojo)
-    * Posibilidad de seleccionar un URL para sa.bros.us en forma independiente del URL del sitio (Pablo Viojo, Diego)
-    * Enlace en el control panel para acceder a sa.bros.us (Pablo Viojo)
+    * Posibilidad de seleccionar un URL para sabros.us en forma independiente del URL del sitio (Pablo Viojo, Diego)
+    * Enlace en el control panel para acceder a sabros.us (Pablo Viojo)
     * mod_rewrite en URL de tags y de los URL de RSS’s (Diego Gonzalez)
 
 Alpha 0.2
@@ -169,10 +169,10 @@ Alpha 0.2
     * Checkbox para guardar el password (pecesama)
     * Fix del script eliminar.php (Paúl López)
     * Corrección de un bug en los tamaños de los tags (Paúl López y Pablo Viojo)
-    * Instalador para sa.bros.us (Pablo Viojo)
+    * Instalador para sabros.us (Pablo Viojo)
     * Correciones en el CSS (Stan)
     * Corrección de algunos bugs menores.
 
 Alpha 0.1
 
-    * Primera versión pública de sa.bros.us (Stan y pecesama)
+    * Primera versión pública de sabros.us (Stan y pecesama)

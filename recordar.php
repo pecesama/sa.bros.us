@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario versin 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -25,7 +25,7 @@
 				$sqlStr = "UPDATE ".$prefix."config SET `admin_pass`='".md5($nuevo_password)."' WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
 			
 				/* Armamos el email */
-				$msg = __("La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sa.bros.us es:") . $nuevo_password;
+				$msg = __("La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:") . $nuevo_password;
 				$asunto = $idioma[rec_email_asunto];
 				if(enviaMail($Sabrosus->emailAdmin, $asunto, $msg, $Sabrosus->emailAdmin))
 				{
@@ -43,8 +43,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title><?=__("recordar contrase&ntilde;a");?>/sa.bros.us</title>
-	<meta name="generator" content="Sa.bros.us <?=version();?>" />
+	<title><?=__("recordar contrase&ntilde;a");?>/sabros.us</title>
+	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
@@ -66,10 +66,10 @@
 <body>
 <div id="pagina">
 	<div id="titulo">
-		<h2>sa.bros.us/<span><?=__("recordar contrase&ntilde;a");?></span></h2>
+		<h2>sabros.us/<span><?=__("recordar contrase&ntilde;a");?></span></h2>
 			<p class="submenu">
 				<a href="cpanel.php"><?=__("panel de control");?></a> |
-				<a href="index.php"><?=__("ir a sa.bros.us");?></a>
+				<a href="index.php"><?=__("ir a sabros.us");?></a>
 			</p>
 	</div>
 	<div id="contenido">
@@ -93,7 +93,7 @@
 			<form name="form" id="form" action="recordar.php" method="post">
 				<fieldset>
 					<legend><?=__("Nueva contrase&ntilde;a");?></legend>
-					<p><?=__("Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.");?></p>
+					<p><?=__("Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo.");?></p>
 					<label for="email"><?=__("email:");?></label><input type="text" name="email" id="email" /><br />
 					<input class="submit" type="submit" name="btnsubmit" value="<?=__("solicitar nueva");?>" />
 				</fieldset>
@@ -101,7 +101,7 @@
 		</div>
 	</div>
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="Sa.bros.us" href="http://sourceforge.net/projects/sabrosus/">sa.bros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 	</div>
 </div>
 </body>

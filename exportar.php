@@ -1,10 +1,10 @@
 <?
 /* ===========================
 
-  sabrosus monousuario version 1.7
-  http://sabrosus.sourceforge.net/
+  sabros.us monousuario version 1.7
+  http://sabros.us/
 
-  sabrosus is a free software licensed under GPL (General public license)
+  sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
@@ -20,7 +20,7 @@ $toFile = '
 <H1>Bookmarks</H1>
 
 <DL><p>
-	<DT><H3>Enlaces de Sa.Bros.us</H3>
+	<DT><H3>Enlaces de sabros.us</H3>
 	<DL><p>
 ';
 	
