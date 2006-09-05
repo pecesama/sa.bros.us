@@ -109,14 +109,13 @@
 ?>
 		<table cellspacing="0">
 			<thead>
-				<th colspan="4"><?=__("Control de contenidos");?></th>
+				<th colspan="3"><?=__("Control de contenidos");?></th>
 			</thead>
 			
 <?			while ($row = mysql_fetch_array($result))
 				{	?>					
 			<tr>
-				<td class="objeto"><?=$row["title"]?></td>
-				<td class="ver"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Ver");?></a></td>
+				<td class="objeto"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=$row["title"]?></a></td>
 				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Editar");?></a></td>
 				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=__("Eliminar");?></a></td>
 			</tr>
