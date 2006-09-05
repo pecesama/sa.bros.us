@@ -69,7 +69,7 @@ header("Content-type: text/html; charset=UTF-8");
 			echo "<a title=\"".__("inicio sabros.us")."\" href=\"".$Sabrosus->sabrUrl."\">sabros.us</a>/";
 			if(isset($tagtag)) {
 				if(isset($_GET["pag"])) {
-					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/".$tagtag,"?tag=".urlencode($tagtag))."\">".htmlspecialchars($tagtag)."</a>/<span>".$_GET["pag"]."</span>";
+					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","?tag=").urlencode($tagtag)."\">".htmlspecialchars($tagtag)."</a>/<span>".$_GET["pag"]."</span>";
 				} else {
 					echo "<span>".htmlspecialchars($tagtag)."</span>";
 				}
