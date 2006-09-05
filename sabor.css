@@ -276,24 +276,24 @@ td.paginator a.alignright{
 		color: #444444;		
 }
  
-.edita a:link, .ver a:link {
+.edita a:link {
 	color: #0066CC;
 	font-weight: normal;
 	text-decoration: none;
 }
 
-.edita a:visited, .ver a:visited  {
+.edita a:visited {
 	color: #0066CC;
 	font-weight: normal;
 	text-decoration: none;
 }
 
-.edita a:hover, .ver a:hover {
+.edita a:hover {
 	color: #B81919;
 	text-decoration: none;
 }
 
-.edita a:active, .ver a:active {
+.edita a:active {
 	color: #333333;
 }
 
