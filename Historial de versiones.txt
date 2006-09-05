@@ -2,6 +2,7 @@ Historial de versiones
 
 v 1.7
 
+    * Mejoras en el sistema de paginacion (Pecesama)
     * Generador de Sitemaps (Victor Bracco)
     * Controlar desde el panel de control el mostrar solo la nube de etiquetas en portada (Pecesama)
     * Detección de nuevos idiomas automaticamente (Victor Bracco)
