@@ -43,7 +43,7 @@ function contarenlaces($tag="") {
 	} else {
 		if ($tag){
 			$recordCount = "select count(*) from ".$prefix."sabrosus where (tags LIKE '% $tag %' OR tags LIKE '$tag %' OR tags LIKE '% $tag' OR tags = '$tag') AND (tags NOT LIKE '%:sab:privado%')";
-		} else {
+		} else {														
 			$recordCount = "select count(*) from ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%')";
 		}
 	}
@@ -109,7 +109,7 @@ function etiquetasRelacionadas ($tags) {
 	{
 		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE $query");
 	} else {
-		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE ($query) AND tags NOT LIKE '%:sab:privado%'");
+		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE ($query) AND (tags NOT LIKE '%:sab:privado%')");
 	}
 	if (!$result) {
 		echo __("Error al ejecutar la consulta en la DB");
