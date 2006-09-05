@@ -18,7 +18,7 @@ if (isset($_GET['instalarlang'])) {
 } else {
 	initIdioma();
 }
-
+ 
 $errors_d=array();
 $errors_d[11]=__("Debes introducir el servidor de base de datos");
 $errors_d[12]=__("Debes introducir el usuario para la base de datos");
