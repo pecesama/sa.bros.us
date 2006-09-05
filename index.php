@@ -150,7 +150,18 @@ header("Content-type: text/html; charset=UTF-8");
 						} else {
 							echo "\n\t\t<div class=\"enlace\">\n";
 						}
-	
+						// Thumbnails
+						if($Sabrosus->multiCont=="1")
+						{
+							if(!ocupaReproduccionEspecial($row["enlace"])) {
+								echo "\t\t<img class=\"preview\" src=\"http://www.webshotspro.com/thumb.php?url=".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
+							} else {
+								/* Imagenes de Flickr */
+								if (esFlickrPhoto($row["enlace"])) {
+									echo "\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
+								}
+							}
+						}
 						echo "\t\t\t<h3>";
 						echo ($Sabrosus->compartir=="1")? '<input type="checkbox" name="links_sel[]" value="'.$row["id_enlace"].'" />' : '';
 						echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
@@ -160,11 +171,6 @@ header("Content-type: text/html; charset=UTF-8");
 						}
 						echo "</h3>\n";
 						if ($Sabrosus->multiCont=="1") {
-							/* Imagenes de Flickr */
-							if (esFlickrPhoto($row["enlace"])) {
-								echo "\t\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
-							}
-							
 							/* Reproductor MP3 */
 							if (esMP3($row["enlace"]))
 							{
