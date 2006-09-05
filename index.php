@@ -121,7 +121,7 @@ header("Content-type: text/html; charset=UTF-8");
 		if(esAdmin())
 			$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
 		else 
-			$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags != '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
+			$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
 		etiquetasRelacionadas($tagtag);
 
 		$result = mysql_query($sqlStr);
