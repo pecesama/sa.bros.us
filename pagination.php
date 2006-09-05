@@ -1,65 +1,225 @@
 <?
-/* ===========================
-
-  sabros.us monousuario version 1.7
-  http://sabros.us/
-
-  sabros.us is a free software licensed under GPL (General public license)
-
-  =========================== */
-
-$page=1;
-$rows = (isset($tagtag) ? contarenlaces($tagtag) : contarenlaces());   
-if($rows)
-{
-	$since = 0;
-	?>
-	<p id="paginator">
-	<? 
-		echo "\t\t".__("Ir a la p&aacute;gina:")."\n";
+	/* ===========================
 	
-		if ($pag!=1)
-		{
+	  sabros.us monousuario versión 1.7
+	  http://sabros.us/
+	
+	  sabros.us is a free software licensed under GPL (General public license)	  
+	
+	  =========================== */
+	  
+	// Script adaptado a sabros.us del encontrado en:
+	// 		http://www.strangerstudios.com/sandbox/pagination/diggstyle.php?page=1
+			
+	// How many adjacent pages should be shown on each side?
+	$adjacents = 3;
+	
+	/* 
+	   First get total number of rows in data table. 
+	   If you have a WHERE clause in your query, make sure you mirror it here.
+	*/
+	
+	
+	$total_pages = (isset($tagtag) ? contarenlaces($tagtag) : contarenlaces()); 
+	
+	/* Setup vars for query. */
+	$limit = $Sabrosus->limit; 								//how many items to show per page
+	if($_GET["pag"]) 
+		$start = ($_GET["pag"] - 1) * $limit; 			//first item to display on this page
+	else
+		$start = 0;								//if no page var is given, set start to 0
+	
+			
+	/* Setup page vars for display. */
+	if ($_GET["pag"] == 0) $_GET["pag"] = 1;					//if no page var is given, default to 1.
+	$prev = $_GET["pag"] - 1;							//previous page is page - 1
+	$next = $_GET["pag"] + 1;							//next page is page + 1
+	$lastpage = ceil($total_pages/$limit);		//lastpage is = total pages / items per page, rounded up.
+	$lpm1 = $lastpage - 1;						//last page minus 1
+	
+	/* 
+		Now we apply our rules and draw the pagination object. 
+		We're actually saving the code to a variable in case we want to draw it more than once.
+	*/
+	$pagination = "";
+	if($lastpage > 1)
+	{	
+		$pagination .= "<div class=\"pagination\">";
+		//previous button
+		if ($_GET["pag"] > 1) 
+		{			
 			if (isset($tagtag))
 			{
-				echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.($pag-1) , '/?tag='.$tagtag.'&amp;pag='.($pag-1) ) ."\">" . __("Anterior") . "</a>\n ";
-			} else {
-				echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.($pag-1) , '/?pag='.($pag-1) ) . "\">" . __("Anterior") ."</a>\n ";
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.$prev , '/?tag='.$tagtag.'&amp;pag='.$prev ) ."\">" . __("&laquo; Anterior") . "</a>";
+			} 
+			else 
+			{
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.$prev , '/?pag='.$prev ) . "\">" . __("&laquo; Anterior") ."</a>";
 			}
 		}
-
-	while ($since < $rows)
-	{
-		if ($page==$pag)
+		else
 		{
-			$act_open="<span class=\"pag_actual\">";
-	  		$act_close="</span>";
-		} else {
-	  		$act_open="";
-	  		$act_close="";
+			$pagination.= "<span class=\"disabled\">". __("&laquo; Anterior")."</span>";
 		}
-		if (isset($tagtag))
-		{
-	  		echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$page,'/?tag='.$tagtag.'&amp;pag='.$page). "\">". $act_open . $page . $act_close . "</a>\n ";
-		} else {
-	  		echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$page,'/?pag='.$page). "\">" . $act_open . $page . $act_close . "</a>\n ";
+		
+		//pages	
+		if ($lastpage < 7 + ($adjacents * 2))	//not enough pages to bother breaking it up
+		{	
+			for ($counter = 1; $counter <= $lastpage; $counter++)
+			{
+				if ($counter == $_GET["pag"]) 
+				{
+					$pagination.= "<span class=\"current\">$counter</span>";
+				} 
+				else 
+				{						
+					if (isset($tagtag))
+					{
+						$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+					} 
+					else 
+					{
+						$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+					}
+				}
+			}
 		}
-  		$since = $since + $Sabrosus->limit;
-  		$page++;
-	}
-
-	
-	if ($pag!=$page-1)
-	{
-  		if (isset($tagtag))
+		elseif($lastpage > 5 + ($adjacents * 2))	//enough pages to hide some
 		{
-        	echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl.chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.($pag+1),'/?tag='.$tagtag.'&amp;pag='.($pag+1)). "\">" . __("Siguiente") ." </a>\n ";
-        } else {
-        	echo "\t\t\t<a href=\"".$Sabrosus->sabrUrl.chequearURLFriendly( '/pag/'.($pag+1) , '/?pag='.($pag+1) ). "\">" . __("Siguiente") ."</a>\n ";
-        }
+			//close to beginning; only hide later pages
+			if($_GET["pag"] < 1 + ($adjacents * 2))		
+			{
+				for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)
+				{
+					if ($counter == $_GET["pag"])
+					{
+						$pagination.= "<span class=\"current\">$counter</span>";
+					}
+					else
+					{							
+						if (isset($tagtag))
+						{
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+						} 
+						else 
+						{
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+						}
+					}
+				}
+				$pagination.= "...";					
+				if (isset($tagtag))
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lpm1,'/?tag='.$tagtag.'&amp;pag='.$lpm1). "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lastpage,'/?tag='.$tagtag.'&amp;pag='.$lastpage). "\">".$lastpage."</a>";
+				} 
+				else 
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lpm1,'/?pag='.$lpm1). "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lastpage,'/?pag='.$lastpage). "\">".$lastpage."</a>";
+				}
+			}
+			//in middle; hide some front and some back
+			elseif($lastpage - ($adjacents * 2) > $_GET["pag"] && $_GET["pag"] > ($adjacents * 2))
+			{					
+				$uno=1;
+				$dos=2;
+				if (isset($tagtag))
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$uno,'/?tag='.$tagtag.'&amp;pag='.$uno). "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$dos,'/?tag='.$tagtag.'&amp;pag='.$dos). "\">".$dos."</a>";
+				} 
+				else 
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$uno,'/?pag='.$uno). "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos). "\">".$dos."</a>";
+				}
+				$pagination.= "...";
+				for ($counter = $_GET["pag"] - $adjacents; $counter <= $_GET["pag"] + $adjacents; $counter++)
+				{
+					if ($counter == $_GET["pag"])
+					{
+						$pagination.= "<span class=\"current\">$counter</span>";
+					}
+					else
+					{							
+						if (isset($tagtag))
+						{
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+						} 
+						else 
+						{
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+						}
+					}
+				}
+				$pagination.= "...";					
+				if (isset($tagtag))
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lpm1,'/?tag='.$tagtag.'&amp;pag='.$lpm1). "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lastpage,'/?tag='.$tagtag.'&amp;pag='.$lastpage). "\">".$lastpage."</a>";
+				} 
+				else 
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lpm1,'/?pag='.$lpm1). "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lastpage,'/?pag='.$lastpage). "\">".$lastpage."</a>";
+				}
+			}
+			//close to end; only hide early pages
+			else
+			{					
+				$uno=1;
+				$dos=2;
+				if (isset($tagtag))
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$uno,'/?tag='.$tagtag.'&amp;pag='.$uno). "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$dos,'/?tag='.$tagtag.'&amp;pag='.$dos). "\">".$dos."</a>";
+				} 
+				else 
+				{
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$uno,'/?pag='.$uno). "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos). "\">".$dos."</a>";
+				}
+				$pagination.= "...";
+				for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++)
+				{
+					if ($counter == $_GET["pag"])
+					{
+						$pagination.= "<span class=\"current\">$counter</span>";
+					}
+					else
+					{							
+						if (isset($tagtag))
+						{
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+						} 
+						else 
+						{
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+						}
+					}
+				}
+			}
+		}
+		
+		//next button
+		if ($_GET["pag"] < $counter - 1)
+		{				
+			if (isset($tagtag))
+			{
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.$next , '/?tag='.$tagtag.'&amp;pag='.$next ) ."\">" . __("Siguiente &raquo;") . "</a>";
+			} 
+			else 
+			{
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.$next , '/?pag='.$next ) . "\">" . __("Siguiente &raquo;") ."</a>";
+			}
+		}
+		else
+		{
+			$pagination.= "<span class=\"disabled\">Siguiente &raquo;</span>";
+		}
+		$pagination.= "</div>\n";		
 	}
-	?>
-		</p>
-<?
-}
+		
+	echo $pagination;
 ?>

@@ -19,6 +19,7 @@ body {
 	margin: 5px 0px 5px 0px;
 }
 .enlace_privado{
+	margin: 2px 0px 2px 0px;
 	background-color: #F7F7F7;
 	border: 1px solid #CCC;
 	border-width: 1px 0px 1px 0px;
@@ -97,20 +98,6 @@ body {
 	padding-top: 0;
 }
 
-#pagination {
-	background-color: #fcfcfc;
-	border:0;
-	margin: 10px;
-	padding: 5px 20px;
-        
-}
-
-#pagination p {
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
 #indicador_pagina {
    background-color: #fcfcfc;
 	border:0;
@@ -120,36 +107,45 @@ body {
 	color: #CC6600;
 }
 
-#paginator{
-	color: #CC6600;
-	font: normal 15.5px/15px georgia, "times new roman", serif;
+/* Inicio paginacion */
+
+div.pagination {
+	padding: 3px;
+	margin: 3px;
 }
 
-#paginator a:link {
-	color: #0066CC;
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #9aafe5;
+	
+	text-decoration: none; 
+	color: #2e6ab1;
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #2b66a5;
+	color: #000;
+	background-color: lightyellow;
+}
+div.pagination span.current {
+padding: 2px 5px 2px 5px;
+margin: 2px;
+	border: 1px solid navy;
+	
 	font-weight: bold;
-	text-decoration: none;
+	background-color: #2e6ab1;
+	color: #FFF;
 }
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #929292;
 
-#paginator a:visited {
-	color: #0066CC;
-	font-weight: bold;
-	text-decoration: none;
-}
+	color: #929292;
+}	
 
-#paginator a:hover {
-	color: #B81919;
-	text-decoration: none;
-}
+/* Fin paginacion */
 
-#paginator a:active {
-	color: #333333;
-}
-#paginator .pag_actual{
-  font-size:11pt;
-  font-weight:bold;
-  color:#c60;
-}
 #tagsx {
 	background-color: #fcfcfc;
 	border:0;
