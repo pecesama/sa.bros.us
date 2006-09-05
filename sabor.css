@@ -14,7 +14,6 @@ body {
 	font: normal 13.5px/17px georgia, "times new roman", serif;
 	margin-bottom: 5px;
 }
-
 .enlacevideo{
 	margin: 5px 0px 5px 0px;
 }
@@ -271,48 +270,6 @@ td.paginator a.alignright{
 .objeto {
 		color: #444444;		
 }
- 
-.edita a:link {
-	color: #0066CC;
-	font-weight: normal;
-	text-decoration: none;
-}
-
-.edita a:visited {
-	color: #0066CC;
-	font-weight: normal;
-	text-decoration: none;
-}
-
-.edita a:hover {
-	color: #B81919;
-	text-decoration: none;
-}
-
-.edita a:active {
-	color: #333333;
-}
-
-.elimina a:link {
-	color: #B81919;
-	font-weight: normal;
-	text-decoration: none;
-}
-
-.elimina a:visited {
-	color: #B81919;
-	font-weight: normal;
-	text-decoration: none;
-}
-
-.elimina a:hover {
-	color: #333;
-	text-decoration: none;
-}
-
-.elimina a:active {
-	color: #333;
-}
 
 #formulario,#bookmarks {
 	margin: 10px;
@@ -491,8 +448,8 @@ img.preview{
 	margin-right: 10px;
 	margin-bottom: 2px;
 	margin-top: 3px;
-	padding: 3px;
-	border: 1px solid #CCC;
+	padding: 1px;
+	border: 1px solid #777;
 }
 .powered { float:right; margin-right: 10px; }
 
@@ -534,7 +491,7 @@ a:active {
 /* Mensajes para el usuario */
 
 .error {
-	background: #FFF7F2 url('../images/error.png') 15px center no-repeat;
+	background: #FFF7F2 url('images/error.png') 15px center no-repeat;
 	border-top: 2px solid #CC0000;
 	border-bottom: 2px solid #CC0000;
 	margin: 0 auto;
@@ -542,7 +499,7 @@ a:active {
 }
 
 .exito {
-	background: #F4FBF5 url('../images/information.png') 15px center no-repeat;
+	background: #F4FBF5 url('images/information.png') 15px center no-repeat;
 	border-top: 2px solid #006600;
 	border-bottom: 2px solid #006600;
 	margin: 0 auto;
@@ -550,7 +507,7 @@ a:active {
 }
 
 .info {
-	background: #FFF6BF url('../images/icon_info.gif') 15px center no-repeat;
+	background: #FFF6BF url('images/icon_info.gif') 15px center no-repeat;
 	border-top: 2px solid #FFD324;
 	border-bottom: 2px solid #FFD324;
 	margin: 0 auto;

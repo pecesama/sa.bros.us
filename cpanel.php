@@ -95,8 +95,8 @@
 				$query .= " OR title LIKE '%".$keywords[$i]."%' OR descripcion LIKE '%".$keywords[$i]."%'";
 			}	
 			
-			$query_next = $query." LIMIT $aux,$Sabrosus->limit";
-			$query .= " LIMIT $begin,$Sabrosus->limit";
+			$query_next = $query." ORDER BY fecha DESC LIMIT $aux,$Sabrosus->limit";
+			$query .= " ORDER BY fecha DESC LIMIT $begin,$Sabrosus->limit";
 			
 			$result = mysql_query($query,$link);
 			$result_next = mysql_query($query_next,$link);
@@ -109,15 +109,16 @@
 ?>
 		<table cellspacing="0">
 			<thead>
-				<th colspan="3"><?=__("Control de contenidos");?></th>
+				<th colspan="4"><?=__("Control de contenidos");?></th>
 			</thead>
 			
 <?			while ($row = mysql_fetch_array($result))
 				{	?>					
 			<tr>
-				<td class="objeto"><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><?=$row["title"]?></a></td>
-				<td class="edita"><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><?=__("Editar");?></a></td>
-				<td class="elimina"><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><?=__("Eliminar");?></a></td>
+				<td class="objeto"><?=$row["title"]?></td>
+				<td><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><img src="images/link.png" alt="<?=__("Ver");?>" title="<?=__("Ver");?>" /></a></td>
+				<td><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><img src="images/edit.png" alt="<?=__("Editar");?>" title="<?=__("Editar");?>" /></a></td>
+				<td><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><img src="images/delete.png" alt="<?=__("Eliminar");?>" title="<?=__("Eliminar");?>" /></a></td>
 			</tr>
 <?				}	?>
 			<tr>
