@@ -13,6 +13,7 @@ body {
 	color: #444444;
 	font: normal 13.5px/17px georgia, "times new roman", serif;
 	margin-bottom: 5px;
+	clear: both;
 }
 .enlacevideo{
 	margin: 5px 0px 5px 0px;
@@ -24,6 +25,7 @@ body {
 	border-width: 1px 0px 1px 0px;
 	font: normal 13.5px/17px georgia, "times new roman", serif;
 	padding-bottom: 5px;
+	clear: both;
 }
 .enlace a:link {
 	color: #8F58AB;
@@ -52,7 +54,6 @@ body {
 
 .pie {
 	color: #999999;
-	clear: both;
 }
 
 .submenu {
@@ -111,6 +112,7 @@ body {
 div.pagination {
 	padding: 3px;
 	margin: 3px;
+	clear: both;
 }
 
 div.pagination a {
@@ -446,7 +448,7 @@ img { border:none; }
 img.preview{ 
 	float: left;
 	margin-right: 10px;
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 	margin-top: 3px;
 	padding: 1px;
 	border: 1px solid #777;
