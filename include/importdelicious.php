@@ -40,20 +40,23 @@
 			{
 				$p++;
 				$post = getTag("post",$posts);
-				$url = getAttrib($post,$urlAttrib);
-				$title = getAttrib($post,$titleAttrib);
-				$description = utf8_decode(getAttrib($post,$descAttrib));
-				$tags = getAttrib($post,$tagAttrib);
+				$enlace = getAttrib($post,$urlAttrib);
+				$titulo = getAttrib($post,$titleAttrib);
+				$descripcion = utf8_decode(getAttrib($post,$descAttrib));
+				$etiquetas = getAttrib($post,$tagAttrib);
 				$time = getAttrib($post,$timeAttrib);
 				
 				$bookmark=array();
-				$bookmark["title"] = trim($title);
-				$bookmark["tags"] = $tags;
-				$bookmark["enlace"] = $url;
-				$bookmark["descripcion"] = $description;
+				$bookmark["title"] = trim($titulo);
+				$bookmark["tags"] = $etiquetas;
+				$bookmark["enlace"] = $enlace;
+				$bookmark["descripcion"] = $descripcion;
 				$bookmark["fecha"] = getGMTDate($time,"Y-m-d H:i:s");
 				if ($bookmark["enlace"])
 				{
+					if($Sabrosus->ping){
+						include("sopa_ping.php");
+					}
 					if(!isInSabrosus($bookmark["enlace"]))
 					{
 						$Sql="insert into ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha)  values ('".$bookmark["title"]."','".$bookmark["tags"]."','".$bookmark["enlace"]."','".$bookmark["descripcion"]."', '".$bookmark["fecha"]."');";
