@@ -1,14 +1,13 @@
 <?
 /* ===========================
 
-  sabros.us monousuario versión 1.7
+  sabros.us monousuario version 1.7
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
-?>
-<?php
+  
 	// Configuración del MySql
 	$server             = "[server]";             // Tu servidor MySql, generalmente es "localhost"
 	$dbUser        	    = "[dbuser]";             // Tu nombre de usuario de MySql
