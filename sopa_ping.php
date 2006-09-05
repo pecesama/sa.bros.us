@@ -1,8 +1,12 @@
-<?php
+<?
+/* ===========================
 
-/**
-*	SopaSabrosa.com.ar Ping XmlRpc Client
-*/
+  sabros.us monousuario versión 1.7
+  http://sabros.us/
+
+  sabros.us is a free software licensed under GPL (General public license)
+
+  =========================== */
 
 include ('include/xmlrpc.php');
 

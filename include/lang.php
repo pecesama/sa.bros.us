@@ -1,4 +1,12 @@
-<?php
+<?
+/* ===========================
+
+  sabros.us monousuario version 1.7
+  http://sabros.us/
+
+  sabros.us is a free software licensed under GPL (General public license)
+
+  =========================== */
 
 require_once('gettext.inc');
 
