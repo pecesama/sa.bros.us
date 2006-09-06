@@ -177,6 +177,7 @@ class clsSabrosus
 		$this->desc_badge = $cfg['links_badge']['descripciones'];
 		$this->ping = $cfg['sopasabrosa']['ping'];
 		$this->soloNube = $cfg['tags_cloud']['alone_index'];
+		$this->estiloNube = $cfg['tags_cloud']['posicion'];
 		
 		get_laguajes();
 		

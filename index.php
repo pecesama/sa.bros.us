@@ -85,9 +85,17 @@ header("Content-type: text/html; charset=UTF-8");
 			<a href="<?=$Sabrosus->sabrUrl;?>/sabrosus.php" title="<?=__("&iquest;qu&eacute; es sabros.us?");?>"><?=__("&iquest;qu&eacute; es sabros.us?");?></a> | <a href="<?=$Sabrosus->sabrUrl;?>/cpanel.php" title="<?=__("panel de control");?>"><?=__("panel de control");?></a>
 		</p>
 	</div>
-
+	<? if($Sabrosus->estiloNube == "1")
+	{
+	?>
+		<div id="tagsx_d">
+		<?php getTags("html"); ?>
+		</div>
+	<?
+	}
+	?>
+	
 	<? if ($Sabrosus->soloNube=="1" && !isset($_GET["tag"])) { } else { ?>
-
 	<div id="contenido">
 		<? if (isset($_GET["er"])) { ?>
 			<div id="divContenedor" class="error">
@@ -208,16 +216,20 @@ header("Content-type: text/html; charset=UTF-8");
 		?>
 	</div>
 	<br class="clear"/>
+	
 	<div id="pagination">
 	<? include "pagination.php"; /* Muestra el paginador */ ?>
 	</div>
 
+	<? 
+	}
+	if($Sabrosus->estiloNube == "0")
+	{ ?>
+		<div id="tagsx">
+		<?php getTags("html"); ?>
+		</div>
 	<? } ?>
-
-	<div id="tagsx">
-	<?php getTags("html"); ?>
-	</div>
-
+	<br class="clear"/> 
 	<div id="pie">
 		<p class="powered"><?=__("generado con:");?> <a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
