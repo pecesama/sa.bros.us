@@ -1,4 +1,4 @@
-# Comienza Sa.bro.us v1.7
+# Comienza Sabro.us v1.7
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
@@ -10,8 +10,8 @@ RewriteRule rss92/(.+) rss92.php?tag=$1 [L]
 RewriteRule rss/(.+) rss.php?tag=$1 [L]
 RewriteRule rss92 rss92.php [L]
 RewriteRule rss rss.php [L]
-RewriteRule atom atom.php
+RewriteRule atom atom.php [L]
 
-RewriteRule pag/([0-9]{1,}) index.php?pag=$1
+RewriteRule pag/([0-9]{1,}) index.php?pag=$1 [L]
 </IfModule>
-# Termina Sa.bro.us v1.7
+# Termina Sabro.us v1.7

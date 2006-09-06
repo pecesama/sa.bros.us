@@ -76,16 +76,16 @@ if(isset($_POST['code_gen'])){
 					<legend><?=__("Personalice la nube de etiquetas:");?></legend>
 					<p><?=__("Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:");?></p><br />
 					
-					<label for=""><?=__("tama&ntilde;o de fuente m&iacute;nimo:");?></label>
+					<label for=""><?=__("Tama&ntilde;o de fuente m&iacute;nimo:");?></label>
 					<input name="min_font" id="txtFMin" value="<?=$min_font?>" /><br />
-					<label for="txtFMax"><?=__("tama&ntilde;o de fuente m&aacute;ximo:");?></label>
+					<label for="txtFMax"><?=__("Tama&ntilde;o de fuente m&aacute;ximo:");?></label>
 					<input name="max_font" id="txtFMax" value="<?=$max_font?>" /><br />
 
-					<label for="color_tags"><?=__("color para la nube de etiquetas:");?></label>
+					<label for="color_tags"><?=__("Color para la nube de etiquetas:");?></label>
 					<select name="color_tags" id="color_tags">
 
 					<?
-					$colors = array(__("naranja"), __("azul"), __("verde"), __("rojo"), __("gris"), __("aleatorio"));
+					$colors = array(__("Naranja"), __("Azul"), __("Verde"), __("Rojo"), __("Gris"), __("Aleatorio"));
 					foreach ($colors as $i => $color) {
 						echo "<option value=\"{$i}\"";
 						echo ($color_font == $i)? " selected=\"selected\"" : "";
@@ -100,7 +100,7 @@ if(isset($_POST['code_gen'])){
 				
 				<? if ($show_code){ ?>
 				<fieldset>
-					<legend><?=__("nube de ejemplo");?></legend>
+					<legend><?=__("Nube de ejemplo");?></legend>
 						<?='					
 <!-- Inicio de sabros.us Badge -->
 	<style type="text/css">

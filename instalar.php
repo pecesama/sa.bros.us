@@ -172,31 +172,31 @@ if ($mostrarform) {
 		<fieldset>
 			<legend><?=__("Configuraci&oacute;n de la base de datos");?></legend>
 			<div>
-				<label for="dbserver"><?=__("servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
-				<label for="dbuser"><?=__("usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
-				<label for="dbpass"><?=__("password:");?></label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
-				<label for="dbpass2"><?=__("reescribe el password:");?></label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
-				<label for="dbname"><?=__("base de datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
-				<label for="prefix"><?=__("prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=$prefix?>"/>
+				<label for="dbserver"><?=__("Servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
+				<label for="dbuser"><?=__("Usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
+				<label for="dbpass"><?=__("Password:");?></label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
+				<label for="dbpass2"><?=__("Reescribe el Password:");?></label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
+				<label for="dbname"><?=__("Base de Datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
+				<label for="prefix"><?=__("Prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=$prefix?>"/>
 			</div>
 		</fieldset>
 		<fieldset>
 			<legend><?=__("Configuraci&oacute;n de sabros.us");?></legend>
 			<div>
-				<label for="admpass"><?=__("password para el control panel:");?></label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
-				<label for="admpass2"><?=__("reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
-				<label for="email"><?=__("email:");?></label><input type="text" name="email" id="email" value=""/><br/>
-				<label for="sname"><?=__("nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
-				<label for="stitle"><?=__("descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
+				<label for="admpass"><?=__("Password para el control panel:");?></label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
+				<label for="admpass2"><?=__("Reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
+				<label for="email"><?=__("Email:");?></label><input type="text" name="email" id="email" value=""/><br/>
+				<label for="sname"><?=__("Nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
+				<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
 				<label for="sabrurl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="sabrurl" id="sabrurl" value="<?=$sabrUrl?>"/><?=mostrarerror($errors,$errors_d,"31")?><br/>
 				<label for="siteUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="siteUrl" id="siteUrl" value="<?=$siteUrl?>"/><?=mostrarerror($errors,$errors_d,"32")?><br/>
-				<label for="limite"><?=__("n&uacute;mero de enlaces por p&aacute;gina:");?></label><input type="text" name="limite" id="limite" value="10"/><br/>
+				<label for="limite"><?=__("N&uacute;mero de enlaces por p&aacute;gina:");?></label><input type="text" name="limite" id="limite" value="10"/><br/>
 				<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:");?></label>
 				<select name="useFriendlyUrl" id="useFriendlyUrl">
-					<option value="1"><?=__("activado");?></option>
-					<option value="0" selected="selected"><?=__("desactivado");?></option>
+					<option value="1"><?=__("Activado");?></option>
+					<option value="0" selected="selected"><?=__("Desactivado");?></option>
 				</select><br/>
-				<label for="lang"><?=__("idioma");?></label>
+				<label for="lang"><?=__("Idioma");?></label>
 				<select id="lang" name="lang">
 					<?php
 						foreach ($idiomas as $idioma => $nombre) {
@@ -212,7 +212,7 @@ if ($mostrarform) {
 		</fieldset>
 		<p>
 			<input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>
-			<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("configurar");?>" class="submit"/>
+			<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("Configurar");?>" class="submit"/>
 		</p>
 	</form>
 <?php

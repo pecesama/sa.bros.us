@@ -98,9 +98,9 @@ if (esAdmin())
 				<fieldset>
 					<legend><?=__("Agregue sus preferencias al c&oacute;digo generado.");?></legend>
 					<p><?=__("Seleccione sus preferencias para desplegar su sabros.us:");?></p><br />
-					<label><?=__("n&uacute;mero de enlaces:");?></label><br />
+					<label><?=__("N&uacute;mero de enlaces:");?></label><br />
 					<input name="txtCuantos" id="txtCuantos" onKeypress="if (event.keyCode < 45 || event.keyCode > 58) event.returnValue = false;" onKeyUp="generaBadge()" /><br />
-					<label><?=__("filtrar por etiqueta:");?></label><br />
+					<label><?=__("Filtrar por etiqueta:");?></label><br />
 					<input name="txtTag" id="txtTag" onKeyUp="generaBadge()" />
 				</fieldset>
 				<fieldset>

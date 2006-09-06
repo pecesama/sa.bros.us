@@ -33,7 +33,7 @@
 			function elimina(id_enlace)
 			{	// Algo de JavaScript para aquello de que no se quiera borrar.
 				var x;
-				x=window.confirm("<?=__("&iquest;Realmente desea eliminar este enlace de su sabros.us?");?>\n\n<?=__("esta acci&oacute;n no se puede deshacer!");?>");				 
+				x=window.confirm("<?=__("&iquest;Realmente desea eliminar este enlace de su sabros.us?");?>\n\n<?=__("Esta acci&oacute;n no se puede deshacer!");?>");				 
 				if (x) { location="eliminar.php?id="+id_enlace+"&confirm=0"; }
 			}
 				
@@ -76,7 +76,7 @@
 		<div id="formulario">
 			<form action="cpanel.php" method="get" name="buscar">
 				<fieldset>
-					<label for="buscar"><?=__("buscar:");?></label>				
+					<label for="buscar"><?=__("Buscar:");?></label>				
 					<input class="input_naranja" id="buscar" name="buscar" type="text" />				
 					<input class="submit_normal" type="submit" value="<?=__("buscar");?>" name="btnBuscar" />
 				</fieldset>

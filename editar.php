@@ -96,22 +96,22 @@ if (isset($_GET["id"])) {
 
 			<fieldset>
 				<legend><?=(isset($_GET["id"]) ? __("Edita los datos de tu enlace.") : __("Escribe los datos de tu enlace."));?></legend>
-				<label for="title"><?=__("t&iacute;tulo:");?></label><br />
+				<label for="title"><?=__("T&iacute;tulo:");?></label><br />
 				<input class="input_morado" type="text" name="title" value="<?=$titulo;?>" size="86" /><br />
 
-				<label for="enlace"><?=__("enlace:");?></label><br />
+				<label for="enlace"><?=__("Enlace:");?></label><br />
 				<input class="input_morado" type="text" name="enlace" value="<? echo $enlace; ?>" size="86" /><br />
 
-				<label for="descripcion"><?=__("descripci&oacute;n:");?></label>
+				<label for="descripcion"><?=__("Descripci&oacute;n:");?></label>
 				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><? echo $descripcion; ?></textarea><br />
 
-				<label for="privado"><?=__("enlace privado:");?></label>
+				<label for="privado"><?=__("Enlace Privado:");?></label>
 				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
 				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
 
-				<label for="etiquetas"><?=__("etiquetas:");?></label><br />
+				<label for="etiquetas"><?=__("Etiquetas:");?></label><br />
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
-				<p><?=__("escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
+				<p><?=__("Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
 					<legend><?=__("Agregar etiquetas");?></legend>
 					<?php getTags("javascript"); ?>
