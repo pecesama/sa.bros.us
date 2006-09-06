@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-05 20:40-0500\n"
+"POT-Creation-Date: 2006-09-05 21:20-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,14 +77,24 @@ msgstr ""
 msgid "Anterior"
 msgstr "anterior"
 
+msgid "Archivo:"
+msgstr ""
+
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
 msgstr ""
 
 msgid "Azul"
 msgstr ""
 
+msgid "Base de Datos:"
+msgstr ""
+
 msgid "Buscar enlaces con"
 msgstr ""
+
+#, fuzzy
+msgid "Buscar:"
+msgstr "buscar:"
 
 msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
 msgstr ""
@@ -105,6 +115,9 @@ msgid "Configuraci&oacute;n de sabros.us"
 msgstr ""
 
 msgid "Configuraci&oacute;n del administrador"
+msgstr ""
+
+msgid "Configurar"
 msgstr ""
 
 msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
@@ -156,6 +169,9 @@ msgstr ""
 msgid "Descripci&oacute;n del sitio:"
 msgstr ""
 
+msgid "Descripci&oacute;n:"
+msgstr ""
+
 msgid "E-mail:"
 msgstr ""
 
@@ -189,10 +205,22 @@ msgstr "eliminar"
 msgid "Eliminar enlace"
 msgstr "eliminar"
 
+msgid "Email:"
+msgstr ""
+
+msgid "Enlace Privado:"
+msgstr ""
+
+msgid "Enlace:"
+msgstr ""
+
 msgid "Enlaces de"
 msgstr ""
 
 msgid "Enlaces por p&aacute;gina:"
+msgstr ""
+
+msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
 msgstr ""
 
 msgid "Error al ejecutar la consulta en la DB"
@@ -204,6 +232,9 @@ msgstr ""
 msgid "Es sencillo y r&aacute;pido de instalar."
 msgstr ""
 
+msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
+msgstr ""
+
 msgid "Escribe los datos de tu enlace."
 msgstr ""
 
@@ -213,13 +244,16 @@ msgstr ""
 msgid "Etiquetas relacionadas:"
 msgstr ""
 
-msgid "Eviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+msgid "Etiquetas:"
 msgstr ""
 
 msgid "Exportar tus marcadores de tu navegador a un archivo"
 msgstr ""
 
 msgid "FUNCIONALIDADES:"
+msgstr ""
+
+msgid "Filtrar por etiqueta:"
 msgstr ""
 
 msgid "Gris"
@@ -240,8 +274,15 @@ msgstr ""
 msgid "Hoja de estilo de mi sabros.us"
 msgstr ""
 
+msgid "Idioma"
+msgstr ""
+
 msgid "Idioma:"
 msgstr ""
+
+#, fuzzy
+msgid "Importar"
+msgstr "importar"
 
 msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
 msgstr ""
@@ -297,13 +338,16 @@ msgstr ""
 msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
 msgstr ""
 
+msgid "N&uacute;mero de enlaces por p&aacute;gina:"
+msgstr ""
+
+msgid "N&uacute;mero de enlaces:"
+msgstr ""
+
 msgid "Naranja"
 msgstr ""
 
 msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
-msgstr ""
-
-msgid "Nmbre del sitio:"
 msgstr ""
 
 msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
@@ -321,13 +365,31 @@ msgstr ""
 msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
 msgstr ""
 
+msgid "Nombre de tu sitio:"
+msgstr ""
+
+msgid "Nombre del sitio:"
+msgstr ""
+
+msgid "Nube de ejemplo"
+msgstr ""
+
 msgid "Nueva contrase&ntilde;a"
+msgstr ""
+
+msgid "P&uacute;blico"
 msgstr ""
 
 msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
 msgstr ""
 
 msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
+msgstr ""
+
+msgid "Password para el control panel:"
+msgstr ""
+
+msgid "Password:"
 msgstr ""
 
 msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
@@ -351,10 +413,25 @@ msgstr ""
 msgid "Personalice la nube de etiquetas:"
 msgstr ""
 
+msgid "Prefijo para las tablas:"
+msgstr ""
+
+msgid "Privacidad:"
+msgstr ""
+
+msgid "Privado"
+msgstr ""
+
 msgid "RSS de la etiqueta"
 msgstr ""
 
 msgid "RSS de sabros.us"
+msgstr ""
+
+msgid "Reescribe el Password:"
+msgstr ""
+
+msgid "Reescribe el password:"
 msgstr ""
 
 msgid "Reescribe la contrase&ntilde;a:"
@@ -381,6 +458,9 @@ msgstr ""
 msgid "Seleccione sus preferencias para desplegar su sabros.us:"
 msgstr ""
 
+msgid "Servidor:"
+msgstr ""
+
 msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
 msgstr ""
 
@@ -400,6 +480,15 @@ msgstr "siguiente"
 msgid "Siguiente &raquo;"
 msgstr "siguiente"
 
+msgid "T&iacute;tulo:"
+msgstr ""
+
+msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
+msgstr ""
+
+msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
+msgstr ""
+
 msgid "Terminando sesi&oacute;n..."
 msgstr ""
 
@@ -407,13 +496,14 @@ msgid "Tiene un atractivo dise&ntilde;o."
 msgstr ""
 
 #, fuzzy
+msgid "Usuario:"
+msgstr "buscar:"
+
+#, fuzzy
 msgid "Ver"
 msgstr "ver"
 
 msgid "Verde"
-msgstr ""
-
-msgid "activado"
 msgstr ""
 
 msgid "actualizaci&oacute;n"
@@ -431,41 +521,10 @@ msgstr ""
 msgid "agregar enlace"
 msgstr ""
 
-msgid "aleatorio"
-msgstr ""
-
-msgid "archivo:"
-msgstr ""
-
-msgid "azul"
-msgstr ""
-
-msgid "base de datos:"
-msgstr ""
-
 msgid "buscar"
 msgstr ""
 
-#, fuzzy
-msgid "buscar:"
-msgstr "buscar:"
-
-msgid "color para la nube de etiquetas:"
-msgstr ""
-
-msgid "configurar"
-msgstr ""
-
 msgid "contrase&ntilde;a:"
-msgstr ""
-
-msgid "desactivado"
-msgstr ""
-
-msgid "descripci&oacute;n del sitio:"
-msgstr ""
-
-msgid "descripci&oacute;n:"
 msgstr ""
 
 #, fuzzy
@@ -491,22 +550,7 @@ msgstr ""
 msgid "en"
 msgstr ""
 
-msgid "enlace privado:"
-msgstr ""
-
-msgid "enlace:"
-msgstr ""
-
 msgid "enlaces con esta etiqueta"
-msgstr ""
-
-msgid "escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
-msgstr ""
-
-msgid "esta acci&oacute;n no se puede deshacer!"
-msgstr ""
-
-msgid "etiquetas:"
 msgstr ""
 
 #, fuzzy
@@ -514,9 +558,6 @@ msgid "exportar"
 msgstr "exportar"
 
 msgid "exportar a mi sabros.us"
-msgstr ""
-
-msgid "filtrar por etiqueta:"
 msgstr ""
 
 #, fuzzy
@@ -535,13 +576,7 @@ msgstr ""
 msgid "generar c&oacute;digo"
 msgstr ""
 
-msgid "gris"
-msgstr ""
-
 msgid "guardar contrase&ntilde;a"
-msgstr ""
-
-msgid "idioma"
 msgstr ""
 
 #, fuzzy
@@ -587,80 +622,29 @@ msgstr ""
 msgid "mis etiquetas en sabros.us"
 msgstr ""
 
-msgid "n&uacute;mero de enlaces por p&aacute;gina:"
-msgstr ""
-
-msgid "n&uacute;mero de enlaces:"
-msgstr ""
-
-msgid "naranja"
-msgstr ""
-
-msgid "nombre de tu sitio:"
-msgstr ""
-
-msgid "nube de ejemplo"
-msgstr ""
-
 msgid "opciones"
 msgstr ""
 
 msgid "ordena por la etiqueta"
 msgstr ""
 
-msgid "p&uacute;blico"
-msgstr ""
-
 #, fuzzy
 msgid "panel de control"
 msgstr "panel de control"
 
-msgid "password para el control panel:"
-msgstr ""
-
-msgid "password:"
-msgstr ""
-
-msgid "prefijo para las tablas:"
-msgstr ""
-
-msgid "privacidad:"
-msgstr ""
-
-msgid "privado"
-msgstr ""
-
 msgid "recordar contrase&ntilde;a"
-msgstr ""
-
-msgid "reescribe el password:"
 msgstr ""
 
 msgid "regresar a sabros.us"
 msgstr ""
 
-msgid "rojo"
-msgstr ""
-
 msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr ""
-
-msgid "servidor:"
 msgstr ""
 
 msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
 msgstr ""
 
 msgid "solicitar nueva"
-msgstr ""
-
-msgid "t&iacute;tulo:"
-msgstr ""
-
-msgid "tama&ntilde;o de fuente m&aacute;ximo:"
-msgstr ""
-
-msgid "tama&ntilde;o de fuente m&iacute;nimo:"
 msgstr ""
 
 msgid "terminar la sesi&oacute;n"
@@ -672,9 +656,6 @@ msgstr ""
 #, fuzzy
 msgid "usuario:"
 msgstr "buscar:"
-
-msgid "verde"
-msgstr ""
 
 #, fuzzy
 #~ msgid "siguiente"

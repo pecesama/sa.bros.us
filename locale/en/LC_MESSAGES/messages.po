@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sa.bros.us 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-05 20:40-0500\n"
+"POT-Creation-Date: 2006-09-05 21:20-0500\n"
 "PO-Revision-Date: 2006-06-02 21:36-0500\n"
 "Last-Translator: Kurt McKee <kurtmckee@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,14 +84,26 @@ msgstr "random"
 msgid "Anterior"
 msgstr "back"
 
+#, fuzzy
+msgid "Archivo:"
+msgstr "file:"
+
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
 msgstr "drag this link to the \"bookmarks toolbar\":"
 
 msgid "Azul"
 msgstr "blue"
 
+#, fuzzy
+msgid "Base de Datos:"
+msgstr "database:"
+
 msgid "Buscar enlaces con"
 msgstr ""
+
+#, fuzzy
+msgid "Buscar:"
+msgstr "search:"
 
 msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
 msgstr "click <kbd>browse...</kbd> to find the saved bookmark file on your computer. the maximum size the file can be is 1mb"
@@ -114,6 +126,10 @@ msgstr "sa.bros.us configuration"
 
 msgid "Configuraci&oacute;n del administrador"
 msgstr "administrator configuration"
+
+#, fuzzy
+msgid "Configurar"
+msgstr "configure"
 
 msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
 msgstr "<strong>control panel's</strong> password:"
@@ -165,6 +181,10 @@ msgstr "deactivated"
 msgid "Descripci&oacute;n del sitio:"
 msgstr "description of the website:"
 
+#, fuzzy
+msgid "Descripci&oacute;n:"
+msgstr "description:"
+
 msgid "E-mail:"
 msgstr "e-mail:"
 
@@ -198,11 +218,27 @@ msgstr "delete"
 msgid "Eliminar enlace"
 msgstr "delete link"
 
+#, fuzzy
+msgid "Email:"
+msgstr "e-mail:"
+
+#, fuzzy
+msgid "Enlace Privado:"
+msgstr "private link:"
+
+#, fuzzy
+msgid "Enlace:"
+msgstr "link:"
+
 msgid "Enlaces de"
 msgstr "links of"
 
 msgid "Enlaces por p&aacute;gina:"
 msgstr "links by page:"
+
+#, fuzzy
+msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+msgstr "send links to SopaSabrosa"
 
 msgid "Error al ejecutar la consulta en la DB"
 msgstr ""
@@ -213,6 +249,10 @@ msgstr "it's open source."
 msgid "Es sencillo y r&aacute;pido de instalar."
 msgstr "easy and simple to install."
 
+#, fuzzy
+msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
+msgstr "a space-separated list of tags describing this bookmark (ex: xhtml css php)."
+
 msgid "Escribe los datos de tu enlace."
 msgstr "create a new bookmark."
 
@@ -222,14 +262,19 @@ msgstr "there's no undo here!"
 msgid "Etiquetas relacionadas:"
 msgstr "related tags"
 
-msgid "Eviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
-msgstr "send links to SopaSabrosa"
+#, fuzzy
+msgid "Etiquetas:"
+msgstr "tags:"
 
 msgid "Exportar tus marcadores de tu navegador a un archivo"
 msgstr "export your bookmarks from your browser to a file"
 
 msgid "FUNCIONALIDADES:"
 msgstr "Features:"
+
+#, fuzzy
+msgid "Filtrar por etiqueta:"
+msgstr "filter by tag:"
 
 msgid "Gris"
 msgstr "gray"
@@ -250,8 +295,16 @@ msgstr "there are <strong>%no_enlaces%</strong> links. showing from <strong>%des
 msgid "Hoja de estilo de mi sabros.us"
 msgstr "style sheet of my sa.bros.us"
 
+#, fuzzy
+msgid "Idioma"
+msgstr "language:"
+
 msgid "Idioma:"
 msgstr "language:"
+
+#, fuzzy
+msgid "Importar"
+msgstr "import"
 
 msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
 msgstr "impossible to send your password by email, because did not enter the administrator's e-mail"
@@ -310,14 +363,19 @@ msgstr "tag cloud's color:"
 msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
 msgstr "mozilla firefox: <kbd>bookmarks &gt; manage bookmarks... &gt; file &gt; export...</kbd>"
 
+#, fuzzy
+msgid "N&uacute;mero de enlaces por p&aacute;gina:"
+msgstr "number of links:"
+
+#, fuzzy
+msgid "N&uacute;mero de enlaces:"
+msgstr "number of links:"
+
 msgid "Naranja"
 msgstr "orange"
 
 msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
 msgstr "netscape: <kbd>bookmarks &gt; manage bookmarks... &gt; tools &gt; export...</kbd>"
-
-msgid "Nmbre del sitio:"
-msgstr "website name:"
 
 msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
 msgstr "unable to write to <code>include/config.php</code>. please check the permissions on the file and run the installation again."
@@ -336,8 +394,24 @@ msgstr "there are not links on this sa.bros.us yet."
 msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
 msgstr "were not imported <strong>%no_noimportadosrepetidos%</strong> links because already were included in sa.bros.us."
 
+#, fuzzy
+msgid "Nombre de tu sitio:"
+msgstr "website name:"
+
+#, fuzzy
+msgid "Nombre del sitio:"
+msgstr "website name:"
+
+#, fuzzy
+msgid "Nube de ejemplo"
+msgstr "nube de ejemplo"
+
 msgid "Nueva contrase&ntilde;a"
 msgstr "new password"
+
+#, fuzzy
+msgid "P&uacute;blico"
+msgstr "public"
 
 msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
 msgstr "in order to import the del.icio.us's links, introduce your login information."
@@ -345,6 +419,14 @@ msgstr "in order to import the del.icio.us's links, introduce your login informa
 #, fuzzy
 msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
 msgstr "in order to show the new urls of your sa.bros.us, you must copy this code anywhere of your blog or in a html page."
+
+#, fuzzy
+msgid "Password para el control panel:"
+msgstr "password for the control panel:"
+
+#, fuzzy
+msgid "Password:"
+msgstr "password:"
 
 msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
 msgstr "quickly add bookmarks using your web browser."
@@ -367,12 +449,32 @@ msgstr "allow visitors to export links:"
 msgid "Personalice la nube de etiquetas:"
 msgstr "add your preferences:"
 
+#, fuzzy
+msgid "Prefijo para las tablas:"
+msgstr "database table prefix:"
+
+#, fuzzy
+msgid "Privacidad:"
+msgstr "privacy:"
+
+#, fuzzy
+msgid "Privado"
+msgstr "private"
+
 msgid "RSS de la etiqueta"
 msgstr "tag feed"
 
 #, fuzzy
 msgid "RSS de sabros.us"
 msgstr "sa.bros.us feed"
+
+#, fuzzy
+msgid "Reescribe el Password:"
+msgstr "confirm password:"
+
+#, fuzzy
+msgid "Reescribe el password:"
+msgstr "confirm password:"
 
 msgid "Reescribe la contrase&ntilde;a:"
 msgstr "confirm password:"
@@ -401,6 +503,10 @@ msgid "Seleccione sus preferencias para desplegar su sabros.us:"
 msgstr "choose the preferences to display your sa.bros.us:"
 
 #, fuzzy
+msgid "Servidor:"
+msgstr "server:"
+
+#, fuzzy
 msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
 msgstr "if you want to personalize the sa.bros.us style, this is the xhtml structure used."
 
@@ -423,20 +529,33 @@ msgstr "next"
 msgid "Siguiente &raquo;"
 msgstr "next"
 
+#, fuzzy
+msgid "T&iacute;tulo:"
+msgstr "title:"
+
+#, fuzzy
+msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
+msgstr "maximum font size"
+
+#, fuzzy
+msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
+msgstr "minimum font size"
+
 msgid "Terminando sesi&oacute;n..."
 msgstr "log out"
 
 msgid "Tiene un atractivo dise&ntilde;o."
 msgstr "has a fashionable design."
 
+#, fuzzy
+msgid "Usuario:"
+msgstr "user:"
+
 msgid "Ver"
 msgstr "view"
 
 msgid "Verde"
 msgstr "green"
-
-msgid "activado"
-msgstr "activated"
 
 msgid "actualizaci&oacute;n"
 msgstr "update"
@@ -454,41 +573,11 @@ msgstr "add to sa.bros.us"
 msgid "agregar enlace"
 msgstr "add link"
 
-msgid "aleatorio"
-msgstr "random"
-
-msgid "archivo:"
-msgstr "file:"
-
-msgid "azul"
-msgstr "blue"
-
-msgid "base de datos:"
-msgstr "database:"
-
 msgid "buscar"
 msgstr "search"
 
-msgid "buscar:"
-msgstr "search:"
-
-msgid "color para la nube de etiquetas:"
-msgstr "tag cloud's color:"
-
-msgid "configurar"
-msgstr "configure"
-
 msgid "contrase&ntilde;a:"
 msgstr "password:"
-
-msgid "desactivado"
-msgstr "deactivated"
-
-msgid "descripci&oacute;n del sitio:"
-msgstr "description of the website:"
-
-msgid "descripci&oacute;n:"
-msgstr "description:"
 
 msgid "editar"
 msgstr "edit"
@@ -511,23 +600,8 @@ msgstr "email:"
 msgid "en"
 msgstr "in"
 
-msgid "enlace privado:"
-msgstr "private link:"
-
-msgid "enlace:"
-msgstr "link:"
-
 msgid "enlaces con esta etiqueta"
 msgstr "links with that tag"
-
-msgid "escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
-msgstr "a space-separated list of tags describing this bookmark (ex: xhtml css php)."
-
-msgid "esta acci&oacute;n no se puede deshacer!"
-msgstr "there's no undo here!"
-
-msgid "etiquetas:"
-msgstr "tags:"
 
 msgid "exportar"
 msgstr "export"
@@ -535,9 +609,6 @@ msgstr "export"
 #, fuzzy
 msgid "exportar a mi sabros.us"
 msgstr "export to my sa.bros.us"
-
-msgid "filtrar por etiqueta:"
-msgstr "filter by tag:"
 
 msgid "generado con:"
 msgstr "powered by:"
@@ -554,14 +625,8 @@ msgstr "create links badge"
 msgid "generar c&oacute;digo"
 msgstr "generate code"
 
-msgid "gris"
-msgstr "gray"
-
 msgid "guardar contrase&ntilde;a"
 msgstr "save password"
-
-msgid "idioma"
-msgstr "language"
 
 msgid "importar"
 msgstr "import"
@@ -610,82 +675,31 @@ msgstr "sa.bros.us' update has been completed successfully. you can access the <
 msgid "mis etiquetas en sabros.us"
 msgstr "my tags on sabros.us"
 
-msgid "n&uacute;mero de enlaces por p&aacute;gina:"
-msgstr "number of links:"
-
-msgid "n&uacute;mero de enlaces:"
-msgstr "number of links:"
-
-msgid "naranja"
-msgstr "orange"
-
-msgid "nombre de tu sitio:"
-msgstr "website name:"
-
-msgid "nube de ejemplo"
-msgstr "nube de ejemplo"
-
 msgid "opciones"
 msgstr "options"
 
 msgid "ordena por la etiqueta"
 msgstr "sort by tag"
 
-msgid "p&uacute;blico"
-msgstr "public"
-
 msgid "panel de control"
 msgstr "control panel"
 
-msgid "password para el control panel:"
-msgstr "password for the control panel:"
-
-msgid "password:"
-msgstr "password:"
-
-msgid "prefijo para las tablas:"
-msgstr "database table prefix:"
-
-msgid "privacidad:"
-msgstr "privacy:"
-
-msgid "privado"
-msgstr "private"
-
 msgid "recordar contrase&ntilde;a"
 msgstr "remember password"
-
-msgid "reescribe el password:"
-msgstr "confirm password:"
 
 #, fuzzy
 msgid "regresar a sabros.us"
 msgstr "back to sa.bros.us"
 
-msgid "rojo"
-msgstr "red"
-
 #, fuzzy
 msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
 msgstr "sa.bros.us is a web-based bookmarking system to organize your bookmarks on your website. it is similar to del.icio.us in that you can manage your bookmarks online, but with sa.bros.us you can do it on your own website."
-
-msgid "servidor:"
-msgstr "server:"
 
 msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
 msgstr "if the characters appears to be rather rare, press the button to fix it."
 
 msgid "solicitar nueva"
 msgstr "get new password"
-
-msgid "t&iacute;tulo:"
-msgstr "title:"
-
-msgid "tama&ntilde;o de fuente m&aacute;ximo:"
-msgstr "maximum font size"
-
-msgid "tama&ntilde;o de fuente m&iacute;nimo:"
-msgstr "minimum font size"
 
 msgid "terminar la sesi&oacute;n"
 msgstr "log out"
@@ -696,11 +710,29 @@ msgstr "log out"
 msgid "usuario:"
 msgstr "user:"
 
-msgid "verde"
-msgstr "green"
-
 #~ msgid "Ir a la p&aacute;gina:"
 #~ msgstr "go to:"
+
+#~ msgid "activado"
+#~ msgstr "activated"
+
+#~ msgid "aleatorio"
+#~ msgstr "random"
+
+#~ msgid "azul"
+#~ msgstr "blue"
+
+#~ msgid "color para la nube de etiquetas:"
+#~ msgstr "tag cloud's color:"
+
+#~ msgid "desactivado"
+#~ msgstr "deactivated"
+
+#~ msgid "descripci&oacute;n del sitio:"
+#~ msgstr "description of the website:"
+
+#~ msgid "esta acci&oacute;n no se puede deshacer!"
+#~ msgstr "there's no undo here!"
 
 #~ msgid "etiquetas relacionadas buscar"
 #~ msgstr "find links tagged with"
@@ -708,5 +740,20 @@ msgstr "green"
 #~ msgid "funcionalidades:"
 #~ msgstr "features:"
 
+#~ msgid "gris"
+#~ msgstr "gray"
+
+#~ msgid "idioma"
+#~ msgstr "language"
+
+#~ msgid "naranja"
+#~ msgstr "orange"
+
+#~ msgid "rojo"
+#~ msgstr "red"
+
 #~ msgid "siguiente"
 #~ msgstr "next"
+
+#~ msgid "verde"
+#~ msgstr "green"
