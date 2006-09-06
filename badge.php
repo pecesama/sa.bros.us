@@ -35,7 +35,7 @@
 	
 	if (isset($_GET["cuantos"])) {		
 		$limite=$_GET["cuantos"];
-		$sqlStr = (!isset($tagtag) ? "select * from ".$prefix."sabrosus ORDER BY fecha DESC LIMIT $limite" : "select * from ".$prefix."sabrosus where tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC LIMIT $limite");
+		$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $limite" : "SELECT * FROM ".$prefix."sabrosus WHERE (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $limite");
 		$result = mysql_query($sqlStr);
 		
 		echo "document.write(\"<div id='mi_sabrosus'>\");\n";

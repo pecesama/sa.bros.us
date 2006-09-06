@@ -139,7 +139,7 @@ header("Content-type: text/html; charset=UTF-8");
 							$privado=true;
 						}
 						if ($etiqueta!=="") {
-							$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".chequearURLFriendly($Sabrosus->sabrUrl."/tag/".urlencode($etiqueta),$Sabrosus->sabrUrl."/index.php?tag=".urlencode($etiqueta))."\">".htmlspecialchars($etiqueta)."</a> ";
+							$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","/index.php?tag=").urlencode($etiqueta)."\">".htmlspecialchars($etiqueta)."</a> ";
 						}
 					}
 	

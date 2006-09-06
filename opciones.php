@@ -8,11 +8,14 @@
 
   =========================== */
 
+
 ob_start();
 define('ABSPATH', dirname(__FILE__).'/');
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
+
+header("Content-type: text/html; charset=UTF-8");
 
 if (esAdmin()) {
 	if (isset($_POST["accion"])) {
@@ -121,7 +124,7 @@ if (esAdmin()) {
 			<form name="config_form" id="config_form" action="opciones.php" method="post">
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n de sabros.us");?></legend>
-					<label for="sname"><?=__("Nmbre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
+					<label for="sname"><?=__("Nombre del sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$Sabrosus->siteName?>" /><br />
 					<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$Sabrosus->siteTitle?>" /><br />
 					<label for="surl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?></label><input type="text" name="surl" id="surl" value="<?=$Sabrosus->siteUrl?>" /><br />
 					<label for="saburl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:");?></label><input type="text" name="saburl" id="saburl" value="<?=$Sabrosus->sabrUrl?>" /><br />
@@ -143,7 +146,7 @@ if (esAdmin()) {
 						?>
 						</select><br />
 						<? $ping = (($Sabrosus->ping=="1") ? "checked=\"true\"" : ""); ?>
-						<label for="ping_sopa"><?=__("Eviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
+						<label for="ping_sopa"><?=__("Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n de la apariencia");?></legend>

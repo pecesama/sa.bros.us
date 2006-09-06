@@ -91,16 +91,16 @@ if (esAdmin())
 		<div id="bookmarks">
 			<form id="import" enctype="multipart/form-data" action="importar.php" method="post">
 				<fieldset>
-					<legend><?=__("importar");?></legend>
-					<label for="userfile"><?=__("archivo:");?></label>
+					<legend><?=__("Importar");?></legend>
+					<label for="userfile"><?=__("Archivo:");?></label>
 						<input class="no_style" type="hidden" name="MAX_FILE_SIZE" value="1024000" />
 						<input class="input_morado" type="file" name="userfile" size="50" /><br />
-					<label for="status"><?=__("privacidad:");?></label>
+					<label for="status"><?=__("Privacidad:");?></label>
 						<select name="status">
-							<option value="0"><?=__("p&uacute;blico");?></option>
-							<option value="1"><?=__("privado");?></option>
+							<option value="0"><?=__("P&uacute;blico");?></option>
+							<option value="1"><?=__("Privado");?></option>
 						</select><br />
-					<input class="submit" type="submit" value="<?=__("importar");?>" />
+					<input class="submit" type="submit" value="<?=__("Importar");?>" />
 				</fieldset>
 			</form>
 		
