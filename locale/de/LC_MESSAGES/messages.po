@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-08-03 22:37-0500\n"
+"POT-Creation-Date: 2006-09-05 20:40-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alexander Drechsel <adrechsel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
 msgstr "bitte gib dein passwort ein"
 
 #, fuzzy
-msgid "&iquest;Realmente desea eliminar este enlace de su sa.bros.us?"
+msgid "&iquest;Realmente desea eliminar este enlace de su sabros.us?"
 msgstr "willst du diesen link wirklich l&ouml;schen?"
 
 #, fuzzy
@@ -29,8 +29,12 @@ msgid "&iquest;olvidaste tu contrase&ntilde;a?"
 msgstr "bitte gib dein passwort ein"
 
 #, fuzzy
-msgid "&iquest;qu&eacute; es sa.bros.us?"
+msgid "&iquest;qu&eacute; es sabros.us?"
 msgstr "was ist sa.bros.us?"
+
+#, fuzzy
+msgid "&laquo; Anterior"
+msgstr "zur&uuml;ck"
 
 msgid "(sin <q>/</q> al final)"
 msgstr ""
@@ -39,7 +43,8 @@ msgstr ""
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
 msgstr "friendly <abbr title=\"Uniform Resource Locator\">url</abbr>:"
 
-msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sa.bros.us:"
+#, fuzzy
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
 msgstr "<abbr title=\"Uniform Resource Locator\">url</abbr> zu deinem sa.bros.us:"
 
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
@@ -62,15 +67,15 @@ msgid "Activado"
 msgstr "aktiviert"
 
 #, fuzzy
-msgid "Actualizaci&oacute;n de sabrosus"
+msgid "Actualizaci&oacute;n de sabros.us"
 msgstr "sa.bros.us-aktualisierung"
 
 #, fuzzy
-msgid "Agrega las etiquetas de sa.bros.us a t&uacute; sitio."
+msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
 msgstr "meine tags bei sa.bros.us"
 
 #, fuzzy
-msgid "Agrega los URLs de sa.bros.us a t&uacute; sitio."
+msgid "Agrega los URLs de sabros.us a t&uacute; sitio."
 msgstr "meine tags bei sa.bros.us"
 
 #, fuzzy
@@ -119,7 +124,7 @@ msgid "Configuraci&oacute;n de la base de datos"
 msgstr "konfiguration und aussehen"
 
 #, fuzzy
-msgid "Configuraci&oacute;n de sa.bros.us"
+msgid "Configuraci&oacute;n de sabros.us"
 msgstr "sa.bros.us-konfiguration"
 
 #, fuzzy
@@ -166,7 +171,7 @@ msgstr ""
 msgid "Debes introducir la URL para el sitio"
 msgstr ""
 
-msgid "Debes introducir la URL para sa.bros.us"
+msgid "Debes introducir la URL para sabros.us"
 msgstr ""
 
 #, fuzzy
@@ -201,11 +206,11 @@ msgid "El email ingresado en el formulario es distinto al que esta guardado en l
 msgstr ""
 
 #, fuzzy
-msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sa.bros.us\">otros miembros</a>."
+msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>."
 msgstr "<a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> und <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">pedro santana</a> haben das sa.bros.us-projekt 2005 begonnen, zusammen mit <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Sa.bros.us team\">anderen mitarbeitern</a>."
 
 #, fuzzy
-msgid "El proyecto sa.bros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sa.bros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sa.bros.us\">SourceForge.net</a>."
+msgid "El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
 msgstr "sa.bros.us ist 'open source' (du kannst es also benutzen und den original-code bearbeiten) und l&auml;uft mit PHP und MySQL. die offizielle homepage findest du <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us\">hier</a>; herunterladen kannst du das programm bei <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project\">sourceforge.net</a>."
 
 msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
@@ -277,7 +282,7 @@ msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <
 msgstr "es sind <strong>%no_enlaces%</strong> links gespeichert. angezeigt werden die links <strong>%desde%</strong> bis1 <strong>%total%</strong>."
 
 #, fuzzy
-msgid "Hoja de estilo de mi sa.bros.us"
+msgid "Hoja de estilo de mi sabros.us"
 msgstr "style-sheet f&uuml;r mein sa.bros.us"
 
 #, fuzzy
@@ -299,21 +304,18 @@ msgstr "anleitung"
 msgid "Introduzca su contrase&ntilde;a"
 msgstr "bitte gib dein passwort ein"
 
-msgid "Ir a la p&aacute;gina:"
-msgstr "gehe zu:"
-
 #, fuzzy
 msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
 msgstr "internet explorer: <kbd>datei &gt; import und export... &gt; favoriten exportieren</kbd>"
 
 #, fuzzy
-msgid "La instalaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
+msgid "La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
 msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
 
 msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
 msgstr ""
 
-msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sa.bros.us es:"
+msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:"
 msgstr ""
 
 #, fuzzy
@@ -344,6 +346,10 @@ msgid "Mostrar descripciones en el badge de enlaces:"
 msgstr ""
 
 #, fuzzy
+msgid "Mostrar solo la nube de etiquetas en la portada:"
+msgstr "farbe der tag-wolke:"
+
+#, fuzzy
 msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
 msgstr "mozilla firefox: <kbd>lesezeichen &gt; lesezeichen-manager... &gt; datei &gt; export...</kbd>"
 
@@ -369,10 +375,10 @@ msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valor
 msgstr ""
 
 #, fuzzy
-msgid "No hay ning&uacute;n enlace en este sa.bros.us todav&iacute;a."
+msgid "No hay ning&uacute;n enlace en este sabros.us todav&iacute;a."
 msgstr "in diesem sa.bros.us wurden noch keine links gespeichert."
 
-msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sa.bros.us."
+msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
 msgstr ""
 
 #, fuzzy
@@ -383,7 +389,7 @@ msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuen
 msgstr ""
 
 #, fuzzy
-msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sa.bros.us."
+msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
 msgstr "kopiere diesen code und f&uuml;ge ihn an der gew&uuml;nschten stelle in deinem blog oder deiner website ein."
 
 #, fuzzy
@@ -417,7 +423,8 @@ msgstr "farbe der tag-wolke:"
 msgid "RSS de la etiqueta"
 msgstr "rss-feed f&uuml;r aktuellen tag"
 
-msgid "RSS de sa.bros.us"
+#, fuzzy
+msgid "RSS de sabros.us"
 msgstr "rss-feed f&uuml;r dieses sa.bros.us"
 
 #, fuzzy
@@ -427,10 +434,6 @@ msgstr "passwort best&auml;tigen:"
 #, fuzzy
 msgid "Rojo"
 msgstr "rot"
-
-#, fuzzy
-msgid "Sa.bros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sa.bros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr "sa.bros.us ist ein cms, mit dem du lesezeichen auf deiner website organisieren kannst - genau so wie bei de.licio.us. aber mit sa.bros.us kannst du das auf deiner eigenen website machen."
 
 msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
 msgstr ""
@@ -447,28 +450,32 @@ msgid "Seleccionar la privacidad por defecto asignada a los marcadores importado
 msgstr "w&auml;hle den standard-status f&uuml;r deine importierten lesezeichen aus."
 
 #, fuzzy
-msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sa.bros.us:"
+msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
 msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
 
 #, fuzzy
-msgid "Seleccione sus preferencias para desplegar su sa.bros.us:"
+msgid "Seleccione sus preferencias para desplegar su sabros.us:"
 msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
 
 #, fuzzy
-msgid "Si deseas personalizar el estilo de despliegue de tu sa.bros.us, este es la estructura del XHTML generado por sa.bros.us badge."
+msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
 msgstr "wenn du den code anpassen willst, dies ist die verwendete xmlt-struktur."
 
-msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sa.bros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
+msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
 msgstr ""
 
-msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sa.bros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
 msgstr ""
 
 #, fuzzy
-msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sa.bros.us"
+msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sabros.us"
 msgstr "wenn du ein blog oder eine website hast, kannst du die neuesten links in deinem sa.bros.us dort anzeigen."
 
 msgid "Siguiente"
+msgstr "vorw&auml;rts"
+
+#, fuzzy
+msgid "Siguiente &raquo;"
 msgstr "vorw&auml;rts"
 
 msgid "Terminando sesi&oacute;n..."
@@ -499,7 +506,8 @@ msgstr "aktualisieren"
 msgid "agregar"
 msgstr "hinzuf&uuml;gen"
 
-msgid "agregar a sa.bros.us"
+#, fuzzy
+msgid "agregar a sabros.us"
 msgstr "zu sa.bros.us hinzuf&uuml;gen"
 
 msgid "agregar enlace"
@@ -597,7 +605,7 @@ msgid "exportar"
 msgstr "exportieren"
 
 #, fuzzy
-msgid "exportar a mi sa.bros.us"
+msgid "exportar a mi sabros.us"
 msgstr "in mein sa.bros.us kopieren"
 
 #, fuzzy
@@ -657,7 +665,7 @@ msgid "ingreso"
 msgstr "einloggen"
 
 #, fuzzy
-msgid "inicio sa.bros.us"
+msgid "inicio sabros.us"
 msgstr "sa.bros.us-startseite"
 
 #, fuzzy
@@ -667,19 +675,20 @@ msgstr "aktualisierung"
 msgid "ir a opciones"
 msgstr "einstellungen"
 
-msgid "ir a sa.bros.us"
+#, fuzzy
+msgid "ir a sabros.us"
 msgstr "zu deiner sa.bros.us-startseite"
 
 #, fuzzy
-msgid "la actualizaci&oacute;n de <strong>sa.bros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
+msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
 msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
 
 #, fuzzy
-msgid "la actualizaci&oacute;n de sa.bros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
+msgid "la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
 msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
 
 #, fuzzy
-msgid "mis etiquetas en sa.bros.us"
+msgid "mis etiquetas en sabros.us"
 msgstr "meine tags bei sa.bros.us"
 
 #, fuzzy
@@ -741,12 +750,16 @@ msgid "reescribe el password:"
 msgstr "passwort best&auml;tigen:"
 
 #, fuzzy
-msgid "regresar a sa.bros.us"
+msgid "regresar a sabros.us"
 msgstr "zur&uuml;ck zu sa.bros.us"
 
 #, fuzzy
 msgid "rojo"
 msgstr "rot"
+
+#, fuzzy
+msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
+msgstr "sa.bros.us ist ein cms, mit dem du lesezeichen auf deiner website organisieren kannst - genau so wie bei de.licio.us. aber mit sa.bros.us kannst du das auf deiner eigenen website machen."
 
 msgid "servidor:"
 msgstr ""
@@ -784,9 +797,8 @@ msgstr "gr&uuml;n"
 #~ msgid "Actualizar"
 #~ msgstr "aktualisieren"
 
-#, fuzzy
-#~ msgid "anterior"
-#~ msgstr "zur&uuml;ck"
+#~ msgid "Ir a la p&aacute;gina:"
+#~ msgstr "gehe zu:"
 
 #, fuzzy
 #~ msgid "siguiente"
