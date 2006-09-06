@@ -47,12 +47,14 @@ if (esAdmin()) {
 		$descrip = (isset($_POST['descripciones']) ? "1" : "0");
 		$ping = (isset($_POST['ping']) ? "1" : "0");
 		$soloNubeIndex = (isset($_POST['nube_tags']) ? "1" : "0");
+		$nubePosicion = (isset($_POST['nube_posicion']) ? "1" : "0");
 		$cfg['tags_cloud']['color'] = $_POST['color_tags'];
 		$cfg['multimedia_content']['allow'] = $multi;
 		$cfg['exportar']['compartir'] = $comp;
 		$cfg['links_badge']['descripciones'] = $descrip;
 		$cfg['sopasabrosa']['ping'] = $ping;
 		$cfg['tags_cloud']['alone_index'] = $soloNubeIndex;
+		$cfg['tags_cloud']['posicion']= $nubePosicion;
 		
 		if (!is_writeable("include/config.ini")) {
 			$errores +=1;
@@ -172,10 +174,13 @@ if (esAdmin()) {
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
 					<? $soloNube = (($Sabrosus->soloNube=="1") ? "checked=\"true\"" : ""); ?>
+					<? $cloudPosicion = (($Sabrosus->estiloNube=="1") ? "checked=\"true\"" : ""); ?>
+					
 					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
 					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
 					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 					<label for="nube_tags"><?=__("Mostrar solo la nube de etiquetas en la portada:");?></label><input name="nube_tags" type="checkbox" <? echo $soloNube; ?> id="nube_tags"/><br />
+					<label for="nube_posicion"><?=__("Mostrar la nube de etiquetas a la derecha:");?></label><input name="nube_posicion" type="checkbox" <? echo $cloudPosicion; ?> id="nube_posicion"/><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n del administrador")?></legend>

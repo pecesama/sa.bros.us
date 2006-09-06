@@ -67,6 +67,7 @@ body {
 	margin-right: 10px;
 	padding-right: 10px;
 	float:right;
+	width: 30%;
 }
 
 #contenido {
@@ -74,7 +75,8 @@ body {
 	margin-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
-	width: 700px;
+	float: left;
+	width: 60%;
 }
 
 #contenido h3 {
@@ -110,6 +112,7 @@ body {
 /* Inicio paginacion */
 br.clear{
 	clear: both;
+	height: 1px;
 }
 div.pagination {
 	text-align:center;
@@ -148,13 +151,24 @@ div.pagination span.disabled {
 
 /* Fin paginacion */
 
-#tagsx {
+#tagsx_d {
+	clear: both;
 	background-color: #fcfcfc;
 	border:0;
 	margin: 10px;
-	padding: 20px;
+	padding: 10px;
+	width: 30%;
+	float: right;
+	text-align: justify;
 }
 
+#tagsx {
+	clear: both;
+	background-color: #fcfcfc;
+	border:0;
+	margin: 10px;
+	padding: 10px;
+}
 #pie {
 	background-color: #F7F7F7;
 	border-top: 1px solid #CCCCCC;
