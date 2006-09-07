@@ -3,7 +3,7 @@ Historial de versiones
 v 1.7
 
     * Posibilidad de mostrar la nube de tags a la derecha o abajo de los enlaces (Victor Bracco)
-    * Screenshot a los enlaces (Victor Bracco, Webshotspro.com)
+    * Screenshots a los enlaces via Webshotspro.com (Victor Bracco, Pecesama)
     * Mejoras en el sistema de paginacion (Pecesama)
     * Generador de Sitemaps (Victor Bracco)
     * Controlar desde el panel de control el mostrar solo la nube de etiquetas en portada (Pecesama)
