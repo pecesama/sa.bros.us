@@ -211,7 +211,7 @@ header("Content-type: text/html; charset=UTF-8");
 				}
 			}
 		}
-		echo ($Sabrosus->compartir=="1") ? "<input type=\"submit\" name=\"enviar_links\" value=\"".__("exportar a mi sabros.us")."\" id=\"enviar_links\"/>
+		echo ($Sabrosus->compartir=="1") ? "<br class=\"clear\"/><input type=\"submit\" name=\"enviar_links\" value=\"".__("exportar a mi sabros.us")."\" id=\"enviar_links\"/>
 		</form>" : '';
 		?>
 	</div>
