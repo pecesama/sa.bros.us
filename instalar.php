@@ -261,9 +261,9 @@ function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $snam
 		) TYPE=MyISAM;";
 		$result = mysql_query($sqlStr);
 
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','P&aacute;gina de Estanislao Vizcarra, autor de sa.bro.sus.','css xhtml dise&ntilde;o web estandares cine php','2005-07-10 00:41:06');";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','Página de Estanislao Vizcarra, autor de sabros.us','css xhtml diseño web estandares cine php','2005-07-10 00:41:06');";
 		$result = mysql_query($sqlStr);
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','P&aacute;gina de Pedro Santana, co-autor de sabros.us','php programaci&oacute;n web java javascript','2005-07-10 00:42:04');";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','Página de Pedro Santana, co-autor de sabros.us','php programación web java javascript','2005-07-10 00:42:04');";
 		$result = mysql_query($sqlStr);
 
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$sname."','".$stitle."','".$siteUrl."','".$sabrUrl."','".$useFriendlyUrl."','".$lang."','".$limite."','".$email."','".md5($admPass)."');";
