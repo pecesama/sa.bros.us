@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-05 21:20-0500\n"
+"POT-Creation-Date: 2006-09-13 10:20-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alexander Drechsel <adrechsel@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,6 +40,16 @@ msgid "(sin <q>/</q> al final)"
 msgstr ""
 
 #, fuzzy
+msgid "-- Idiomas --"
+msgstr "sprache:"
+
+msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
+msgstr ""
+
+msgid "/index.php\">ver el sitio.</a>"
+msgstr ""
+
+#, fuzzy
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
 msgstr "friendly <abbr title=\"Uniform Resource Locator\">url</abbr>:"
 
@@ -51,24 +61,12 @@ msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
 msgstr "haupt-<abbr title=\"Uniform Resource Locator\">url</abbr> deiner website:"
 
 #, fuzzy
-msgid "<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
-msgstr "<strong>warnung</strong>: die f&uuml;r die aktualisierung notwendigen informationen konnten nicht gelesen werden. bitte &uuml;berpr&uuml;fe, ob die datei <code>include/config.php</code> nicht versehentlich ersetzt wurde und dass sie nicht daten einer vorhergehenden version enth&auml;lt."
-
-#, fuzzy
 msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
 msgstr "<strong>warnung</strong>: die aktualisierung wurde schon durchgef&uuml;hrt. sie muss nicht erneut durchgef&uuml;hrt werden."
 
 #, fuzzy
-msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
-msgstr "<strong>fehler</strong>: die datei <code>include/config.php</code> hat nicht die erforderlichen schreibrechte. bitte &auml;ndere sie und f&uuml;hre die aktualisierung erneut durch."
-
-#, fuzzy
 msgid "Activado"
 msgstr "aktiviert"
-
-#, fuzzy
-msgid "Actualizaci&oacute;n de sabros.us"
-msgstr "sa.bros.us-aktualisierung"
 
 #, fuzzy
 msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
@@ -396,6 +394,10 @@ msgid "Mostrar descripciones en el badge de enlaces:"
 msgstr ""
 
 #, fuzzy
+msgid "Mostrar la nube de etiquetas a la derecha:"
+msgstr "farbe der tag-wolke:"
+
+#, fuzzy
 msgid "Mostrar solo la nube de etiquetas en la portada:"
 msgstr "farbe der tag-wolke:"
 
@@ -531,10 +533,6 @@ msgstr "rot"
 
 msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
 msgstr ""
-
-#, fuzzy
-msgid "Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
-msgstr "die aktualisierung kann nun beginnen. klicke einfach auf die schaltfl&auml;che 'aktualisieren' und sie wird automatisch durchgef&uuml;hrt."
 
 msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
 msgstr ""
@@ -722,11 +720,7 @@ msgid "ir a sabros.us"
 msgstr "zu deiner sa.bros.us-startseite"
 
 #, fuzzy
-msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
-msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
-
-#, fuzzy
-msgid "la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
+msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
 msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
 
 #, fuzzy
@@ -772,11 +766,27 @@ msgstr "ausloggen"
 msgid "usuario:"
 msgstr "suche:"
 
+#, fuzzy
+#~ msgid "<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
+#~ msgstr "<strong>warnung</strong>: die f&uuml;r die aktualisierung notwendigen informationen konnten nicht gelesen werden. bitte &uuml;berpr&uuml;fe, ob die datei <code>include/config.php</code> nicht versehentlich ersetzt wurde und dass sie nicht daten einer vorhergehenden version enth&auml;lt."
+
+#, fuzzy
+#~ msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
+#~ msgstr "<strong>fehler</strong>: die datei <code>include/config.php</code> hat nicht die erforderlichen schreibrechte. bitte &auml;ndere sie und f&uuml;hre die aktualisierung erneut durch."
+
+#, fuzzy
+#~ msgid "Actualizaci&oacute;n de sabros.us"
+#~ msgstr "sa.bros.us-aktualisierung"
+
 #~ msgid "Actualizar"
 #~ msgstr "aktualisieren"
 
 #~ msgid "Ir a la p&aacute;gina:"
 #~ msgstr "gehe zu:"
+
+#, fuzzy
+#~ msgid "Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
+#~ msgstr "die aktualisierung kann nun beginnen. klicke einfach auf die schaltfl&auml;che 'aktualisieren' und sie wird automatisch durchgef&uuml;hrt."
 
 #, fuzzy
 #~ msgid "activado"
@@ -813,6 +823,10 @@ msgstr "suche:"
 #, fuzzy
 #~ msgid "idioma"
 #~ msgstr "sprache:"
+
+#, fuzzy
+#~ msgid "la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
+#~ msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
 
 #, fuzzy
 #~ msgid "naranja"

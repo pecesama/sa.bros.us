@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-05 21:20-0500\n"
+"POT-Creation-Date: 2006-09-13 10:20-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,15 @@ msgstr ""
 msgid "(sin <q>/</q> al final)"
 msgstr ""
 
+msgid "-- Idiomas --"
+msgstr ""
+
+msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
+msgstr ""
+
+msgid "/index.php\">ver el sitio.</a>"
+msgstr ""
+
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
 msgstr ""
 
@@ -43,19 +52,10 @@ msgstr ""
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
 msgstr ""
 
-msgid "<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
-msgstr ""
-
 msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
 msgstr ""
 
-msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
-msgstr ""
-
 msgid "Activado"
-msgstr ""
-
-msgid "Actualizaci&oacute;n de sabros.us"
 msgstr ""
 
 msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
@@ -325,6 +325,9 @@ msgstr ""
 msgid "Mostrar descripciones en el badge de enlaces:"
 msgstr ""
 
+msgid "Mostrar la nube de etiquetas a la derecha:"
+msgstr ""
+
 msgid "Mostrar solo la nube de etiquetas en la portada:"
 msgstr ""
 
@@ -434,9 +437,6 @@ msgid "Rojo"
 msgstr ""
 
 msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
-msgstr ""
-
-msgid "Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
 msgstr ""
 
 msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
@@ -598,10 +598,7 @@ msgstr ""
 msgid "ir a sabros.us"
 msgstr ""
 
-msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
-msgstr ""
-
-msgid "la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
+msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
 msgstr ""
 
 msgid "mis etiquetas en sabros.us"
