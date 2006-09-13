@@ -14,10 +14,10 @@
 
 	$a = explode(';',$GLOBALS[HTTP_ACCEPT_LANGUAGE]);
 	if (preg_match('/es/',$a[0])) {
-		$archivoIdioma = "es-mx.php";
-		$templocale = "es_MX"
+		$Sabrosus->archivoIdioma = "es-mx.php";
+		$templocale = "es_MX";
 	} else {
-		$archivoIdioma = "en.php";
+		$Sabrosus->archivoIdioma = "en.php";
 		$templocale = "en";
 	}
 
@@ -48,7 +48,7 @@
 			{
 				if($_SERVER["REQUEST_METHOD"]=="POST"){
 					$sqlStr = "SELECT * FROM ".$prefix."sabrosus";
-					$result = mysql_query($sqlStr);
+					$result = mysql_query($sqlStr,$link);
 					while ($row = mysql_fetch_array($result))
 					{
 						$id = $row["id_enlace"];
@@ -61,7 +61,7 @@
 					$cfg['codificacion']['utf'] = 1;
 					saveIni("include/config.ini",$cfg);
 					?>
-					<p><?=__("la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>");?></p>
+					<p><?=__("la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"".$Sabrosus->sabrUrl."/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"".$Sabrosus->sabrUrl."/index.php\">ver el sitio.</a>");?></p>
 				<?
 				} else { /* No se realiz la codificacin y no viene por POST -> Muestro el form para convertir */
 				?>
@@ -84,109 +84,5 @@
 	</body>
 	</html>
 	<?
-	die();
-	}
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
-<head>
-	<title><?=__("actualizaci&oacute;n");?>/sabros.us</title>
-	<meta name="generator" content="sabros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="<?=$sabrUrl?>/sabor.css" type="text/css" />
-	<link rel="stylesheet" href="<?=$sabrUrl?>/instalar.css" type="text/css" />
-	<link rel="shortcut icon" href="<?=$sabrUrl?>/images/sabrosus_icon.png" />
-</head>
-<body>
-<div id="pagina">
-
-	<div id="titulo">
-		<h2>sabros.us/<span><?=__("actualizaci&oacute;n");?></span></h2>
-	</div>
-	<div id="contenido">
-	<?
-		if($_SERVER["REQUEST_METHOD"]=="POST"){
-			if(isset($adminPass)){
-				$fname="include/config-sample.php";
-				$f = fopen($fname, "r");
-				$cfg=fread($f, filesize($fname));
-				fclose($f);
-				$cfg=str_replace("[server]",$server,$cfg);
-				$cfg=str_replace("[dbuser]",$dbUser,$cfg);
-				$cfg=str_replace("[dbpass]",$dbPass,$cfg);
-				$cfg=str_replace("[database]",$dataBase,$cfg);
-				$cfg=str_replace("[prefix]",$prefix,$cfg);
-				$fname="include/config.php";
-				if (is_writable($fname)) {
-					$f = fopen($fname, "w");
-					fwrite($f,$cfg);
-					fclose($f);
-					//Actualiza la DB.
-					if(updatedb()){
-						echo "<p>".__("la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>")."</p>";
-					}
-				} else {
-					echo "<p>".__("<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n.")."</p>";
-				}
-			}
-		} else {
-			//Form de Bienvenida a la Instalacin.
-			//No es necesario que llene ningun dato escencial para poder realizar la instalcin.
-			//Aunque podra ser un form parecido a la Instalacin, solo que los datos, aparezcan completados automaticamente y solo tenga que apretar el boton "Actualizar" y listo.
-
-			//Antes de mostrar el form, se debera controlar que el archivo config tenga permiso de escritura.
-			?>
-			<form method="post" action="update.php" id="config_form">
-				<fieldset>
-					<legend><?=__("Actualizaci&oacute;n de sabros.us");?></legend>
-					<div>
-						<?
-						if(!isset($adminPass)){
-							echo "<p>".__("<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n.")."</p>";
-						} else {
-							echo "<p>".__("Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente.")."</p>";
-							echo "<p><input type=\"submit\" name=\"btnsubmit\" id=\"btnsubmit\" value=\"".__("actualizar")."\" class=\"submit\"/><p>";
-						}
-						?>
-					</div>
-				</fieldset>
-			<?
-		}
-	?>
-	</div>
-	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
-	</div>
-</div>
-</body>
-</html>
-<?
-	function updatedb()
-	{
-		global $server,$dbUser,$dbPass,$dataBase,$prefix,$limit;
-		global $adminPass,$siteName,$siteTitle,$sabrUrl,$siteUrl,$usefriendlyurl,$archivoIdioma;
-		global $link;
-		if (!$link) {
-			return false;
-		}
-		$sqlStr = "ALTER TABLE `".$prefix."sabrosus` CHANGE `id_enlace` `id_enlace` INT( 11 ) NOT NULL AUTO_INCREMENT";
-		$result = mysql_query($sqlStr);
-
-		$sqlStr = "CREATE TABLE `".$prefix."config` (
-			`site_name` varchar(250) NOT NULL default '',
-			`site_title` varchar(250) NOT NULL default '',
-			`site_url` varchar(250) NOT NULL default '',
-			`sabrosus_url` varchar(250) NOT NULL default '',
-			`url_friendly` tinyint(1) NOT NULL default '0',
-			`idioma` varchar(10) NOT NULL default '',
-			`limite_enlaces` int(3) NOT NULL default '0',
-			`admin_email` varchar(250) NOT NULL default '',
-			`admin_pass` varchar(250) NOT NULL default '',
-			PRIMARY KEY (`sabrosus_url`)
-		) TYPE=MyISAM;";
-		$result = mysql_query($sqlStr);
-		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$siteName."','".$siteTitle."','".$siteUrl."','".$sabrUrl."','".$usefriendlyurl."','".$templocale."','".$limit."','','".md5($adminPass)."');";
-		$result = mysql_query($sqlStr);
-		return true;
 	}
 ?>
