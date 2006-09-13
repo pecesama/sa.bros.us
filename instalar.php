@@ -7,10 +7,12 @@
   sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
+define('ABSPATH', dirname(__FILE__).'/');
 
 include("include/lang.php");
 include("include/functions.php");
 
+get_laguajes();
 if (isset($_GET['instalarlang'])) {
 	initIdioma($_GET['instalarlang']);
 } else if (isset($_POST['instalarlang'])) {
@@ -140,24 +142,48 @@ require_once("include/config.php");
 	<link rel="stylesheet" href="sabor.css" type="text/css" />
 	<link rel="stylesheet" href="instalar.css" type="text/css" />
 	<link rel="shortcut icon" href="images/sabrosus_icon.png" />
-</head>
+	<script type="text/javascript">
+		function check(form)
+		{
+			if(document.getElementById('instalarlang').value!="0")
+				return true;
+			else 
+				return false;
+		}
+	</script>
+	</head>
 <body>
 <div id="pagina">
 	<div id="titulo">
 		<h2>sabros.us/<span><?=__("instalaci&oacute;n");?></span></h2>
 	</div>
-	<div id="instalarlang">
+	<div id="contenido">
+	
+<?
+if(!isset($_POST['paso']) || $_POST['paso']==0)
+{
+?>
+	<div>
+		<form name="form1" method="post" action="instalar.php">
+			<select  id="instalarlang" name="instalarlang" onChange="if(check(this.form)){submit();}">
+				<option value="0" selected><?=__("-- Idiomas --")?></option>
 		<?php
 			foreach ($idiomas as $idioma => $nombre) {
-				echo "<a href=\"instalar.php?instalarlang=".$idioma."\">".$nombre."</a> ";
+				?>
+				<option value="<?=$idioma?>"><?=$nombre?></option>
+				<?
 			}
 		?>
+			</select>
+			<noscript>
+				<input type="submit" class="submit" value="<?=__("Siguiente")?>" />
+			</noscript>
+			<input type="hidden" style="display:none;" name="paso" value="1" />
+		</form>
 	</div>
-
-	<div id="contenido">
-
-<?php
-if ($mostrarform) {
+<?
+} elseif($_POST['paso']==1) {
+	if ($mostrarform) {
 	if (mostrarerror($errors,$errors_d,"201")) {
 		echo "<div class=\"error\">".mostrarerror($errors,$errors_d,"201")."</div>";
 	}?>
@@ -200,7 +226,7 @@ if ($mostrarform) {
 				<select id="lang" name="lang">
 					<?php
 						foreach ($idiomas as $idioma => $nombre) {
-							if($idioma=="es_MX") {
+							if($idioma==$_POST['instalarlang']) {
 								echo "<option value=\"".$idioma."\" selected=\"selected\">".$nombre."</option>\n";
 							} else {
 								echo "<option value=\"".$idioma."\">".$nombre."</option>\n";
@@ -211,13 +237,15 @@ if ($mostrarform) {
 			</div>
 		</fieldset>
 		<p>
+			<input type="hidden" name="paso" value="1" style="display:none;"/>
 			<input type="hidden" name="accion" id="accion" value="config" style="display:none;"/>
 			<input type="submit" name="btnsubmit" id="btnsubmit" value="<?=__("Configurar");?>" class="submit"/>
 		</p>
 	</form>
-<?php
-} else {
-	echo "<p>".__("La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
+	<?php
+	} else {
+		echo "<p>".__("La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
+	}
 }
 ?>
 	</div>
@@ -261,9 +289,9 @@ function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $snam
 		) TYPE=MyISAM;";
 		$result = mysql_query($sqlStr);
 
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','Página de Estanislao Vizcarra, autor de sabros.us','css xhtml diseño web estandares cine php','2005-07-10 00:41:06');";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','".utf8_encode("Página de Estanislao Vizcarra, autor de sabros.us")."','".utf8_encode("css xhtml diseño web estandares cine php")."','2005-07-10 00:41:06');";
 		$result = mysql_query($sqlStr);
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','Página de Pedro Santana, co-autor de sabros.us','php programación web java javascript','2005-07-10 00:42:04');";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','".utf8_encode("Página de Pedro Santana, co-autor de sabros.us")."','".utf8_encode("php programación web java javascript")."','2005-07-10 00:42:04');";
 		$result = mysql_query($sqlStr);
 
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$sname."','".$stitle."','".$siteUrl."','".$sabrUrl."','".$useFriendlyUrl."','".$lang."','".$limite."','".$email."','".md5($admPass)."');";
