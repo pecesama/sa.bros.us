@@ -171,13 +171,13 @@ class clsSabrosus
 		$this->adminPass      = $row['admin_pass'];
 
 		$cfg = parse_ini_file("include/config.ini", true);
-		$this->multiCont = $cfg['multimedia_content']['allow'];
-		$this->tagsColor = $cfg['tags_cloud']['color'];
-		$this->compartir = $cfg['exportar']['compartir'];
-		$this->desc_badge = $cfg['links_badge']['descripciones'];
-		$this->ping = $cfg['sopasabrosa']['ping'];
-		$this->soloNube = $cfg['tags_cloud']['alone_index'];
-		$this->estiloNube = $cfg['tags_cloud']['posicion'];
+		$this->multiCont = (isset($cfg['multimedia_content']['allow']))?$cfg['multimedia_content']['allow']:"0";
+		$this->tagsColor = (isset($cfg['tags_cloud']['color']))?$cfg['tags_cloud']['color']:"0";
+		$this->compartir = (isset($cfg['exportar']['compartir']))?$cfg['exportar']['compartir']:"0";
+		$this->desc_badge = (isset($cfg['links_badge']['descripciones']))?$cfg['links_badge']['descripciones']:"0";
+		$this->ping = (isset($cfg['sopasabrosa']['ping']))?$cfg['sopasabrosa']['ping']:"0";
+		$this->soloNube = (isset($cfg['tags_cloud']['alone_index']))?$cfg['tags_cloud']['alone_index']:"0";
+		$this->estiloNube = (isset($cfg['tags_cloud']['posicion']))?$cfg['tags_cloud']['posicion']:"0";
 		
 		get_laguajes();
 		
