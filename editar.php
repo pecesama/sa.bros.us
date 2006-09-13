@@ -79,7 +79,16 @@ if (isset($_GET["id"])) {
 <div id="pagina">
 	<div id="titulo">
 		<h2>sabros.us/<span><?=(isset($_GET["id"]) ? __("editar enlace") : __("agregar enlace")); ?></span></h2>
-		<p class="submenu"><a href="cpanel.php"><?=__("panel de control");?></a> | <a href="editar.php"><?=__("agregar enlace");?></a></p>
+		<p class="submenu"><a href="cpanel.php"><?=__("panel de control");?></a>
+		<?
+		if(isset($_GET["id"]))
+		{
+		?>
+			 | <a href="editar.php"><?=__("agregar enlace");?></a>
+		<?
+		}
+		?>
+		</p>
 	</div>
 
 	<div id="contenido">
