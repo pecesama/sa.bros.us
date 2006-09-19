@@ -1,14 +1,13 @@
-=== Updating v1.0 to v1.6 ===
+=== Updating v1.5 to v1.7 ===
 
 	1. Create a backup of your /include/config.php file.
-	2. Replace all files from v1 with those from the new 1.6 EXCEPT for the file /include/config.php
-		2.1 If you do replace it by error, use the backup you create during step one.
+	2. Replace all files from v1.5 with those from the new 1.7 EXCEPT for the file /include/config.php
+		2.1. If you do replace it by error, use the backup you create during step one.
 	3. Execute the update.php file and follow the indicated steps.
 	4. If the characters appears to be rather rare, execute again update.php
-	
-=== Updating v1.5 to v1.6 ===
 
-	1. Create a backup of your /include/config.php file.
-	2. Replace all files from v1.5 with those from the new 1.6 EXCEPT for the file /include/config.php
+=== Updating v1.6 to v1.7 ===
+
+	1. Create a backup of your /include/config.php and /include/config.ini files.
+	2. Replace all files from v1.6 with those from the new 1.7 EXCEPT for the files /include/config.php and /include/config.ini.
 		2.1. If you do replace it by error, use the backup you create during step one.
-	3. If the characters appears to be rather rare, execute update.php

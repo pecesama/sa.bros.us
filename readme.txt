@@ -22,13 +22,7 @@ sabros.us 1.7 version
        Any doubt, suggestion or comment, you can post on the forum or on the mailing list:
 
 	http://sourceforge.net/projects/sabrosus/
-
-       You can see some installed sabros.us:
-
-	    * Stanmx				http://www.stanmx.com/sabrosus/
-	    * Pecesama.Net			http://www.pecesama.net/sabrosus/
-	    * Concept and Development		http://www.lexas-solutions.com/sabrosus/
-	    * Victor Bracco			http://labs.vbracco.com.ar/sabrosus/
+       
 
 - More info?
 
@@ -37,3 +31,15 @@ sabros.us 1.7 version
 - Credits:
 
 	https://sourceforge.net/project/memberlist.php?group_id=143603
+
+- What is SopaSabrosa?
+
+SopaSabrosa is a system to organize the data from all the sabros.us. The social part of sabros.us!!!
+
+- How do you get the screenshots?
+
+We are using a third party system for the screenshot WebShotsPro ( http://www.webshotspro.com/ ); thanks guys for your amazing system :)
+
+   - How much is it (about webshotspro.com)?
+
+	For general use the screenshots is free unless your system strat to abuse.
