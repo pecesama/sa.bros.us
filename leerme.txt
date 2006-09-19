@@ -23,13 +23,7 @@ sabros.us version 1.7
 	Si tienes dudas, sugerencias o comentarios, puedes hacerlos publicos en los foros o en la lista de correos de:
 
 	http://sourceforge.net/projects/sabrosus/
-
-	Puedes ver funcionando a sabros.us en las siguientes direcciones:
-
-	    * Stanmx				http://www.stanmx.com/sabrosus/
-	    * Pecesama.Net			http://www.pecesama.net/sabrosus/
-	    * Concept and Development		http://www.lexas-solutions.com/sabrosus/
-	    * Victor Bracco			http://labs.vbracco.com.ar/sabrosus/
+	
 
 - Mas informacion sobre sa.bro.sus
 
@@ -38,3 +32,15 @@ sabros.us version 1.7
 - Creditos:
 
 	https://sourceforge.net/project/memberlist.php?group_id=143603
+
+- ¿Qué es SopaSabrosa?
+
+SopaSabrosa es un sistema para organizar la información de muchos sabros.us. El componente social de sabros.us!!!
+
+- ¿Como obtienen las miniaturas de las páginas?
+
+Estamos usando un sistema externo llamado WebShotsPro ( http://www.webshotspro.com/ ); thanks guys for your amazing system :)
+
+   - ¿Cuanto cuesta WebShotsPro?
+
+	Para un uso general de las miniaturas es gratuito al menos que tu sistema comience a abusar de su uso.
