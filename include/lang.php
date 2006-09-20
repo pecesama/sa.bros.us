@@ -24,19 +24,19 @@ function esIdioma($test) {
 }
 
 function initIdioma($lang = "es_MX") {
-	global $locale;
+	global $locale, $l10n;
 
 	if (!esIdioma($locale) && esIdioma($lang)) {
 		$locale = $lang;
 	}
 
 	// gettext setup
-	$input = new FileReader(dirname(__FILE__) .'/locales/'. $locale .'/LC_MESSAGES/messages.mo');
-	global $l10n = new gettext_reader($input);
+	$input = new FileReader('locale/'. $locale .'/LC_MESSAGES/messages.mo');
+	$l10n = new gettext_reader($input);
 }
 
 // Standard wrappers for xgettext
-function T_($text) {
+function __($text) {
 	global $l10n;
 	return $l10n->translate($text);
 }
