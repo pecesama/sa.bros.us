@@ -8,7 +8,8 @@
 
   =========================== */
 
-require_once('gettext.inc');
+require_once('streams.php');
+require_once('gettext.php');
 
 $idiomas = array();
 $idiomas['es_MX'] = "Español de México";
@@ -30,13 +31,21 @@ function initIdioma($lang = "es_MX") {
 	}
 
 	// gettext setup
-	$encoding = 'UTF-8';
-	$domain = 'messages';
-	T_setlocale(LC_MESSAGES, $locale);
-	T_bindtextdomain($domain, './locale');
-	T_bind_textdomain_codeset($domain, $encoding);
-	T_textdomain($domain);
+	$input = new FileReader(dirname(__FILE__) .'/locales/'. $locale .'/LC_MESSAGES/messages.mo');
+	global $l10n = new gettext_reader($input);
 }
+
+// Standard wrappers for xgettext
+function T_($text) {
+	global $l10n;
+	return $l10n->translate($text);
+}
+
+function T_ngettext($single, $plural, $number) {
+	global $l10n;
+	return $l10n->ngettext($single, $plural, $number);
+}
+
 function get_laguajes() {
 	global $idiomas;
 
