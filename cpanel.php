@@ -22,7 +22,7 @@
 <head>
 	<title><?=__("panel de control");?>/sabros.us</title>
 	<meta name="generator" content="sabros.us <?=version();?>" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8?>" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
