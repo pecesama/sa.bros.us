@@ -2,6 +2,7 @@ Historial de versiones
 
 v 1.7
 
+    * Solucionado bug de localizacion en algunos servers. (Kurt McKee)
     * Posibilidad de mostrar la nube de tags a la derecha o abajo de los enlaces (Victor Bracco)
     * Screenshots a los enlaces via Webshotspro.com (Victor Bracco, Pecesama)
     * Mejoras en el sistema de paginacion (Pecesama)
