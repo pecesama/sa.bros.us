@@ -7,7 +7,7 @@
   sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
-
+define('ABSPATH', str_replace('/include','',dirname(__FILE__).'/'));
 include('lang.php');
 
 session_start();

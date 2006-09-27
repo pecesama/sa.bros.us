@@ -53,7 +53,6 @@ function get_laguajes() {
 	$sabr_langs_loc = 'locale/';
 	$sabr_langs_root = ABSPATH.$sabr_langs_loc;
 
-	// Files in wp-content/plugins directory
 	$sabr_langs_dir = @ dir($sabr_langs_root);
 	if ($sabr_langs_dir) {
 		while (($file = $sabr_langs_dir->read()) !== false) {
