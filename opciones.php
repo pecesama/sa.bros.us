@@ -10,7 +10,6 @@
 
 
 ob_start();
-define('ABSPATH', dirname(__FILE__).'/');
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
