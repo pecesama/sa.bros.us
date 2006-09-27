@@ -1,5 +1,8 @@
 Historial de versiones
 
+v 1.8
+    * Detección automatica de idiomas mejorada. (Victor Bracco)
+
 v 1.7
 
     * Solucionado bug de localizacion en algunos servers. (Kurt McKee)
