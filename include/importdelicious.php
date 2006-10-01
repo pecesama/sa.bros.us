@@ -16,7 +16,7 @@
 		global $prefix;
 		global $link;
 		
-		$xml="http://del.icio.us/api/posts/all?";
+		$xml="https://api.del.icio.us/v1/posts/all?";
 		$get=new Get();
 		$src_obj=$get->getContent($xml,$user,$pass);
 		$src=$src_obj->response();
