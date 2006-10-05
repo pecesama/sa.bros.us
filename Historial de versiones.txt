@@ -1,6 +1,8 @@
 Historial de versiones
 
 v 1.8
+    * Cambio en la llamada a los screenshot. (Victor Bracco)
+    * Cambio en la url de la API de del.icios.us. (Pablo Viojo)
     * Detección automatica de idiomas mejorada. (Victor Bracco)
 
 v 1.7
