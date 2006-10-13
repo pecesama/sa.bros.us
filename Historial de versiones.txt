@@ -1,6 +1,7 @@
 Historial de versiones
 
 v 1.8
+    * Problemas para exportar solucionados (Victor Bracco, Victor de la Rocha, Pecesama)
     * Cambio en la llamada a los screenshot. (Victor Bracco)
     * Cambio en la url de la API de del.icios.us. (Pablo Viojo)
     * Detección automatica de idiomas mejorada. (Victor Bracco)

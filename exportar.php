@@ -12,6 +12,14 @@ include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
+if(!esAdmin() && $Sabrosus->compartir!="1"){
+	header("Location: index.php");
+	die();
+}
+if(substr($_SERVER['HTTP_REFERER'],0,strlen($Sabrosus->sabrUrl))!=$Sabrosus->sabrUrl){
+	header("Location: index.php");
+	die();
+}
 
 $toFile = '
 <!DOCTYPE NETSCAPE-Bookmark-file-1>
@@ -32,9 +40,9 @@ if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
 	}
 }else{
 	$link_id = $_POST['links_sel'];
-	$sqlStr .=	'WHERE id_enlace = '.$link_id[0];
+	$sqlStr .=	'WHERE id_enlace = '.intval($link_id[0]);
 	for($i = 1; $i < count($link_id); $i++){
-		$sqlStr .= ' OR id_enlace ='.$link_id[$i];
+		$sqlStr .= ' OR id_enlace ='.intval($link_id[$i]);
 	}
 }
 
