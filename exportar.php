@@ -12,10 +12,13 @@ include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
-if(!esAdmin() && $Sabrosus->compartir!="1"){
-	header("Location: index.php");
-	die();
+if(!esAdmin()){
+	if($Sabrosus->compartir!="1"){
+		header("Location: index.php");
+		die();
+	}
 }
+
 if(substr($_SERVER['HTTP_REFERER'],0,strlen($Sabrosus->sabrUrl))!=$Sabrosus->sabrUrl){
 	header("Location: index.php");
 	die();
