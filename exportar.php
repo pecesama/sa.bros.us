@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -12,16 +12,18 @@ include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
-if(!esAdmin()){
+if(!esAdmin())
+{
 	if($Sabrosus->compartir!="1"){
 		header("Location: index.php");
-		die();
+		exit();
 	}
 }
 
-if(substr($_SERVER['HTTP_REFERER'],0,strlen($Sabrosus->sabrUrl))!=$Sabrosus->sabrUrl){
+if(substr($_SERVER['HTTP_REFERER'],0,strlen($Sabrosus->sabrUrl))!=$Sabrosus->sabrUrl)
+{
 	header("Location: index.php");
-	die();
+	exit();
 }
 
 $toFile = '
@@ -35,20 +37,31 @@ $toFile = '
 	<DL><p>
 ';
 	
-$sqlStr = 'SELECT title, enlace FROM '.$prefix.'sabrosus  ';
-	
+$sqlStr = "SELECT title, enlace FROM ".$prefix."sabrosus";
+
 if(!isset($_POST['links_sel']) || (count($_POST['links_sel']) == 0)){
 	if (!esAdmin()) {
 		header("Location: login.php");
+		exit();
 	}
 }else{
-	$link_id = $_POST['links_sel'];
-	$sqlStr .=	'WHERE id_enlace = '.intval($link_id[0]);
-	for($i = 1; $i < count($link_id); $i++){
-		$sqlStr .= ' OR id_enlace ='.intval($link_id[$i]);
+	$i=0;
+	foreach($_POST['links_sel'] as $key => $value)
+	{
+		if(!is_numeric($value)){ continue; }
+		if(esPrivado($value) && !esAdmin()){ continue; }
+			if($i==0){ 
+				$sqlStr .=	" WHERE id_enlace = ".$value; 
+				$i++;
+			} else {
+				$sqlStr .= " OR id_enlace = ".$value;
+			}
 	}
 }
-
+if($i==0 && !esAdmin()){
+	header("Location: login.php");
+	exit();
+}
 
 $result = mysql_query($sqlStr);
 while ($row = mysql_fetch_array($result)){

@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -48,10 +48,6 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 		//se ordena alfabeticamente el arreglo de nombres de llaves
 		#FIX: Aqui hace falta que ordene carectares especiales.
 		sort($keys);
-
-		// Optionally sort by tag count
-		// array_multisort($kw, SORT_DESC, $keys, SORT_ASC);
-
 		//se determina la maxima y minima repeticion de tags
 		$max = max($kw);
 		$min = min($kw);

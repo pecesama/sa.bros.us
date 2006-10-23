@@ -1,7 +1,7 @@
 <?
 	/* ===========================
 	
-	  sabros.us monousuario versión 1.7
+	  sabros.us monousuario versión 1.8
 	  http://sabros.us/
 	
 	  sabros.us is a free software licensed under GPL (General public license)	  
@@ -19,8 +19,14 @@
 	   If you have a WHERE clause in your query, make sure you mirror it here.
 	*/
 	
-	
-	$total_pages = (isset($tagtag) ? contarenlaces($tagtag) : contarenlaces()); 
+	$total_pages = contarenlaces(substr($sqlStr,9,strpos($sqlStr,"ORDER")-9)); 
+	if($q!="")
+			if($Sabrosus->usefriendlyurl==0)
+					$q="&busqueda=".$q;
+				else
+					$q="/busqueda/".$q;
+		else
+			$q="";
 	
 	/* Setup vars for query. */
 	$limit = $Sabrosus->limit; 								//how many items to show per page
@@ -50,11 +56,11 @@
 		{			
 			if (isset($tagtag))
 			{
-				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.$prev , '/?tag='.$tagtag.'&amp;pag='.$prev ) ."\">" . __("&laquo; Anterior") . "</a>";
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.$prev , '/?tag='.$tagtag.'&amp;pag='.$prev ) .$q."\">" . __("&laquo; Anterior") . "</a>";
 			} 
 			else 
 			{
-				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.$prev , '/?pag='.$prev ) . "\">" . __("&laquo; Anterior") ."</a>";
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.$prev , '/?pag='.$prev ) .$q. "\">" . __("&laquo; Anterior") ."</a>";
 			}
 		}
 		else
@@ -75,11 +81,11 @@
 				{						
 					if (isset($tagtag))
 					{
-						$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+						$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter).$q. "\">".$counter."</a>";
 					} 
 					else 
 					{
-						$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+						$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter).$q. "\">".$counter."</a>";
 					}
 				}
 			}
@@ -99,24 +105,24 @@
 					{							
 						if (isset($tagtag))
 						{
-							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter).$q. "\">".$counter."</a>";
 						} 
 						else 
 						{
-							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter).$q. "\">".$counter."</a>";
 						}
 					}
 				}
 				$pagination.= "...";					
 				if (isset($tagtag))
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lpm1,'/?tag='.$tagtag.'&amp;pag='.$lpm1). "\">".$lpm1."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lastpage,'/?tag='.$tagtag.'&amp;pag='.$lastpage). "\">".$lastpage."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lpm1,'/?tag='.$tagtag.'&amp;pag='.$lpm1).$q. "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lastpage,'/?tag='.$tagtag.'&amp;pag='.$lastpage).$q. "\">".$lastpage."</a>";
 				} 
 				else 
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lpm1,'/?pag='.$lpm1). "\">".$lpm1."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lastpage,'/?pag='.$lastpage). "\">".$lastpage."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lpm1,'/?pag='.$lpm1).$q. "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lastpage,'/?pag='.$lastpage).$q. "\">".$lastpage."</a>";
 				}
 			}
 			//in middle; hide some front and some back
@@ -126,13 +132,13 @@
 				$dos=2;
 				if (isset($tagtag))
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$uno,'/?tag='.$tagtag.'&amp;pag='.$uno). "\">".$uno."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$dos,'/?tag='.$tagtag.'&amp;pag='.$dos). "\">".$dos."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$uno,'/?tag='.$tagtag.'&amp;pag='.$uno).$q. "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$dos,'/?tag='.$tagtag.'&amp;pag='.$dos).$q. "\">".$dos."</a>";
 				} 
 				else 
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$uno,'/?pag='.$uno). "\">".$uno."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos). "\">".$dos."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$uno,'/?pag='.$uno).$q. "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos).$q. "\">".$dos."</a>";
 				}
 				$pagination.= "...";
 				for ($counter = $_GET["pag"] - $adjacents; $counter <= $_GET["pag"] + $adjacents; $counter++)
@@ -145,24 +151,24 @@
 					{							
 						if (isset($tagtag))
 						{
-							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter).$q. "\">".$counter."</a>";
 						} 
 						else 
 						{
-							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter).$q. "\">".$counter."</a>";
 						}
 					}
 				}
 				$pagination.= "...";					
 				if (isset($tagtag))
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lpm1,'/?tag='.$tagtag.'&amp;pag='.$lpm1). "\">".$lpm1."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lastpage,'/?tag='.$tagtag.'&amp;pag='.$lastpage). "\">".$lastpage."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lpm1,'/?tag='.$tagtag.'&amp;pag='.$lpm1).$q. "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$lastpage,'/?tag='.$tagtag.'&amp;pag='.$lastpage).$q. "\">".$lastpage."</a>";
 				} 
 				else 
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lpm1,'/?pag='.$lpm1). "\">".$lpm1."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lastpage,'/?pag='.$lastpage). "\">".$lastpage."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lpm1,'/?pag='.$lpm1).$q. "\">".$lpm1."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$lastpage,'/?pag='.$lastpage).$q. "\">".$lastpage."</a>";
 				}
 			}
 			//close to end; only hide early pages
@@ -172,13 +178,13 @@
 				$dos=2;
 				if (isset($tagtag))
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$uno,'/?tag='.$tagtag.'&amp;pag='.$uno). "\">".$uno."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$dos,'/?tag='.$tagtag.'&amp;pag='.$dos). "\">".$dos."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$uno,'/?tag='.$tagtag.'&amp;pag='.$uno).$q. "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$dos,'/?tag='.$tagtag.'&amp;pag='.$dos).$q. "\">".$dos."</a>";
 				} 
 				else 
 				{
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$uno,'/?pag='.$uno). "\">".$uno."</a>";
-					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos). "\">".$dos."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$uno,'/?pag='.$uno).$q. "\">".$uno."</a>";
+					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos).$q. "\">".$dos."</a>";
 				}
 				$pagination.= "...";
 				for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++)
@@ -191,11 +197,11 @@
 					{							
 						if (isset($tagtag))
 						{
-							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter). "\">".$counter."</a>";
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/tag/'.$tagtag.'/pag/'.$counter,'/?tag='.$tagtag.'&amp;pag='.$counter).$q. "\">".$counter."</a>";
 						} 
 						else 
 						{
-							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter). "\">".$counter."</a>";
+							$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$counter,'/?pag='.$counter).$q. "\">".$counter."</a>";
 						}
 					}
 				}
@@ -207,11 +213,11 @@
 		{				
 			if (isset($tagtag))
 			{
-				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.$next , '/?tag='.$tagtag.'&amp;pag='.$next ) ."\">" . __("Siguiente &raquo;") . "</a>";
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/tag/'.$tagtag.'/pag/'.$next , '/?tag='.$tagtag.'&amp;pag='.$next ) .$q."\">" . __("Siguiente &raquo;") . "</a>";
 			} 
 			else 
 			{
-				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.$next , '/?pag='.$next ) . "\">" . __("Siguiente &raquo;") ."</a>";
+				$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly( '/pag/'.$next , '/?pag='.$next ) .$q. "\">" . __("Siguiente &raquo;") ."</a>";
 			}
 		}
 		else

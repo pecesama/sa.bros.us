@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -14,18 +14,18 @@
 
 	if (!esAdmin()) {
 		header("Location: login.php");
+		exit();
+	}
+	// $_GET['id'] must be set, and must be a number
+	if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+		header("Location: cpanel.php");
+		exit()
+	}
+	if (isset($_GET['confirm']) && $_GET['confirm']=='0') {
+		$Sql="DELETE FROM ".$prefix."sabrosus WHERE id_enlace=".$_GET['id'];
+		mysql_query($Sql,$link);
+		header("Location: cpanel.php");
 	} else {
-
-		// $_GET['id'] must be set, and must be a number
-		if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-			header("Location: cpanel.php");
-		}
-
-		if (isset($_GET['confirm']) && $_GET['confirm']=='0') {
-			$Sql="DELETE FROM ".$prefix."sabrosus WHERE id_enlace=".$_GET['id'];
-			mysql_query($Sql,$link);
-			header("Location: cpanel.php");
-		} else {
 		?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
@@ -62,8 +62,6 @@
 </div>
 </body>
 </html>
-
 <?
-		} //end confirmation
-	} //esAdmin
+	} //end confirmation
 ?>

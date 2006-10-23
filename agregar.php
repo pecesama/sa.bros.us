@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 	if (isset($_POST["privado"])) {
 		$etiquetas = ":sab:privado ".$etiquetas;
 	}else{
-		if($Sabrosus->ping){
+		if($Sabrosus->ping=="1"){
 			include("sopa_ping.php");
 		}
 	}
@@ -41,15 +41,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 		$result = mysql_query($sql, $link);
 		$en = mysql_fetch_array($result);
 		header("Location: editar.php?id=".$en['id_enlace']);
-		die();
+		exit();
 	}
 	if (isset($_POST["regresa"])) {
 		$url="Location: ".urldecode($_POST["regresa"]);
 		header($url);
+		exit();
 	} else {
 		header("Location: cpanel.php");
+		exit();
 	}
 } else {
 	header("Location: index.php");
+	exit();
 }
 ?>

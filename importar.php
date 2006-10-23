@@ -1,23 +1,27 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
 
-//Script basado parcialmente en el del proyecto Scuttle [http://sourceforge.net/projects/scuttle/]
-include("include/config.php");
-include("include/conex.php");
-include("include/functions.php");
+	//Script basado parcialmente en el del proyecto Scuttle [http://sourceforge.net/projects/scuttle/]
+	include("include/config.php");
+	include("include/conex.php");
+	include("include/functions.php");
 
-if (esAdmin())
-{
-	if (sizeof($_FILES) > 0 && $_FILES['userfile']['size'] > 0) {
-	
-		if (isset($_POST["status"]) && $_POST["status"]=="1") {
+	if (!esAdmin())
+	{
+		header("Location: login.php");
+		exit();
+	}
+	if (sizeof($_FILES) > 0 && $_FILES['userfile']['size'] > 0)
+	{
+		if (isset($_POST["status"]) && $_POST["status"]=="1")
+		{
 			$status = ":sab:privado";
 		} else {
 			$status = "";
@@ -32,7 +36,8 @@ if (esAdmin())
 		$titles = $matches[2];
 		
 		$size = count($links);
-		for ($i = 0; $i < $size; $i++) {
+		for ($i = 0; $i < $size; $i++)
+		{
 			$attributes = preg_split('/\s+/s', $links[$i]);
 			foreach ($attributes as $attribute) {
 				$att = preg_split('/\s*=\s*/s', $attribute, 2);
@@ -53,7 +58,6 @@ if (esAdmin())
 			if (strtotime($bDatetime) > time()) {
 				$bDatetime = gmdate('Y-m-d H:i:s');
 			}
-	
 			// Esto es por si tiene almacenados bookmarlets (claro no funcionaran, pero no tiene caso)
 			$bAddress=eregi_replace("\"","",$bAddress);
 			$bAddress=eregi_replace("\'","",$bAddress);
@@ -63,7 +67,6 @@ if (esAdmin())
 				mysql_query($Sql,$link);
 			}
 		}
-		
 		header("Location: cpanel.php");
 	} else {
 	?>
@@ -128,7 +131,4 @@ if (esAdmin())
 </html>
 <?
 	}
-} else {
-	header("Location: login.php");
-}
 ?>

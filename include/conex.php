@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -124,7 +124,7 @@ function MostrarErrorConexion($mensaje)
 	</body></html>
 
 	<?
-	die();
+	exit();
 }
 
 class clsSabrosus

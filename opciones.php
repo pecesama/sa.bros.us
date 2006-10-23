@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -16,62 +16,62 @@ include("include/functions.php");
 
 header("Content-type: text/html; charset=UTF-8");
 
-if (esAdmin()) {
-	if (isset($_POST["accion"])) {
-		$errores = 0;
-		$sql = "UPDATE `".$prefix."config` SET
-					`site_name` = '".$_POST['sname']."',
-					`site_title` = '".$_POST['stitle']."',
-					`site_url` = '".$_POST['surl']."',
-					`sabrosus_url` = '".$_POST['saburl']."',
-					`url_friendly` = '".$_POST['useFriendlyUrl']."',
-					`idioma` = '".$_POST['selIdioma']."',
-					`limite_enlaces` = '".$_POST['limit']."',
-					`admin_email` = '".$_POST['email']."'";
-		if ($_POST[pass1]!=$_POST[pass2]){
-			echo __("Las contrase&ntilde;as deben ser iguales");
-			$errores += 1;
-		} else {
-			if ($_POST[pass1] != "") {
-				$encript = md5($_POST[pass1]);
-				$sql .= ", `admin_pass` = '".$encript."'";
-			}
-		}
-		$sql .= " WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
-
-		$cfg = parse_ini_file("include/config.ini", true);
-
-		$multi = (isset($_POST["contenidos_multi"]) ? "1" : "0");
-		$comp = (isset($_POST['compartir']) ? "1" : "0");
-		$descrip = (isset($_POST['descripciones']) ? "1" : "0");
-		$ping = (isset($_POST['ping']) ? "1" : "0");
-		$soloNubeIndex = (isset($_POST['nube_tags']) ? "1" : "0");
-		$nubePosicion = (isset($_POST['nube_posicion']) ? "1" : "0");
-		$cfg['tags_cloud']['color'] = $_POST['color_tags'];
-		$cfg['multimedia_content']['allow'] = $multi;
-		$cfg['exportar']['compartir'] = $comp;
-		$cfg['links_badge']['descripciones'] = $descrip;
-		$cfg['sopasabrosa']['ping'] = $ping;
-		$cfg['tags_cloud']['alone_index'] = $soloNubeIndex;
-		$cfg['tags_cloud']['posicion']= $nubePosicion;
-		
-		if (!is_writeable("include/config.ini")) {
-			$errores +=1;
-		}
-		if (!$errores) {
-			saveIni("include/config.ini", $cfg);
-			$result = mysql_query($sql);
-			header("Location: opciones.php?ex=1");
-		} else {
-			if (!is_writeable("include/config.ini")) {
-				header("Location: opciones.php?er=2");
-			} else {
-				header("Location: opciones.php?er=1");
-			}
-		}
+if (!esAdmin()) {
+	header("Location: login.php");
+	exit();
+}
+if (isset($_POST["accion"])) {
+	$errores = 0;
+	$sql = "UPDATE `".$prefix."config` SET
+				`site_name` = '".$_POST['sname']."',
+				`site_title` = '".$_POST['stitle']."',
+				`site_url` = '".$_POST['surl']."',
+				`sabrosus_url` = '".$_POST['saburl']."',
+				`url_friendly` = '".$_POST['useFriendlyUrl']."',
+				`idioma` = '".$_POST['selIdioma']."',
+				`limite_enlaces` = '".$_POST['limit']."',
+				`admin_email` = '".$_POST['email']."'";
+	if ($_POST[pass1]!=$_POST[pass2]){
+		echo __("Las contrase&ntilde;as deben ser iguales");
+		$errores += 1;
 	} else {
+		if ($_POST[pass1] != "") {
+			$encript = md5($_POST[pass1]);
+			$sql .= ", `admin_pass` = '".$encript."'";
+		}
+	}
+	$sql .= " WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
+		$cfg = parse_ini_file("include/config.ini", true);
+		$multi = (isset($_POST["contenidos_multi"]) ? "1" : "0");
+	$comp = (isset($_POST['compartir']) ? "1" : "0");
+	$descrip = (isset($_POST['descripciones']) ? "1" : "0");
+	$ping = (isset($_POST['ping']) ? "1" : "0");
+	$soloNubeIndex = (isset($_POST['nube_tags']) ? "1" : "0");
+	$nubePosicion = (isset($_POST['nube_posicion']) ? "1" : "0");
+	$cfg['tags_cloud']['color'] = $_POST['color_tags'];
+	$cfg['multimedia_content']['allow'] = $multi;
+	$cfg['exportar']['compartir'] = $comp;
+	$cfg['links_badge']['descripciones'] = $descrip;
+	$cfg['sopasabrosa']['ping'] = $ping;
+	$cfg['tags_cloud']['alone_index'] = $soloNubeIndex;
+	$cfg['tags_cloud']['posicion']= $nubePosicion;
+	
+	if (!is_writeable("include/config.ini")) {
+		$errores +=1;
+	}
+	if (!$errores) {
+		saveIni("include/config.ini", $cfg);
+		$result = mysql_query($sql);
+		header("Location: opciones.php?ex=1");
+	} else {
+		if (!is_writeable("include/config.ini")) {
+			header("Location: opciones.php?er=2");
+		} else {
+			header("Location: opciones.php?er=1");
+		}
+	}
+} else {
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
@@ -199,7 +199,4 @@ if (esAdmin()) {
 </html>
 <?php
 	} //POST[action]
-} else { //no es Admin
-	header("Location: login.php");
-}
 ?>

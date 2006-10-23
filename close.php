@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -12,6 +12,11 @@ include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
+if(!esAdmin())
+{
+	header("Location: index.php");
+	exit();
+}
 $_SESSION = array();
 setcookie("pass_sabrosus_cookie","",time()-1);
 unset($_COOKIE[session_name()]);
