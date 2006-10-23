@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -14,6 +14,7 @@ include("include/functions.php");
 
 if (esAdmin()) {
 	header("Location: cpanel.php");
+	exit();
 }
 
 if ((isset($_POST["pass"]) && md5($_POST["pass"])==$Sabrosus->adminPass)) {

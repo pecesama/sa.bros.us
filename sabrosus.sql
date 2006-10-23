@@ -13,7 +13,7 @@ CREATE TABLE `sab_sabrosus` (
   PRIMARY KEY  (`id_enlace`)
 ) TYPE=MyISAM;
 
-
+ALTER TABLE sab_sabrosus ADD FULLTEXT `busqueda`(`title`, `enlace`, `descripcion`, `tags`);
 
 #
 # Datos de la tabla 'sab_sabrosus'

@@ -1,4 +1,4 @@
-sabros.us version 1.7
+sabros.us version 1.8
 
 - Que es sabros.us?
 

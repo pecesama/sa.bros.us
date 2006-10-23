@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -18,6 +18,7 @@
 		if($Sabrosus->emailAdmin=="")
 		{
 			header("Location: recordar.php?er=1");
+			exit();
 		} else {
 			if($_POST[email]==$Sabrosus->emailAdmin)
 			{
@@ -31,11 +32,14 @@
 				{
 					mysql_query($sqlStr);
 					header("Location: recordar.php?ex=1");
+					exit();
 				} else {
 					header("Location: recordar.php?er=3");
+					exit();
 				}
 			} else {
 				header("Location: recordar.php?er=2");
+				exit();
 			}
 		}
 	} else {

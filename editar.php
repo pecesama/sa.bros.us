@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -36,7 +36,7 @@ if (!esAdmin()) {
 }
 
 if (isset($_GET["id"])) {
-	$result = mysql_query("select * from ".$prefix."sabrosus where id_enlace = ".$_GET["id"], $link);
+	$result = mysql_query("select * from ".$prefix."sabrosus where id_enlace = ".$_GET["id"]." LIMIT 1", $link);
 	if (mysql_num_rows($result)>0) {
 		$row = mysql_fetch_array($result);
 		$titulo = htmlspecialchars($row['title']);
@@ -45,6 +45,7 @@ if (isset($_GET["id"])) {
 		$tags = htmlspecialchars($row['tags']);
 	} else {
 		header("Location: cpanel.php");
+		exit();
 	}
 } elseif (isset($_GET["url"])) {
 	$etiquetas = @get_meta_tags($_GET['url']);
@@ -90,7 +91,6 @@ if (isset($_GET["id"])) {
 		?>
 		</p>
 	</div>
-
 	<div id="contenido">
 		<div id="formulario">
 			<form method="post" action="<? echo (isset($_GET["id"]) ? "modifica.php" : "agregar.php"); ?>">

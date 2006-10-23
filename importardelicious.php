@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -12,16 +12,19 @@
 	include("include/conex.php");
 	include("include/functions.php");
 
-if (esAdmin())
-{
-        if (isset($_POST["username"])){
-          $isImporting=true;
-        }else{
-          $isImporting=false;
-        }
+	if (!esAdmin())
+	{
+		header("Location: login.php");
+		exit();
+	}
+	if (isset($_POST["username"])){
+		$isImporting=true;
+	}else{
+		$isImporting=false;
+	}
 	if ($isImporting) {
 		include "include/importdelicious.php";
-        	$respImport=importdelicious($_POST["username"],$_POST["password"]);
+       	$respImport=importdelicious($_POST["username"],$_POST["password"]);
 	} 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -98,8 +101,3 @@ if (esAdmin())
 </div>
 </body>
 </html>
-<?
-	} else {
-		header("Location: login.php");
-	}	
-    ?>

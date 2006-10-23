@@ -63,6 +63,7 @@ body {
 }
 
 .submenu_derecho {
+	clear: both;
 	font: normal 14.5px/17px georgia, "times new roman", serif;
 	margin-right: 10px;
 	padding-right: 10px;
@@ -343,6 +344,12 @@ textarea{
 br {
 	clear: left;
 }
+#buscador{
+	float: right;
+	margin: 15px 10px 0px 0px;
+}
+#buscador input{ margin-left: 5px; }
+
 input#enviar_links{
 	font-size:12px;
 	background-color:#EDEDED;
@@ -529,4 +536,28 @@ a:active {
 	border-bottom: 2px solid #FFD324;
 	margin: 0 auto;
 	padding: 5px 20px 5px 45px;
+}
+
+#formulario_ajax{
+	clear: both;
+	margin: 10px 0px 0px 0px;
+	padding: 5px;
+	width: 500px;
+	background-color: #EEE;
+	border-top: 1px solid #777;
+	border-bottom: 1px solid #777;
+	text-align: left;
+}
+#formulario_ajax input, #formulario_ajax textarea{width: 450px;}
+.ajax_opcion{
+	margin: 0px 3px 5px 0px;
+	background-color: #777;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.ajax_opcion a:link, .ajax_opcion a:active, .ajax_opcion a:visited, .ajax_opcion a:hover{
+	color: #FFF;
+}
+.ajax_msg{
+	clear: both;
 }

@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -12,9 +12,11 @@ include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
-if (esAdmin())
+if (!esAdmin())
 {
-
+	header("Location: login.php");
+	exit();
+}
 $show_code 	= false;
 $min_font 	= 12;
 $max_font 	= 30;
@@ -145,12 +147,6 @@ if(isset($_POST['code_gen'])){
 	<div id="pie">
 		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 	</div>
-
 </div>
 </body>
 </html>
-<?
-} else {
-   header("Location: login.php");
-}
-?> 
