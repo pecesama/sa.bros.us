@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -9,7 +9,7 @@
   =========================== */
 
 function version() {
-	return "1.7";
+	return "1.8";
 }
 
 function normalizeTags($etiquetas) {
@@ -21,6 +21,14 @@ function normalizeTags($etiquetas) {
 	return trim($tags);
 }
 
+function esPrivado($id){
+		global $prefix,$link;
+		$sqlStr=mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE (id_enlace=".$id." AND tags LIKE '%:sab:privado%') LIMIT 1",$link) or die(mysql_error());
+		if($row=mysql_fetch_assoc($sqlStr))
+				return true; //Enlace privado
+			else
+				return false; //Enlace Público
+}
 function saveIni($fileName, $configOpts) {
 	$file = fopen($fileName, 'wb');
 	foreach ($configOpts as $section => $configLine) {
@@ -32,22 +40,9 @@ function saveIni($fileName, $configOpts) {
 	fclose($file);
 }
 
-function contarenlaces($tag="") {
+function contarenlaces($sql) {
 	global $prefix;
-	if(esAdmin()){
-		if ($tag){
-			$recordCount = "select count(*) from ".$prefix."sabrosus where (tags LIKE '% $tag %' OR tags LIKE '$tag %' OR tags LIKE '% $tag' OR tags = '$tag')";
-		} else {
-			$recordCount = "select count(*) from ".$prefix."sabrosus";
-		}
-	} else {
-		if ($tag){
-			$recordCount = "select count(*) from ".$prefix."sabrosus where (tags LIKE '% $tag %' OR tags LIKE '$tag %' OR tags LIKE '% $tag' OR tags = '$tag') AND (tags NOT LIKE '%:sab:privado%')";
-		} else {														
-			$recordCount = "select count(*) from ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%')";
-		}
-	}
-	$totalRowsResult = mysql_query($recordCount);
+	$totalRowsResult = mysql_query("SELECT count(*) ".$sql);
 	if (!$totalRowsResult) {
 		echo __("Error al ejecutar la consulta en la DB");
 	} else {
