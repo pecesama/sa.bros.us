@@ -542,13 +542,13 @@ a:active {
 	clear: both;
 	margin: 10px 0px 0px 0px;
 	padding: 5px;
-	width: 500px;
+	width: 90%;
 	background-color: #EEE;
 	border-top: 1px solid #777;
 	border-bottom: 1px solid #777;
 	text-align: left;
 }
-#formulario_ajax input, #formulario_ajax textarea{width: 450px;}
+#formulario_ajax input, #formulario_ajax textarea{width: 85%;}
 .ajax_opcion{
 	margin: 0px 3px 5px 0px;
 	background-color: #777;
