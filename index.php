@@ -1,7 +1,7 @@
 <?
 /* ===========================
 
-  sabros.us monousuario version 1.7
+  sabros.us monousuario version 1.8
   http://sabros.us/
 
   sabros.us is a free software licensed under GPL (General public license)
@@ -40,6 +40,9 @@ header("Content-type: text/html; charset=UTF-8");
 			contenedor.toggle();
 		}
 	</script>
+	<?php if(esAdmin()){?>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/editar_ajax.js.php"></script>
+	<?php }?>
 </head>
 <body>
 <?
@@ -62,6 +65,14 @@ header("Content-type: text/html; charset=UTF-8");
 <div id="pagina">
 
 	<div id="titulo">
+		<div id="buscador">
+			<fieldset>
+				<form action="<?=$Sabrosus->sabrUrl?>" method="get">
+					<input type="text" value="<?=isset($_GET['busqueda'])?$_GET['busqueda']:"";?>" name="busqueda" id="busqueda"/>
+					<input type="submit" value="Buscar"/>
+				</form>
+			</fieldset>
+		</div>
 		<h2>
 		<?
 		echo "\t<a title=\"".$Sabrosus->siteTitle."\" href=\"".$Sabrosus->siteUrl."\">".$Sabrosus->siteName."</a>/";
@@ -102,7 +113,6 @@ header("Content-type: text/html; charset=UTF-8");
 				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
-
 		<?
 		echo ($Sabrosus->compartir=="1")? "<form action=\"".$Sabrosus->sabrUrl."/exportar.php\" method=\"post\" >" : '';
 
@@ -114,7 +124,36 @@ header("Content-type: text/html; charset=UTF-8");
 
 		$desde=($pag-1)*$Sabrosus->limit;
 
-		$nenlaces=(isset($tagtag) ? contarenlaces($tagtag) : contarenlaces());
+		// Para incluir en el update.php de la version 1.8
+		######################
+		//Consulta que se tiene que realizar para las búsquedas con match against
+		//ALTER TABLE ".$prefix."sabrosus ADD FULLTEXT `busqueda`(`title`, `enlace`, `descripcion`, `tags`);		
+		#######################
+		
+		if(isset($_GET['busqueda'])&&!eregi("^ *$",$_GET['busqueda'])){
+				$busqueda = mysql_real_escape_string(trim($_GET['busqueda']));
+				$q=$busqueda;
+				if(eregi(chr(32),$busqueda))
+						$busqueda="MATCH(title,enlace,descripcion,tags) AGAINST('$busqueda')";
+					else
+						$busqueda="title LIKE '%$busqueda%' OR enlace LIKE '%$busqueda%' OR descripcion LIKE '%$busqueda%' OR tags LIKE '%$busqueda%'";
+			}else{
+				$busqueda="";
+				$q="";
+			}
+				
+		if(esAdmin())
+			if($busqueda=="")
+					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
+				else
+					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda AND tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
+		else 
+			if($busqueda=="")
+					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
+				else
+					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda AND (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
+				
+		$nenlaces=contarenlaces(substr($sqlStr,9,strpos($sqlStr,"ORDER")-9));
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 
 		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
@@ -125,11 +164,7 @@ header("Content-type: text/html; charset=UTF-8");
 			$pag_text = "<strong>" . __("No hay ning&uacute;n enlace en este sabros.us todav&iacute;a.") . "</strong>";
 		}
 		echo "<div id=\"indicador_pagina\">".$pag_text."</div>\n";
-		
-		if(esAdmin())
-			$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE CONCAT(' ', tags, ' ') LIKE '% $tagtag %' ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
-		else 
-			$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE (CONCAT(' ', tags, ' ') LIKE '% $tagtag %') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
+
 		etiquetasRelacionadas($tagtag);
 
 		$result = mysql_query($sqlStr);
@@ -151,18 +186,20 @@ header("Content-type: text/html; charset=UTF-8");
 						}
 					}
 	
-					if (!esAdmin() && $privado) { //Aqui no imprime nada por ser privado
+					if (!esAdmin() && $privado) { 
+						//Aqui no imprime nada por ser privado
 					} else {
+						echo"\n\t\t<div id=\"editar".$row['id_enlace']."\"></div>";
 						if($privado){
-							echo "\n\t\t<div class=\"enlace_privado\">\n";
+							echo "\n\t\t<div class=\"enlace_privado\" id=\"enlace".$row['id_enlace']."\">\n";
 						} else {
-							echo "\n\t\t<div class=\"enlace\">\n";
+							echo "\n\t\t<div class=\"enlace\" id=\"enlace".$row['id_enlace']."\">\n";
 						}
 						// Thumbnails
 						if($Sabrosus->multiCont=="1")
 						{
 							if(!ocupaReproduccionEspecial($row["enlace"])) {
-								echo "\t\t<img class=\"preview\" src=\"http://thumbs.webshotspro.com/url/".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
+								echo "\t\t<img class=\"preview\" src=\"http://www.webshotspro.com/thumb.php?url=".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
 							} else {
 								/* Imagenes de Flickr */
 								if (esFlickrPhoto($row["enlace"])) {
@@ -175,7 +212,7 @@ header("Content-type: text/html; charset=UTF-8");
 						echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 	
 						if (esAdmin()) {
-							echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\">".__("Editar")." &raquo;</a>";
+							echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\" onClick=\"return editar_ajax(".$row['id_enlace'].");\">".__("Editar")." &raquo;</a>";
 						}
 						echo "</h3>\n";
 						if ($Sabrosus->multiCont=="1") {
