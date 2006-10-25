@@ -9,13 +9,12 @@
   =========================== */
 
 $feeds = true;
+header("Content-type: text/xml; charset=utf-8");
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
-header("Content-type: text/xml; charset=utf-8");
 echo "<?xml version=\"1.0\""." encoding=\"UTF-8\"?>\n";
-
 if (isset($_GET["tag"])) {
 	$navegador = strtolower($_SERVER['HTTP_USER_AGENT']);
 	if (stristr($navegador, "opera") || stristr($navegador, "msie")) {
@@ -25,17 +24,25 @@ if (isset($_GET["tag"])) {
 	}
 }
 
-if (isset($cuantos)) {
-	//Parametro $cuantos=todos para que devuelvas una sindicación completa de sabros.us.
-	if($cuantos=='todos')
-		$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC " : "SELECT * FROM ".$prefix."sabrosus WHERE tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC");
-	else
-		$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC limit $cuantos" : "SELECT * FROM ".$prefix."sabrosus where tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC limit $cuantos");
+$sqlStr = "SELECT * FROM ".$prefix."sabrosus WHERE";
+if(isset($tagtag)){
+	$sqlStr .= " ((tags NOT LIKE '%:sab:privado%')";
+	$sqlStr .= " AND (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag'))";
 } else {
-	$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC limit 10" : "SELECT * FROM ".$prefix."sabrosus where tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC limit 10");
+	$sqlStr .= " (tags NOT LIKE '%:sab:privado%')";
+}
+$sqlStr .= " ORDER BY fecha DESC";
+if(isset($cuantos)){
+	if($cuantos!='todos' && is_numeric($cuantos)){
+		$sqlStr .= " LIMIT $cuantos";
+	}
+	if($cuantos!='todos' && !is_numeric($cuantos)){
+		$sqlStr .= " LIMIT 10";
+	}
+} else {
+	$sqlStr .= " LIMIT 10";
 }
 $result = mysql_query($sqlStr,$link);
-
 ?>
 
 <rss version="2.0">
@@ -54,37 +61,21 @@ $result = mysql_query($sqlStr,$link);
 
 		<?
 		while ($registro = mysql_fetch_array($result)) {
-			/* Control de Enlaces Privados */
-			$tags=htmlspecialchars($registro["tags"]);
-			$privado=false;
-			$etiquetas = explode(" ", $tags);
-			foreach ($etiquetas as $etiqueta) {
-				if ($etiqueta==":sab:privado") {
-					$privado=true;
-				}
-			}
-
-			if (!$privado) {
-				$titulo = htmlspecialchars($registro["title"]);
-				$desc = htmlspecialchars($registro["descripcion"]);
-				$url = htmlspecialchars($registro["enlace"]);
-				$fecha = gmdate("D, d M Y H:i:s \G\M\T", strtotime($registro["fecha"]));
-
-				?>
-
-				<item>
-					<title><?=$titulo;?></title>
-					<link><?=$url;?></link>
-					<description><?=$desc;?></description>
-					<pubDate><?=$fecha;?></pubDate>
-					<category><?=$tags;?></category>
-					<guid isPermaLink="true"><?=$Sabrosus->sabrUrl."/ir.php?id=".$registro['id_enlace'];?></guid>
-				</item>
-
-				<?
-			}
+			$titulo = htmlspecialchars($registro["title"]);
+			$desc = htmlspecialchars($registro["descripcion"]);
+			$url = htmlspecialchars($registro["enlace"]);
+			$fecha = gmdate("D, d M Y H:i:s \G\M\T", strtotime($registro["fecha"]));
+			?>
+			<item>
+				<title><?=$titulo;?></title>
+				<link><?=$url;?></link>
+				<description><?=$desc;?></description>
+				<pubDate><?=$fecha;?></pubDate>
+				<category><?=$tags;?></category>
+				<guid isPermaLink="true"><?=$Sabrosus->sabrUrl."/ir.php?id=".$registro['id_enlace'];?></guid>
+			</item>
+			<?
 		}
 		?>
-
 	</channel>
 </rss>
