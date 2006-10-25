@@ -7,13 +7,14 @@
   sabros.us is a free software licensed under GPL (General public license)
 
   =========================== */
+header("Content-type: text/html; charset=UTF-8");
 
 include("include/functions.php");
 include("include/config.php");
 include("include/conex.php");
 include("include/tags.php");
 
-header("Content-type: text/html; charset=UTF-8");
+
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -114,7 +115,6 @@ header("Content-type: text/html; charset=UTF-8");
 			</div>
 		<? } ?>
 		<?
-		echo ($Sabrosus->compartir=="1")? "<form action=\"".$Sabrosus->sabrUrl."/exportar.php\" method=\"post\" >" : '';
 
 		if (isset($_GET["pag"])) {
 			$pag=$_GET["pag"];
@@ -172,6 +172,7 @@ header("Content-type: text/html; charset=UTF-8");
 			echo __("Error al ejecutar la consulta en la DB");
 		} else {
 			if(mysql_num_rows($result)>0) {
+				echo ($Sabrosus->compartir=="1")? "<form action=\"".$Sabrosus->sabrUrl."/exportar.php\" method=\"post\" >" : '';
 				while ($row = mysql_fetch_array($result)) {
 					$privado=false;
 					$etiquetas = explode(" ",$row["tags"]);
@@ -246,10 +247,10 @@ header("Content-type: text/html; charset=UTF-8");
 						echo "\t\t</div>\n";
 					}
 				}
+				echo ($Sabrosus->compartir=="1") ? "<br class=\"clear\"/><input type=\"submit\" name=\"enviar_links\" value=\"".__("exportar a mi sabros.us")."\" id=\"enviar_links\"/>
+				</form>" : '';
 			}
 		}
-		echo ($Sabrosus->compartir=="1") ? "<br class=\"clear\"/><input type=\"submit\" name=\"enviar_links\" value=\"".__("exportar a mi sabros.us")."\" id=\"enviar_links\"/>
-		</form>" : '';
 		?>
 	</div>
 	<br class="clear"/>
