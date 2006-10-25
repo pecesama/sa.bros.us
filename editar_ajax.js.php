@@ -94,7 +94,7 @@ function editar_ajax(id){
 		ajax = xmlhttp();
 		ajax.onreadystatechange=function(){
 				if(ajax.readyState==1){
-						<?php /*Hace falta imagen de loading...*/?>
+						<?php /*Hace falta imagen de cargando...*/?>
 						A.innerHTML = '<p class="ajax_msg"><?=__("Cargando...")?></p>';
 					}
 				if(ajax.readyState==4){
