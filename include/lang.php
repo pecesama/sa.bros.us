@@ -48,7 +48,7 @@ function T_ngettext($single, $plural, $number) {
 
 function get_laguajes() {
 	global $idiomas;
-
+	ob_start();
 	$sabr_langs = array ();
 	$sabr_langs_loc = 'locale/';
 	$sabr_langs_root = ABSPATH.$sabr_langs_loc;
@@ -71,7 +71,6 @@ function get_laguajes() {
 	foreach ($lang_files as $lang_file) {
 		include($sabr_langs_root."/".$lang_file);
 	}
-
-	return $idiomas;
+		return $idiomas;
 }
 ?>
