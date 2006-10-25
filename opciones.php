@@ -10,11 +10,12 @@
 
 
 ob_start();
+header("Content-type: text/html; charset=UTF-8");
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
 
-header("Content-type: text/html; charset=UTF-8");
+
 
 if (!esAdmin()) {
 	header("Location: login.php");
