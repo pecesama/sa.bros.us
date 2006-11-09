@@ -313,5 +313,4 @@ function mostrarerror($errors,$errors_d,$n) {
 	else
 		return "";
 }
-
 ?>
