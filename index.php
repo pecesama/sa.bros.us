@@ -45,7 +45,7 @@ include("include/tags.php");
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/editar_ajax.js.php"></script>
 	<?php }?>
 </head>
-(<body>
+<body>
 <?
 	/* PATCH Bug #1242025 */
 	if (isset($_GET["tag"])) {
