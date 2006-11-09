@@ -86,7 +86,7 @@
 			</form>
 		</div>
 <?		
-		$page = $pag;
+		$page = isset($pag)?$pag:"";
 		if(isset($pag)) $begin=$page*$Sabrosus->limit; else $begin=0;
 		$aux = $begin+$Sabrosus->limit;
 		if (isset($_GET["buscar"]))
