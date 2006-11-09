@@ -73,7 +73,7 @@
 		{	
 			for ($counter = 1; $counter <= $lastpage; $counter++)
 			{
-				if ($counter == $_GET['pag']) 
+				if ($counter == isset($_GET['pag'])?$_GET['pag']:"") 
 				{
 					$pagination.= "<span class=\"current\">$counter</span>";
 				} 
