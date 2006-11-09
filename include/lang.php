@@ -47,6 +47,7 @@ function T_ngettext($single, $plural, $number) {
 }
 
 function get_laguajes() {
+	$lang_files="";
 	global $idiomas;
 	ob_start();
 	$sabr_langs = array ();
