@@ -62,8 +62,8 @@ if (isset($_GET["id"])) {
 		$titulo = "";
 	}
 	$enlace = $_GET['url'];
-	$descripcion = $etiquetas['description'];
-	$tags = comasxespacios($etiquetas['keywords']);
+	$descripcion = isset($etiquetas['description'])?$etiquetas['description']:"";
+	$tags = isset($etiquetas['keywords'])?comasxespacios($etiquetas['keywords']):"";
 }
 
 ?>
@@ -108,20 +108,20 @@ if (isset($_GET["id"])) {
 			<fieldset>
 				<legend><?=(isset($_GET["id"]) ? __("Edita los datos de tu enlace.") : __("Escribe los datos de tu enlace."));?></legend>
 				<label for="title"><?=__("T&iacute;tulo:");?></label><br />
-				<input class="input_morado" type="text" name="title" value="<?=$titulo;?>" size="86" /><br />
+				<input class="input_morado" type="text" name="title" value="<?=isset($titulo)?$titulo:"";?>" size="86" /><br />
 
 				<label for="enlace"><?=__("Enlace:");?></label><br />
-				<input class="input_morado" type="text" name="enlace" value="<? echo $enlace; ?>" size="86" /><br />
+				<input class="input_morado" type="text" name="enlace" value="<?=isset($enlace)?$enlace:"";?>" size="86" /><br />
 
 				<label for="descripcion"><?=__("Descripci&oacute;n:");?></label>
-				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><? echo $descripcion; ?></textarea><br />
+				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><?=isset($descripcion)?$descripcion:"";?></textarea><br />
 
 				<label for="privado"><?=__("Enlace Privado:");?></label>
-				<? $esPrivado = ((strpos($tags, ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
+				<? $esPrivado = ((strpos(isset($tags)?$tags:"", ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
 				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
 
 				<label for="etiquetas"><?=__("Etiquetas:");?></label><br />
-				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", $tags); echo trim($tags_temp); ?>" size="86" /><br />
+				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", isset($tags)?$tags:""); echo trim($tags_temp); ?>" size="86" /><br />
 				<p><?=__("Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
 					<legend><?=__("Agregar etiquetas");?></legend>
