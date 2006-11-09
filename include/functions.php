@@ -91,6 +91,8 @@ function etiquetasRelacionadas ($tags) {
 
 	# Busqueda para encontrar todas las etiquetas que se relacionan con la etiqueta actual
 	$tags = explode(" ", $tags);
+	$i=0;
+	$query="";
 	foreach ($tags as $tag) {
 		/* This is a sub-optimal solution */
 		$tag = str_replace("+", "[+]", $tag); 
@@ -134,6 +136,7 @@ function etiquetasRelacionadas ($tags) {
 	if (!empty($pop)) {
 		echo "<div class=\"tags_relacionados\"><strong>".__("Etiquetas relacionadas:")."</strong> ";
 		arsort ($pop);
+		$i=0;
 		foreach ($pop as $tag => $num) {
 			# Asegurarse que no sea la misma etiqueta
 			$tag_match = str_replace("+", "\+", urlencode($tag));
