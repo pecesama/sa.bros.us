@@ -86,8 +86,8 @@
 			</form>
 		</div>
 <?		
-		$page = isset($pag)?$pag:"";
-		if(isset($pag)) $begin=$page*$Sabrosus->limit; else $begin=0;
+		$page = isset($_GET['pag'])?$_GET['pag']:"";
+		if(isset($_GET['pag'])) $begin=$page*$Sabrosus->limit; else $begin=0;
 		$aux = $begin+$Sabrosus->limit;
 		if (isset($_GET["buscar"]))
 		{
@@ -127,7 +127,7 @@
 			<tr>
 				<td colspan="4" class="paginator">
 				<?
-					if(isset($pag)&&$pag>0)
+					if(isset($_GET['pag'])&&$_GET['pag']>0)
 					{
 						if(isset($_GET['buscar']))
 							echo "<a class=\"alignleft\" href=\"cpanel.php?pag=".($page-1)."&amp;buscar=".$_GET['buscar']."\">&laquo; ".__("Anterior")."</a>";				
