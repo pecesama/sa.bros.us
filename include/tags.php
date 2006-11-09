@@ -69,30 +69,30 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 		}
 
 		/* color tags */
-		$colores[0][r] = 0.1;
-		$colores[0][g] = 2;
-		$colores[0][b] = 4;
+		$colores[0]['r'] = 0.1;
+		$colores[0]['g'] = 2;
+		$colores[0]['b'] = 4;
 
-		$colores[1][r] = 8;
-		$colores[1][g] = 2;
-		$colores[1][b] = 0.8;
+		$colores[1]['r'] = 8;
+		$colores[1]['g'] = 2;
+		$colores[1]['b'] = 0.8;
 
-		$colores[2][r] = 5;
-		$colores[2][g] = 1.6;
-		$colores[2][b] = 5;
+		$colores[2]['r'] = 5;
+		$colores[2]['g'] = 1.6;
+		$colores[2]['b'] = 5;
 
-		$colores[3][r] = 1;
-		$colores[3][g] = 5.5;
-		$colores[3][b] = 5.5;
+		$colores[3]['r'] = 1;
+		$colores[3]['g'] = 5.5;
+		$colores[3]['b'] = 5.5;
 
-		$colores[4][r] = 1.5;
-		$colores[4][g] = 1.5;
-		$colores[4][b] = 1.5;
+		$colores[4]['r'] = 1.5;
+		$colores[4]['g'] = 1.5;
+		$colores[4]['b'] = 1.5;
 
 		foreach($keys as $key) {
-			$colores[5][r] = (rand(5,40)) / 10;
-			$colores[5][g] = (rand(5,40)) / 10;
-			$colores[5][b] = (rand(5,40)) / 10;
+			$colores[5]['r'] = (rand(5,40)) / 10;
+			$colores[5]['g'] = (rand(5,40)) / 10;
+			$colores[5]['b'] = (rand(5,40)) / 10;
 
 			if ($output=="badge") {
 				$selectedColor = (isset($_GET['color']) && isset($colores[$_GET['color']]))? $_GET['color'] : 0;
@@ -101,9 +101,9 @@ function getTags($output="html", $max_font=30, $min_font=12) {
 			}
 
 			$color = round(255 - ($prop * $kw[$key]),0);
-			$r = round(($color/$colores[$selectedColor][r]),0);
-			$g = round(($color/$colores[$selectedColor][g]),0);
-			$b = round(($color/$colores[$selectedColor][b]),0);
+			$r = round(($color/$colores[$selectedColor]['r']),0);
+			$g = round(($color/$colores[$selectedColor]['g']),0);
+			$b = round(($color/$colores[$selectedColor]['b']),0);
 
 			$r = ($r>215)? 215 : $r;
 			$g = ($g>215)? 215 : $g;
