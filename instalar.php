@@ -198,12 +198,12 @@ if(!isset($_POST['paso']) || $_POST['paso']==0)
 		<fieldset>
 			<legend><?=__("Configuraci&oacute;n de la base de datos");?></legend>
 			<div>
-				<label for="dbserver"><?=__("Servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=$server?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
-				<label for="dbuser"><?=__("Usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=$dbUser?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
+				<label for="dbserver"><?=__("Servidor:");?></label><input type="text" name="dbserver" id="dbserver" value="<?=isset($server)?$server:"";?>"/><?=mostrarerror($errors,$errors_d,"11")?><br/>
+				<label for="dbuser"><?=__("Usuario:");?></label><input type="text" name="dbuser" id="dbuser" value="<?=isset($dbUser)?$dbUser:"";?>"/><?=mostrarerror($errors,$errors_d,"12")?><br/>
 				<label for="dbpass"><?=__("Password:");?></label><input type="password" name="dbpass" id="dbpass" value=""/><?=mostrarerror($errors,$errors_d,"13")?><br/>
 				<label for="dbpass2"><?=__("Reescribe el Password:");?></label><input type="password" name="dbpass2" id="dbpass2" value=""/><?=mostrarerror($errors,$errors_d,"101")?><br/>
-				<label for="dbname"><?=__("Base de Datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=$dataBase?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
-				<label for="prefix"><?=__("Prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=$prefix?>"/>
+				<label for="dbname"><?=__("Base de Datos:");?></label><input type="text" name="dbname" id="dbname" value="<?=isset($dataBase)?$dataBase:"";?>"/><?=mostrarerror($errors,$errors_d,"14")?><br/>
+				<label for="prefix"><?=__("Prefijo para las tablas:");?></label><input type="text" name="prefix" id="prefix" value="<?=isset($prefix)?$prefix:"";?>"/>
 			</div>
 		</fieldset>
 		<fieldset>
@@ -212,10 +212,10 @@ if(!isset($_POST['paso']) || $_POST['paso']==0)
 				<label for="admpass"><?=__("Password para el control panel:");?></label><input type="password" name="admpass" id="admpass" value=""/><?=mostrarerror($errors,$errors_d,"21")?><br/>
 				<label for="admpass2"><?=__("Reescribe el password:");?></label><input type="password" name="admpass2" id="admpass2" value=""/><?=mostrarerror($errors,$errors_d,"102")?><br/>
 				<label for="email"><?=__("Email:");?></label><input type="text" name="email" id="email" value=""/><br/>
-				<label for="sname"><?=__("Nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=$siteName?>"/><br/>
-				<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=$siteTitle?>"/><br/>
-				<label for="sabrurl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="sabrurl" id="sabrurl" value="<?=$sabrUrl?>"/><?=mostrarerror($errors,$errors_d,"31")?><br/>
-				<label for="siteUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="siteUrl" id="siteUrl" value="<?=$siteUrl?>"/><?=mostrarerror($errors,$errors_d,"32")?><br/>
+				<label for="sname"><?=__("Nombre de tu sitio:");?></label><input type="text" name="sname" id="sname" value="<?=isset($siteName)?$siteName:"";?>"/><br/>
+				<label for="stitle"><?=__("Descripci&oacute;n del sitio:");?></label><input type="text" name="stitle" id="stitle" value="<?=isset($siteTitle)?$siteTitle:"";?>"/><br/>
+				<label for="sabrurl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="sabrurl" id="sabrurl" value="<?=isset($sabrUrl)?$sabrUrl:"";?>"/><?=mostrarerror($errors,$errors_d,"31")?><br/>
+				<label for="siteUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:");?><br/><?=__("(sin <q>/</q> al final)");?></label><input type="text" name="siteUrl" id="siteUrl" value="<?=isset($siteUrl)?$siteUrl:"";?>"/><?=mostrarerror($errors,$errors_d,"32")?><br/>
 				<label for="limite"><?=__("N&uacute;mero de enlaces por p&aacute;gina:");?></label><input type="text" name="limite" id="limite" value="10"/><br/>
 				<label for="useFriendlyUrl"><?=__("<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:");?></label>
 				<select name="useFriendlyUrl" id="useFriendlyUrl">
@@ -289,9 +289,9 @@ function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $snam
 		) TYPE=MyISAM;";
 		$result = mysql_query($sqlStr);
 
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','".utf8_encode("Página de Estanislao Vizcarra, autor de sabros.us")."','".utf8_encode("css xhtml diseño web estandares cine php")."','2005-07-10 00:41:06');";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','".utf8_encode("Pgina de Estanislao Vizcarra, autor de sabros.us")."','".utf8_encode("css xhtml diseo web estandares cine php")."','2005-07-10 00:41:06');";
 		$result = mysql_query($sqlStr);
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','".utf8_encode("Página de Pedro Santana, co-autor de sabros.us")."','".utf8_encode("php programación web java javascript")."','2005-07-10 00:42:04');";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','".utf8_encode("Pgina de Pedro Santana, co-autor de sabros.us")."','".utf8_encode("php programacin web java javascript")."','2005-07-10 00:42:04');";
 		$result = mysql_query($sqlStr);
 
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$sname."','".$stitle."','".$siteUrl."','".$sabrUrl."','".$useFriendlyUrl."','".$lang."','".$limite."','".$email."','".md5($admPass)."');";
