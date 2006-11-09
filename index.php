@@ -279,5 +279,6 @@ include("include/tags.php");
 	</div>
 
 </div>
+<img src="images/ajax-loading.gif" alt="loading.gif" style="display:none;">
 </body>
 </html>
