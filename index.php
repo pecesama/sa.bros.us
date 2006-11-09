@@ -165,7 +165,8 @@ include("include/tags.php");
 		}
 		echo "<div id=\"indicador_pagina\">".$pag_text."</div>\n";
 
-		etiquetasRelacionadas($tagtag);
+		if(isset($tagtag))
+			etiquetasRelacionadas($tagtag);
 
 		$result = mysql_query($sqlStr);
 		if (!$result) {
