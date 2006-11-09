@@ -45,7 +45,7 @@ include("include/tags.php");
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/editar_ajax.js.php"></script>
 	<?php }?>
 </head>
-<body>
+(<body>
 <?
 	/* PATCH Bug #1242025 */
 	if (isset($_GET["tag"])) {
@@ -69,7 +69,7 @@ include("include/tags.php");
 		<div id="buscador">
 			<fieldset>
 				<form action="<?=$Sabrosus->sabrUrl?>" method="get">
-					<input type="text" value="<?=isset($_GET['busqueda'])?$_GET['busqueda']:"";?>" name="busqueda" id="busqueda"/>
+					<input type="text" value="<?=isset($_GET['busqueda'])?htmlentities($_GET['busqueda']):"";?>" name="busqueda" id="busqueda"/>
 					<input type="submit" value="Buscar"/>
 				</form>
 			</fieldset>
