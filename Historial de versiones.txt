@@ -1,6 +1,9 @@
 Historial de versiones
 
 v 1.8
+    * Buscador (Victor De la Rocha)
+    * Paginador de cpanel.php solucionado para cuando Register_Globals esta definida en Off (Victor De la Rocha)
+    * Eliminación de Warnings y Notices (Victor De la Rocha)
     * Metodos con Ajax (Victor de la Rocha, Victor Bracco)
     * Problemas para exportar solucionados (Victor Bracco, Victor de la Rocha, Pecesama)
     * Cambio en la llamada a los screenshot. (Victor Bracco)
@@ -118,7 +121,7 @@ v 1.0
     * Agregada una pagina de '¿Qué es sabros.us?' (Miguel Cuesta)
     * Integracion del script de busqueda en el panel de control (Pecesama)
     * Asistentente para cambiar el idioma de manera grafica (Pecesama)
-    * Modificado la forma en que se muestra en tittle de la pagina (Victor)
+    * Modificado la forma en que se muestra en tittle de la pagina (Victor De la Rocha)
     * Agregado un script de busqueda (Mauro Lizaur)
     * Solucionado bug en la funcion esAdmin (Pecesama)
     * Parche a rss.php relacionado con el bug del filtrado de etiquetas (Pecesama)
@@ -145,7 +148,7 @@ Beta 1.3
 
     * Mejoras al paginador (Pablo Viojo)
     * Parchado el bug en IE y Opera con el UTF-8. (pecesama, Federico (de 511) )
-    * Posibilidad de mostrar tus nube de tags de sabros.us en cualquier sitio HTML con el sabros.us tags badge (Victor).
+    * Posibilidad de mostrar tus nube de tags de sabros.us en cualquier sitio HTML con el sabros.us tags badge (Victor De la Rocha).
     * Solucionado bug en la paginacion de sabros.us (Pablo Viojo)
     * Solucionado bug con el generador de sabros.us badge que apuntaba a pecesama.net siempre (Pablo Viojo)
     * solucionado bug con la cookie en el cpanel y en agregar nuevo enlace (Pablo Viojo, pecesama).
