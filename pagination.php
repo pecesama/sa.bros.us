@@ -1,7 +1,7 @@
 <?
 	/* ===========================
 	
-	  sabros.us monousuario versión 1.8
+	  sabros.us monousuario versión 1.7
 	  http://sabros.us/
 	
 	  sabros.us is a free software licensed under GPL (General public license)	  
@@ -30,16 +30,16 @@
 	
 	/* Setup vars for query. */
 	$limit = $Sabrosus->limit; 								//how many items to show per page
-	if(isset($_GET['pag'])&&$_GET['pag']) 
-		$start = ($_GET['pag'] - 1) * $limit; 			//first item to display on this page
+	if($_GET["pag"]) 
+		$start = ($_GET["pag"] - 1) * $limit; 			//first item to display on this page
 	else
 		$start = 0;								//if no page var is given, set start to 0
 	
 			
 	/* Setup page vars for display. */
-	if (isset($_GET['pag'])&&$_GET['pag'] == 0) $_GET['pag'] = 1;					//if no page var is given, default to 1.
-	$prev = isset($_GET['pag'])?($_GET['pag'] - 1):"";							//previous page is page - 1
-	$next = isset($_GET['pag'])?($_GET['pag'] + 1):"";							//next page is page + 1
+	if ($_GET["pag"] == 0) $_GET["pag"] = 1;					//if no page var is given, default to 1.
+	$prev = $_GET["pag"] - 1;							//previous page is page - 1
+	$next = $_GET["pag"] + 1;							//next page is page + 1
 	$lastpage = ceil($total_pages/$limit);		//lastpage is = total pages / items per page, rounded up.
 	$lpm1 = $lastpage - 1;						//last page minus 1
 	
@@ -52,7 +52,7 @@
 	{	
 		$pagination .= "<div class=\"pagination\">";
 		//previous button
-		if (isset($_GET['pag'])&&$_GET['pag'] > 1) 
+		if ($_GET["pag"] > 1) 
 		{			
 			if (isset($tagtag))
 			{
@@ -73,7 +73,7 @@
 		{	
 			for ($counter = 1; $counter <= $lastpage; $counter++)
 			{
-				if ($counter == isset($_GET['pag'])?$_GET['pag']:"") 
+				if ($counter == $_GET["pag"]) 
 				{
 					$pagination.= "<span class=\"current\">$counter</span>";
 				} 
@@ -93,11 +93,11 @@
 		elseif($lastpage > 5 + ($adjacents * 2))	//enough pages to hide some
 		{
 			//close to beginning; only hide later pages
-			if(isset($_GET['pag'])&&$_GET['pag'] < 1 + ($adjacents * 2))		
+			if($_GET["pag"] < 1 + ($adjacents * 2))		
 			{
 				for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)
 				{
-					if ($counter == $_GET['pag'])
+					if ($counter == $_GET["pag"])
 					{
 						$pagination.= "<span class=\"current\">$counter</span>";
 					}
@@ -126,7 +126,7 @@
 				}
 			}
 			//in middle; hide some front and some back
-			elseif(isset($_GET['pag']) && $lastpage - ($adjacents * 2) > $_GET['pag'] && $_GET['pag'] > ($adjacents * 2))
+			elseif($lastpage - ($adjacents * 2) > $_GET["pag"] && $_GET["pag"] > ($adjacents * 2))
 			{					
 				$uno=1;
 				$dos=2;
@@ -141,9 +141,9 @@
 					$pagination.= "<a href=\"".$Sabrosus->sabrUrl . chequearURLFriendly('/pag/'.$dos,'/?pag='.$dos).$q. "\">".$dos."</a>";
 				}
 				$pagination.= "...";
-				for ($counter = $_GET['pag'] - $adjacents; $counter <= $_GET['pag'] + $adjacents; $counter++)
+				for ($counter = $_GET["pag"] - $adjacents; $counter <= $_GET["pag"] + $adjacents; $counter++)
 				{
-					if ($counter == $_GET['pag'])
+					if ($counter == $_GET["pag"])
 					{
 						$pagination.= "<span class=\"current\">$counter</span>";
 					}
@@ -189,7 +189,7 @@
 				$pagination.= "...";
 				for ($counter = $lastpage - (2 + ($adjacents * 2)); $counter <= $lastpage; $counter++)
 				{
-					if ($counter == isset($_GET['pag'])?$_GET['pag']:"")
+					if ($counter == $_GET["pag"])
 					{
 						$pagination.= "<span class=\"current\">$counter</span>";
 					}
@@ -209,7 +209,7 @@
 		}
 		
 		//next button
-		if (isset($_GET['pag']) && $_GET['pag'] < $counter - 1)
+		if ($_GET["pag"] < $counter - 1)
 		{				
 			if (isset($tagtag))
 			{
