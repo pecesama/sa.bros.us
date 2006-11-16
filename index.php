@@ -30,15 +30,19 @@ include("include/tags.php");
 	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?=$Sabrosus->sabrUrl?>/atom.php" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.pack.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.transitions.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.utils.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/accordion.js"></script>
 	<script type="text/javascript">
 		var contenedor;
 		window.onload = function() {
-			contenedor = new fx.Opacity('divContenedor', {duration: 5000, onComplete:
+			contenedor = new Fx.Style('divContenedor', 'opacity', {duration: 5000, onComplete:
 				function() {
 					document.getElementById('divContenedor').style.display="none";
 				}
 			});
-			contenedor.toggle();
+			contenedor.custom(1,0);
 		}
 	</script>
 	<?php if(esAdmin()){?>

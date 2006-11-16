@@ -1,4 +1,12 @@
 <?php
+/* ===========================
+
+  sabros.us monousuario version 1.8
+  http://sabros.us/
+
+  sabros.us is a free software licensed under GPL (General public license)
+
+  =========================== */
 	header("Content-type: application/x-javascript");
 	include("include/functions.php");
 	include("include/config.php");
@@ -23,7 +31,7 @@ function editar_guardar(id){
 		ajax = xmlhttp();
 		ajax.onreadystatechange=function(){
 				if(ajax.readyState==1){
-						document.getElementById('editar'+id).innerHTML='<p class="ajax_msg"><img src="images/ajax-loading.gif" alt="Saboreando..."/><?=__("Saboreando...")?></p>';
+						document.getElementById('editar'+id).innerHTML='<p class="ajax_msg"><img src="images/ajax-loading.gif" alt="Saboreando..."/><?=__(" Saboreando...")?></p>';
 					}
 				if(ajax.readyState==4){
 						<?php /*Ocultamos la caja donde estaba el formulario y msg de Guardando... */?>
@@ -53,7 +61,7 @@ function ver_enlace(id){
 		_ajax = xmlhttp()
 		_ajax.onreadystatechange=function(){
 				if(_ajax.readyState==1)
-					document.getElementById('enlace'+id).innerHTML='<p class="ajax_msg"><img src="images/ajax-loading.gif" alt="Saboreando..."/><?=__("Saboreando...")?></p>';		
+					document.getElementById('enlace'+id).innerHTML='<p class="ajax_msg"><img src="images/ajax-loading.gif" alt="Saboreando..."/><?=__(" Saboreando...")?></p>';		
 				if(_ajax.readyState==4)
 					document.getElementById('enlace'+id).innerHTML=_ajax.responseText;
 			}
