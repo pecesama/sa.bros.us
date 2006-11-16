@@ -108,13 +108,13 @@ if (isset($_GET["id"])) {
 			<fieldset>
 				<legend><?=(isset($_GET["id"]) ? __("Edita los datos de tu enlace.") : __("Escribe los datos de tu enlace."));?></legend>
 				<label for="title"><?=__("T&iacute;tulo:");?></label><br />
-				<input class="input_morado" type="text" name="title" value="<?=isset($titulo)?$titulo:"";?>" size="86" /><br />
+				<input class="input_morado" type="text" name="title" id="title" value="<?=isset($titulo)?$titulo:"";?>" size="86" /><br />
 
 				<label for="enlace"><?=__("Enlace:");?></label><br />
-				<input class="input_morado" type="text" name="enlace" value="<?=isset($enlace)?$enlace:"";?>" size="86" /><br />
+				<input class="input_morado" type="text" name="enlace" id="enlace" value="<?=isset($enlace)?$enlace:"";?>" size="86" /><br />
 
-				<label for="descripcion"><?=__("Descripci&oacute;n:");?></label>
-				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion"><?=isset($descripcion)?$descripcion:"";?></textarea><br />
+				<label for="descripcion"><?=__("Descripci&oacute;n:");?></label><br />
+				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion" id="descripcion"><?=isset($descripcion)?$descripcion:"";?></textarea><br />
 
 				<label for="privado"><?=__("Enlace Privado:");?></label>
 				<? $esPrivado = ((strpos(isset($tags)?$tags:"", ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
@@ -135,7 +135,7 @@ if (isset($_GET["id"])) {
 		</div>
 		<fieldset>
 			<legend><?=__("Instalar el bookmarklet.");?></legend>
-			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sabros.us");?>" class="bookmarklet"><?=__("agregar a sabros.us");?></a></label>
+			<label><?=__("Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:");?><a href="javascript:location.href='<?=$Sabrosus->sabrUrl?>/editar.php?url='+encodeURIComponent(location.href)+'&amp;titulo='+encodeURIComponent(document.title)" title="<?=__("agregar a sabros.us");?>" class="bookmarklet"><?=__("agregar a sabros.us");?></a></label>
 		</fieldset>
 	</div>
 
