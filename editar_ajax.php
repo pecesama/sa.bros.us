@@ -1,4 +1,12 @@
 <?php
+/* ===========================
+
+  sabros.us monousuario version 1.8
+  http://sabros.us/
+
+  sabros.us is a free software licensed under GPL (General public license)
+
+  =========================== */
 header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 

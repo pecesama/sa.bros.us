@@ -84,16 +84,19 @@ if (isset($_POST["accion"])) {
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl;?>/images/sabrosus_icon.png" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.pack.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.transitions.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.utils.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/accordion.js"></script>
+	<script type="text/javascript">		
 		var contenedor;
-
 		window.onload = function() {
-			contenedor = new fx.Opacity('divContenedor', {duration: 5000, onComplete:
+			contenedor = new Fx.Style('divContenedor', 'opacity', {duration: 5000, onComplete:
 				function() {
 					document.getElementById('divContenedor').style.display="none";
 				}
 			});
-			contenedor.toggle();
+			contenedor.custom(1,0);
 		}
 	</script>
 </head>

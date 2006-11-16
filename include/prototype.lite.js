@@ -1,10 +1,12 @@
-/*  Prototype JavaScript framework
+/*  Prototype JavaScript framework, version 1.4.0
  *  (c) 2005 Sam Stephenson <sam@conio.net>
+ *
  *  Prototype is freely distributable under the terms of an MIT-style license.
  *  For details, see the Prototype web site: http://prototype.conio.net/
+ *
 /*--------------------------------------------------------------------------*/
 
-//note: modified & stripped down version of prototype, to be used with moo.fx by mad4milk (http://moofx.mad4milk.net).
+//note: stripped down version of prototype, to be used with moo.fx by mad4milk (http://moofx.mad4milk.net).
 
 var Class = {
 	create: function() {
@@ -12,26 +14,39 @@ var Class = {
 			this.initialize.apply(this, arguments);
 		}
 	}
-}
+};
 
 Object.extend = function(destination, source) {
-	for (property in source) destination[property] = source[property];
+	for (var property in source) destination[property] = source[property];
 	return destination;
-}
+};
 
 Function.prototype.bind = function(object) {
 	var __method = this;
 	return function() {
 		return __method.apply(object, arguments);
 	}
+};
+
+if (!Array.prototype.forEach){
+	Array.prototype.forEach = function(fn, bind){
+		for(var i = 0; i < this.length ; i++) fn.call(bind, this[i], i);
+	};
 }
 
-Function.prototype.bindAsEventListener = function(object) {
-var __method = this;
-	return function(event) {
-		__method.call(object, event || window.event);
-	}
-}
+Array.prototype.each = Array.prototype.forEach;
+
+String.prototype.camelize = function(){
+	return this.replace(/-\D/gi, function(match){
+		return match.charAt(match.length - 1).toUpperCase();
+	});
+};
+
+var $A = function(iterable) {
+	var nArray = [];
+	for (var i = 0; i < iterable.length; i++) nArray.push(iterable[i]);
+	return nArray;
+};
 
 function $() {
 	if (arguments.length == 1) return get$(arguments[0]);
@@ -45,11 +60,12 @@ function $() {
 		if (typeof el == 'string') el = document.getElementById(el);
 		return el;
 	}
-}
+};
 
-if (!window.Element) var Element = new Object();
+if (!window.Element) var Element = {};
 
 Object.extend(Element, {
+
 	remove: function(element) {
 		element = $(element);
 		element.parentNode.removeChild(element);
@@ -57,76 +73,26 @@ Object.extend(Element, {
 
 	hasClassName: function(element, className) {
 		element = $(element);
-		if (!element) return;
-		var hasClass = false;
-		element.className.split(' ').each(function(cn){
-			if (cn == className) hasClass = true;
-		});
-		return hasClass;
+		return !!element.className.match(new RegExp("\\b"+className+"\\b"));
 	},
 
 	addClassName: function(element, className) {
 		element = $(element);
-		Element.removeClassName(element, className);
-		element.className += ' ' + className;
+		if (!Element.hasClassName(element, className)) element.className = (element.className+' '+className);
 	},
-  
+
 	removeClassName: function(element, className) {
 		element = $(element);
-		if (!element) return;
-		var newClassName = '';
-		element.className.split(' ').each(function(cn, i){
-			if (cn != className){
-				if (i > 0) newClassName += ' ';
-				newClassName += cn;
-			}
-		});
-		element.className = newClassName;
-	},
-
-	cleanWhitespace: function(element) {
-		element = $(element);
-		$c(element.childNodes).each(function(node){
-			if (node.nodeType == 3 && !/\S/.test(node.nodeValue)) Element.remove(node);
-		});
-	},
-
-	find: function(element, what) {
-		element = $(element)[what];
-		while (element.nodeType != 1) element = element[what];
-		return element;
+		if (Element.hasClassName(element, className)) element.className = element.className.replace(className, '');
 	}
+
 });
 
-var Position = {
-	cumulativeOffset: function(element) {
-		var valueT = 0, valueL = 0;
-		do {
-			valueT += element.offsetTop  || 0;
-			valueL += element.offsetLeft || 0;
-			element = element.offsetParent;
-		} while (element);
-		return [valueL, valueT];
-	}
-};
-
-document.getElementsByClassName = function(className) {
-	var children = document.getElementsByTagName('*') || document.all;
+document.getElementsByClassName = function(className){
 	var elements = [];
-	$c(children).each(function(child){
-		if (Element.hasClassName(child, className)) elements.push(child);
-	});  
+	var all = document.getElementsByTagName('*');
+	$A(all).each(function(el){
+		if (Element.hasClassName(el, className)) elements.push(el);
+	});
 	return elements;
-}
-
-//useful array functions
-Array.prototype.iterate = function(func){
-	for(var i=0;i<this.length;i++) func(this[i], i);
-}
-if (!Array.prototype.each) Array.prototype.each = Array.prototype.iterate;
-
-function $c(array){
-	var nArray = [];
-	for (var i=0;i<array.length;i++) nArray.push(array[i]);
-	return nArray;
-}
+};
