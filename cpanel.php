@@ -112,7 +112,7 @@
 ?>
 		<table cellspacing="0">
 			<thead>
-				<th colspan="4"><?=__("Control de contenidos");?></th>
+				<tr><th colspan="4"><?=__("Control de contenidos");?></th></tr>
 			</thead>
 			
 <?			while ($row = mysql_fetch_array($result))
