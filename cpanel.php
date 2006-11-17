@@ -28,12 +28,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.pack.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.transitions.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.utils.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/accordion.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/mootools.js"></script>
 
 	<script language="JavaScript" type="text/javascript">
 		<!--			

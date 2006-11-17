@@ -11,9 +11,10 @@ body {
 }
 .enlace {
 	color: #444444;
+	background-color: #FFFFFF;
 	font: normal 13.5px/17px georgia, "times new roman", serif;
 	margin-bottom: 5px;
-	clear: both;
+	clear: both;	
 }
 .enlacevideo{
 	margin: 5px 0px 5px 0px;

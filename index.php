@@ -28,14 +28,11 @@ include("include/tags.php");
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=$Sabrosus->sabrUrl?>/rss.php" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 0.92" href="<?=$Sabrosus->sabrUrl?>/rss92.php" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?=$Sabrosus->sabrUrl?>/atom.php" />
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/prototype.lite.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.pack.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.transitions.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/moo.fx.utils.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/accordion.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/mootools.js"></script>
 	<script type="text/javascript">
 		var contenedor;
+		var efectoEnlaceCancelar;
+		var efectoEnlaceGuardar;
 		window.onload = function() {
 			contenedor = new Fx.Style('divContenedor', 'opacity', {duration: 5000, onComplete:
 				function() {
@@ -197,10 +194,10 @@ include("include/tags.php");
 					} else {
 						echo"\n\t\t<div id=\"editar".$row['id_enlace']."\"></div>";
 						if($privado){
-							echo "\n\t\t<div class=\"enlace_privado\" id=\"enlace".$row['id_enlace']."\">\n";
+							echo "\n\t\t<div class=\"enlace_privado\" style=\"background-color: rgb(247, 247, 247);\" id=\"enlace".$row['id_enlace']."\">\n";
 						} else {
-							echo "\n\t\t<div class=\"enlace\" id=\"enlace".$row['id_enlace']."\">\n";
-						}
+							echo "\n\t\t<div class=\"enlace\" style=\"background-color: rgb(255, 255, 255);\" id=\"enlace".$row['id_enlace']."\">\n";
+						}						
 						// Thumbnails
 						if($Sabrosus->multiCont=="1")
 						{
