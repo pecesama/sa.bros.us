@@ -20,6 +20,10 @@ function editar_cancelar(id){
 		<?php /*Ocultamos el formulario de edición para el enlace*/?>
 		document.getElementById('editar'+id).style.visibility="hidden";
 		document.getElementById('editar'+id).style.position="absolute";
+		
+		<? /*Efecto*/?>
+		efectoEnlaceCancelar = new Fx.Color('enlace'+id, 'background-color');
+		efectoEnlaceCancelar.fromColor('#FF0000');
 	}
 
 function editar_guardar(id){
@@ -42,6 +46,10 @@ function editar_guardar(id){
 						ver_enlace(id);
 						document.getElementById('enlace'+id).style.position="relative";
 						document.getElementById('enlace'+id).style.visibility="visible";
+						
+						<? /*Efecto*/?>
+						efectoEnlaceGuardar = new Fx.Color('enlace'+id, 'background-color');
+						efectoEnlaceGuardar.fromColor('#00FF00');
 					}
 						
 			}
