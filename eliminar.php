@@ -19,7 +19,7 @@
 	// $_GET['id'] must be set, and must be a number
 	if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 		header("Location: cpanel.php");
-		exit()
+		exit();
 	}
 	if (isset($_GET['confirm']) && $_GET['confirm']=='0') {
 		$Sql="DELETE FROM ".$prefix."sabrosus WHERE id_enlace=".$_GET['id'];

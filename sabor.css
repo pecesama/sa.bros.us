@@ -17,13 +17,13 @@ body {
 	clear: both;	
 }
 .enlacevideo{
-	margin: 5px 0px 5px 0px;
+	margin: 5px 0 5px 0;
 }
 .enlace_privado{
-	margin: 2px 0px 2px 0px;
+	margin: 2px 0 2px 0;
 	background-color: #F7F7F7;
 	border: 1px solid #CCC;
-	border-width: 1px 0px 1px 0px;
+	border-width: 1px 0 1px 0;
 	font: normal 13.5px/17px georgia, "times new roman", serif;
 	padding-bottom: 5px;
 	clear: both;
@@ -73,10 +73,8 @@ body {
 }
 
 #contenido {
-	margin-left: 10px;
-	margin-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
+	margin-left: 0 0 0 10px;
+	padding: 0 0 10px 10px;
 	float: left;
 	width: 60%;
 }
@@ -105,8 +103,8 @@ body {
 #indicador_pagina {
    background-color: #fcfcfc;
 	border:0;
-	margin: 20px 0px;
-	padding: 5px 0px;
+	margin: 20px 0;
+	padding: 5px 0;
    font: normal 15.5px/15px georgia, "times new roman", serif;
 	color: #CC6600;
 }
@@ -204,9 +202,9 @@ div.pagination span.disabled {
 #pie p{
 	color: #CC6600;
 	font: normal 10pt georgia, "times new roman", serif;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	margin-left: 10px;
-	margin-top: 0px;
+	margin-top: 0;
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
@@ -248,7 +246,7 @@ div.pagination span.disabled {
 	font: normal 20pt georgia, "times new roman", serif;
 	margin-bottom: 10px;
 	margin-left: 10px;
-	margin-top: 0px;
+	margin-top: 0;
 	padding-bottom: 0;
 	padding-top: 10px;
 }
@@ -293,12 +291,12 @@ td.paginator a.alignright{
 #formulario,#bookmarks {
 	margin: 10px;
 	padding: 0px;
-	border: 0px;
+	border: 0;
 }
 
 fieldset {
 	border: 0;
-	padding: 0px 5px 5px 5px;
+	padding: 0 5px 5px 5px;
 	margin-top: 0px;
 }
 legend{
@@ -347,7 +345,7 @@ br {
 }
 #buscador{
 	float: right;
-	margin: 15px 10px 0px 0px;
+	margin: 15px 10px 0 0;
 }
 #buscador input{ margin-left: 5px; }
 
@@ -419,7 +417,8 @@ input#enviar_links{
 
 .bookmarklet, .bookmarklet:hover {
 	font-weight:bold; padding: 1px 2px;
-	border: 2px solid #888; background-color: #eee; text-decoration:none;
+	border: 2px solid #888;
+	background-color: #eee; text-decoration:none;
 }
 
 #ejemploHtml b {
@@ -541,7 +540,7 @@ a:active {
 
 #formulario_ajax{
 	clear: both;
-	margin: 10px 0px 0px 0px;
+	margin: 10px 0 0 0;
 	padding: 5px;
 	width: 90%;
 	background-color: #EEE;
@@ -551,7 +550,7 @@ a:active {
 }
 #formulario_ajax input, #formulario_ajax textarea{width: 85%;}
 .ajax_opcion{
-	margin: 0px 3px 5px 0px;
+	margin: 0 3px 5px 0;
 	background-color: #777;
 	padding-left: 3px;
 	padding-right: 3px;
