@@ -1,6 +1,8 @@
 Historial de versiones
 
 v 1.8
+
+    * Imagen para los enlaces privados y corrección de errores menores. (Jorge Condomí)
     * Buscador (Victor De la Rocha)
     * Paginador de cpanel.php solucionado para cuando Register_Globals esta definida en Off (Victor De la Rocha)
     * Eliminación de Warnings y Notices (Victor De la Rocha)

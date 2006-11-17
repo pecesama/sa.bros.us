@@ -115,9 +115,10 @@
 			</thead>
 			
 <?			while ($row = mysql_fetch_array($result))
-				{	?>					
+				{					
+				$privado = (eregi("(.*)\:sab\:privado(.*)",$row['tags']));?>					
 			<tr>
-				<td class="objeto"><?=$row["title"]?></td>
+				<td class="objeto"><?=($privado)? '<img src="images/lock.png" alt="'.__("Enlace Privado:").' '.$row["title"].'" title="'.__("Enlace Privado:").' '.$row["title"].'" />':'';?> <?=$row["title"]?></td>
 				<td><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><img src="images/link.png" alt="<?=__("Ver");?>" title="<?=__("Ver");?>" /></a></td>
 				<td><a href="editar.php?id=<? echo $row["id_enlace"]; ?>"><img src="images/edit.png" alt="<?=__("Editar");?>" title="<?=__("Editar");?>" /></a></td>
 				<td><a href="eliminar.php?id=<?=$row["id_enlace"];?>&amp;confirm=1" onclick="elimina(<?=$row["id_enlace"];?>);return false;"><img src="images/delete.png" alt="<?=__("Eliminar");?>" title="<?=__("Eliminar");?>" /></a></td>
