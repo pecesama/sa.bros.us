@@ -196,7 +196,7 @@ include("include/tags.php");
 						if($privado){
 							echo "\n\t\t<div class=\"enlace_privado\" style=\"background-color: rgb(247, 247, 247);\" id=\"enlace".$row['id_enlace']."\">\n";
 						} else {
-							echo "\n\t\t<div class=\"enlace\" style=\"background-color: rgb(255, 255, 255);\" id=\"enlace".$row['id_enlace']."\">\n";
+							echo "\n\t\t<div class=\"enlace\" style=\"background-color: rgb(252, 252, 252);\" id=\"enlace".$row['id_enlace']."\">\n";
 						}						
 						// Thumbnails
 						if($Sabrosus->multiCont=="1")
