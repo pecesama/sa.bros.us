@@ -2,6 +2,7 @@ Historial de versiones
 
 v 1.8
 
+    * Exportación de los datos del config.ini a la BD. (Victor Bracco)
     * Imagen para los enlaces privados y corrección de errores menores. (Jorge Condomí)
     * Buscador (Victor De la Rocha)
     * Paginador de cpanel.php solucionado para cuando Register_Globals esta definida en Off (Victor De la Rocha)

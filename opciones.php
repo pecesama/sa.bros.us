@@ -42,31 +42,26 @@ if (isset($_POST["accion"])) {
 		}
 	}
 	$sql .= " WHERE (`sabrosus_url` = '".$Sabrosus->sabrUrl."') LIMIT 1";
-		$cfg = parse_ini_file("include/config.ini", true);
-		$multi = (isset($_POST["contenidos_multi"]) ? "1" : "0");
+
+	$multi = (isset($_POST["contenidos_multi"]) ? "1" : "0");
 	$comp = (isset($_POST['compartir']) ? "1" : "0");
 	$descrip = (isset($_POST['descripciones']) ? "1" : "0");
 	$ping = (isset($_POST['ping']) ? "1" : "0");
 	$soloNubeIndex = (isset($_POST['nube_tags']) ? "1" : "0");
 	$nubePosicion = (isset($_POST['nube_posicion']) ? "1" : "0");
-	$cfg['tags_cloud']['color'] = $_POST['color_tags'];
-	$cfg['multimedia_content']['allow'] = $multi;
-	$cfg['exportar']['compartir'] = $comp;
-	$cfg['links_badge']['descripciones'] = $descrip;
-	$cfg['sopasabrosa']['ping'] = $ping;
-	$cfg['tags_cloud']['alone_index'] = $soloNubeIndex;
-	$cfg['tags_cloud']['posicion']= $nubePosicion;
+	$tagColor = $_POST['color_tags'];
 	
-	if (!is_writeable("include/config.ini")) {
-		$errores +=1;
-	}
+	if($multi != $Sabrosus->multiCont) 			$Sabrosus->save_option(multiCont,$multi);
+	if($comp != $Sabrosus->compartir) 			$Sabrosus->save_option(compartir,$comp);
+	if($descrip != $Sabrosus->desc_badge) 		$Sabrosus->save_option(desc_badge,$descrip);
+	if($ping != $Sabrosus->ping) 				$Sabrosus->save_option(ping,$ping);
+	if($soloNubeIndex != $Sabrosus->soloNube) 	$Sabrosus->save_option(soloNube,$soloNubeIndex);
+	if($nubePosicion != $Sabrosus->estiloNube)	$Sabrosus->save_option(estiloNube,$nubePosicion);
+	if($tagColor != $Sabrosus->tagsColor) 		$Sabrosus->save_option(tagsColor,$tagColor);
+	
 	if (!$errores) {
-		saveIni("include/config.ini", $cfg);
-		$result = mysql_query($sql);
-		header("Location: opciones.php?ex=1");
-	} else {
-		if (!is_writeable("include/config.ini")) {
-			header("Location: opciones.php?er=2");
+		if(mysql_query($sql)) {
+			header("Location: opciones.php?ex=1");
 		} else {
 			header("Location: opciones.php?er=1");
 		}
@@ -113,11 +108,6 @@ if (isset($_POST["accion"])) {
 		<? if (isset($_GET["er"]) && $_GET["er"] == "1") { ?>
 			<div id="divContenedor" class="error">
 				<p><?=__("Ha ocurrido un error al almacenar los cambios");?></p>
-			</div>
-		<? } ?>
-		<? if (isset($_GET["er"]) && $_GET["er"] == "2") { ?>
-			<div id="divContenedor" class="error">
-				<p><?=__("El archivo <code>include/config.ini</code> no tiene permisos de escritura");?></p>
 			</div>
 		<? } ?>
 		<div id="formulario">
