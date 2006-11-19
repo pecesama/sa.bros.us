@@ -170,14 +170,18 @@ class clsSabrosus
 		$this->emailAdmin     = $row['admin_email'];
 		$this->adminPass      = $row['admin_pass'];
 
-		$cfg = parse_ini_file("include/config.ini", true);
-		$this->multiCont = (isset($cfg['multimedia_content']['allow']))?$cfg['multimedia_content']['allow']:"0";
-		$this->tagsColor = (isset($cfg['tags_cloud']['color']))?$cfg['tags_cloud']['color']:"0";
-		$this->compartir = (isset($cfg['exportar']['compartir']))?$cfg['exportar']['compartir']:"0";
-		$this->desc_badge = (isset($cfg['links_badge']['descripciones']))?$cfg['links_badge']['descripciones']:"0";
-		$this->ping = (isset($cfg['sopasabrosa']['ping']))?$cfg['sopasabrosa']['ping']:"0";
-		$this->soloNube = (isset($cfg['tags_cloud']['alone_index']))?$cfg['tags_cloud']['alone_index']:"0";
-		$this->estiloNube = (isset($cfg['tags_cloud']['posicion']))?$cfg['tags_cloud']['posicion']:"0";
+		$sql2 = "SELECT * FROM ".$prefix."opciones";
+		$result2 = @mysql_query($sql2);
+		while($row2 = @mysql_fetch_array($result2)){
+			
+			$this->multiCont 	= $this->get_option(multiCont);
+			$this->tagsColor 	= $this->get_option(tagsColor);
+			$this->compartir 	= $this->get_option(compartir);
+			$this->desc_badge 	= $this->get_option(desc_badge);
+			$this->ping 		= $this->get_option(ping);
+			$this->soloNube 	= $this->get_option(soloNube);
+			$this->estiloNube	= $this->get_option(estiloNube);
+		}
 		
 		get_laguajes();
 		
@@ -194,6 +198,28 @@ class clsSabrosus
 
 			initIdioma($locale);
 		}
+	}
+	
+	function get_option($name){
+		global $link,$prefix;
+		$sql = "SELECT * FROM ".$prefix."opciones WHERE nombre='".$name."' LIMIT 1";
+		$result = @mysql_query($sql,$link);
+		if(@mysql_num_rows($result)>0){
+			$row = @mysql_fetch_array($result);
+			return $row['valor'];
+		} else {
+			return "0";
+		}
+	}
+	
+	function save_option($name,$value){
+		global $link,$prefix;
+		$sql = "UPDATE `".$prefix."opciones` SET valor='".$value."' WHERE nombre='".$name."' LIMIT 1";
+		if(@mysql_query($sql,$link)) {
+			return true;
+		} else {
+			return false;
+		}	
 	}
 }
 
