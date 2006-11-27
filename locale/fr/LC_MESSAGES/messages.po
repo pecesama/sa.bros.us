@@ -1,638 +1,641 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# French translation of Sa.bros.us, a web-based bookmark manager.
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the GPL v2.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+#   Lord Nogard <lord.nogard@gmail.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: sabros.us 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-13 10:20-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2006-11-27 13:10+0100\n"
+"Last-Translator: Lord Nogard <lord.nogard@gmail.com>\n"
+"Language-Team: Lord Nogard <lord.nogard@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
 
 msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
-msgstr ""
+msgstr "Mot de passe oubli&eacute;?"
 
 msgid "&iquest;Realmente desea eliminar este enlace de su sabros.us?"
-msgstr ""
+msgstr "Voulez-vous effacer ce lien?"
 
 msgid "&iquest;olvidaste tu contrase&ntilde;a?"
-msgstr ""
+msgstr "Mot de passe oubli&eacute;?"
 
 msgid "&iquest;qu&eacute; es sabros.us?"
-msgstr ""
+msgstr "Qu'est-ce que sabros.us?"
 
 msgid "&laquo; Anterior"
-msgstr ""
+msgstr "Pr&eacute;c&eacute;dent"
 
 msgid "(sin <q>/</q> al final)"
-msgstr ""
+msgstr "(sans le slash <q>/</q> final)"
 
 msgid "-- Idiomas --"
-msgstr ""
+msgstr "-- Langues --"
 
 msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
-msgstr ""
+msgstr "/cpanel.php\">Panneau de configuration</a> et ajouter des liens ou <a href=\""
 
 msgid "/index.php\">ver el sitio.</a>"
-msgstr ""
+msgstr "/index.php\">voir le site</a>."
 
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
-msgstr ""
+msgstr "<abbr title=\"Uniform Resource Locator\">URL</abbr> conviviales:"
 
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
-msgstr ""
+msgstr "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
 
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
-msgstr ""
+msgstr "<abbr title=\"Uniform Resource Locator\">URL</abbr> du site principal:"
 
 msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
-msgstr ""
+msgstr "<strong>Attention</strong>: la mise &agrave; jour a d&eacute;j&agrave; &eacute;t&eacute; faite pr&eacute;c&eacute;demment. Il n'est pas n&eacute;cessaire d'en faire une nouvelle."
 
 msgid "Activado"
-msgstr ""
+msgstr "Activ&eacute;"
 
 msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
-msgstr ""
+msgstr "Ajouter le nuage de tags sur votre site internet."
 
 msgid "Agrega los URLs de sabros.us a t&uacute; sitio."
-msgstr ""
+msgstr "Ajouter les URL de sabros.us sur votre site internet."
 
 msgid "Agregar etiquetas"
-msgstr ""
+msgstr "Ajouter tags"
 
 msgid "Agregue sus preferencias al c&oacute;digo generado."
-msgstr ""
+msgstr "Ajouter vos pr&eacute;f&eacute;rences au code g&eacute;n&eacute;r&eacute;."
 
 msgid "Aleatorio"
-msgstr ""
+msgstr "Al&eacute;atoire"
 
 msgid "Anterior"
-msgstr ""
+msgstr "Pr&eacute;c&eacute;dent"
 
 msgid "Archivo:"
-msgstr ""
+msgstr "Fichier:"
 
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
-msgstr ""
+msgstr "D&eacute;placez ce lien dans votre \" barre personnelle\":"
 
 msgid "Azul"
-msgstr ""
+msgstr "Bleu"
 
 msgid "Base de Datos:"
-msgstr ""
+msgstr "Base de donn&eacute;es:"
 
 msgid "Buscar enlaces con"
-msgstr ""
+msgstr "Rechercher des liens avec"
 
 msgid "Buscar:"
-msgstr ""
+msgstr "Rechercher:"
 
 msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
-msgstr ""
+msgstr "Cliquez sur <kbd>parcourir...</kbd> pour chercher le fichier des favoris sur votre ordinateur. La taille du fichier ne doit pas d&eacute;passer 1Mb"
 
 msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
-msgstr ""
+msgstr "Cliquez sur <kbd>importer</kbd> pour lancer l'importation des favoris ; cela peut prendre quelques instants"
 
 msgid "Color para la nube de etiquetas:"
-msgstr ""
+msgstr "Couleur du nuage de tags:"
 
 msgid "Configuraci&oacute;n de la apariencia"
-msgstr ""
+msgstr "Configuration du th&egrave;me"
 
 msgid "Configuraci&oacute;n de la base de datos"
-msgstr ""
+msgstr "Configuration de la base de donn&eacute;es"
 
 msgid "Configuraci&oacute;n de sabros.us"
-msgstr ""
+msgstr "Configuration de sabros.us"
 
 msgid "Configuraci&oacute;n del administrador"
-msgstr ""
+msgstr "Configuration de l'administration"
 
 msgid "Configurar"
-msgstr ""
+msgstr "Configurer"
 
 msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
-msgstr ""
+msgstr "Mot de passe du <strong>Panneau de configuration</strong>:"
 
 msgid "Contrase&ntilde;a:"
-msgstr ""
+msgstr "Mot de passe:"
 
 msgid "Control de contenidos"
-msgstr ""
+msgstr "Contr&ocirc;le du contenu"
 
 msgid "Copiar el c&oacute;digo fuente"
-msgstr ""
+msgstr "Copier le code source"
 
 msgid "Da clic para etiquetar esta entrada con"
-msgstr ""
+msgstr "Cliquez pour taguer cette entr&eacute;e avec"
 
 msgid "Datos de del.icio.us"
-msgstr ""
+msgstr "Infos sur del.icio.us"
 
 msgid "Debes introducir el nombre de la base de datos a utilizar"
-msgstr ""
+msgstr "Veuillez entrer le nom de la base de donn&eacute;es"
 
 msgid "Debes introducir el password para el usuario admin"
-msgstr ""
+msgstr "Veuillez entrer le mot de passe de l'administrateur"
 
 msgid "Debes introducir el password para la base de datos"
-msgstr ""
+msgstr "Veuillez entrer le mot de passe de la base de donn&eacute;es"
 
 msgid "Debes introducir el servidor de base de datos"
-msgstr ""
+msgstr "Veuillez entrer le nom du serveur de la base de donn&eacute;es"
 
 msgid "Debes introducir el usuario para la base de datos"
-msgstr ""
+msgstr "Veuillez entrer le nom d'utilisateur pour la base de donn&eacute;es"
 
 msgid "Debes introducir la URL para el sitio"
-msgstr ""
+msgstr "Veuillez entrer l'URL du site"
 
 msgid "Debes introducir la URL para sabros.us"
-msgstr ""
+msgstr "Veuillez entrer l'url compl&egrave;te pour sabros.us"
 
 msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
-msgstr ""
+msgstr "N'entrez rien dans ces cases si vous ne souhaitez pas modifier votre mot de passe"
 
 msgid "Desactivado"
-msgstr ""
+msgstr "Desactiv&eacute;"
 
 msgid "Descripci&oacute;n del sitio:"
-msgstr ""
+msgstr "Description du site internet:"
 
 msgid "Descripci&oacute;n:"
-msgstr ""
+msgstr "Description:"
 
 msgid "E-mail:"
-msgstr ""
+msgstr "Courriel:"
 
 msgid "Edita los datos de tu enlace."
-msgstr ""
+msgstr "Modifier les informations du lien"
 
 msgid "Editar"
-msgstr ""
+msgstr "Editer"
 
 msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
-msgstr ""
+msgstr "Le fichier <code>include/config.ini</code> n'est pas accessible en &eacute;criture"
 
 msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
-msgstr ""
+msgstr "L'adresse e-mail du formulaire ne correspond pas &agrave; celle de la base de donn&eacute;es"
 
 msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>."
-msgstr ""
+msgstr "Le projet a &eacute;t&eacute; initi&eacute; par <a href=\"http://www.stanmx.com/\">Estanislao Vizcarra</a> et <a href=\"http://www.pecesama.net/\">Pedro Santana</a> en 2005, et s'appuie sur la collaboration d'<a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\">autres membres</a>."
 
 msgid "El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
-msgstr ""
+msgstr "Le projet sabros.us est 'open source' (vous pouvez utiliser et modifier librement le code source original) et n&eacute;cessite PHP et MySQL. Le site officiel est accessible ici: <a href=\"http://sabros.us/\" title=\"sa.bros.us\">sabros.us</a> et le logiciel peut &ecirc;tre t&eacute;l&eacute;charg&eacute; depuis <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"projet sabros.us\">sourceforge.net</a>."
 
 msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
-msgstr ""
+msgstr "Le nom d'utilisateur ou le mot de passe est invalide. Merci de r&eacute;essayer."
 
 msgid "Eliminar"
-msgstr ""
+msgstr "Effacer"
 
 msgid "Eliminar enlace"
-msgstr ""
+msgstr "Effacer le lien"
 
 msgid "Email:"
-msgstr ""
+msgstr "Courriel:"
 
 msgid "Enlace Privado:"
-msgstr ""
+msgstr "Lien priv&eacute;:"
 
 msgid "Enlace:"
-msgstr ""
+msgstr "Lien:"
 
 msgid "Enlaces de"
-msgstr ""
+msgstr "Liens de"
 
 msgid "Enlaces por p&aacute;gina:"
-msgstr ""
+msgstr "Liens par page:"
 
 msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
-msgstr ""
+msgstr "Envoyer les liens &agrave; <a href=\"http://www.sopasabrosa.com.ar\">SopaSabrosa</a>:"
 
 msgid "Error al ejecutar la consulta en la DB"
-msgstr ""
+msgstr "Erreur lors de l'&eacute;x&eacute;cution d'une requ&ecirc;te dans la Base de donn&eacute;es"
 
 msgid "Es 'open source'."
-msgstr ""
+msgstr "C'est 'open source'."
 
 msgid "Es sencillo y r&aacute;pido de instalar."
-msgstr ""
+msgstr "C'est simple et rapide &agrave; installer."
 
 msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
-msgstr ""
+msgstr "Ecrivez les tags d&eacute;crivant les liens en les s&eacute;parant par un espace (ex: xhtml css php)."
 
 msgid "Escribe los datos de tu enlace."
-msgstr ""
+msgstr "Ajouter un nouveau lien."
 
 msgid "Esta acci&oacute;n no se puede deshacer!"
-msgstr ""
+msgstr "Cette action est irr&eacute;versible!"
 
 msgid "Etiquetas relacionadas:"
-msgstr ""
+msgstr "Tags similaires"
 
 msgid "Etiquetas:"
-msgstr ""
+msgstr "Tags:"
 
 msgid "Exportar tus marcadores de tu navegador a un archivo"
-msgstr ""
+msgstr "Exporter les favoris de votre navigateur dans un fichier"
 
 msgid "FUNCIONALIDADES:"
-msgstr ""
+msgstr "Fonctionalit&eacute;s:"
 
 msgid "Filtrar por etiqueta:"
-msgstr ""
+msgstr "Filtrer par tag:"
 
 msgid "Gris"
-msgstr ""
+msgstr "Gris"
 
 msgid "Ha ocurrido un error al almacenar los cambios"
-msgstr ""
+msgstr "Une erreur est apparue lors de l'enregistrement"
 
 msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
-msgstr ""
+msgstr "Une erreur est apparue (erreur  <strong>%no_error%</strong>). Merci de r&eacute;essayer."
 
 msgid "Ha ocurrido un error."
-msgstr ""
+msgstr "Une erreur est apparue."
 
 msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
-msgstr ""
+msgstr "Il y a <strong>%no_enlaces%</strong> liens. Affichage des liens <strong>%desde%</strong> &agrave; <strong>%total%</strong>"
 
 msgid "Hoja de estilo de mi sabros.us"
-msgstr ""
+msgstr "Feuille de style de votre sabros.us"
 
 msgid "Idioma"
-msgstr ""
+msgstr "Langue"
 
 msgid "Idioma:"
-msgstr ""
+msgstr "Langue:"
 
 msgid "Importar"
-msgstr ""
+msgstr "Importer"
 
 msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
-msgstr ""
+msgstr "Impossible d'envoyer le mot de passe par email car vous n'aviez pas renseign&eacute; l'adresse email de l'administrateur"
 
 msgid "Instalar el bookmarklet."
-msgstr ""
+msgstr "Installer l'application."
 
 msgid "Instrucciones"
-msgstr ""
+msgstr "Instructions"
 
 msgid "Introduzca su contrase&ntilde;a"
-msgstr ""
+msgstr "Saisissez votre mot de passe"
 
 msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
-msgstr ""
+msgstr "Internet explorer: <kbd>Fichier &gt; Importer et exporter... &gt; Exporter les Favoris</kbd>"
 
 msgid "La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
-msgstr ""
+msgstr "L'installation de sabros.us s'est termin&eacute;e avec succ&egrave;s. Vous pouvez acc&eacute;der au <a href=\"/cpanel.php\">Panneau de configuration</a> et commencer &agrave; ajouter des liens, ou <a href=\"/index.php\">visiter le site.</a>"
 
 msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
-msgstr ""
+msgstr "Un email contenant votre nouveau mot de passe a &eacute;t&eacute; envoy&eacute; &agrave; votre adresse. Il contient les instructions pour finaliser ce changement de mot de passe."
 
 msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:"
-msgstr ""
+msgstr "Le nouveau mot de passe a &eacute;t&eacute; automatiquement g&eacute;n&eacute;r&eacute; - vous pourrez changer pour un autre plus facile &agrave; retenir.<br />Le mot de passe actuel pour acc&eacute;der au Panneau de configuration est:"
 
 msgid "Las contrase&ntilde;as deben ser iguales"
-msgstr ""
+msgstr "Les mots de passe doivent &ecirc;tre identiques"
 
 msgid "Los cambios se han almacenado con &eacute;xito"
-msgstr ""
+msgstr "Les modifications ont &eacute;t&eacute; enregistr&eacute;es"
 
 msgid "Los passwords introducidos no coinciden"
-msgstr ""
+msgstr "Les mots de passe ne correspondent pas"
 
 msgid "M&aacute;s en"
-msgstr ""
+msgstr "La suite dans"
 
 msgid "Mi sa.bro.sus"
-msgstr ""
+msgstr "Mon sabros.us"
 
 msgid "Mis etiquetas en sa.bro.sus"
-msgstr ""
+msgstr "Mes tags sur sabros.us"
 
 msgid "Mostrar contenidos multimedia:"
-msgstr ""
+msgstr "Afficher les images miniatures:"
 
 msgid "Mostrar descripciones en el badge de enlaces:"
-msgstr ""
+msgstr "Afficher les descriptions dans le carnet de liens:"
 
 msgid "Mostrar la nube de etiquetas a la derecha:"
-msgstr ""
+msgstr "Afficher le nuage de tags sur la droite:"
 
 msgid "Mostrar solo la nube de etiquetas en la portada:"
-msgstr ""
+msgstr "Afficher seulement le nuage de tags sur la page principale:"
 
 msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
-msgstr ""
+msgstr "Mozilla firefox: <kbd>Marques-page &gt; G&eacute;rer les marques-page... &gt; Fichier &gt; Exporter...</kbd>"
 
 msgid "N&uacute;mero de enlaces por p&aacute;gina:"
-msgstr ""
+msgstr "Nombre de liens par page:"
 
 msgid "N&uacute;mero de enlaces:"
-msgstr ""
+msgstr "Nombre de liens:"
 
 msgid "Naranja"
-msgstr ""
+msgstr "Orange"
 
 msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
-msgstr ""
+msgstr "Netscape: <kbd>Signets &gt; G&eacute;rer les signets... &gt; Outils &gt; Exporter...</kbd>"
 
 msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
-msgstr ""
+msgstr "Impossible d'&eacute;crire dans le fichier <code>include/config.php</code>. Merci de v&eacute;rifier les permissions de ce fichier et de relancer l'installation."
 
 msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
-msgstr ""
+msgstr "Il est impossible d'exporter ce lien, car le dossier <code>tmp</code> est prot&eacute;g&eacute; en &eacute;criture"
 
 msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
-msgstr ""
+msgstr "Impossible de se connecter &agrave; la base de donn&eacute;es. Merci de v&eacute;rifier de v&eacute;rifier son bon param&eacute;trage et de r&eacute;essayer ensuite."
 
 msgid "No hay ning&uacute;n enlace en este sabros.us todav&iacute;a."
-msgstr ""
+msgstr "Il n'y a pas encore de liens sur ce sabros.us."
 
 msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
-msgstr ""
+msgstr "<strong>%no_noimportadosrepetidos%</strong> liens n'ont pas &eacute;t&eacute; import&eacute;s car ils &eacute;taient d&eacute;j&agrave; pr&eacute;sent dans sabros.us."
 
 msgid "Nombre de tu sitio:"
-msgstr ""
+msgstr "Le nom de votre site:"
 
 msgid "Nombre del sitio:"
-msgstr ""
+msgstr "Nom du site:"
 
 msgid "Nube de ejemplo"
-msgstr ""
+msgstr "Exemple de nuage"
 
 msgid "Nueva contrase&ntilde;a"
-msgstr ""
+msgstr "Nouveau mot de passe"
 
 msgid "P&uacute;blico"
-msgstr ""
+msgstr "Publique"
 
 msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
-msgstr ""
+msgstr "Pour importer les liens depuis del.icio.us,veuillez entrer vos identifiants."
 
 msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
-msgstr ""
+msgstr "Pour afficher les liens les plus r&eacute;cents de votre sabros.us sur une autre page, vous pouvez copier ce code n'importe o&ugrave; dans votre blog ou dans n'importe quelle autre page html."
 
 msgid "Password para el control panel:"
-msgstr ""
+msgstr "Mot de passe du Panneau de configuration:"
 
 msgid "Password:"
-msgstr ""
+msgstr "Mot de passe:"
 
 msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
-msgstr ""
+msgstr "Ajouter rapidement un marque-page en utilisant votre navigateur internet."
 
 msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
-msgstr ""
+msgstr "Flux RSS et Atom pour suivre tous les marque-pages ou les marques-page d'un tag en particulier."
 
 msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
-msgstr ""
+msgstr "G&eacute;n&eacute;rer automatiquement un 'nuage' &agrave; partir de tous les tags ins&eacute;r&eacute;s."
 
 msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
-msgstr ""
+msgstr "G&eacute;rer les marques-page gr&acirc;ce au Panneau de configuration."
 
 msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
-msgstr ""
+msgstr "Ajouter des 'tags' &agrave; chaque marque-page, afin de pouvoir rechercher d'autres marques-pages sur le m&ecirc;me th&egrave;me."
 
 msgid "Permitir que se exporten los enlaces:"
-msgstr ""
+msgstr "Autoriser les visiteurs &agrave; exporter les liens:"
 
 msgid "Personalice la nube de etiquetas:"
-msgstr ""
+msgstr "Personnaliser votre nuage de tags:"
 
 msgid "Prefijo para las tablas:"
-msgstr ""
+msgstr "Pr&eacute;fixe des tables:"
 
 msgid "Privacidad:"
-msgstr ""
+msgstr "Vie priv&eacute;e:"
 
 msgid "Privado"
-msgstr ""
+msgstr "Priv&eacute;:"
 
 msgid "RSS de la etiqueta"
-msgstr ""
+msgstr "RSS des tags"
 
 msgid "RSS de sabros.us"
-msgstr ""
+msgstr "RSS de sabros.us"
 
 msgid "Reescribe el Password:"
-msgstr ""
+msgstr "Confirmez le mot de passe:"
 
 msgid "Reescribe el password:"
-msgstr ""
+msgstr "Confirmez le mot de passe:"
 
 msgid "Reescribe la contrase&ntilde;a:"
-msgstr ""
+msgstr "Confirmez le mot de passe:"
 
 msgid "Rojo"
-msgstr ""
+msgstr "Rouge"
 
 msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
-msgstr ""
+msgstr "L'importation des liens dans del.icio.us s'est d&eacute;roul&eacute;e avec succ&egrave;s. Au total, <strong>%no_importados%</strong> liens ont &eacute;t&eacute; import&eacute;s."
 
 msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
-msgstr ""
+msgstr "Une erreur est apparue. Merci de r&eacute;essayer plus tard. Si l'erreur persiste, veuillez contacter l'administrateur."
 
 msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
-msgstr ""
+msgstr "S&eacute;lectionnez le param&egrave;tre de vie priv&eacute;e par d&eacute;faut pour les marques-page import&eacute;s"
 
 msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
-msgstr ""
+msgstr "S&eacute;lectionnez vos pr&eacute;f&eacute;rences pour l'affichage du nuage de tags de sabros.us:"
 
 msgid "Seleccione sus preferencias para desplegar su sabros.us:"
-msgstr ""
+msgstr "S&eacute;lectionnez vos pr&eacute;f&eacute;rences pour l'affichage de votre sabros.us:"
 
 msgid "Servidor:"
-msgstr ""
+msgstr "Serveur:"
 
 msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
-msgstr ""
+msgstr "Si vous souhaitez personnaliser le style de votre sabros.us , voici le squelette xhtml utilis&eacute;."
 
 msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
-msgstr ""
+msgstr "Si vous avez oubli&eacute; votre mot de passe, nous pouvons vous en envoyer un nouveau. Merci d'indiquer votre adresse email pour que l'administrateur de ce site puisse vous le faire parvenir."
 
 msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
-msgstr ""
+msgstr "Si vous poss&eacute;dez un blog ou un site internet, vous pouvez afficher le nuage de tag de sabros.us."
 
 msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sabros.us"
-msgstr ""
+msgstr "Si vous poss&eacute;dez un blog ou un site internet, vous pouvez y afficher les URL les plus r&eacute;cemment ajout&eacute;es dans votre sabros.us"
 
 msgid "Siguiente"
-msgstr ""
+msgstr "Suivant"
 
 msgid "Siguiente &raquo;"
-msgstr ""
+msgstr "Suivant &raquo;"
 
 msgid "T&iacute;tulo:"
-msgstr ""
+msgstr "Titre:"
 
 msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
-msgstr ""
+msgstr "Taille de police maximale"
 
 msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
-msgstr ""
+msgstr "Taille de police minimale"
 
 msgid "Terminando sesi&oacute;n..."
-msgstr ""
+msgstr "D&eacute;connection"
 
 msgid "Tiene un atractivo dise&ntilde;o."
-msgstr ""
+msgstr "Poss&egrave;de un design &agrave; la mode."
 
 msgid "Usuario:"
-msgstr ""
+msgstr "Utilisateur:"
 
 msgid "Ver"
-msgstr ""
+msgstr "Voir"
 
 msgid "Verde"
-msgstr ""
+msgstr "Vert"
 
 msgid "actualizaci&oacute;n"
-msgstr ""
+msgstr "Actualisation"
 
 msgid "actualizar"
-msgstr ""
+msgstr "Actualisation"
 
 msgid "agregar"
-msgstr ""
+msgstr "Ajouter"
 
 msgid "agregar a sabros.us"
-msgstr ""
+msgstr "Ajouter &agrave; sabros.us"
 
 msgid "agregar enlace"
-msgstr ""
+msgstr "Ajouter un lien"
 
 msgid "buscar"
-msgstr ""
+msgstr "Rechercher"
 
 msgid "contrase&ntilde;a:"
-msgstr ""
+msgstr "Mot de passe:"
 
 msgid "editar"
-msgstr ""
+msgstr "Editer"
 
 msgid "editar enlace"
-msgstr ""
+msgstr "Editer le lien"
 
 msgid "el"
-msgstr ""
+msgstr "&agrave;"
 
 msgid "eliminar"
-msgstr ""
+msgstr "effacer"
 
 msgid "eliminar enlace"
-msgstr ""
+msgstr "Effacer le lien"
 
 msgid "email:"
-msgstr ""
+msgstr "courriel:"
 
 msgid "en"
-msgstr ""
+msgstr "dans"
 
 msgid "enlaces con esta etiqueta"
-msgstr ""
+msgstr "liens avec ce tag"
 
 msgid "exportar"
-msgstr ""
+msgstr "Exporter"
 
 msgid "exportar a mi sabros.us"
-msgstr ""
+msgstr "exporter vers mon sabros.us"
 
 msgid "generado con:"
-msgstr ""
+msgstr "propuls&eacute; par:"
 
 msgid "generar badge"
-msgstr ""
+msgstr "G&eacute;n&eacute;rer carnet"
 
 msgid "generar badge de la nube de etiquetas"
-msgstr ""
+msgstr "g&eacute;n&eacute;rer un nuage de tags"
 
 msgid "generar badge de los enlaces"
-msgstr ""
+msgstr "g&eacute;n&eacute;rer un carnet de liens"
 
 msgid "generar c&oacute;digo"
-msgstr ""
+msgstr "g&eacute;n&eacute;rer code"
 
 msgid "guardar contrase&ntilde;a"
-msgstr ""
+msgstr "se souvenir du mot de passe"
 
 msgid "importar"
-msgstr ""
+msgstr "Importer"
 
 msgid "importar de del.icio.us"
-msgstr ""
+msgstr "importer depuis del.icio.us"
 
 msgid "importar de delicious"
-msgstr ""
+msgstr "importer depuis del.icio.us"
 
 msgid "importar desde un archivo"
-msgstr ""
+msgstr "importer depuis un fichier"
 
 msgid "importar marcadores"
-msgstr ""
+msgstr "importer marques-page"
 
 msgid "ingresar"
-msgstr ""
+msgstr "Se connecter"
 
 msgid "ingreso"
-msgstr ""
+msgstr "Connection"
 
 msgid "inicio sabros.us"
-msgstr ""
+msgstr "Accueil sabros.us"
 
 msgid "instalaci&oacute;n"
-msgstr ""
+msgstr "installation"
 
 msgid "ir a opciones"
-msgstr ""
+msgstr "Options"
 
 msgid "ir a sabros.us"
-msgstr ""
+msgstr "Accueil sabros.us"
 
 msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
-msgstr ""
+msgstr "L'actualisation de sabros.us s'est correctement d&eacute;roul&eacute;e. Vous pouvez acc&eacute;der au <a href=\"/cpanel.php\">panneau de configuration</a> et commencer &agrave; ajouter des liens ou <a href=\"/index.php\">visiter le site.</a>"
 
 msgid "mis etiquetas en sabros.us"
-msgstr ""
+msgstr "Mes tags sur sabros.us"
 
 msgid "opciones"
-msgstr ""
+msgstr "options"
 
 msgid "ordena por la etiqueta"
-msgstr ""
+msgstr "classer par tag"
 
 msgid "panel de control"
-msgstr ""
+msgstr "Panneau de configuration"
 
 msgid "recordar contrase&ntilde;a"
-msgstr ""
+msgstr "se souvenir du mot de passe"
 
 msgid "regresar a sabros.us"
-msgstr ""
+msgstr "retour &agrave; sabros.us"
 
 msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr ""
+msgstr "sabros.us est un syst&egrave;me pour organiser vos marques-page ou vos liens favoris sur votre site internet. Il est similaire &agrave; del.icio.us dans le sens o&ugrave; la gestion des favoris se fait en ligne, mais avec sabros.us vous pouvez d&eacute;sormais le faire sur votre propre site internet."
 
 msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
-msgstr ""
+msgstr "si certains caract&egrave;res 'hi&eacquesute;roglyphiques' apparaissent avec certains liens, cliquez sur le bouton pour les corriger."
 
 msgid "solicitar nueva"
-msgstr ""
+msgstr "obtenir un nouveau mot de passe"
 
 msgid "terminar la sesi&oacute;n"
-msgstr ""
+msgstr "Se d&eacute;connecter"
 
 msgid "terminar sesi&oacute;n"
-msgstr ""
+msgstr "Se d&eacute;connecter"
 
 msgid "usuario:"
-msgstr ""
+msgstr "utilisateur:"
+
