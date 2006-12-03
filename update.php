@@ -61,9 +61,14 @@
 					$cfg['codificacion']['utf'] = 1;
 					saveIni("include/config.ini",$cfg);
 					?>
-					<p><?=__("la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"".$Sabrosus->sabrUrl."/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"".$Sabrosus->sabrUrl."/index.php\">ver el sitio.</a>");?></p>
+					<p>
+						<? // hay que usar %texto_reemplazable% para no meter PHP dentro de la funcion __() de gettext y tronar la traduccion
+						$op_exito = str_replace("%sab_url_rep%",$Sabrosus->sabrUrl,__("la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"%sab_url_rep%/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"%sab_url_rep%/index.php\">ver el sitio.</a>"));
+						echo $op_exito;						
+						?>
+					</p>
 				<?
-				} else { /* No se realiz la codificacin y no viene por POST -> Muestro el form para convertir */
+				} else { /* No se realiza la codificacion y no viene por POST -> Muestro el form para convertir */
 				?>
 					<p><?=__("si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo.");?></p>
 						<form method="post" action="update.php" id="config_form">
