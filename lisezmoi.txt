@@ -11,9 +11,9 @@ sabros.us 1.7
 - Comment l'installer ?
 
         1.- Décompressez la distribution à la racine de votre site internet.
-        2.- Lancez install.php dans votre navigateur.
+        2.- Lancez instalar.php dans votre navigateur.
         3.- Suivez les instructions.
-        4.- Une fois terminé, effacez le fichier install.php
+        4.- Une fois terminé, effacez le fichier instalar.php
 
 - D'autres données ?
 

@@ -11,9 +11,9 @@ sabros.us 1.8 version
 - How do I install it?
 
         1.- Unpack the distribution under your webroot directory.
-        2.- Locate install.php in your browser.
+        2.- Locate instalar.php in your browser.
         3.- Follow the instructions.
-        4.- When you are done, be sure to delete install.php script.
+        4.- When you are done, be sure to delete instalar.php script.
 
 - Extra data?
 
@@ -42,4 +42,4 @@ We are using a third party system for the screenshot WebShotsPro ( http://www.we
 
    - How much is it (about webshotspro.com)?
 
-	For general use the screenshots is free unless your system strat to abuse.
+	For general use the screenshots is free unless your system start to abuse.
