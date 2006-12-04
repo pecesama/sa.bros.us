@@ -1,0 +1,46 @@
+sabros.us version 1.8
+
+- Que es sabros.us?
+
+	sabros.us es en CMS para tener tus bookmarks en el web con soporte de etiquetas al estilo del.icio.us con la diferencia de que en este tu tienes el control del codigo. sabros.us esta desarrollado en PHP y como sistema de backend MySQL.
+
+- Donde lo obtengo?
+
+	http://sourceforge.net/projects/sabrosus/
+
+
+- Como lo instalo?
+
+	1.- Descomprime el .zip dentro de un folder llamado sabrosus (o puedes darle cualquier otro nombre).
+	2.- Corre instalar.php y llena los campos con los datos que se te solicitan.
+	3.- Una vez presionado el boton de configurar, tu sabros.us esta listo para trabajar.
+	4.- Por ultimo elimina el archivo instalar.php para evitar problemas de seguridad futuros.
+
+- Otros datos?
+
+	sabros.us aun se encuentra en sus primeras versiones y puede tener algunos errores, la idea de liberarlo es de que aportes tus mejoras, lo modifiques, jueges con el, o si comienzas a hacer tu CMS desde cero, el codigo de sabros.us es un buen comienzo para empezar y darse una idea de como podria funcionar un CMS.
+
+	Si tienes dudas, sugerencias o comentarios, puedes hacerlos publicos en los foros o en la lista de correos de:
+
+	http://sourceforge.net/projects/sabrosus/
+	
+
+- Mas informacion sobre sa.bro.sus
+
+	Consulta la página oficial de sabros.us para mas información http://sabros.us/wiki/
+
+- Creditos:
+
+	https://sourceforge.net/project/memberlist.php?group_id=143603
+
+- ¿Qué es SopaSabrosa?
+
+SopaSabrosa es un sistema para organizar la información de muchos sabros.us. El componente social de sabros.us!!!
+
+- ¿Como obtienen las miniaturas de las páginas?
+
+Estamos usando un sistema externo llamado WebShotsPro ( http://www.webshotspro.com/ ); thanks guys for your amazing system :)
+
+   - ¿Cuanto cuesta WebShotsPro?
+
+	Para un uso general de las miniaturas es gratuito al menos que tu sistema comience a abusar de su uso.
