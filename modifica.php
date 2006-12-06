@@ -11,6 +11,7 @@
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
+include("include/tags.class.php");
 
 if (!esAdmin()) {
 	header("Location: login.php");
@@ -18,12 +19,13 @@ if (!esAdmin()) {
 }
 
 if($_SERVER["REQUEST_METHOD"]=="POST") {
-	$etiquetas = normalizeTags($_POST["etiquetas"]);
-	if (isset($_POST["privado"])) {
-		$etiquetas = ":sab:privado ".$etiquetas;
-	}
-	$Sql="UPDATE ".$prefix."sabrosus SET title='".$_POST["title"]."', tags='".$etiquetas."', enlace='".$_POST["enlace"]."', descripcion='".$_POST["descripcion"]."' WHERE (id_enlace=".$_POST["id_enlace"].") LIMIT 1";
+	$etiquetas = $_POST["etiquetas"];
+		$privado = (isset($_POST["privado"]))? 1 : 0;
+	$Sql="UPDATE ".$prefix."sabrosus SET title='".$_POST["title"]."',  enlace='".$_POST["enlace"]."', descripcion='".$_POST["descripcion"]."', privado='".$privado."' WHERE (id_enlace=".$_POST["id_enlace"].") LIMIT 1";
 	mysql_query($Sql,$link);
+	$tags = new tags;
+	$tags->deleteLinkTags($_POST['id_enlace']);
+	$tags->addTags($etiquetas, $_POST['id_enlace']);
 	header("Location: cpanel.php");
 	exit();
 } else {

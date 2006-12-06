@@ -13,7 +13,7 @@ header("Content-type: text/html; charset=UTF-8");
 include("include/config.php");
 include("include/conex.php");
 include("include/functions.php");
-include("include/tags.php");
+include("include/tags.class.php");
 
 
 
@@ -44,7 +44,9 @@ if (isset($_GET["id"])) {
 		$titulo = htmlspecialchars($row['title']);
 		$enlace = htmlspecialchars($row['enlace']);
 		$descripcion = htmlspecialchars($row['descripcion']);
-		$tags = htmlspecialchars($row['tags']);
+		$t = new tags;
+		$tags = $t->linkTags($row['id_enlace']);
+		$privado = esPrivado($row['id_enlace']);
 	} else {
 		header("Location: cpanel.php");
 		exit();
@@ -76,6 +78,17 @@ if (isset($_GET["id"])) {
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
 	<link rel="shortcut icon" href="<?=$Sabrosus->sabrUrl?>/images/sabrosus_icon.png" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl?>/include/addtags.js"></script>
+	<script type="text/javascript">
+		function checkQuotes(){
+			var etiquetas = document.getElementById('etiquetas');	
+			if(etiquetas.value.split('"').length % 2 == 0){
+				alert("<?=__("Error en las etiquetas")?>");
+				return false;
+			}else{
+				return true;	
+			}
+		}
+	</script>
 </head>
 
 <body>
@@ -95,7 +108,7 @@ if (isset($_GET["id"])) {
 	</div>
 	<div id="contenido">
 		<div id="formulario">
-			<form method="post" action="<? echo (isset($_GET["id"]) ? "modifica.php" : "agregar.php"); ?>">
+			<form method="post" action="<? echo (isset($_GET["id"]) ? "modifica.php" : "agregar.php"); ?>" onsubmit=" return checkQuotes()">
 
 			<? if (!isset($_GET["id"]) && (isset($_GET["titulo"]) && isset($_GET["url"]))) { ?>
 				<input class="no_style" type="hidden" name="regresa" value="<?=(isset($_GET['ret']))? urlencode($_GET['ret']) : urlencode($_GET['url'])?>" />
@@ -117,15 +130,17 @@ if (isset($_GET["id"])) {
 				<textarea class="textarea_oscuro" rows="3" cols="84" name="descripcion" id="descripcion"><?=isset($descripcion)?$descripcion:"";?></textarea><br />
 
 				<label for="privado"><?=__("Enlace Privado:");?></label>
-				<? $esPrivado = ((strpos(isset($tags)?$tags:"", ":sab:privado")>-1) ? "checked=\"true\"" : ""); ?>
-				<input name="privado" type="checkbox" <? echo $esPrivado; ?> id="privado"/><br />
+				<input name="privado" type="checkbox" <?=($privado)? "checked=\"true\"" : ""; ?> id="privado"/><br />
 
 				<label for="etiquetas"><?=__("Etiquetas:");?></label><br />
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", isset($tags)?$tags:""); echo trim($tags_temp); ?>" size="86" /><br />
 				<p><?=__("Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
 					<legend><?=__("Agregar etiquetas");?></legend>
-					<?php getTags("javascript"); ?>
+					<?php 
+					$tags = new tags;
+					$tags->showTags("javascript");
+					?>
 				</fieldset>
 
 				<input class="submit" type="submit" name="accion" value="<?=(isset($_GET['id']) ? __("editar") : __("agregar")); ?>" /><br /> <?=(isset($_GET['id']) ? "<a href=\"".$Sabrosus->sabrUrl."/eliminar.php?id=".$row['id_enlace']."\" title=\" ".__("Eliminar enlace")."\">".__("Eliminar enlace")." &raquo;</a>" : ""); ?><br />

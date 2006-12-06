@@ -10,11 +10,13 @@
   
 	include_once("include/parsing.php");
 	include_once("include/get.php");
+	include_once("include/tags.class.php");
 
 	function importdelicious($user,$pass)
 	{
 		global $prefix;
 		global $link;
+		$tags = new tags;
 		
 		$xml="https://api.del.icio.us/v1/posts/all?";
 		$get=new Get();
@@ -59,8 +61,13 @@
 					}
 					if(!isInSabrosus($bookmark["enlace"]))
 					{
-						$Sql="insert into ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha)  values ('".$bookmark["title"]."','".$bookmark["tags"]."','".$bookmark["enlace"]."','".$bookmark["descripcion"]."', '".$bookmark["fecha"]."');";
+						$Sql="insert into ".$prefix."sabrosus (title,enlace,descripcion,fecha,privado)  values ('".$bookmark["title"]."','".$bookmark["enlace"]."','".$bookmark["descripcion"]."', '".$bookmark["fecha"]."','0');";
 						mysql_query($Sql,$link);
+						
+						$query = "SELECT LAST_INSERT_ID() as link_id";
+						$result = mysql_query($query, $link);
+						list($link_id) = mysql_fetch_array($result);
+						$tags->addTags($bookmark["tags"], $link_id);
 						$imported++;
 					}
 					$total++;

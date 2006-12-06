@@ -22,9 +22,9 @@
 	{
 		if (isset($_POST["status"]) && $_POST["status"]=="1")
 		{
-			$status = ":sab:privado";
+			$status = "1";
 		} else {
-			$status = "";
+			$status = "0";
 		}
 		
 		// Manejador del archivo
@@ -63,7 +63,7 @@
 			$bAddress=eregi_replace("\'","",$bAddress);
 			if(!isInSabrosus($bAddress))
 			{
-				$Sql="INSERT INTO ".$prefix."sabrosus (title,tags,enlace,descripcion,fecha)  values ('".$bTitle."','".$status."','".$bAddress."','', '".$bDatetime."')";
+				$Sql="INSERT INTO ".$prefix."sabrosus (title,enlace,descripcion,fecha,privado)  values ('".$bTitle."','".$bAddress."','', '".$bDatetime."','".$status."')";
 				mysql_query($Sql,$link);
 			}
 		}

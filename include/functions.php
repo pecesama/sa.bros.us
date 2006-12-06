@@ -12,22 +12,14 @@ function version() {
 	return "1.8";
 }
 
-function normalizeTags($etiquetas) {
-	foreach (explode(" ", $etiquetas) as $etiqueta) {
-		if ($etiqueta!="") {
-			$tags = $tags . " " . $etiqueta;
-		}
-	}
-	return trim($tags);
-}
 
 function esPrivado($id){
 		global $prefix,$link;
-		$sqlStr=mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE (id_enlace=".$id." AND tags LIKE '%:sab:privado%') LIMIT 1",$link) or die(mysql_error());
+		$sqlStr=mysql_query("SELECT privado FROM ".$prefix."sabrosus WHERE id_enlace=".$id,$link) or die(mysql_error());
 		if($row=mysql_fetch_assoc($sqlStr))
-				return true; //Enlace privado
+				return $row['privado']; 
 			else
-				return false; //Enlace Público
+				return 0;
 }
 function saveIni($fileName, $configOpts) {
 	$file = fopen($fileName, 'wb');
@@ -42,17 +34,11 @@ function saveIni($fileName, $configOpts) {
 
 function contarenlaces($sql) {
 	global $prefix;
-	$totalRowsResult = mysql_query("SELECT count(*) ".$sql);
+	$totalRowsResult = mysql_query($sql) or die(mysql_error()."<h2>$sql</h2>");
 	if (!$totalRowsResult) {
 		echo __("Error al ejecutar la consulta en la DB");
 	} else {
-		if(mysql_num_rows($totalRowsResult)>0) {
-			$totalRows = mysql_fetch_row($totalRowsResult);
-			$rows = $totalRows[0];
-			return $rows;
-		} else {
-			return 0;
-		}
+		return mysql_num_rows($totalRowsResult);
 	}
 }
 
@@ -81,57 +67,8 @@ function etiquetasRelacionadas ($tags) {
 	# codigo basado en el propuesto en http://hellojoseph.com/tags-howto.php
 	global $Sabrosus;
 	global $prefix;
-
-	if (empty($tags)) {
-		return;
-	}
-
-	# Hacemos una copia de la etiqueta original
-	$tags_orig = $tags;
-
-	# Busqueda para encontrar todas las etiquetas que se relacionan con la etiqueta actual
-	$tags = explode(" ", $tags);
-	$i=0;
-	$query="";
-	foreach ($tags as $tag) {
-		/* This is a sub-optimal solution */
-		$tag = str_replace("+", "[+]", $tag); 
-		$tag = str_replace("*", "[*]", $tag);
-
-		$query .= $i++ > 0 ? " or " : "";
-		$query .= "tags REGEXP '[[:<:]]".$tag."[[:>:]]'";
-	}
-	unset($i);
-	if(esAdmin())
-	{
-		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE $query");
-	} else {
-		$result = mysql_query("SELECT tags FROM ".$prefix."sabrosus WHERE ($query) AND (tags NOT LIKE '%:sab:privado%')");
-	}
-	if (!$result) {
-		echo __("Error al ejecutar la consulta en la DB");
-	} else {
-		# buscar en todas las entradas para encontrar las etiquetas que no sean la que tenemos.
-		# se crea un erreglo con la etiqueta como llave y el numero de "hits" como valor.
-		# despues hacemos un arsort() con el que se hara un ordenamiento inverso basado en los valores (hits),
-		# lo cual nos dara las etiquetas relacionadas mas populares/comunes primero.
-		while ($t = mysql_fetch_array($result)) {
-			$tags = explode(" ", $t['tags']);
-			foreach ($tags as $tag) {
-				if ($tag == $tags_orig) {
-					continue;
-				}
-				if (!empty($tag)) {
-					$tag = strtolower($tag);
-					if (isset($pop[$tag])) {
-						$pop[$tag]++;
-					} else {
-						$pop[$tag] = 1;
-					}
-				}
-			}
-		}
-	}
+	
+	/*
 
 	if (!empty($pop)) {
 		echo "<div class=\"tags_relacionados\"><strong>".__("Etiquetas relacionadas:")."</strong> ";
@@ -154,6 +91,7 @@ function etiquetasRelacionadas ($tags) {
 		}
 		echo "</div>";
 	}
+	*/
 }
 
 function comasxespacios($text) {

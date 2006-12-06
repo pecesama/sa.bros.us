@@ -25,14 +25,14 @@ if (isset($_GET["tag"])) {
 	}
 }
 
-$sqlStr = "SELECT * FROM ".$prefix."sabrosus WHERE";
+$sqlStr = "SELECT link.* FROM ".$prefix."sabrosus as link, ".$prefix."tags as tag, ".$prefix."linktags as rel WHERE";
+
 if(isset($tagtag)){
-	$sqlStr .= " ((tags NOT LIKE '%:sab:privado%')";
-	$sqlStr .= " AND (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag'))";
-} else {
-	$sqlStr .= " (tags NOT LIKE '%:sab:privado%')";
+	$sqlStr .= " (tag.tag LIKE '$tagtag') AND ";
 }
-$sqlStr .= " ORDER BY fecha DESC";
+
+$sqlStr .= " (tag.id = rel.tag_id AND rel.link_id = link.id_enlace) AND link.privado = 0 ORDER BY link.fecha DESC";
+
 if(isset($cuantos)){
 	if($cuantos!='todos' && is_numeric($cuantos)){
 		$sqlStr .= " LIMIT $cuantos";
@@ -44,6 +44,7 @@ if(isset($cuantos)){
 	$sqlStr .= " LIMIT 10";
 }
 $result = mysql_query($sqlStr,$link);
+
 ?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="<?=strtolower(str_replace("_","-",$locale));?>">
@@ -61,10 +62,18 @@ $result = mysql_query($sqlStr,$link);
 while ($registro = mysql_fetch_array($result)) {
 	$titulo=htmlspecialchars($registro["title"]);
 	$desc=htmlspecialchars($registro["descripcion"]);
-	$tags=htmlspecialchars($registro["tags"]);
 	$url=htmlspecialchars($registro["enlace"]);
 
 	$fecha = gmdate("Y-m-d\TH:i:s\Z", strtotime($registro["fecha"]));
+	
+	$sql = "SELECT tag FROM ".$prefix."tags AS t, ".$prefix."linktags AS rel WHERE rel.link_id = ".$registro['id_enlace']." AND t.id = rel.tag_id";
+	$res = mysql_query($sql,$link);
+	$tags = array();
+	if(mysql_num_rows($res) > 0){
+		while(list($tag) = mysql_fetch_array($res)){
+			array_push($tags,$tag);
+		}
+	}
 	?>
 	<entry>
 		<title><?=$titulo;?></title>
@@ -81,7 +90,7 @@ while ($registro = mysql_fetch_array($result)) {
 		</content>
 		<updated><?=$fecha;?></updated>
 		<?
-		foreach($etiquetas as $etiqueta) {
+		foreach($tags as $etiqueta) {
 			if ($etiqueta) {
 			?>
 			<category term="<?=$etiqueta;?>" label="<?=$etiqueta;?>" />

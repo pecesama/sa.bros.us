@@ -52,7 +52,7 @@ if ((isset($_POST["pass"]) && md5($_POST["pass"])==$Sabrosus->adminPass)) {
 					<legend><?=__("Introduzca su contrase&ntilde;a");?></legend>
 					<label><?=__("Contrase&ntilde;a:");?></label>
 					<input class="input_rojo" name="pass" type="password" /><br />
-					<input name="guardar_pass" type="checkbox" /> <label><?=__("guardar contrase&ntilde;a");?></label><br />
+					<input name="guardar_pass" type="checkbox" id="guardar_pass"/> <label for="guardar_pass"><?=__("guardar contrase&ntilde;a");?></label><br />
 					<? if (isset($_GET['dirigir']) || isset($_POST['dirigir'])) { ?>
 						<input class="no_style" type="hidden" name="dirigir" value="<?=urlencode(isset($_GET['dirigir']) ? $_GET['dirigir'] : $_POST['dirigir']);?>" />
 					<? } ?>
