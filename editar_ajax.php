@@ -13,6 +13,7 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 	include("include/functions.php");
 	include("include/config.php");
 	include("include/conex.php");
+	include("include/tags.class.php");
 	
 	if(!isset($_GET['id']) || !esAdmin() || !is_numeric($_GET['id'])){
 		header("location: index.php");
@@ -25,24 +26,25 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 		header("location: index.php");
 		exit();
 	}
-
+$tags = new tags;
 /* De donde viene el $_GET['enlace'] ?? */
 if(!isset($_GET['enlace'])){
+
 ?>
 <div id="formulario_ajax">
 	<fieldset>
 		<legend><?=__("Editar enlace")?></legend>
-			<label for="title"><?=__("Titulo")?>:</label><br />
+			<label for="_title<?=$row['id_enlace']?>"><?=__("Titulo")?>:</label><br />
 			<input type="text" name="title" id="_title<?=$row['id_enlace']?>" value="<?=$row['title']?>"><br />
 			
-			<label for="enlace"><?=__("Enlace")?>:</label><br />
+			<label for="_enlace<?=$row['id_enlace']?>"><?=__("Enlace")?>:</label><br />
 			<input type="text" name="enlace" id="_enlace<?=$row['id_enlace']?>" value="<?=$row['enlace']?>"><br />
 				
-			<label for="descripcion"><?=__("Descripci&oacute;n")?>:</label><br />
+			<label for="_descripcion<?=$row['id_enlace']?>"><?=__("Descripci&oacute;n")?>:</label><br />
 			<textarea name="descripcion" id="_descripcion<?=$row['id_enlace']?>" rows="3" cols="60"><?=$row['descripcion']?></textarea><br />
-			
+
 			<label for="tags"><?=__("Tags")?>:</label><br />
-			<input type="text" name="tags" id="_tags<?=$row['id_enlace']?>" value="<?=$row['tags']?>"><br />
+			<input type="text" name="tags" id="_tags<?=$row['id_enlace']?>" value="<?=$tags->linkTags($row['id_enlace'])?>"><br />
 	</fieldset>
 </div>
 <?php return;}else{?>
@@ -54,19 +56,8 @@ if(!isset($_GET['enlace'])){
 			if(mysql_num_rows($result)>0) {
 				while ($row = mysql_fetch_array($result)) {
 					$privado=false;
-					$etiquetas = explode(" ",$row["tags"]);
-					$tags="";
-					foreach ($etiquetas as $etiqueta) {
-						if ($etiqueta==":sab:privado") {
-							$etiqueta="";
-							$privado=true;
-						}
-						if ($etiqueta!=="") {
-							$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","/index.php?tag=").urlencode($etiqueta)."\">".htmlspecialchars($etiqueta)."</a> ";
-						}
-					}
 	
-					if (!esAdmin() && $privado) { //Aqui no imprime nada por ser privado
+					if (!esAdmin() && $row['privado']) { //Aqui no imprime nada por ser privado
 					} else {
 						// Thumbnails
 						if($Sabrosus->multiCont=="1")
@@ -112,8 +103,9 @@ if(!isset($_GET['enlace'])){
 							echo "\t\t\t<p>".$row['descripcion']."</p>\n";
 						}
 						echo "\t\t\t<p class=\"pie\">";
-						if ($tags) {
-							echo __("en")." <span class=\"link_tags\">".$tags."</span> ";
+						$etiquetas = $tags->linkTags($row['id_enlace']);
+						if ($etiquetas) {
+							echo __("en")." <span class=\"link_tags\">".$etiquetas."</span> ";
 						}
 						echo __("el")." ".date("d.m.y", strtotime($row["fecha"]))."</p>\n";
 					}

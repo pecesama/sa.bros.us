@@ -116,7 +116,7 @@
 			
 <?			while ($row = mysql_fetch_array($result))
 				{					
-				$privado = (eregi("(.*)\:sab\:privado(.*)",$row['tags']));?>					
+				$privado = esPrivado($row['id_enlace'])?>					
 			<tr>
 				<td class="objeto"><?=($privado)? '<img src="images/lock.png" alt="'.__("Enlace Privado:").' '.$row["title"].'" title="'.__("Enlace Privado:").' '.$row["title"].'" />':'';?> <?=$row["title"]?></td>
 				<td><a href="ir.php?id=<? echo $row["id_enlace"]; ?>"><img src="images/link.png" alt="<?=__("Ver");?>" title="<?=__("Ver");?>" /></a></td>

@@ -11,6 +11,7 @@
 	include("include/config.php");
 	include("include/conex.php");
 	include("include/functions.php");
+	include("include/tags.class.php");
 
 	if (!esAdmin()) {
 		header("Location: login.php");
@@ -24,6 +25,10 @@
 	if (isset($_GET['confirm']) && $_GET['confirm']=='0') {
 		$Sql="DELETE FROM ".$prefix."sabrosus WHERE id_enlace=".$_GET['id'];
 		mysql_query($Sql,$link);
+		
+		$tags = new tags;
+		$tags->deleteLinkTags($_GET['id']);
+		
 		header("Location: cpanel.php");
 	} else {
 		?>

@@ -13,13 +13,12 @@
 			
 	// How many adjacent pages should be shown on each side?
 	$adjacents = 3;
-	
 	/* 
 	   First get total number of rows in data table. 
 	   If you have a WHERE clause in your query, make sure you mirror it here.
 	*/
 	
-	$total_pages = contarenlaces(substr($sqlStr,9,strpos($sqlStr,"ORDER")-9)); 
+	$total_pages = contarenlaces($noLimit[0]); 
 	if($q!="")
 			if($Sabrosus->usefriendlyurl==0)
 					$q="&busqueda=".$q;
