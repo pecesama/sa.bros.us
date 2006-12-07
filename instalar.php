@@ -1,3 +1,4 @@
+
 <?
 /* ===========================
 
@@ -11,6 +12,7 @@ define('ABSPATH', dirname(__FILE__).'/');
 
 include("include/lang.php");
 include("include/functions.php");
+include("include/tags.class.php");
 
 get_laguajes();
 if (isset($_GET['instalarlang'])) {
@@ -264,7 +266,7 @@ function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $snam
 		if (!mysql_select_db($dataBase,$link)) {
 			return false;
 		}
-
+		$tags = new tags;
 		$sqlStr = "CREATE TABLE `".$prefix."sabrosus` (
 			`id_enlace` int(3) NOT NULL auto_increment,
 			`title` varchar(100) NOT NULL default '',
@@ -288,11 +290,37 @@ function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $snam
 			PRIMARY KEY (`sabrosus_url`)
 		) TYPE=MyISAM;";
 		$result = mysql_query($sqlStr);
+			
+		$sqlStr = "CREATE TABLE ".$prefix."tags (
+			`id` INT NOT NULL AUTO_INCREMENT ,
+			`tag` VARCHAR(100) NOT NULL ,
+			PRIMARY KEY (id) ,FULLTEXT (tag));";
+		$result = mysql_query($sqlStr);
 
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','".utf8_encode("Pgina de Estanislao Vizcarra, autor de sabros.us")."','".utf8_encode("css xhtml diseo web estandares cine php")."','2005-07-10 00:41:06');";
+			
+		$sqlStr = "CREATE TABLE ".$prefix."linktags (
+			`link_id` INT NOT NULL ,
+			`tag_id` INT NOT NULL ,
+			INDEX ( link_id , tag_id ));";
 		$result = mysql_query($sqlStr);
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','".utf8_encode("Pgina de Pedro Santana, co-autor de sabros.us")."','".utf8_encode("php programacin web java javascript")."','2005-07-10 00:42:04');";
+
+
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','".utf8_encode("Pgina de Estanislao Vizcarra, autor de sabros.us")."','2005-07-10 00:41:06',0);";
 		$result = mysql_query($sqlStr);
+		
+		$query = "SELECT LAST_INSERT_ID() as link_id";
+		$result = mysql_query($query);
+		list($link_id) = mysql_fetch_array($result);
+		$tags->addTags("css xhtml diseo web estandares cine php", $link_id);
+
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','".utf8_encode("Pgina de Pedro Santana, co-autor de sabros.us")."','2005-07-10 00:42:04',0);";
+		$result = mysql_query($sqlStr);
+		
+		$query = "SELECT LAST_INSERT_ID() as link_id";
+		$result = mysql_query($query);
+		list($link_id) = mysql_fetch_array($result);
+		$tags->addTags("php programacin web java javascript", $link_id);
+
 
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$sname."','".$stitle."','".$siteUrl."','".$sabrUrl."','".$useFriendlyUrl."','".$lang."','".$limite."','".$email."','".md5($admPass)."');";
 		$result = mysql_query($sqlStr);
