@@ -162,11 +162,18 @@ $tagoo = new tags;
 		$wheresql = implode (" AND ",$where);
 		
 				$sqlStr ="SELECT DISTINCT link.* FROM ".$prefix."sabrosus AS link";
-				$sqlStr .= (isset($multitag))? " WHERE ".$multitag: ", ".$prefix."tags AS tag, ".$prefix."linktags AS rel".((!empty($wheresql))? " WHERE ".$wheresql: '');
+				if(isset($multitag)){
+					$sqlStr .= " WHERE ".$multitag;
+				}else{
+					$sqlStr .=  (isset($where['busqueda']) || isset($where['busquedaTags']))? ", ".$prefix."tags AS tag, ".$prefix."linktags AS rel": '';
+					$sqlStr .= (!empty($wheresql))? " WHERE ".$wheresql: '';
+				}
+				//$sqlStr .= (isset($multitag))? " WHERE ".$multitag: ", ".$prefix."tags AS tag, ".$prefix."linktags AS rel".((!empty($wheresql))? " WHERE ".$wheresql: '');
 				$sqlStr .=	" ORDER BY fecha DESC LIMIT ".$desde.",".$Sabrosus->limit;
 				
 
 		$noLimit = explode("LIMIT",$sqlStr);
+		print_r($noLimit);
 		$nenlaces=contarenlaces($noLimit[0]);
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 

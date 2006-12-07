@@ -170,9 +170,6 @@ class clsSabrosus
 		$this->emailAdmin     = $row['admin_email'];
 		$this->adminPass      = $row['admin_pass'];
 
-		$sql2 = "SELECT * FROM ".$prefix."opciones";
-		$result2 = @mysql_query($sql2);
-		while($row2 = @mysql_fetch_array($result2)){
 			
 			$this->multiCont 	= $this->get_option(multiCont);
 			$this->tagsColor 	= $this->get_option(tagsColor);
@@ -181,7 +178,6 @@ class clsSabrosus
 			$this->ping 		= $this->get_option(ping);
 			$this->soloNube 	= $this->get_option(soloNube);
 			$this->estiloNube	= $this->get_option(estiloNube);
-		}
 		
 		get_laguajes();
 		
