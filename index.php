@@ -189,7 +189,7 @@ $tagoo = new tags;
 		if(isset($tagtag))
 			$tagoo->showRelateds($tagtag);
 			
-		$result = mysql_query($sqlStr, $link);
+		$result = mysql_query($sqlStr, $link) or die(mysql_error().$sqlStr);
 		if (!$result) {
 			echo __("Error al ejecutar la consulta en la DB");
 		} else {
