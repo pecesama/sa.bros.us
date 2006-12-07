@@ -38,19 +38,19 @@ class tags
 		}
 		foreach($tagsArray as $tag){
 			$query = "SELECT id FROM ".$prefix."tags WHERE tag LIKE '".$tag."'";
-			$result = mysql_query($query, $link) or die(mysql_error().$query);
+			$result = mysql_query($query) or die(mysql_error().$query);
 			if(mysql_num_rows($result) == 0){
 				$query = "INSERT INTO ".$prefix."tags (tag) VALUES ('".$tag."')";
-				$result = mysql_query($query, $link);
+				$result = mysql_query($query);
 				$query = "SELECT LAST_INSERT_ID() as tag_id";
-				$result = mysql_query($query, $link) or die(mysql_error().$query);
+				$result = mysql_query($query) or die(mysql_error().$query);
 			}
 			list($tag_id) = mysql_fetch_array($result);
 			$query = "SELECT * FROM ".$prefix."linktags WHERE tag_id = ".$tag_id." AND link_id = ".$link_id;
-			$result = mysql_query($query, $link) or die(mysql_error().$query);
+			$result = mysql_query($query) or die(mysql_error().$query);
 			if(mysql_num_rows($result) == 0){
 				$query = "INSERT INTO ".$prefix."linktags (tag_id, link_id) VALUES ('".$tag_id."','".$link_id."')";
-				$result = mysql_query($query, $link);
+				$result = mysql_query($query);
 			}
 		}
 	
@@ -87,7 +87,7 @@ class tags
 	function showTags($output="html", $max_font=30, $min_font=12){
 		// $output = ("html" | "javascript" | "badge")
 		// Muestra la nube de tags en diferentes formatos
-		global $link, $prefix, $Sabrosus;
+		global  $prefix, $Sabrosus;
 		$keys = array();
 		if(esAdmin()){
 		$query = "SELECT tag_id, COUNT(*) AS cnt FROM ".$prefix."linktags GROUP BY tag_id ORDER BY cnt DESC";
@@ -97,7 +97,7 @@ class tags
 						(SELECT * FROM ".$prefix."sabrosus AS s WHERE s.id_enlace = lt.link_id AND s.privado = 1))
 					AS links GROUP BY tag_id ORDER BY cnt DESC";
 		}
-		$result = mysql_query($query, $link) or die(mysql_error().$query);
+		$result = mysql_query($query) or die(mysql_error().$query);
 		while(list($id, $value) = mysql_fetch_array($result)){
 			$q2 = "SELECT tag FROM ".$prefix."tags WHERE id = ".$id;
 			$r2 = mysql_query($q2) or die(mysql_error());
@@ -212,7 +212,7 @@ class tags
 		// Muestra los tags relacionados a una etiqueta en particular
 		global $prefix, $link, $Sabrosus;
 		$query = "SELECT id FROM ".$prefix."tags WHERE tag LIKE '".$tag_original."' LIMIT 1";
-		$result = mysql_query($query, $link) or die(mysql_error().$query);
+		$result = mysql_query($query) or die(mysql_error().$query);
 		list($tag_id) = mysql_fetch_array($result);
 		
 		if(esAdmin()){
@@ -220,7 +220,7 @@ class tags
 		}else{
 		$query = "SELECT tag , COUNT(*) AS cnt FROM (SELECT tag FROM ".$prefix."linktags as rel, ".$prefix."tags AS t WHERE t.id = rel.tag_id AND rel.link_id IN(SELECT link_id FROM ".$prefix."linktags  AS lt, ".$prefix."sabrosus AS links WHERE lt.link_id = links.id_enlace AND links.privado != 1 AND lt.tag_id = ".$tag_id.") AND tag != ".$tag_id.") as related GROUP BY tag";
 		}
-		$result = mysql_query($query, $link) or die(mysql_error().$query);
+		$result = mysql_query($query) or die(mysql_error().$query);
 		$pop = array();
 		while ($t = mysql_fetch_array($result)) {
 			$pop[$t['tag']] = $t['cnt'];
@@ -252,7 +252,7 @@ class tags
 		// Determina si un enlace es privado o no
 		global $link, $prefix;
 		$query = "SELECT privado FROM ".$prefix."sabrosus WHERE id_enlace = ".$link_id;
-		$result = mysql_query($query, $link) or die(mysql_error().$query);
+		$result = mysql_query($query) or die(mysql_error().$query);
 		if(mysql_num_rows($result)){
 			list($private) = mysql_fetch_array($result);
 			return $private;	
