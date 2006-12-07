@@ -33,8 +33,8 @@ function saveIni($fileName, $configOpts) {
 }
 
 function contarenlaces($sql) {
-	global $prefix;
-	$totalRowsResult = mysql_query($sql) or die(mysql_error()."<h2>$sql</h2>");
+	global $link, $prefix;
+	$totalRowsResult = mysql_query($sql,$link) or die(mysql_error()."<h2>$sql</h2>");
 	if (!$totalRowsResult) {
 		echo __("Error al ejecutar la consulta en la DB");
 	} else {
@@ -63,36 +63,6 @@ function esAdmin() {
 	return false;
 }
 
-function etiquetasRelacionadas ($tags) {
-	# codigo basado en el propuesto en http://hellojoseph.com/tags-howto.php
-	global $Sabrosus;
-	global $prefix;
-	
-	/*
-
-	if (!empty($pop)) {
-		echo "<div class=\"tags_relacionados\"><strong>".__("Etiquetas relacionadas:")."</strong> ";
-		arsort ($pop);
-		$i=0;
-		foreach ($pop as $tag => $num) {
-			# Asegurarse que no sea la misma etiqueta
-			$tag_match = str_replace("+", "\+", urlencode($tag));
-			if (preg_match("/$tag_match/i", $tags_orig)) {
-				continue;
-			}
-			if($tag == ":sab:privado"){
-				continue;
-			}
-			# solo mostramos 5.
-			if ($i++ > 4) {
-				continue;
-			}
-			echo chequearURLFriendly("<a title=\"".__("Buscar enlaces con")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/tag/".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ", "<a title=\"".__("Buscar enlaces con")." '".htmlspecialchars($tag)."'\" href=\"".$Sabrosus->sabrUrl."/index.php?tag=".urlencode($tag)."\">".htmlspecialchars($tag)."</a> ");
-		}
-		echo "</div>";
-	}
-	*/
-}
 
 function comasxespacios($text) {
 	$text = str_replace(",", " ", $text);
