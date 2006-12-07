@@ -216,9 +216,9 @@ class tags
 		list($tag_id) = mysql_fetch_array($result);
 		
 		if(esAdmin()){
-			$query = "SELECT tag , COUNT(*) AS cnt FROM (SELECT tag FROM ".$prefix."linktags as rel, sab_tags AS t WHERE t.id = rel.tag_id AND rel.link_id IN (SELECT link_id FROM ".$prefix."linktags  AS lt WHERE lt.tag_id = ".$tag_id.") AND tag_id != ".$tag_id.") as related GROUP BY tag";
+			$query = "SELECT tag , COUNT(*) AS cnt FROM (SELECT tag FROM ".$prefix."linktags as rel, ".$prefix."tags AS t WHERE t.id = rel.tag_id AND rel.link_id IN (SELECT link_id FROM ".$prefix."linktags  AS lt WHERE lt.tag_id = ".$tag_id.") AND tag_id != ".$tag_id.") as related GROUP BY tag";
 		}else{
-		$query = "SELECT tag , COUNT(*) AS cnt FROM (SELECT tag FROM ".$prefix."linktags as rel, sab_tags AS t WHERE t.id = rel.tag_id AND rel.link_id IN(SELECT link_id FROM ".$prefix."linktags  AS lt, ".$prefix."sabrosus AS links WHERE lt.link_id = links.id_enlace AND links.privado != 1 AND lt.tag_id = ".$tag_id.") AND tag != ".$tag_id.") as related GROUP BY tag";
+		$query = "SELECT tag , COUNT(*) AS cnt FROM (SELECT tag FROM ".$prefix."linktags as rel, ".$prefix."tags AS t WHERE t.id = rel.tag_id AND rel.link_id IN(SELECT link_id FROM ".$prefix."linktags  AS lt, ".$prefix."sabrosus AS links WHERE lt.link_id = links.id_enlace AND links.privado != 1 AND lt.tag_id = ".$tag_id.") AND tag != ".$tag_id.") as related GROUP BY tag";
 		}
 		$result = mysql_query($query, $link) or die(mysql_error().$query);
 		$pop = array();
