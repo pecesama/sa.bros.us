@@ -12,10 +12,9 @@ header("Content-type: text/html; charset=UTF-8");
 include("include/functions.php");
 include("include/config.php");
 include("include/conex.php");
-include("include/tags.php");
+include("include/tags.class.php");
 
-
-
+$tagoo = new tags;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
@@ -33,13 +32,21 @@ include("include/tags.php");
 		var contenedor;
 		var efectoEnlaceCancelar;
 		var efectoEnlaceGuardar;
+		
+		function addToSearch(tag){
+			var s  = document.getElementById('busqueda');
+			s.value = s.value+"::"+tag;
+			return false;
+		}
+		
 		window.onload = function() {
 			contenedor = new Fx.Style('divContenedor', 'opacity', {duration: 5000, onComplete:
 				function() {
 					document.getElementById('divContenedor').style.display="none";
 				}
 			});
-			contenedor.custom(1,0);
+			contenedor.custom(1,0);	
+			
 		}
 	</script>
 	<?php if(esAdmin()){?>
@@ -48,6 +55,7 @@ include("include/tags.php");
 </head>
 <body>
 <?
+
 	/* PATCH Bug #1242025 */
 	if (isset($_GET["tag"])) {
 		$navegador = strtolower( $_SERVER['HTTP_USER_AGENT'] );
@@ -61,6 +69,7 @@ include("include/tags.php");
 		} else {
 			$tagtag = $_GET["tag"];
 		}
+		$tagtag = urldecode($tagtag);
 	}
 	/* End PATCH Bug #1242025 */
 ?>
@@ -102,7 +111,9 @@ include("include/tags.php");
 	{
 	?>
 		<div id="tagsx_d">
-		<?php getTags("html"); ?>
+		<?php 
+		$tagoo->showTags();
+		 ?>
 		</div>
 	<?
 	}
@@ -124,71 +135,69 @@ include("include/tags.php");
 		}
 
 		$desde=($pag-1)*$Sabrosus->limit;
-
-		// Para incluir en el update.php de la version 1.8
-		######################
-		//Consulta que se tiene que realizar para las búsquedas con match against
-		//ALTER TABLE ".$prefix."sabrosus ADD FULLTEXT `busqueda`(`title`, `enlace`, `descripcion`, `tags`);		
-		#######################
 		
-		if(isset($_GET['busqueda'])&&!eregi("^ *$",$_GET['busqueda'])){
-				$busqueda = mysql_real_escape_string(trim($_GET['busqueda']));
-				$q=$busqueda;
-				if(eregi(chr(32),$busqueda))
-						$busqueda="MATCH(title,enlace,descripcion,tags) AGAINST('$busqueda')";
-					else
-						$busqueda="title LIKE '%$busqueda%' OR enlace LIKE '%$busqueda%' OR descripcion LIKE '%$busqueda%' OR tags LIKE '%$busqueda%'";
-			}else{
-				$busqueda="";
-				$q="";
-			}
+		$where = array();
+		if($tagoo->checkMultiTag($_GET['busqueda'])){
+			// Busqueda por multiples tags
+			$multitag = $tagoo->multitagQuery($_GET['busqueda'], esAdmin());
+		}else{
+				if(isset($_GET['busqueda']) && !empty($_GET['busqueda'])){
+					// Busqueda normal
+					$q = mysql_real_escape_string(trim($_GET['busqueda']));
+					if(eregi(chr(32),$busqueda))
+						$where['busqueda']=" (MATCH(link.title,link.enlace,link.descripcion) AGAINST('$q')) ";
+						else
+						$where['busqueda']=" (link.title LIKE '%$q%' OR link.enlace LIKE '%$q%' OR link.descripcion LIKE '%$q%')";
+				}else{
+					$q="";
+				}
+				if(isset($tagtag)){
+				// Busqueda por tags simples
+				$where['busquedaTags'] =  "( tag.tag LIKE '%".$tagtag."%') AND ( tag.id = rel.tag_id AND rel.link_id = link.id_enlace)";
+				}
+		}
+		if(!esAdmin()){
+		$where['privados'] =  " link.privado= 0";
+		}
+		$wheresql = implode (" AND ",$where);
+		
+				$sqlStr ="SELECT DISTINCT link.* FROM ".$prefix."sabrosus AS link";
+				$sqlStr .= (isset($multitag))? " WHERE ".$multitag: ", ".$prefix."tags AS tag, ".$prefix."linktags AS rel".((!empty($wheresql))? " WHERE ".$wheresql: '');
+				$sqlStr .=	" ORDER BY fecha DESC LIMIT ".$desde.",".$Sabrosus->limit;
 				
-		if(esAdmin())
-			if($busqueda=="")
-					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
-				else
-					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda AND tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag' ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
-		else 
-			if($busqueda=="")
-					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
-				else
-					$sqlStr = (!isset($tagtag) ? "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit" : "SELECT * FROM ".$prefix."sabrosus WHERE $busqueda AND (tags LIKE '% $tagtag %' OR tags LIKE '$tagtag %' OR tags LIKE '% $tagtag' OR tags = '$tagtag') AND (tags NOT LIKE '%:sab:privado%') ORDER BY fecha DESC LIMIT $desde,$Sabrosus->limit");
-				
-		$nenlaces=contarenlaces(substr($sqlStr,9,strpos($sqlStr,"ORDER")-9));
+
+		$noLimit = explode("LIMIT",$sqlStr);
+		$nenlaces=contarenlaces($noLimit[0]);
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 
 		$pag_text = str_replace("%no_enlaces%",$nenlaces,__("Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"));
 		$pag_text = str_replace("%desde%",($desde+1),$pag_text);
 		$pag_text = str_replace("%total%",(($desde+$Sabrosus->limit>=$nenlaces)?$nenlaces:$desde+$Sabrosus->limit),$pag_text);
-
-		if (!$nenlaces) {
-			$pag_text = "<strong>" . __("No hay ning&uacute;n enlace en este sabros.us todav&iacute;a.") . "</strong>";
+		
+		
+		if (!$nenlaces){
+			if(isset($_GET['busqueda'])){
+				$pag_text = "<strong>" . __("No hay ning&uacute;n enlace que concuerde con la busqueda") . "</strong>";
+			}elseif(isset($tagtag)){
+				$pag_text = "<strong>" . __("No hay ning&uacute;n enlace con esta etiqueta") . "</strong>";
+			}else{
+				$pag_text = "<strong>" . __("No hay ning&uacute;n enlace en este sabros.us todav&iacute;a.") . "</strong>";
+			}
 		}
 		echo "<div id=\"indicador_pagina\">".$pag_text."</div>\n";
 
 		if(isset($tagtag))
-			etiquetasRelacionadas($tagtag);
-
-		$result = mysql_query($sqlStr);
+			$tagoo->showRelateds($tagtag);
+			
+		$result = mysql_query($sqlStr, $link);
 		if (!$result) {
 			echo __("Error al ejecutar la consulta en la DB");
 		} else {
 			if(mysql_num_rows($result)>0) {
 				echo ($Sabrosus->compartir=="1")? "<form action=\"".$Sabrosus->sabrUrl."/exportar.php\" method=\"post\" >" : '';
 				while ($row = mysql_fetch_array($result)) {
-					$privado=false;
-					$etiquetas = explode(" ",$row["tags"]);
-					$tags="";
-					foreach ($etiquetas as $etiqueta) {
-						if ($etiqueta==":sab:privado") {
-							$etiqueta="";
-							$privado=true;
-						}
-						if ($etiqueta!=="") {
-							$tags.= "<a title=\"".__("ordena por la etiqueta")." '".htmlspecialchars($etiqueta)."'\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","/index.php?tag=").urlencode($etiqueta)."\">".htmlspecialchars($etiqueta)."</a> ";
-						}
-					}
-	
+					$privado = $tagoo->isPrivate($row['id_enlace']);
+					$tags = $tagoo->linkTags($row['id_enlace'],1);	
 					if (!esAdmin() && $privado) { 
 						//Aqui no imprime nada por ser privado
 					} else {
@@ -266,7 +275,9 @@ include("include/tags.php");
 	if($Sabrosus->estiloNube == "0")
 	{ ?>
 		<div id="tagsx">
-		<?php getTags("html"); ?>
+		<?php
+			$tagoo->showTags();
+ 		?>
 		</div>
 	<? } ?>
 	<br class="clear"/> 
