@@ -37,6 +37,7 @@ class tags
 			}
 		}
 		foreach($tagsArray as $tag){
+			$tag = mysql_real_escape_string($tag);
 			$query = "SELECT id FROM ".$prefix."tags WHERE tag LIKE '".$tag."'";
 			$result = mysql_query($query) or die(mysql_error().$query);
 			if(mysql_num_rows($result) == 0){
@@ -167,10 +168,10 @@ class tags
 	
 				$size = (($value - $min)*$step) + $min_font;
 				if ($output=="html") {
-					echo "\t\t\t<li><a title=\"".$value." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\"> ".htmlspecialchars($key)."</a><img src=\"".$Sabrosus->sabrUrl."/images/icon_add.gif\" onclick=\"addToSearch('".$key."');\" title=\"".__("Agregar esta etiqueta a la busqueda")."\"/></li>\n 
+					echo "\t\t\t<li><a title=\"".$value." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\"> ".htmlspecialchars($key)."</a><img src=\"".$Sabrosus->sabrUrl."/images/icon_add.gif\" onclick=\"addToSearch('".str_replace("'","\'",$key)."');\" title=\"".__("Agregar esta etiqueta a la busqueda")."\"/></li>\n 
 					";
-				} else if ($output=="javascript") {
-					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".htmlentities(utf8_decode($key))."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".urlencode($key)."'\">".htmlspecialchars($key)."</a> 
+				} else if ($output=="javascript") {					
+					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".htmlentities(utf8_decode(str_replace("'","\'",$key)))."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".urlencode($key)."'\">".htmlspecialchars($key)."</a> 
 					";
 				} else if ($output=="badge") {
 					echo "document.write(\"<li><a title='".$value." ".__("enlaces con esta etiqueta")."' style='font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."'>".htmlspecialchars($key)."</a></li> \");\n
@@ -281,8 +282,9 @@ class tags
 			global $link, $prefix;
 			$busqueda = trim($busqueda);
 			$mTags = explode("::",$busqueda);
-				if(count($mTags) <= 2){
-					header("Location: index.php/tag/".urlencode($mTags[1]));
+				if(count($mTags) <= 2){					
+					header("Location: index.php/tag/".urldecode(stripslashes($mTags[1])));
+					echo $mTags[1];
 					exit();
 				}else{
 				unset($mTags[0]);
