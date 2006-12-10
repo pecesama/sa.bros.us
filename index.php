@@ -19,7 +19,7 @@ $tagoo = new tags;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
-	<title>sabros.us/<?=$Sabrosus->siteName?><? if((isset($_GET["tag"])) && (!empty($_GET["tag"]))){ $tag=$_GET["tag"]; echo" - ".htmlentities($tag); } ?></title>
+	<title>sabros.us/<?=$Sabrosus->siteName?><? if((isset($_GET["tag"])) && (!empty($_GET["tag"]))){ $tag=$_GET["tag"]; echo" - ".htmlspecialchars($tag); } ?></title>
 	<meta name="generator" content="sabros.us <?=version();?>" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="<?=$Sabrosus->sabrUrl?>/sabor.css" type="text/css" />
@@ -173,7 +173,6 @@ $tagoo = new tags;
 				
 
 		$noLimit = explode("LIMIT",$sqlStr);
-		print_r($noLimit);
 		$nenlaces=contarenlaces($noLimit[0]);
 		$desde=(($desde<$nenlaces) ? $desde : 0);
 
@@ -228,7 +227,7 @@ $tagoo = new tags;
 						}
 						echo "\t\t\t<h3>";
 						echo ($Sabrosus->compartir=="1")? '<input type="checkbox" name="links_sel[]" value="'.$row["id_enlace"].'" />' : '';
-						echo "<a title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
+						echo "<a rel=\"nofollow\" title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 	
 						if (esAdmin()) {
 							echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\" onClick=\"return editar_ajax(".$row['id_enlace'].");\">".__("Editar")." &raquo;</a>";
