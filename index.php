@@ -15,8 +15,7 @@ include("include/conex.php");
 include("include/tags.class.php");
 
 $tagoo = new tags;
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?=$locale;?>" lang="<?=$locale;?>">
 <head>
 	<title>sabros.us/<?=$Sabrosus->siteName?><? if((isset($_GET["tag"])) && (!empty($_GET["tag"]))){ $tag=$_GET["tag"]; echo" - ".htmlspecialchars($tag); } ?></title>
@@ -290,10 +289,11 @@ $tagoo = new tags;
 	<div id="pie">
 		<p class="powered"><?=__("generado con:");?> <a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
-				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sabros.us");?>" title="<?=__("RSS de sabros.us");?>" /></a></p>
+				<p class="rss"><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sabros.us");?>" title="<?=__("RSS de sabros.us");?>" /></a></p>
 		<? } else { ?>
-				<p><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss/','/rss.php?tag=').htmlspecialchars($tagtag);?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de la etiqueta");?> '<?=htmlspecialchars($tagtag);?>'" title="<?=__("RSS de la etiqueta");?> '<?=htmlspecialchars($tagtag);?>'" /></a></p>
+				<p class="rss"><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss/','/rss.php?tag=').htmlspecialchars($tagtag);?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de la etiqueta");?> '<?=htmlspecialchars($tagtag);?>'" title="<?=__("RSS de la etiqueta");?> '<?=htmlspecialchars($tagtag);?>'" /></a></p>
 		<? } ?>
+		<p class="sponsor"><a href="http://sourceforge.net/" title="SourceForge.NET"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=143603&type=2" alt="SourceForce"/></a></p>
 	</div>
 
 </div>
