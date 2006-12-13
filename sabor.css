@@ -476,6 +476,8 @@ img.preview{
 	border: 1px solid #777;
 }
 .powered { float:right; margin-right: 10px; }
+.rss { float:left; margin-left: 10px; }
+.sponsor { text-align:center; display:none; }
 
 .error {
   color:#c00;
