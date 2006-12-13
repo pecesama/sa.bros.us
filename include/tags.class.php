@@ -168,7 +168,7 @@ class tags
 	
 				$size = (($value - $min)*$step) + $min_font;
 				if ($output=="html") {
-					echo "\t\t\t<li><a title=\"".$value." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\"> ".htmlspecialchars($key)."</a><img src=\"".$Sabrosus->sabrUrl."/images/icon_add.gif\" onclick=\"addToSearch('".str_replace("'","\'",$key)."');\" title=\"".__("Agregar esta etiqueta a la busqueda")."\"/></li>\n 
+					echo "\t\t\t<li><a title=\"".$value." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\"> ".htmlspecialchars($key)."</a><img src=\"".$Sabrosus->sabrUrl."/images/icon_add.gif\" alt=\"".__("Agregar esta etiqueta a la busqueda")."\" onclick=\"addToSearch('".str_replace("'","\'",$key)."');\" title=\"".__("Agregar esta etiqueta a la busqueda")."\"/></li>\n 
 					";
 				} else if ($output=="javascript") {					
 					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".htmlentities(utf8_decode(str_replace("'","\'",$key)))."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".urlencode($key)."'\">".htmlspecialchars($key)."</a> 
