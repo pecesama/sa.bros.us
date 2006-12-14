@@ -18,8 +18,8 @@ ALTER TABLE sab_sabrosus ADD FULLTEXT `busqueda`(`title`, `enlace`, `descripcion
 #
 # Datos de la tabla 'sab_sabrosus'
 #
-INSERT INTO sab_sabrosus (id_enlace, title, enlace, descripcion, tags, fecha) VALUES("1", "Stanmx.com - Buscando la accesibilidad", "http://www.stanmx.com", "Página de Estanislao Vizcarra, autor de sa.bro.sus.", "css xhtml diseño web estandares cine php javascript", "2005-07-10 00:41:06");
-INSERT INTO sab_sabrosus (id_enlace, title, enlace, descripcion, tags, fecha) VALUES("2", "Pecesama.Net [developing the future]", "http://www.pecesama.net", "Página de Pedro Santana, co-autor de sa.bros.us", "php programación web java javascript", "2005-07-10 00:42:04");
+INSERT INTO sab_sabrosus (id_enlace, title, enlace, descripcion, tags, fecha) VALUES("1", "Stanmx.com - Buscando la accesibilidad", "http://www.stanmx.com", "Página de Estanislao Vizcarra, autor de sabros.us.", "css xhtml diseño web estandares cine php javascript", "2005-07-10 00:41:06");
+INSERT INTO sab_sabrosus (id_enlace, title, enlace, descripcion, tags, fecha) VALUES("2", "Pecesama.Net [developing the future]", "http://www.pecesama.net", "Página de Pedro Santana, co-autor de sabros.us", "php programación web java javascript", "2005-07-10 00:42:04");
 
 # 
 # Estructura de tabla para la tabla 'sab_config'

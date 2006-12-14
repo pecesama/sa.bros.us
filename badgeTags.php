@@ -15,7 +15,7 @@
 
 	header("Content-type: application/x-javascript");
 	echo "document.write(\"<div id='badgetags'>\");\n";
-	echo "document.write(\"<p><strong>".__("Mis etiquetas en sa.bro.sus")."</strong></p>\");\n";
+	echo "document.write(\"<p><strong>".__("Mis etiquetas en sabros.us")."</strong></p>\");\n";
 
 	$max_font = (isset($_GET['max']) && eregi("^[0-9]+$",$_GET['max']))? $_GET['max'] : 25;
 	$min_font = (isset($_GET['min']) && eregi("^[0-9]+$",$_GET['min']))? $_GET['min'] : 10;
