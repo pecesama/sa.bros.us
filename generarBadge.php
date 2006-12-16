@@ -32,7 +32,7 @@ if (!esAdmin())
 			 return s.split(r).join(w);
 		}
 		
-		//Este código se encarga de generar el sabrosus badge.
+		//Este cdigo se encarga de generar el sabrosus badge.
 		function generaBadge()
 		{
 			var cuantos = document.getElementById('txtCuantos').value;	
@@ -125,7 +125,7 @@ if (!esAdmin())
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sabros.us/">sabros.us</a></p>
 	</div>
 
 </div>
