@@ -25,7 +25,7 @@ if (isset($_GET["tag"])) {
 	}
 }
 
-$sqlStr = "SELECT link.* FROM ".$prefix."sabrosus as link, ".$prefix."tags as tag, ".$prefix."linktags as rel WHERE";
+$sqlStr = "SELECT DISTINCT link.* FROM ".$prefix."sabrosus as link, ".$prefix."tags as tag, ".$prefix."linktags as rel WHERE";
 
 if(isset($tagtag)){
 	$sqlStr .= " (tag.tag LIKE '$tagtag') AND ";
