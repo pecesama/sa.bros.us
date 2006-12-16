@@ -287,7 +287,7 @@ $tagoo = new tags;
 	<? } ?>
 	<br class="clear"/> 
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?> <a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
+		<p class="powered"><?=__("generado con:");?> <a title="sabros.us" href="http://sabros.us/">sabros.us</a></p>
 		<? if (!isset($tagtag)) { ?>
 				<p class="rss"><a href="<? echo $Sabrosus->sabrUrl.chequearURLFriendly('/rss','/rss.php');?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sabros.us");?>" title="<?=__("RSS de sabros.us");?>" /></a></p>
 		<? } else { ?>

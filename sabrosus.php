@@ -37,7 +37,7 @@
 	<div id="contenido">
 		<p><?=__("sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web.");?></p>
 		<p>&nbsp;</p>
-		<p><?=__("El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>.");?></p>
+		<p><?=__("El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. Visita la <a href=\"http://sabros.us/\" title=\"sabros.us\">p&aacute;gina oficial del sabros.us</a>.");?></p>
 		<p>&nbsp;</p>
 		<p><?=__("El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>.");?></p>
 		<p>&nbsp;</p>
@@ -55,7 +55,7 @@
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sabros.us/">sabros.us</a></p>
 		<p><a href="<?=$Sabrosus->sabrUrl.chequearURLFriendly('rss','rss.php')?>"><img src="<?=$Sabrosus->sabrUrl?>/images/feed-icon.png" alt="<?=__("RSS de sabros.us");?>" title="<?=__("RSS de sabros.us");?>" /></a></p>
 	</div>
 </div>

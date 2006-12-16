@@ -145,7 +145,7 @@ if(isset($_POST['code_gen'])){
 	</div>
 	
 	<div id="pie">
-		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sourceforge.net/projects/sabrosus/">sabros.us</a></p>
+		<p class="powered"><?=__("generado con:");?>&nbsp;&nbsp;<a title="sabros.us" href="http://sabros.us/">sabros.us</a></p>
 	</div>
 </div>
 </body>
