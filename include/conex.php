@@ -171,13 +171,13 @@ class clsSabrosus
 		$this->adminPass      = $row['admin_pass'];
 
 			
-			$this->multiCont 	= $this->get_option(multiCont);
-			$this->tagsColor 	= $this->get_option(tagsColor);
-			$this->compartir 	= $this->get_option(compartir);
-			$this->desc_badge 	= $this->get_option(desc_badge);
-			$this->ping 		= $this->get_option(ping);
-			$this->soloNube 	= $this->get_option(soloNube);
-			$this->estiloNube	= $this->get_option(estiloNube);
+			$this->multiCont 	= $this->get_option('multiCont');
+			$this->tagsColor 	= $this->get_option('tagsColor');
+			$this->compartir 	= $this->get_option('compartir');
+			$this->desc_badge 	= $this->get_option('desc_badge');
+			$this->ping 		= $this->get_option('ping');
+			$this->soloNube 	= $this->get_option('soloNube');
+			$this->estiloNube	= $this->get_option('estiloNube');
 		
 		get_laguajes();
 		
