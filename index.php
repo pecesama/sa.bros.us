@@ -136,25 +136,27 @@ $tagoo = new tags;
 		$desde=($pag-1)*$Sabrosus->limit;
 		
 		$where = array();
-		if($tagoo->checkMultiTag($_GET['busqueda'])){
-			// Busqueda por multiples tags
-			$multitag = $tagoo->multitagQuery($_GET['busqueda'], esAdmin());
-		}else{
-				if(isset($_GET['busqueda']) && !empty($_GET['busqueda'])){
-					// Busqueda normal
-					$q = mysql_real_escape_string(trim($_GET['busqueda']));
-					if(eregi(chr(32),$busqueda))
-						$where['busqueda']=" (MATCH(link.title,link.enlace,link.descripcion) AGAINST('$q')) ";
-						else
-						$where['busqueda']=" (link.title LIKE '%$q%' OR link.enlace LIKE '%$q%' OR link.descripcion LIKE '%$q%')";
-				}else{
-					$q="";
-				}
-				if(isset($tagtag)){
-				// Busqueda por tags simples
-				$where['busquedaTags'] =  "( tag.tag LIKE '%".$tagtag."%') AND ( tag.id = rel.tag_id AND rel.link_id = link.id_enlace)";
-				}
-		}
+		
+		if(isset($_GET['busqueda']))
+			if($tagoo->checkMultiTag($_GET['busqueda'])){
+				// Busqueda por multiples tags
+				$multitag = $tagoo->multitagQuery($_GET['busqueda'], esAdmin());
+			}else{
+					if(isset($_GET['busqueda']) && !empty($_GET['busqueda'])){
+						// Busqueda normal
+						$q = mysql_real_escape_string(trim($_GET['busqueda']));
+						if(eregi(chr(32),$busqueda))
+							$where['busqueda']=" (MATCH(link.title,link.enlace,link.descripcion) AGAINST('$q')) ";
+							else
+							$where['busqueda']=" (link.title LIKE '%$q%' OR link.enlace LIKE '%$q%' OR link.descripcion LIKE '%$q%')";
+					}else{
+						$q="";
+					}
+					if(isset($tagtag)){
+					// Busqueda por tags simples
+					$where['busquedaTags'] =  "( tag.tag LIKE '%".$tagtag."%') AND ( tag.id = rel.tag_id AND rel.link_id = link.id_enlace)";
+					}
+			}
 		if(!esAdmin()){
 		$where['privados'] =  " link.privado= 0";
 		}
