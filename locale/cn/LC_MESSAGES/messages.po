@@ -1,0 +1,642 @@
+# English translation of Sa.bros.us, a web-based bookmark manager.
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the GPL v2.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sabros.us 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-13 10:20-0500\n"
+"PO-Revision-Date: 2006-12-02 21:23+0800\n"
+"Last-Translator: sluke <sluke520@yahoo.com.cn>\n"
+"Language-Team: sluke <sluke520@yahoo.com.cn>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Chinese\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#, fuzzy
+msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
+msgstr "忘记密码?"
+
+msgid "&iquest;Realmente desea eliminar este enlace de su sabros.us?"
+msgstr "您要删除这个链接?"
+
+msgid "&iquest;olvidaste tu contrase&ntilde;a?"
+msgstr "忘记密码?"
+
+msgid "&iquest;qu&eacute; es sabros.us?"
+msgstr "什么是 sabros.us?"
+
+msgid "&laquo; Anterior"
+msgstr "返回"
+
+msgid "(sin <q>/</q> al final)"
+msgstr "(没有最后的 <q>/</q>)"
+
+msgid "-- Idiomas --"
+msgstr "-- Languages --"
+
+msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
+msgstr "/cpanel.php\">控制中心</a>  以及开始添加链接或者 <a href=\""
+
+msgid "/index.php\">ver el sitio.</a>"
+msgstr "/index.php\">访问该网站</a>."
+
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
+msgstr "友情 <abbr title=\"uniform resource locator\">URL</abbr>:"
+
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
+msgstr "sabros.us <abbr title=\"Uniform Resource Locator\">URL</abbr>:"
+
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
+msgstr "主站 <abbr title=\"Uniform Resource Locator\">URL</abbr>:"
+
+msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
+msgstr "<strong>警告</strong>: 已经更新过了，不必继续。"
+
+msgid "Activado"
+msgstr "已启动"
+
+msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
+msgstr "添加sabros.us 标签云到你的网站。"
+
+msgid "Agrega los URLs de sabros.us a t&uacute; sitio."
+msgstr "在您的网站添加本站。"
+
+msgid "Agregar etiquetas"
+msgstr "添加 tags"
+
+msgid "Agregue sus preferencias al c&oacute;digo generado."
+msgstr "添加您的偏好到生成码。"
+
+msgid "Aleatorio"
+msgstr "随机"
+
+msgid "Anterior"
+msgstr "返回"
+
+msgid "Archivo:"
+msgstr "文件："
+
+msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
+msgstr "拖动这个链接到 \"书签工具条\":"
+
+msgid "Azul"
+msgstr "蓝色"
+
+msgid "Base de Datos:"
+msgstr "数据库："
+
+msgid "Buscar enlaces con"
+msgstr "搜索这个链接"
+
+msgid "Buscar:"
+msgstr "搜索："
+
+msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
+msgstr "点击 <kbd>浏览...</kbd> 从你的电脑寻找已保存的书签文件。 最大为1M"
+
+msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
+msgstr "点击 <kbd>导入</kbd> 开始导入书签，可能需要一点时间。"
+
+msgid "Color para la nube de etiquetas:"
+msgstr "标签云的颜色:"
+
+msgid "Configuraci&oacute;n de la apariencia"
+msgstr "模板设置"
+
+msgid "Configuraci&oacute;n de la base de datos"
+msgstr "数据库设置"
+
+msgid "Configuraci&oacute;n de sabros.us"
+msgstr "sabros.us 设置"
+
+msgid "Configuraci&oacute;n del administrador"
+msgstr "管理员设置"
+
+msgid "Configurar"
+msgstr "设置"
+
+msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
+msgstr "<strong>控制面板</strong> 密码:"
+
+msgid "Contrase&ntilde;a:"
+msgstr "密码："
+
+msgid "Control de contenidos"
+msgstr "内容管理"
+
+msgid "Copiar el c&oacute;digo fuente"
+msgstr "复制源代码"
+
+msgid "Da clic para etiquetar esta entrada con"
+msgstr "Click to tag this entry with"
+
+msgid "Datos de del.icio.us"
+msgstr "del.icio.us 信息"
+
+msgid "Debes introducir el nombre de la base de datos a utilizar"
+msgstr "请输入数据库用户"
+
+msgid "Debes introducir el password para el usuario admin"
+msgstr "请输入管理员密码"
+
+msgid "Debes introducir el password para la base de datos"
+msgstr "请输入数据库密码"
+
+msgid "Debes introducir el servidor de base de datos"
+msgstr "请输入数据库主机"
+
+msgid "Debes introducir el usuario para la base de datos"
+msgstr "请输入数据库用户名"
+
+msgid "Debes introducir la URL para el sitio"
+msgstr "请输入网站 url"
+
+msgid "Debes introducir la URL para sabros.us"
+msgstr "请输入完整的sabros.us url"
+
+msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
+msgstr "留空为不修改密码"
+
+msgid "Desactivado"
+msgstr "不活动的"
+
+msgid "Descripci&oacute;n del sitio:"
+msgstr "网站描述："
+
+msgid "Descripci&oacute;n:"
+msgstr "描述："
+
+msgid "E-mail:"
+msgstr "E-mail:"
+
+msgid "Edita los datos de tu enlace."
+msgstr "编辑书签数据"
+
+msgid "Editar"
+msgstr "编辑"
+
+msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
+msgstr "文件 <code>include/config.ini</code> 不可写"
+
+msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
+msgstr "e-mail 与数据库中的不符合。"
+
+msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>."
+msgstr "本项目由 <a href=\"http://www.stanmx.com/\">estanislao vizcarra</a> 和 <a href=\"http://www.pecesama.net/\">pedro santana</a> 于2005年启动, 请访问 <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\">sourceforge.net</a>."
+
+msgid "El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
+msgstr "sabros.us是一个开源程序，运行于PHP和MYSQL。官方是<a href=\"http://sabros.us/\" title=\"sa.bros.us\">sabros.us</a> ，可以从 <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"sabros.us project\">sourceforge.net</a>下载。<br />由<a href=\"http://www.sluke.cn\" title=\"sluke\">www.Sluke.cn</a>汉化。"
+
+msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
+msgstr "用户名或者密码无效.，请重新输入。 "
+
+msgid "Eliminar"
+msgstr "删除"
+
+msgid "Eliminar enlace"
+msgstr "删除链接"
+
+msgid "Email:"
+msgstr "E-mail:"
+
+msgid "Enlace Privado:"
+msgstr "私有链接："
+
+msgid "Enlace:"
+msgstr "链接:"
+
+msgid "Enlaces de"
+msgstr "Links of"
+
+msgid "Enlaces por p&aacute;gina:"
+msgstr "Links by page:"
+
+msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+msgstr "发送链接到 <a href=\"http://www.sopasabrosa.com.ar\">SopaSabrosa</a>:"
+
+msgid "Error al ejecutar la consulta en la DB"
+msgstr "查询数据库时发生错误"
+
+msgid "Es 'open source'."
+msgstr "这是开源软件！"
+
+msgid "Es sencillo y r&aacute;pido de instalar."
+msgstr "安装简单."
+
+msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
+msgstr "输入几个关键词描述这个书签k (如: xhtml css php)."
+
+msgid "Escribe los datos de tu enlace."
+msgstr "创建一个新的书签"
+
+msgid "Esta acci&oacute;n no se puede deshacer!"
+msgstr "There's no undo here!"
+
+msgid "Etiquetas relacionadas:"
+msgstr "最新的标签"
+
+msgid "Etiquetas:"
+msgstr "Tags:"
+
+msgid "Exportar tus marcadores de tu navegador a un archivo"
+msgstr "从你的浏览器中导出收藏文件"
+
+msgid "FUNCIONALIDADES:"
+msgstr "特点:"
+
+msgid "Filtrar por etiqueta:"
+msgstr "标签过滤器:"
+
+msgid "Gris"
+msgstr "灰色"
+
+msgid "Ha ocurrido un error al almacenar los cambios"
+msgstr "存放数据时发生错误"
+
+msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
+msgstr "一个错误发生 (error  <strong>%no_error%</strong>)。 请重新尝试。"
+
+msgid "Ha ocurrido un error."
+msgstr "一个错误发生。"
+
+msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
+msgstr "这是 <strong>%no_enlaces%</strong> 链接， 显示 <strong>%desde%</strong> 共 <strong>%total%</strong>"
+
+msgid "Hoja de estilo de mi sabros.us"
+msgstr "自有 sabros.us 风格脚本"
+
+msgid "Idioma"
+msgstr "语言："
+
+msgid "Idioma:"
+msgstr "语言："
+
+msgid "Importar"
+msgstr "导入"
+
+msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
+msgstr "不能使用电子邮件发送您的密码, 因为您没有设置管理员的电子邮件"
+
+msgid "Instalar el bookmarklet."
+msgstr "安装书签。"
+
+msgid "Instrucciones"
+msgstr "介绍"
+
+msgid "Introduzca su contrase&ntilde;a"
+msgstr "输入您的密码"
+
+msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
+msgstr "Internet explorer: <kbd>文件 &gt; 导入及导出... &gt; 导出最爱</kbd>"
+
+msgid "La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
+msgstr "安装sabros.us 成功。您可以进入<a href=\"/cpanel.php\">控制面板</a>添加书签，或者<a href=\"/index.php\">访问网站。</a>"
+
+msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
+msgstr "一封包括您的新密码的邮件已经发送您的邮件地址。"
+
+msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:"
+msgstr "密码自动生成，请修改，地址是："
+
+msgid "Las contrase&ntilde;as deben ser iguales"
+msgstr "密码必须匹配"
+
+msgid "Los cambios se han almacenado con &eacute;xito"
+msgstr "更新已经保存"
+
+msgid "Los passwords introducidos no coinciden"
+msgstr "密码未匹配"
+
+msgid "M&aacute;s en"
+msgstr "更多"
+
+msgid "Mi sa.bro.sus"
+msgstr "我的 sabros.us"
+
+msgid "Mis etiquetas en sa.bro.sus"
+msgstr "我在sabros.us的标签"
+
+msgid "Mostrar contenidos multimedia:"
+msgstr "显示多媒体内容:"
+
+msgid "Mostrar descripciones en el badge de enlaces:"
+msgstr "显示链接徽记的描述："
+
+msgid "Mostrar la nube de etiquetas a la derecha:"
+msgstr "在右边显示标签云："
+
+msgid "Mostrar solo la nube de etiquetas en la portada:"
+msgstr "只在主页显示标签云："
+
+msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
+msgstr "Mozilla firefox: <kbd>书签 &gt; 管理书签... &gt; 文件 &gt; 导出...</kbd>"
+
+msgid "N&uacute;mero de enlaces por p&aacute;gina:"
+msgstr "每页显示链接："
+
+msgid "N&uacute;mero de enlaces:"
+msgstr "链接数："
+
+msgid "Naranja"
+msgstr "橙色"
+
+msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
+msgstr "Netscape: <kbd>bookmarks &gt; manage bookmarks... &gt; tools &gt; export...</kbd>"
+
+msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
+msgstr "文件 <code>include/config.php</code> 不可写。"
+
+msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
+msgstr "文件夹<code>tmp</code> 不可写"
+
+msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
+msgstr "不能链接数据库。"
+
+msgid "No hay ning&uacute;n enlace en este sabros.us todav&iacute;a."
+msgstr " sabros.us 无链接。"
+
+msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
+msgstr "导入<strong>%no_noimportadosrepetidos%</strong>失败，数据库中已经存在"
+
+msgid "Nombre de tu sitio:"
+msgstr "您的网站名:"
+
+msgid "Nombre del sitio:"
+msgstr "网站名:"
+
+msgid "Nube de ejemplo"
+msgstr "范例"
+
+msgid "Nueva contrase&ntilde;a"
+msgstr "新密码"
+
+msgid "P&uacute;blico"
+msgstr "公开"
+
+msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
+msgstr "为了导入您的 del.icio.us's 链接, 请输入您的信息。"
+
+msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
+msgstr "为了显示最新的sabros.us 链接, 您需要复制这些代码到您blog或者首页。"
+
+msgid "Password para el control panel:"
+msgstr "控制面板密码:"
+
+msgid "Password:"
+msgstr "密码:"
+
+msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
+msgstr "使用您的浏览器快速添加书签。"
+
+msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
+msgstr "最新的书签RSS 和 Atom，或者是最新的已由标签过滤的标签云。"
+
+msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
+msgstr "自动为可用的标签生成“标签云”。"
+
+msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
+msgstr "通过控制面板管理您的书签。"
+
+msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
+msgstr "增加标签到每一个书签, 以便寻找到相似的书签。"
+
+msgid "Permitir que se exporten los enlaces:"
+msgstr "允许游客导出链接："
+
+msgid "Personalice la nube de etiquetas:"
+msgstr "定制您的标签云："
+
+msgid "Prefijo para las tablas:"
+msgstr "数据库前缀："
+
+msgid "Privacidad:"
+msgstr "保密性:"
+
+msgid "Privado"
+msgstr "私有"
+
+msgid "RSS de la etiqueta"
+msgstr "Tag feed"
+
+msgid "RSS de sabros.us"
+msgstr "sabros.us feed"
+
+msgid "Reescribe el Password:"
+msgstr "确认密码："
+
+msgid "Reescribe el password:"
+msgstr "确认密码："
+
+msgid "Reescribe la contrase&ntilde;a:"
+msgstr "确认密码："
+
+msgid "Rojo"
+msgstr "红色"
+
+msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
+msgstr "导入完成，以下是 <strong>%no_importados%</strong>链接。"
+
+msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
+msgstr "发生错误，请联系管理员。"
+
+msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
+msgstr "为您导入的书签选择默认的私有设置。"
+
+msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
+msgstr "选择您的标签云显示偏爱："
+
+msgid "Seleccione sus preferencias para desplegar su sabros.us:"
+msgstr "选择您的 sabros.us 显示偏好："
+
+msgid "Servidor:"
+msgstr "服务器："
+
+msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
+msgstr "如果您要定制风格， 使用XHTML结构。"
+
+msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
+msgstr "如果您忘记了您的密码, 我们将发送一个电子邮件, 请提交您的电子邮件, 您的新密码将被发送。"
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+msgstr "如果您有一个blogm您可以在blog上显示您的标签云。"
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sabros.us"
+msgstr "如果您有一个网站或者blog,您可以在上面显示您最新的收藏。"
+
+msgid "Siguiente"
+msgstr "下一"
+
+msgid "Siguiente &raquo;"
+msgstr "下一 &raquo;"
+
+msgid "T&iacute;tulo:"
+msgstr "标题："
+
+msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
+msgstr "最大字体"
+
+msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
+msgstr "最小字体"
+
+msgid "Terminando sesi&oacute;n..."
+msgstr "注销"
+
+msgid "Tiene un atractivo dise&ntilde;o."
+msgstr "有一个时髦的设计。"
+
+msgid "Usuario:"
+msgstr "用户："
+
+msgid "Ver"
+msgstr "观点"
+
+msgid "Verde"
+msgstr "绿色"
+
+msgid "actualizaci&oacute;n"
+msgstr "更新"
+
+msgid "actualizar"
+msgstr "更新"
+
+msgid "agregar"
+msgstr "添加"
+
+msgid "agregar a sabros.us"
+msgstr "添加到 sabros.us"
+
+msgid "agregar enlace"
+msgstr "添加链接"
+
+msgid "buscar"
+msgstr "搜索"
+
+msgid "contrase&ntilde;a:"
+msgstr "密码："
+
+msgid "editar"
+msgstr "编辑"
+
+msgid "editar enlace"
+msgstr "编辑书签"
+
+msgid "el"
+msgstr "在"
+
+msgid "eliminar"
+msgstr "删除"
+
+msgid "eliminar enlace"
+msgstr "删除链接"
+
+msgid "email:"
+msgstr "e-mail:"
+
+msgid "en"
+msgstr "在"
+
+msgid "enlaces con esta etiqueta"
+msgstr "使用这个标签的各链接"
+
+msgid "exportar"
+msgstr "导出"
+
+msgid "exportar a mi sabros.us"
+msgstr "导出到 sabros.us"
+
+msgid "generado con:"
+msgstr "powered by:"
+
+msgid "generar badge"
+msgstr "生成调用码"
+
+msgid "generar badge de la nube de etiquetas"
+msgstr "生成调用"
+
+msgid "generar badge de los enlaces"
+msgstr "创建调用代码"
+
+msgid "generar c&oacute;digo"
+msgstr "生成代码"
+
+msgid "guardar contrase&ntilde;a"
+msgstr "保存密码"
+
+msgid "importar"
+msgstr "导入"
+
+msgid "importar de del.icio.us"
+msgstr "从 del.icio.us 导入"
+
+msgid "importar de delicious"
+msgstr "从 del.icio.us 导入"
+
+msgid "importar desde un archivo"
+msgstr "由文件导入"
+
+msgid "importar marcadores"
+msgstr "导入书签"
+
+msgid "ingresar"
+msgstr "登陆"
+
+msgid "ingreso"
+msgstr "登陆"
+
+msgid "inicio sabros.us"
+msgstr "sabros.us 首页"
+
+msgid "instalaci&oacute;n"
+msgstr "安装"
+
+msgid "ir a opciones"
+msgstr "转到选项"
+
+msgid "ir a sabros.us"
+msgstr "转到 sabros.us"
+
+msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
+msgstr "sabros.us 升级成功。您可以进入 <a href=\"/cpanel.php\">控制面板</a> 或者开始添加链接，也可以<a href=\"/index.php\">浏览网站。</a>"
+
+msgid "mis etiquetas en sabros.us"
+msgstr "我在 sabros.us 的标签"
+
+msgid "opciones"
+msgstr "选项"
+
+msgid "ordena por la etiqueta"
+msgstr "用标签排序"
+
+msgid "panel de control"
+msgstr "控制面板"
+
+msgid "recordar contrase&ntilde;a"
+msgstr "记住密码"
+
+msgid "regresar a sabros.us"
+msgstr "返回 sabros.us"
+
+msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
+msgstr "sabros.us 是一个基于互联网的书签系统。它与del.icio.us 是相似，您能在网上处理您的书签, 或者自己建立一个网站。"
+
+msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
+msgstr "如果字符不符合，请修改浏览器编码。"
+
+msgid "solicitar nueva"
+msgstr "获得新代码"
+
+msgid "terminar la sesi&oacute;n"
+msgstr "注销"
+
+msgid "terminar sesi&oacute;n"
+msgstr "注销"
+
+msgid "usuario:"
+msgstr "用户："
+
