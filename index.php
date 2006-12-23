@@ -137,28 +137,27 @@ $tagoo = new tags;
 		
 		$where = array();
 		
-		if(isset($_GET['busqueda']))
-			if($tagoo->checkMultiTag($_GET['busqueda'])){
-				// Busqueda por multiples tags
-				$multitag = $tagoo->multitagQuery($_GET['busqueda'], esAdmin());
+		if(isset($_GET['busqueda']) && $tagoo->checkMultiTag($_GET['busqueda'])){
+			// Busqueda por multiples tags
+			$multitag = $tagoo->multitagQuery($_GET['busqueda'], esAdmin());
+		}else{
+			if(isset($_GET['busqueda']) && !empty($_GET['busqueda'])){
+				// Busqueda normal
+				$q = mysql_real_escape_string(trim($_GET['busqueda']));
+				if(eregi(chr(32),$_GET['busqueda']))
+					$where['busqueda']=" (MATCH(link.title,link.enlace,link.descripcion) AGAINST('$q')) ";
+				else
+					$where['busqueda']=" (link.title LIKE '%$q%' OR link.enlace LIKE '%$q%' OR link.descripcion LIKE '%$q%')";
 			}else{
-					if(isset($_GET['busqueda']) && !empty($_GET['busqueda'])){
-						// Busqueda normal
-						$q = mysql_real_escape_string(trim($_GET['busqueda']));
-						if(eregi(chr(32),$busqueda))
-							$where['busqueda']=" (MATCH(link.title,link.enlace,link.descripcion) AGAINST('$q')) ";
-							else
-							$where['busqueda']=" (link.title LIKE '%$q%' OR link.enlace LIKE '%$q%' OR link.descripcion LIKE '%$q%')";
-					}else{
-						$q="";
-					}
-					if(isset($tagtag)){
-					// Busqueda por tags simples
-					$where['busquedaTags'] =  "( tag.tag LIKE '%".$tagtag."%') AND ( tag.id = rel.tag_id AND rel.link_id = link.id_enlace)";
-					}
+				$q="";
 			}
+			if(isset($tagtag)){
+				// Busqueda por tags simples
+				$where['busquedaTags'] =  "( tag.tag LIKE '%".$tagtag."%') AND ( tag.id = rel.tag_id AND rel.link_id = link.id_enlace)";
+			}
+		}
 		if(!esAdmin()){
-		$where['privados'] =  " link.privado= 0";
+			$where['privados'] =  " link.privado= 0";
 		}
 		$wheresql = implode (" AND ",$where);
 		
@@ -172,7 +171,6 @@ $tagoo = new tags;
 				//$sqlStr .= (isset($multitag))? " WHERE ".$multitag: ", ".$prefix."tags AS tag, ".$prefix."linktags AS rel".((!empty($wheresql))? " WHERE ".$wheresql: '');
 				$sqlStr .=	" ORDER BY fecha DESC LIMIT ".$desde.",".$Sabrosus->limit;
 				
-
 		$noLimit = explode("LIMIT",$sqlStr);
 		$nenlaces=contarenlaces($noLimit[0]);
 		$desde=(($desde<$nenlaces) ? $desde : 0);
