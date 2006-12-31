@@ -2,6 +2,7 @@ Historial de versiones
 
 v 1.8
 
+    * Modificaciones al JavaScript de la busqueda por tags (pecesama)
     * Modificación del motor de tags y las tablas de los enlaces. (Jorge Condomí)
     * Modificación de las tablas de los enlaces. (Jorge Condomí)
     * Exportación de los datos del config.ini a la BD. (Victor Bracco)
@@ -14,6 +15,7 @@ v 1.8
     * Cambio en la llamada a los screenshot. (Victor Bracco)
     * Cambio en la url de la API de del.icios.us. (Pablo Viojo)
     * Detección automatica de idiomas mejorada. (Victor Bracco)
+    * Reparación de bugs menores. (Pecesama, Victor Bracco, Jorge Condomí y Victor de la Rocha)
 
 v 1.7
 
@@ -126,7 +128,7 @@ v 1.0
     * Agregada una pagina de '¿Qué es sabros.us?' (Miguel Cuesta)
     * Integracion del script de busqueda en el panel de control (Pecesama)
     * Asistentente para cambiar el idioma de manera grafica (Pecesama)
-    * Modificado la forma en que se muestra en tittle de la pagina (Victor De la Rocha)
+    * Modificado la forma en que se muestra el tittle de la pagina (Victor De la Rocha)
     * Agregado un script de busqueda (Mauro Lizaur)
     * Solucionado bug en la funcion esAdmin (Pecesama)
     * Parche a rss.php relacionado con el bug del filtrado de etiquetas (Pecesama)
@@ -171,7 +173,7 @@ Beta 1.2
 Beta 1
 
     * Posibilidad de organizar en páginas los enlaces, tanto en la vista general como en la de enlaces ordenados por tags (Pablo Viojo, Diego).
-    * Posibilidad de activar o desactivar la generación de enlaces 'URL Friendly&' de modo de permitir que funcionen en servidores con esta característica deshabilitada (Pablo Viojo, Diego).
+    * Posibilidad de activar o desactivar la generación de enlaces 'URL Friendly' de modo de permitir que funcionen en servidores con esta característica deshabilitada (Pablo Viojo, Diego).
     * Correciones en el CSS (Stan).
     * Corrección de algunos bugs menores (pecesama).
 

@@ -34,3 +34,34 @@ function addTag(tagText) {
 	etiquetas.value = allTags.join(' ');
 	return true;
 }
+
+function addToSearch(tag){		
+	var temp = new String();
+	var s  = document.getElementById('busqueda');
+	temp = "::"+tag;
+	if (s.value.indexOf(temp)==-1) {
+		s.value = s.value+temp;
+	} else {
+		s.value = removeSubstring(s.value, temp);
+		s.value = trimAll(s.value.replace('  ', ' '));
+	}
+	return false;
+}
+
+function removeSubstring(s, t) {
+  i = s.indexOf(t);
+  r = "";
+  if (i == -1) return s;
+  r += s.substring(0,i) + removeSubstring(s.substring(i + t.length), t);
+  return r;
+}
+
+function trimAll(sString) {
+	while (sString.substring(0,1) == ' ') {
+		sString = sString.substring(1, sString.length);
+	}
+	while (sString.substring(sString.length-1, sString.length) == ' ') {
+		sString = sString.substring(0,sString.length-1);
+	}
+	return sString;
+}
