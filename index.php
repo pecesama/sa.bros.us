@@ -27,16 +27,11 @@ $tagoo = new tags;
 	<link rel="alternate" type="application/rss+xml" title="RSS 0.92" href="<?=$Sabrosus->sabrUrl?>/rss92.php" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?=$Sabrosus->sabrUrl?>/atom.php" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/mootools.js"></script>
+	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl?>/include/addtags.js"></script>
 	<script type="text/javascript">
 		var contenedor;
 		var efectoEnlaceCancelar;
 		var efectoEnlaceGuardar;
-		
-		function addToSearch(tag){
-			var s  = document.getElementById('busqueda');
-			s.value = s.value+"::"+tag;
-			return false;
-		}
 		
 		window.onload = function() {
 			contenedor = new Fx.Style('divContenedor', 'opacity', {duration: 5000, onComplete:
