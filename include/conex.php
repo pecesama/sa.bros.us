@@ -142,6 +142,7 @@ class clsSabrosus
 	var $tagsColor;
 	var $compartir;
 	var $desc_badge;
+	var $nofollow;
 
 	function clsSabrosus()
 	{
@@ -170,14 +171,15 @@ class clsSabrosus
 		$this->emailAdmin     = $row['admin_email'];
 		$this->adminPass      = $row['admin_pass'];
 
-			
-			$this->multiCont 	= $this->get_option('multiCont');
-			$this->tagsColor 	= $this->get_option('tagsColor');
-			$this->compartir 	= $this->get_option('compartir');
-			$this->desc_badge 	= $this->get_option('desc_badge');
-			$this->ping 		= $this->get_option('ping');
-			$this->soloNube 	= $this->get_option('soloNube');
-			$this->estiloNube	= $this->get_option('estiloNube');
+
+		$this->multiCont 	= $this->get_option('multiCont');
+		$this->tagsColor 	= $this->get_option('tagsColor');
+		$this->compartir 	= $this->get_option('compartir');
+		$this->desc_badge 	= $this->get_option('desc_badge');
+		$this->ping 		= $this->get_option('ping');
+		$this->soloNube 	= $this->get_option('soloNube');
+		$this->estiloNube	= $this->get_option('estiloNube');
+		$this->nofollow		= $this->get_option('nofollow');
 		
 		get_laguajes();
 		
@@ -194,7 +196,7 @@ class clsSabrosus
 
 			initIdioma($locale);
 		}
-	}
+	} 
 	
 	function get_option($name){
 		global $link,$prefix;
@@ -204,13 +206,24 @@ class clsSabrosus
 			$row = @mysql_fetch_array($result);
 			return $row['valor'];
 		} else {
+			$this->new_option($name);
 			return "0";
 		}
 	}
 	
 	function save_option($name,$value){
 		global $link,$prefix;
-		$sql = "UPDATE `".$prefix."opciones` SET valor='".$value."' WHERE nombre='".$name."' LIMIT 1";
+		$sql = "UPDATE ".$prefix."opciones SET valor='".$value."' WHERE nombre='".$name."' LIMIT 1";
+		if(@mysql_query($sql,$link)) {
+			return true;
+		} else {
+			return false;
+		}	
+	}
+	
+	function new_option($name){
+		global $link,$prefix;
+		$sql = "INSERT INTO ".$prefix."opciones VALUES ('".$name."',0)";
 		if(@mysql_query($sql,$link)) {
 			return true;
 		} else {

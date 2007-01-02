@@ -49,6 +49,7 @@ if (isset($_POST["accion"])) {
 	$ping = (isset($_POST['ping']) ? "1" : "0");
 	$soloNubeIndex = (isset($_POST['nube_tags']) ? "1" : "0");
 	$nubePosicion = (isset($_POST['nube_posicion']) ? "1" : "0");
+	$nofollow = (isset($_POST['nofollow']) ? "1" : "0");
 	$tagColor = $_POST['color_tags'];
 	
 	if($multi != $Sabrosus->multiCont) 			$Sabrosus->save_option(multiCont,$multi);
@@ -58,6 +59,7 @@ if (isset($_POST["accion"])) {
 	if($soloNubeIndex != $Sabrosus->soloNube) 	$Sabrosus->save_option(soloNube,$soloNubeIndex);
 	if($nubePosicion != $Sabrosus->estiloNube)	$Sabrosus->save_option(estiloNube,$nubePosicion);
 	if($tagColor != $Sabrosus->tagsColor) 		$Sabrosus->save_option(tagsColor,$tagColor);
+	if($nofollow != $Sabrosus->nofollow) 		$Sabrosus->save_option(nofollow,$nofollow);
 	
 	if (!$errores) {
 		if(mysql_query($sql)) {
@@ -158,13 +160,15 @@ if (isset($_POST["accion"])) {
 
 					</select><br />
 
+					<? $follow = (($Sabrosus->nofollow=="1") ? "checked=\"true\"" : ""); ?>
 					<? $multi = (($Sabrosus->multiCont=="1") ? "checked=\"true\"" : ""); ?>
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
 					<? $soloNube = (($Sabrosus->soloNube=="1") ? "checked=\"true\"" : ""); ?>
 					<? $cloudPosicion = (($Sabrosus->estiloNube=="1") ? "checked=\"true\"" : ""); ?>
 					
-					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />
+					<label for="nofollow"><?=__("Agregar rel='nofollow' en los enlaces:");?></label><input name="nofollow" type="checkbox" <? echo $follow; ?> id="nofollow" /><br />
+					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />				
 					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
 					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
 					<label for="nube_tags"><?=__("Mostrar solo la nube de etiquetas en la portada:");?></label><input name="nube_tags" type="checkbox" <? echo $soloNube; ?> id="nube_tags"/><br />
