@@ -27,11 +27,16 @@ $tagoo = new tags;
 	<link rel="alternate" type="application/rss+xml" title="RSS 0.92" href="<?=$Sabrosus->sabrUrl?>/rss92.php" />
 	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?=$Sabrosus->sabrUrl?>/atom.php" />
 	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl;?>/include/mootools.js"></script>
-	<script type="text/javascript" src="<?=$Sabrosus->sabrUrl?>/include/addtags.js"></script>
 	<script type="text/javascript">
 		var contenedor;
 		var efectoEnlaceCancelar;
 		var efectoEnlaceGuardar;
+		
+		function addToSearch(tag){
+			var s  = document.getElementById('busqueda');
+			s.value = s.value+"::"+tag;
+			return false;
+		}
 		
 		window.onload = function() {
 			contenedor = new Fx.Style('divContenedor', 'opacity', {duration: 5000, onComplete:
@@ -221,7 +226,8 @@ $tagoo = new tags;
 						}
 						echo "\t\t\t<h3>";
 						echo ($Sabrosus->compartir=="1")? '<input type="checkbox" name="links_sel[]" value="'.$row["id_enlace"].'" />' : '';
-						echo "<a rel=\"nofollow\" title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
+						$follow = ($Sabrosus->nofollow=="1")? "rel=\"nofollow\"" : "";
+						echo "<a ".$follow." title=\"".htmlspecialchars($row["title"])."\" href=\"".htmlspecialchars($row["enlace"])."\">".htmlspecialchars($row['title'])."</a>";
 	
 						if (esAdmin()) {
 							echo " | <a href=\"".$Sabrosus->sabrUrl."/editar.php?id=".$row['id_enlace']."\" title=\" ".__("Editar")." - ".htmlspecialchars($row['title'])."\" onClick=\"return editar_ajax(".$row['id_enlace'].");\">".__("Editar")." &raquo;</a>";
