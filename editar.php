@@ -134,6 +134,7 @@ if (isset($_GET["id"])) {
 
 				<label for="etiquetas"><?=__("Etiquetas:");?></label><br />
 				<input class="input_naranja" type="text" name="etiquetas" id="etiquetas" value="<? $tags_temp=str_replace(":sab:privado", "", isset($tags)?$tags:""); echo trim($tags_temp); ?>" size="86" /><br />
+				<? $_SESSION["etiquetasLista"] = $tags_temp; ?>
 				<p><?=__("Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php).");?></p>
 				<fieldset>
 					<legend><?=__("Agregar etiquetas");?></legend>

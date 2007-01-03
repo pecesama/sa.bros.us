@@ -510,10 +510,28 @@ a:active {
 	list-style: none;
 	padding: 0;
 }
+
+.unselected {
+	background-color:#FFFFFF;
+}
+
+.selected {
+	background-color:#CEEFCE;
+}
+
 #cloud li {
 	display: inline;
+
 }
+
+#cloud li {
+	display: inline;	
+}
+
+
+
 #cloud li img { margin:0 0 0 2px; cursor:pointer;}
+
 /* Mensajes para el usuario */
 
 .error {
