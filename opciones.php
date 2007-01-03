@@ -139,6 +139,8 @@ if (isset($_POST["accion"])) {
 						</select><br />
 						<? $ping = (($Sabrosus->ping=="1") ? "checked=\"true\"" : ""); ?>
 						<label for="ping_sopa"><?=__("Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:");?></label><input name="ping" type="checkbox" <? echo $ping; ?> id="ping_sopa" /><br />
+						<? $follow = (($Sabrosus->nofollow=="1") ? "checked=\"true\"" : ""); ?>
+						<label for="nofollow"><?=__("Agregar rel='nofollow' en los enlaces:");?></label><input name="nofollow" type="checkbox" <? echo $follow; ?> id="nofollow" /><br />
 				</fieldset>
 				<fieldset>
 					<legend><?=__("Configuraci&oacute;n de la apariencia");?></legend>
@@ -160,14 +162,14 @@ if (isset($_POST["accion"])) {
 
 					</select><br />
 
-					<? $follow = (($Sabrosus->nofollow=="1") ? "checked=\"true\"" : ""); ?>
+					
 					<? $multi = (($Sabrosus->multiCont=="1") ? "checked=\"true\"" : ""); ?>
 					<? $compartir = (($Sabrosus->compartir=="1") ? "checked=\"true\"" : ""); ?>
 					<? $descripciones = (($Sabrosus->desc_badge=="1") ? "checked=\"true\"" : ""); ?>
 					<? $soloNube = (($Sabrosus->soloNube=="1") ? "checked=\"true\"" : ""); ?>
 					<? $cloudPosicion = (($Sabrosus->estiloNube=="1") ? "checked=\"true\"" : ""); ?>
 					
-					<label for="nofollow"><?=__("Agregar rel='nofollow' en los enlaces:");?></label><input name="nofollow" type="checkbox" <? echo $follow; ?> id="nofollow" /><br />
+					
 					<label for="contenidos_multi"><?=__("Mostrar contenidos multimedia:");?></label><input name="contenidos_multi" type="checkbox" <? echo $multi; ?> id="contenidos_multi" /><br />				
 					<label for="compartir"><?=__("Permitir que se exporten los enlaces:");?></label><input name="compartir" type="checkbox" <? echo $compartir; ?> id="compartir" /><br />
 					<label for="descripciones"><?=__("Mostrar descripciones en el badge de enlaces:");?></label><input name="descripciones" type="checkbox" <? echo $descripciones; ?> id="descripciones"/><br />
