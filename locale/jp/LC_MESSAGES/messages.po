@@ -1,0 +1,641 @@
+# English translation of Sa.bros.us, a web-based bookmark manager.
+# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the GPL v2.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: sabros.us 1.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-09-13 10:20-0500\n"
+"PO-Revision-Date: 2006-12-22 15:57+0900\n"
+"Last-Translator: Yuki <hiroyuki@ddfactory.net>\n"
+"Language-Team: D&D Factory <hiroyuki@ddfactory.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Japanese\n"
+"X-Poedit-Country: JAPAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
+msgstr "パスワードをお忘れですか?"
+
+msgid "&iquest;Realmente desea eliminar este enlace de su sabros.us?"
+msgstr "このリンクを削除してもよろしいですか?"
+
+msgid "&iquest;olvidaste tu contrase&ntilde;a?"
+msgstr "パスワードをお忘れですか?"
+
+msgid "&iquest;qu&eacute; es sabros.us?"
+msgstr "what is sabros.us?"
+
+msgid "&laquo; Anterior"
+msgstr "&raquo; Back"
+
+msgid "(sin <q>/</q> al final)"
+msgstr "(末尾にスラッシュ(<q>/</q>)はつけないように)"
+
+msgid "-- Idiomas --"
+msgstr "-- 使用する言語 --"
+
+msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
+msgstr "/cpanel.php\">コントロールパネル</a>でリンクを追加できます。<a href=\""
+
+msgid "/index.php\">ver el sitio.</a>"
+msgstr "/index.php\">メインページ</a>。"
+
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
+msgstr "Friendly <abbr title=\"uniform resource locator\">URL</abbr>(タグ用):"
+
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
+msgstr "sabros.usメインページの<abbr title=\"Uniform Resource Locator\">URL</abbr>:"
+
+msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
+msgstr "サイトトップページの<abbr title=\"Uniform Resource Locator\">URL</abbr>:"
+
+msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
+msgstr "<strong>warning</strong>:既にアップデート済みです。 再度実行する必要はありません。"
+
+msgid "Activado"
+msgstr "有効"
+
+msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
+msgstr "sabros.usのタグクラウドをあなたのWebサイトに表示"
+
+msgid "Agrega los URLs de sabros.us a t&uacute; sitio."
+msgstr "sabros.usに登録してあるリンクをあなたのwebサイトに表示"
+
+msgid "Agregar etiquetas"
+msgstr "タグの追加"
+
+msgid "Agregue sus preferencias al c&oacute;digo generado."
+msgstr "生成するコードのカスタマイズ"
+
+msgid "Aleatorio"
+msgstr "ランダム"
+
+msgid "Anterior"
+msgstr "Back"
+
+msgid "Archivo:"
+msgstr "ファイル:"
+
+msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
+msgstr "このリンクをブックマークに追加しておくと簡単にリンクを追加することができます:<br />"
+
+msgid "Azul"
+msgstr "Blue"
+
+msgid "Base de Datos:"
+msgstr "データベース:"
+
+msgid "Buscar enlaces con"
+msgstr "Search links with"
+
+msgid "Buscar:"
+msgstr "Search:"
+
+msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
+msgstr "<kbd>参照</kbd>ボタンをクリックして、エクスポートしたブックマークファイルを選択して下さい。最大1MBまでインポート可能です。"
+
+msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
+msgstr "<kbd>インポート</kbd>ボタンをクリックするとインポートが始まりますので、そのまま少しお待ち下さい。"
+
+msgid "Color para la nube de etiquetas:"
+msgstr "タグクラウドの基本色:"
+
+msgid "Configuraci&oacute;n de la apariencia"
+msgstr "テーマの設定"
+
+msgid "Configuraci&oacute;n de la base de datos"
+msgstr "データベースの設定"
+
+msgid "Configuraci&oacute;n de sabros.us"
+msgstr "sabros.usの基本設定"
+
+msgid "Configuraci&oacute;n del administrador"
+msgstr "管理者の設定"
+
+msgid "Configurar"
+msgstr "設定"
+
+msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
+msgstr "<strong>コントロールパネル用</strong>パスワード:"
+
+msgid "Contrase&ntilde;a:"
+msgstr "パスワード:"
+
+msgid "Control de contenidos"
+msgstr "ブックマークの管理"
+
+msgid "Copiar el c&oacute;digo fuente"
+msgstr "貼り付け用コード"
+
+msgid "Da clic para etiquetar esta entrada con"
+msgstr "このタグを追加"
+
+msgid "Datos de del.icio.us"
+msgstr "del.icio.us info"
+
+msgid "Debes introducir el nombre de la base de datos a utilizar"
+msgstr "<br />データベース名を入力して下さい。"
+
+msgid "Debes introducir el password para el usuario admin"
+msgstr "<br />管理者用のパスワードを入力して下さい。"
+
+msgid "Debes introducir el password para la base de datos"
+msgstr "<br />データベースのパスワードを入力して下さい。"
+
+msgid "Debes introducir el servidor de base de datos"
+msgstr "<br />データベースのホスト名を入力して下さい。"
+
+msgid "Debes introducir el usuario para la base de datos"
+msgstr "<br />データベースのユーザー名を入力して下さい。"
+
+msgid "Debes introducir la URL para el sitio"
+msgstr "<br />サイトトップページのURLを入力して下さい。"
+
+msgid "Debes introducir la URL para sabros.us"
+msgstr "sabros.usのメインページを置く<br />ディレクトリのURLを入力して下さい"
+
+msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
+msgstr "パスワードを変更するとき以外は、空白のままにしておいて下さい"
+
+msgid "Desactivado"
+msgstr "無効"
+
+msgid "Descripci&oacute;n del sitio:"
+msgstr "サイトの概要:"
+
+msgid "Descripci&oacute;n:"
+msgstr "概要:"
+
+msgid "E-mail:"
+msgstr "E-mail:"
+
+msgid "Edita los datos de tu enlace."
+msgstr "ブックマークデータを編集."
+
+msgid "Editar"
+msgstr "編集"
+
+msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
+msgstr "<code>include/config.ini</code>が、書き込み可能になっていません"
+
+msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
+msgstr "入力されたメールアドレスが登録されているものと違います。"
+
+msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>."
+msgstr "このプロジェクトは<a href=\"http://www.stanmx.com/\">estanislao vizcarra</a>と<a href=\"http://www.pecesama.net/\">pedro santana</a>によって2005年にスタートしました。現在は<a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\">いろいろなメンバー</a>が開発に協力してくれています。"
+
+msgid "El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
+msgstr "sabros.usプロジェクトはPHPとMySQLを使った「オープンソース」です。(オリジナルのソースコードを自由に変更して使うことができます)  公式ホームページは<a href=\"http://sabros.us/\" title=\"sa.bros.us\">sabros.us</a>、スクリプトは<a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"sabros.us project\">sourceforge.net</a>からダウンロードできます。"
+
+msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
+msgstr "ユーザ名かパスワードが無効です。 もう一度やり直して下さい。"
+
+msgid "Eliminar"
+msgstr "削除"
+
+msgid "Eliminar enlace"
+msgstr "リンクを削除"
+
+msgid "Email:"
+msgstr "E-mail:"
+
+msgid "Enlace Privado:"
+msgstr "プライベートリンクに設定する(一般には公開されません):"
+
+msgid "Enlace:"
+msgstr "URL:"
+
+msgid "Enlaces de"
+msgstr "Links of"
+
+msgid "Enlaces por p&aacute;gina:"
+msgstr "1ページに表示するリンクの数:"
+
+msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+msgstr "<a href=\"http://www.sopasabrosa.com.ar\">SopaSabrosa</a>にリンクを送信する:"
+
+msgid "Error al ejecutar la consulta en la DB"
+msgstr "DBでクエリー実行中にエラーが発生しました"
+
+msgid "Es 'open source'."
+msgstr "sabros.usはオープンソースです。"
+
+msgid "Es sencillo y r&aacute;pido de instalar."
+msgstr "インストールもシンプルで簡単です。"
+
+msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
+msgstr "関連するタグを複数入力する場合はスペースで区切って下さい。(ex: xhtml css php)."
+
+msgid "Escribe los datos de tu enlace."
+msgstr "新規ブックマークの追加"
+
+msgid "Esta acci&oacute;n no se puede deshacer!"
+msgstr "この操作は元に戻せません!"
+
+msgid "Etiquetas relacionadas:"
+msgstr "Related tags"
+
+msgid "Etiquetas:"
+msgstr "タグ:"
+
+msgid "Exportar tus marcadores de tu navegador a un archivo"
+msgstr "ブックマークをブラウザからエクスポートします。"
+
+msgid "FUNCIONALIDADES:"
+msgstr "特徴:"
+
+msgid "Filtrar por etiqueta:"
+msgstr "表示するリンク(特定のタグに絞り込みたい場合は入力):"
+
+msgid "Gris"
+msgstr "Gray"
+
+msgid "Ha ocurrido un error al almacenar los cambios"
+msgstr "データの保存中に、エラーが発生しました。"
+
+msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
+msgstr "エラーが発生しました(エラー:  <strong>%no_error%</strong>)。もう一度やり直して下さい。"
+
+msgid "Ha ocurrido un error."
+msgstr "エラーが発生しました。"
+
+msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
+msgstr "<strong>%desde%</strong>～<strong>%total%</strong>/<strong>%no_enlaces%</strong> links"
+
+msgid "Hoja de estilo de mi sabros.us"
+msgstr "my sabros.usの構成"
+
+msgid "Idioma"
+msgstr "言語:"
+
+msgid "Idioma:"
+msgstr "言語:"
+
+msgid "Importar"
+msgstr "インポート"
+
+msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
+msgstr "入力されたメールアドレスが管理者のものと違うのでパスワードを送信できません。"
+
+msgid "Instalar el bookmarklet."
+msgstr "bookmarkletのインストール."
+
+msgid "Instrucciones"
+msgstr "手順"
+
+msgid "Introduzca su contrase&ntilde;a"
+msgstr "パスワードを入力して下さい"
+
+msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
+msgstr "Internet explorerの場合: <br /><kbd>ファイル &gt; インポートおよびエクスポート &gt; お気に入りのエクスポート</kbd>"
+
+msgid "La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
+msgstr "sabros.usのインストールが完了しました。<br />リンクを追加するには<a href=\"/sabrosus/cpanel.php\">コントロールパネル</a>にアクセスして下さい。<br />サイトのメインページは<a href=\"/sabrosus/index.php\">こちら</a>。"
+
+msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
+msgstr "新しいパスワードを記載したメールを送りました。 このメールには、パスワードの変更を完了させるための手順が書かれています。"
+
+msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:"
+msgstr "新しいパスワードを自動的に生成しました-パスワードは覚えやすいお好きなものに変えて下さい。<br />現在はこのパスワードでログインできます:"
+
+msgid "Las contrase&ntilde;as deben ser iguales"
+msgstr "パスワードは同じでなければなりません。"
+
+msgid "Los cambios se han almacenado con &eacute;xito"
+msgstr "変更を保存しました。"
+
+msgid "Los passwords introducidos no coinciden"
+msgstr "<br />パスワードが違います"
+
+msgid "M&aacute;s en"
+msgstr "More in"
+
+msgid "Mi sa.bro.sus"
+msgstr "My sabros.us"
+
+msgid "Mis etiquetas en sa.bro.sus"
+msgstr "My tags on sabros.us"
+
+msgid "Mostrar contenidos multimedia:"
+msgstr "マルチメディアコンテンツを表示する:"
+
+msgid "Mostrar descripciones en el badge de enlaces:"
+msgstr "外部表示の際に概要を表示する:"
+
+msgid "Mostrar la nube de etiquetas a la derecha:"
+msgstr "タグクラウドをページの右側に表示する:"
+
+msgid "Mostrar solo la nube de etiquetas en la portada:"
+msgstr "メインページにタグクラウドのみ表示する:"
+
+msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
+msgstr "Mozilla firefoxの場合: <br /><kbd>ブックマーク &gt; ブックマークの管理 &gt; ファイル &gt; エクスポート</kbd>"
+
+msgid "N&uacute;mero de enlaces por p&aacute;gina:"
+msgstr "1ページに表示するリンクの数:"
+
+msgid "N&uacute;mero de enlaces:"
+msgstr "表示するリンク数:"
+
+msgid "Naranja"
+msgstr "Orange"
+
+msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
+msgstr "Netscapeの場合: <br /><kbd>ブックマーク &gt; ブックマークの管理 &gt; ツール &gt; エクスポート</kbd>"
+
+msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
+msgstr "<code>include/config.php</code>に書き込めません。パーミッションの設定を確認して、インストールをやり直して下さい。"
+
+msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
+msgstr "<code>tmp</code>ディレクトリが書き込み不可能になっているので、リンクをエクスポートすることができません。"
+
+msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
+msgstr "データベースに接続できません。データベース設定を確認してやりなおして下さい。"
+
+msgid "No hay ning&uacute;n enlace en este sabros.us todav&iacute;a."
+msgstr "このタグに関連するリンクはありません。"
+
+msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
+msgstr "すでに「<strong>%no_noimportadosrepetidos%</strong>」はsa.bros.usに登録されています。"
+
+msgid "Nombre de tu sitio:"
+msgstr "あなたのサイト名:"
+
+msgid "Nombre del sitio:"
+msgstr "サイト名:"
+
+msgid "Nube de ejemplo"
+msgstr "Example cloud"
+
+msgid "Nueva contrase&ntilde;a"
+msgstr "新しいパスワード"
+
+msgid "P&uacute;blico"
+msgstr "一般に公開する"
+
+msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
+msgstr "del.icio.usからブックマークをインポートするには、ログイン情報を入力して下さい"
+
+msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
+msgstr "他のブログやホームページに表示するには、下記のコードを貼り付けて下さい。"
+
+msgid "Password para el control panel:"
+msgstr "コントロールパネル用パスワード:"
+
+msgid "Password:"
+msgstr "パスワード:"
+
+msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
+msgstr "ブラウザから簡単にブックマークを追加できます。"
+
+msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
+msgstr "新しく追加したブックマークをRSSとAtomで提供することができます。もちろんタグで絞り込むことも可能です。"
+
+msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
+msgstr "「タグクラウド」の生成も自動です。"
+
+msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
+msgstr "あなたのブックマークをコントロールパネルで一括管理。"
+
+msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
+msgstr "タグを追加することで、ブックマークを分類することも簡単です。"
+
+msgid "Permitir que se exporten los enlaces:"
+msgstr "訪問者にリンクのエクスポートを許可する:"
+
+msgid "Personalice la nube de etiquetas:"
+msgstr "タグクラウドのカスタマイズ:"
+
+msgid "Prefijo para las tablas:"
+msgstr "データベースのテーブルに付ける接頭語:"
+
+msgid "Privacidad:"
+msgstr "公開設定:"
+
+msgid "Privado"
+msgstr "プライベート用"
+
+msgid "RSS de la etiqueta"
+msgstr "Tag feed"
+
+msgid "RSS de sabros.us"
+msgstr "sabros.us feed"
+
+msgid "Reescribe el Password:"
+msgstr "パスワード(確認用に再入力):"
+
+msgid "Reescribe el password:"
+msgstr "パスワード(確認用に再入力):"
+
+msgid "Reescribe la contrase&ntilde;a:"
+msgstr "パスワード(確認用に再入力):"
+
+msgid "Rojo"
+msgstr "Red"
+
+msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
+msgstr "インポート作業が完了しました。 <strong>%no_importados%</strong>のリンクをインポートしました。"
+
+msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
+msgstr "エラーが発生しました。もう一度送信してみて下さい。<br />万が一それでも失敗するようであれば管理者に連絡して下さい。"
+
+msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
+msgstr "ブックマークをインポートする際のデフォルトプライバシー設定を選択して下さい。"
+
+msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
+msgstr "環境やお好みに応じて、下記の設定を変更して下さい。"
+
+msgid "Seleccione sus preferencias para desplegar su sabros.us:"
+msgstr "環境やお好みに応じて、下記の設定を変更して下さい。"
+
+msgid "Servidor:"
+msgstr "サーバー:"
+
+msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
+msgstr "もしsabros.usの見た目を変更したいのであれば、下記のような構造になっていますので、スタイルシートを適宜変更してください。"
+
+msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
+msgstr "もしパスワードをお忘れなら、メールで新しいパスワードを送信します。sabros.usに登録してあるメールアドレスを入力してください。"
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+msgstr "ブログやホームページをお持ちなら、sabros.usのタグクラウドを表示させることができます。"
+
+msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sabros.us"
+msgstr "ブログやホームページをお持ちなら、sabros.usに加えた新しいリンクを表示させることができます。"
+
+msgid "Siguiente"
+msgstr "Next"
+
+msgid "Siguiente &raquo;"
+msgstr "Next &raquo;"
+
+msgid "T&iacute;tulo:"
+msgstr "タイトル:"
+
+msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
+msgstr "最大フォントサイズ"
+
+msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
+msgstr "最小フォントサイズ"
+
+msgid "Terminando sesi&oacute;n..."
+msgstr "ログアウトしました"
+
+msgid "Tiene un atractivo dise&ntilde;o."
+msgstr "おしゃれなデザイン。"
+
+msgid "Usuario:"
+msgstr "ユーザー:"
+
+msgid "Ver"
+msgstr "リンクを表示"
+
+msgid "Verde"
+msgstr "Green"
+
+msgid "actualizaci&oacute;n"
+msgstr "更新"
+
+msgid "actualizar"
+msgstr "更新"
+
+msgid "agregar"
+msgstr "追加"
+
+msgid "agregar a sabros.us"
+msgstr "sabros.usへ追加"
+
+msgid "agregar enlace"
+msgstr "リンクを追加"
+
+msgid "buscar"
+msgstr "Search"
+
+msgid "contrase&ntilde;a:"
+msgstr "パスワード:"
+
+msgid "editar"
+msgstr "編集"
+
+msgid "editar enlace"
+msgstr "ブックマークを編集"
+
+msgid "el"
+msgstr "at"
+
+msgid "eliminar"
+msgstr "削除"
+
+msgid "eliminar enlace"
+msgstr "リンクを削除"
+
+msgid "email:"
+msgstr "e-mail:"
+
+msgid "en"
+msgstr "in"
+
+msgid "enlaces con esta etiqueta"
+msgstr "links with that tag"
+
+msgid "exportar"
+msgstr "エクスポート"
+
+msgid "exportar a mi sabros.us"
+msgstr "my sabros.usのエクスポート"
+
+msgid "generado con:"
+msgstr "powered by:"
+
+msgid "generar badge"
+msgstr "外部表示用コードの取得"
+
+msgid "generar badge de la nube de etiquetas"
+msgstr "外部表示用コード生成(タグクラウド)"
+
+msgid "generar badge de los enlaces"
+msgstr "外部表示用コード生成(リンク)"
+
+msgid "generar c&oacute;digo"
+msgstr "コード生成"
+
+msgid "guardar contrase&ntilde;a"
+msgstr "パスワードを保存する"
+
+msgid "importar"
+msgstr "インポート"
+
+msgid "importar de del.icio.us"
+msgstr "del.icio.usからインポート"
+
+msgid "importar de delicious"
+msgstr "del.icio.usからインポート"
+
+msgid "importar desde un archivo"
+msgstr "ファイルからインポート"
+
+msgid "importar marcadores"
+msgstr "ブックマークのインポート"
+
+msgid "ingresar"
+msgstr "ログイン"
+
+msgid "ingreso"
+msgstr "ログイン"
+
+msgid "inicio sabros.us"
+msgstr "sabros.us home"
+
+msgid "instalaci&oacute;n"
+msgstr "インストール"
+
+msgid "ir a opciones"
+msgstr "オプション"
+
+msgid "ir a sabros.us"
+msgstr "sabros.usメインページへ"
+
+msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
+msgstr "sabros.usのアップデートが完了しました。<br />リンクを追加するには<a href=\"/cpanel.php\">コントロールパネル</a>にアクセスして下さい。<br />サイトのトップページは<a href=\"/index.php\">こちら</a>。"
+
+msgid "mis etiquetas en sabros.us"
+msgstr "my tags on sabros.us"
+
+msgid "opciones"
+msgstr "オプション"
+
+msgid "ordena por la etiqueta"
+msgstr "sort by tag"
+
+msgid "panel de control"
+msgstr "コントロールパネル"
+
+msgid "recordar contrase&ntilde;a"
+msgstr "パスワードを覚えていてください。"
+
+msgid "regresar a sabros.us"
+msgstr "sabros.usメインページへ戻る"
+
+msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
+msgstr "sabros.usはウェブサイト上で、あなたのブックマークを管理するWebベースのブックマークシステムです。オンラインでブックマークを管理できるという点はdel.icio.usと同じですが、sabros.usを使えば、あなた自身のウェブサイトで同じことができるのです。"
+
+msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
+msgstr "文字見た目がおかしいようなら、ボタンを押して修正して下さい。"
+
+msgid "solicitar nueva"
+msgstr "新しいパスワードを取得"
+
+msgid "terminar la sesi&oacute;n"
+msgstr "ログアウト"
+
+msgid "terminar sesi&oacute;n"
+msgstr "ログアウト"
+
+msgid "usuario:"
+msgstr "ユーザー:"
+
