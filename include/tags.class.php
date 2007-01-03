@@ -168,10 +168,17 @@ class tags
 	
 				$size = (($value - $min)*$step) + $min_font;
 				if ($output=="html") {
-					echo "\t\t\t<li><a title=\"".$value." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\"> ".htmlspecialchars($key)."</a><img src=\"".$Sabrosus->sabrUrl."/images/icon_add.gif\" alt=\"".__("Agregar esta etiqueta a la busqueda")."\" onclick=\"addToSearch('".str_replace("'","\'",$key)."');\" title=\"".__("Agregar esta etiqueta a la busqueda")."\"/></li>\n 
+					echo "\t\t\t<li><a title=\"".$value." ".__("enlaces con esta etiqueta")."\" style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."\"> ".htmlspecialchars($key)."</a><img src=\"".$Sabrosus->sabrUrl."/images/magnifier.png\" alt=\"".__("Agregar esta etiqueta a la busqueda")."\" onclick=\"addToSearch('".str_replace("'","\'",$key)."');\" title=\"".__("Agregar esta etiqueta a la busqueda")."\"/></li>\n
 					";
-				} else if ($output=="javascript") {					
-					echo "<a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" onclick=\"addTag('".htmlentities(utf8_decode(str_replace("'","\'",$key)))."')\" title=\"".__("Da clic para etiquetar esta entrada con")." '".urlencode($key)."'\">".htmlspecialchars($key)."</a> 
+				} else if ($output=="javascript") {
+					$textoClase = "unselected";
+					$etiquetasArreglo = explode(" ", $_SESSION["etiquetasLista"]);
+					for ($i=0; $i<count($etiquetasArreglo)-1; $i++) {
+						if (utf8_decode($etiquetasArreglo[$i]) == htmlentities(utf8_decode($key))) {
+							$textoClase = "selected";
+						}
+					}						
+					echo "<span class=\"".$textoClase."\" onclick=\"addTag('".htmlentities(utf8_decode(str_replace("'","\'",$key)))."', this)\"><a style=\"font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");\" href=\"javascript:void(0)\" title=\"".__("Da clic para etiquetar esta entrada con")." '".urlencode($key)."'\">".htmlspecialchars($key)."</a></span>
 					";
 				} else if ($output=="badge") {
 					echo "document.write(\"<li><a title='".$value." ".__("enlaces con esta etiqueta")."' style='font-size:".$size."px; color:rgb(".$r.",".$g.",".$b.");' href='".$Sabrosus->sabrUrl.chequearURLFriendly('/tag/','/index.php?tag=').urlencode($key)."'>".htmlspecialchars($key)."</a></li> \");\n

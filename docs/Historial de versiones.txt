@@ -2,6 +2,9 @@ Historial de versiones
 
 v 1.8
 
+ 
+    * Mostrar con iluminado las etiquetas pertenecen a un enlace en la edicion (pecesama)
+    * Agregada la opcion de rel="nofollow" configurable desde el panel de administracion (Victor Bracco)
     * Modificaciones al JavaScript de la busqueda por tags (pecesama)
     * Modificación del motor de tags y las tablas de los enlaces. (Jorge Condomí)
     * Modificación de las tablas de los enlaces. (Jorge Condomí)

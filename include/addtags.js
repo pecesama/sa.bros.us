@@ -1,4 +1,4 @@
-function addTag(tagText) {
+function addTag(tagText, elemento) {
 	var repetida = false;
 	var tags = new Array();
 	var etiquetas = new String();
@@ -20,7 +20,10 @@ function addTag(tagText) {
 		for (var o=0; o<eachTag.length; o++){
 			if(eachTag[o] != ' ' && eachTag[o] != ''){
 				if(eachTag[o] != tagText){	allTags.push(eachTag[o]);
-				}else{	repetida = true;	}
+				}else{	
+					repetida = true;
+					elemento.className = 'unselected';
+				}
 			}
 		}
 	}
@@ -30,6 +33,7 @@ function addTag(tagText) {
 		}else{
 			allTags.push(tagText);
 		}
+		elemento.className = 'selected';
 	}
 	etiquetas.value = allTags.join(' ');
 	return true;
