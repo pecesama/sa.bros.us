@@ -52,6 +52,13 @@ if (isset($_GET["id"])) {
 		exit();
 	}
 } elseif (isset($_GET["url"])) {
+	/* Si el enlace ya existe, redirigimos a la página para editarlo. */
+	if(isInSabrosus($_GET["url"])) {
+		$sql = "SELECT id_enlace FROM ".$prefix."sabrosus WHERE enlace = '".$_GET["url"]."' LIMIT 1";
+		$r = mysql_fetch_array(mysql_query($sql,$link));
+		header("Location: editar.php?id=".$r['id_enlace']);
+		die();
+	}
 	$etiquetas = @get_meta_tags($_GET['url']);
 
 	if (isset($_GET['titulo'])) {
