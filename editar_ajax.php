@@ -63,7 +63,7 @@ if(!isset($_GET['enlace'])){
 						if($Sabrosus->multiCont=="1")
 						{
 							if(!ocupaReproduccionEspecial($row["enlace"])) {
-								echo "\t\t<img class=\"preview\" src=\"http://www.webshotspro.com/thumb.php?url=".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
+								echo "\t\t<img class=\"preview\" src=\"http://sabros.us/thumbs/?url=".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
 							} else {
 								/* Imagenes de Flickr */
 								if (esFlickrPhoto($row["enlace"])) {
