@@ -106,7 +106,7 @@ class tags
 			$keys[$tag] = $value;
 		}
 		if(count($keys) > 0){
-			ksort($keys);
+			uksort($keys,array($this,"cmpTag"));
 			$max = max($keys);
 			$min = min($keys);
 			$prop = 255 / $max;
@@ -195,6 +195,28 @@ class tags
 			}
 		}
 
+	}
+	
+	function cmpTag($tag1,$tag2){
+		// Utilizada para ordernar correctamente los tags, incluso los que tienen caracteres especiales
+		// Larga lista de caracteres especiales que habría que revisar: http://www.thesauruslex.com/typo/eng/enghtml.htm, hay muchos que no se con que letras se reemplazan...
+		$originales = array('á','é','í','ó','ú','à','è','ì','ò','ù','ä','ë','ï','ö','ü','â','ê','î','ô','û','ã','õ','ç','ñ');
+		$reemplazos = array('a','e','i','o','u','a','e','i','o','u','a','e','i','o','u','a','e','i','o','u','a','o','c','n');
+		
+		// Consiste en remover todos los caracteres especiales y luego comparar.
+		$_tag1 = str_replace($originales,$reemplazos,utf8_decode($tag1)); // para convertir "Ã¡lgebra" en "álgebra"
+		$_tag1 = str_replace($originales,$reemplazos,html_entity_decode($_tag1)); // para convertir "programaci&oacute;n" en "programación"
+		$_tag1 = str_replace($originales,$reemplazos,strtolower($_tag1)); // pasado todo a minusculas
+		
+		$_tag2 = str_replace($originales,$reemplazos,utf8_decode($tag2));
+		$_tag2 = str_replace($originales,$reemplazos,html_entity_decode($_tag2));
+		$_tag2 = str_replace($originales,$reemplazos,strtolower($_tag2));		
+		
+		
+		// Faltaría optimizar para determinar que la "ñ" esta despues de la "n", porque como esta ahora, la toma como una "n".
+		// Mono debería salir primero que Moño
+
+		return strnatcmp($_tag1,$_tag2);
 	}
 	
 	function editTag(){
