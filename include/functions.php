@@ -177,4 +177,65 @@ function enviaMail($to, $title, $body, $from) {
 
 	return @mail($to, $title, $body, $head);
 }
+
+//usada por GPL de wordpress-mobile-edition
+function esMovil() {
+	if (!isset($_SERVER["HTTP_USER_AGENT"]) ) {
+        return false;
+    }
+    $whitelist = array(
+        'Stand Alone/QNws'
+    );
+    foreach ($whitelist as $browser) {
+        if (strstr($_SERVER["HTTP_USER_AGENT"], $browser)) {
+            return false;
+        }
+    }
+	$small_browsers = array(
+		'2.0 MMP'
+		,'240x320'
+		,'AvantGo'
+		,'BlackBerry'
+		,'Blazer'
+		,'Cellphone'
+		,'Danger'
+		,'DoCoMo'
+		,'Elaine/3.0'
+		,'EudoraWeb'
+		,'hiptop'
+		,'MIDP-2.0'
+		,'MMEF20'
+		,'MOT-V'
+		,'NetFront'
+		,'Newt'
+		,'Nintendo Wii'
+		,'Nitro' // Nintendo DS
+		,'Nokia'
+		,'Opera Mini'
+		,'Palm'
+		,'portalmmm'
+		,'Proxinet'
+		,'ProxiNet'
+		,'SHARP-TQ-GX10'
+		,'Small'
+		,'SonyEricsson'
+		,'Symbian OS'
+		,'SymbianOS'
+		,'TS21i-10'
+		,'UP.Browser'
+		,'UP.Link'
+		,'Windows CE'
+		,'WinWAP'
+		,'psp'
+        ,'PlayStation'
+		,'playstation'
+	);
+
+	foreach ($small_browsers as $browser) {
+        if (strstr($_SERVER["HTTP_USER_AGENT"], $browser)) {
+           return true;
+        }
+    }
+    return false;
+}
 ?>
