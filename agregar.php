@@ -24,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 	$enlace = $_POST["enlace"];
 	$descripcion = $_POST["descripcion"];
 	$etiquetas = $_POST["etiquetas"];
+	$salto = $_POST["salto"];
 	$privado = 0;
 	if (isset($_POST["privado"])) {
 		$privado = 1;
@@ -52,9 +53,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 		exit();
 	}
 	if (isset($_POST["regresa"])) {
+		if($salto=='cerrar') echo '<SCRIPT LANGUAGE="JavaScript">window.opener=self; window.close();self.close(); window.close(); </SCRIPT>';
+ 		else	
 		$url="Location: ".urldecode($_POST["regresa"]);
 		header($url);
-		exit();
 	} else {
 		header("Location: cpanel.php");
 		exit();
