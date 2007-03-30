@@ -29,7 +29,7 @@ if (!esAdmin()) {
 				$titulo = $_GET['titulo'];
 			}
 		}
-		header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "") . (isset($_GET['ret'])? "&ret=".$_GET['ret'] : "")));
+		header("Location: login.php?dirigir=" . urlencode("editar.php?url=".urlencode($_GET['url']) . (isset($titulo) ? "&titulo=".urlencode($titulo) : "") . (isset($_GET['ret'])? "&ret=".$_GET['ret'] : "") . (isset($_GET['salto']) ? "&salto=cerrar" : "")));
 		exit();
 	} else {
 		header("Location: login.php");
@@ -52,7 +52,7 @@ if (isset($_GET["id"])) {
 		exit();
 	}
 } elseif (isset($_GET["url"])) {
-	/* Si el enlace ya existe, redirigimos a la página para editarlo. */
+	/* Si el enlace ya existe, redirigimos a la pï¿½ina para editarlo. */
 	if(isInSabrosus($_GET["url"])) {
 		$sql = "SELECT id_enlace FROM ".$prefix."sabrosus WHERE enlace = '".$_GET["url"]."' LIMIT 1";
 		$r = mysql_fetch_array(mysql_query($sql,$link));
@@ -118,7 +118,7 @@ if (isset($_GET["id"])) {
 			<form method="post" action="<? echo (isset($_GET["id"]) ? "modifica.php" : "agregar.php"); ?>" onsubmit=" return checkQuotes()">
 			
 			<? if (isset($_GET["salto"])) echo "<input type=\"hidden\" name=\"salto\" value=\"".$_GET["salto"]."\">"; ?>
-
+			<? if (isset($_POST["salto"])) echo "<input type=\"hidden\" name=\"salto\" value=\"".$_POST["salto"]."\">"; ?>
 
 			<? if (!isset($_GET["id"]) && (isset($_GET["titulo"]) && isset($_GET["url"]))) { ?>
 				<input class="no_style" type="hidden" name="regresa" value="<?=(isset($_GET['ret']))? urlencode($_GET['ret']) : urlencode($_GET['url'])?>" />
