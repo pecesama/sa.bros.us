@@ -1,4 +1,4 @@
-<?
+﻿<?
 /* ===========================
 
   sabros.us monousuario version 1.8
@@ -117,8 +117,8 @@ if (isset($_GET["id"])) {
 		<div id="formulario">
 			<form method="post" action="<? echo (isset($_GET["id"]) ? "modifica.php" : "agregar.php"); ?>" onsubmit=" return checkQuotes()">
 			
-			<? if (isset($_GET["salto"])) echo "<input type=\"hidden\" name=\"salto\" value=\"".$_GET["salto"]."\">"; ?>
-			<? if (isset($_POST["salto"])) echo "<input type=\"hidden\" name=\"salto\" value=\"".$_POST["salto"]."\">"; ?>
+			<? if (isset($_GET["salto"])) echo "<input type=\"hidden\" class=\"no_style\" name=\"salto\" value=\"".$_GET["salto"]."\">"; ?>
+			<? if (isset($_POST["salto"])) echo "<input type=\"hidden\" class=\"no_style\" name=\"salto\" value=\"".$_POST["salto"]."\">"; ?>
 
 			<? if (!isset($_GET["id"]) && (isset($_GET["titulo"]) && isset($_GET["url"]))) { ?>
 				<input class="no_style" type="hidden" name="regresa" value="<?=(isset($_GET['ret']))? urlencode($_GET['ret']) : urlencode($_GET['url'])?>" />
