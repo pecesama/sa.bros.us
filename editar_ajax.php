@@ -43,7 +43,7 @@ if(!isset($_GET['enlace'])){
 			<label for="_descripcion<?=$row['id_enlace']?>"><?=__("Descripci&oacute;n")?>:</label><br />
 			<textarea name="descripcion" id="_descripcion<?=$row['id_enlace']?>" rows="3" cols="60"><?=$row['descripcion']?></textarea><br />
 
-			<label for="tags"><?=__("Tags")?>:</label><br />
+			<label for="tags"><?=__("Etiquetas")?>:</label><br />
 			<input type="text" name="tags" id="_tags<?=$row['id_enlace']?>" value="<?=$tags->linkTags($row['id_enlace'])?>"><br />
 	</fieldset>
 </div>
