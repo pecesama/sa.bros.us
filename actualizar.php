@@ -10,7 +10,7 @@ global $link,$prefix;
 
 // Crear tablas Tags y LinkHasTags
 
-$Error = __("Se ha producido un error miestras se actualizaban las estructuras");
+$Error = __("Se ha producido un error mientras se actualizaban las estructuras");
 	
 $res = mysql_query("SHOW TABLE STATUS LIKE '".$prefix."tags'",$link);
 if(mysql_num_rows($res) == 0){

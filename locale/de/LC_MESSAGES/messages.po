@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-26 22:04-0600\n"
+"POT-Creation-Date: 2007-04-26 23:10-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1133,11 +1133,11 @@ msgstr ""
 msgid "Error en las etiquetas"
 msgstr ""
 
-#: editar_ajax.js.php:38 editar_ajax.js.php:72
+#: editar_ajax.js.php:38 editar_ajax.js.php:72 editar_ajax.js.php:114
 msgid " Saboreando..."
 msgstr ""
 
-#: editar_ajax.js.php:114
+#: editar_ajax.js.php:114 editar_ajax.js.php:38
 msgid "Saboreando..."
 msgstr ""
 
@@ -1199,4 +1199,20 @@ msgstr ""
 
 #: tags.class.php:171
 msgid "Agregar esta etiqueta a la busqueda"
+msgstr ""
+
+#: actualizar.php:13
+msgid "Se ha producido un error mientras se actualizaban las estructuras"
+msgstr ""
+
+#: cpanel.php:38
+msgid "Realmente desea eliminar este enlace de su sabros.us?"
+msgstr ""
+
+#: cpanel.php:38
+msgid "Este evento no se puede deshacer!"
+msgstr ""
+
+#: editar_ajax.php:46
+msgid "Etiquetas"
 msgstr ""

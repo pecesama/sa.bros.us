@@ -35,7 +35,7 @@
 			function elimina(id_enlace)
 			{	// Algo de JavaScript para aquello de que no se quiera borrar.
 				var x;
-				x=window.confirm("<?=__("&iquest;Realmente desea eliminar este enlace de su sabros.us?");?>\n\n<?=__("Esta acci&oacute;n no se puede deshacer!");?>");				 
+				x=window.confirm("<?=__("Realmente desea eliminar este enlace de su sabros.us?");?>\n\n<?=__("Este evento no se puede deshacer!");?>");				 
 				if (x) { location="eliminar.php?id="+id_enlace+"&confirm=0"; }
 			}
 				
