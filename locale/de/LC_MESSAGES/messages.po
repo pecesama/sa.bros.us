@@ -1,382 +1,554 @@
-# German translation of Sa.bros.us
-# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Sa.bros.us package.
-# Alexander Drechsel <adrechsel@gmail.com>, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-13 10:20-0500\n"
+"POT-Creation-Date: 2007-04-26 22:04-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Alexander Drechsel <adrechsel@gmail.com>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: login.php:59
 #, fuzzy
 msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
 msgstr "bitte gib dein passwort ein"
 
+#: cpanel.php:38 eliminar.php:55
 #, fuzzy
 msgid "&iquest;Realmente desea eliminar este enlace de su sabros.us?"
 msgstr "willst du diesen link wirklich l&ouml;schen?"
 
+#: login.php:59
 #, fuzzy
 msgid "&iquest;olvidaste tu contrase&ntilde;a?"
 msgstr "bitte gib dein passwort ein"
 
+#: index.php:101 sabrosus.php:18 sabrosus.php:31
 #, fuzzy
 msgid "&iquest;qu&eacute; es sabros.us?"
 msgstr "was ist sa.bros.us?"
 
+#: pagination.php:58 pagination.php:62 pagination.php:67
 #, fuzzy
 msgid "&laquo; Anterior"
 msgstr "zur&uuml;ck"
 
+#: instalar.php:219 instalar.php:220
 msgid "(sin <q>/</q> al final)"
 msgstr ""
 
+#: instalar.php:171
 #, fuzzy
 msgid "-- Idiomas --"
 msgstr "sprache:"
 
-msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
+msgid ""
+"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
 msgstr ""
 
 msgid "/index.php\">ver el sitio.</a>"
 msgstr ""
 
+#: instalar.php:222 opciones.php:123
 #, fuzzy
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
 msgstr "friendly <abbr title=\"Uniform Resource Locator\">url</abbr>:"
 
+#: instalar.php:219 opciones.php:122
 #, fuzzy
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
-msgstr "<abbr title=\"Uniform Resource Locator\">url</abbr> zu deinem sa.bros.us:"
+msgstr ""
+"<abbr title=\"Uniform Resource Locator\">url</abbr> zu deinem sa.bros.us:"
 
-msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
-msgstr "haupt-<abbr title=\"Uniform Resource Locator\">url</abbr> deiner website:"
+#: instalar.php:220 opciones.php:121
+msgid ""
+"<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
+msgstr ""
+"haupt-<abbr title=\"Uniform Resource Locator\">url</abbr> deiner website:"
 
+#: update.php:80
 #, fuzzy
-msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
-msgstr "<strong>warnung</strong>: die aktualisierung wurde schon durchgef&uuml;hrt. sie muss nicht erneut durchgef&uuml;hrt werden."
+msgid ""
+"<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada "
+"anteriormente. no es necesario volver a ejecutarla."
+msgstr ""
+"<strong>warnung</strong>: die aktualisierung wurde schon durchgef&uuml;hrt. "
+"sie muss nicht erneut durchgef&uuml;hrt werden."
 
+#: instalar.php:224 opciones.php:125
 #, fuzzy
 msgid "Activado"
 msgstr "aktiviert"
 
+#: generarBadgeTags.php:74
 #, fuzzy
 msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
 msgstr "meine tags bei sa.bros.us"
 
+#: generarBadge.php:84
 #, fuzzy
 msgid "Agrega los URLs de sabros.us a t&uacute; sitio."
 msgstr "meine tags bei sa.bros.us"
 
+#: editar.php:150
 #, fuzzy
 msgid "Agregar etiquetas"
 msgstr "vergebene tags (per klick hinzuf&uuml;gen)"
 
+#: generarBadge.php:102
 #, fuzzy
 msgid "Agregue sus preferencias al c&oacute;digo generado."
 msgstr "code anpassen"
 
+#: generarBadgeTags.php:90 opciones.php:153
 #, fuzzy
 msgid "Aleatorio"
 msgstr "zuf&auml;llig"
 
+#: cpanel.php:133 cpanel.php:135
 msgid "Anterior"
 msgstr "zur&uuml;ck"
 
+#: importar.php:98
 #, fuzzy
 msgid "Archivo:"
 msgstr "datei:"
 
+#: editar.php:164
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
 msgstr "f&uuml;ge einfach den folgenden link zu deinen lesezeichen hinzu:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 #, fuzzy
 msgid "Azul"
 msgstr "blau"
 
+#: instalar.php:207
 msgid "Base de Datos:"
 msgstr ""
 
+#: tags.class.php:274
 msgid "Buscar enlaces con"
 msgstr ""
 
+#: cpanel.php:81
 #, fuzzy
 msgid "Buscar:"
 msgstr "suche"
 
+#: importar.php:120
 #, fuzzy
-msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
-msgstr "klicke auf <kbd>durchsuchen</kbd>, um die gespeicherte lesezeichen-datei auf deinem computer zu finden. diese darf h&ouml;chstens 1 mb gro&szlig; sein."
+msgid ""
+"Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado "
+"en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de "
+"1MB"
+msgstr ""
+"klicke auf <kbd>durchsuchen</kbd>, um die gespeicherte lesezeichen-datei auf "
+"deinem computer zu finden. diese darf h&ouml;chstens 1 mb gro&szlig; sein."
 
+#: importar.php:122
 #, fuzzy
-msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
-msgstr "klicke auf <kbd>importieren</kbd> und los geht's. der import kann ein paar augenblicke dauern."
+msgid ""
+"Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; "
+"esto puede llevar algo de tiempo"
+msgstr ""
+"klicke auf <kbd>importieren</kbd> und los geht's. der import kann ein paar "
+"augenblicke dauern."
 
+#: generarBadgeTags.php:86 opciones.php:149
 #, fuzzy
 msgid "Color para la nube de etiquetas:"
 msgstr "farbe der tag-wolke:"
 
+#: opciones.php:146
 #, fuzzy
 msgid "Configuraci&oacute;n de la apariencia"
 msgstr "konfiguration und aussehen"
 
+#: instalar.php:201
 #, fuzzy
 msgid "Configuraci&oacute;n de la base de datos"
 msgstr "konfiguration und aussehen"
 
+#: instalar.php:212 opciones.php:118
 #, fuzzy
 msgid "Configuraci&oacute;n de sabros.us"
 msgstr "sa.bros.us-konfiguration"
 
+#: opciones.php:180
 #, fuzzy
 msgid "Configuraci&oacute;n del administrador"
 msgstr "administratorenkonfiguration"
 
+#: instalar.php:244
 msgid "Configurar"
 msgstr ""
 
+#: opciones.php:181
 #, fuzzy
 msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
 msgstr "passwort f&uuml;r die <strong>konsole</strong>"
 
+#: login.php:53
 #, fuzzy
 msgid "Contrase&ntilde;a:"
 msgstr "passwort:"
 
+#: cpanel.php:114
 #, fuzzy
 msgid "Control de contenidos"
 msgstr "gespeicherte links"
 
+#: generarBadge.php:88 generarBadgeTags.php:122
 #, fuzzy
 msgid "Copiar el c&oacute;digo fuente"
 msgstr "quelltext"
 
+#: tags.class.php:181
 msgid "Da clic para etiquetar esta entrada con"
 msgstr "den link per klick mit diesem tag versehen"
 
+#: importardelicious.php:85
 msgid "Datos de del.icio.us"
 msgstr ""
 
+#: instalar.php:30
 msgid "Debes introducir el nombre de la base de datos a utilizar"
 msgstr ""
 
+#: instalar.php:31
 msgid "Debes introducir el password para el usuario admin"
 msgstr ""
 
+#: instalar.php:29
 msgid "Debes introducir el password para la base de datos"
 msgstr ""
 
+#: instalar.php:27
 msgid "Debes introducir el servidor de base de datos"
 msgstr ""
 
+#: instalar.php:28
 msgid "Debes introducir el usuario para la base de datos"
 msgstr ""
 
+#: instalar.php:33
 msgid "Debes introducir la URL para el sitio"
 msgstr ""
 
+#: instalar.php:32
 msgid "Debes introducir la URL para sabros.us"
 msgstr ""
 
+#: opciones.php:182
 #, fuzzy
 msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
-msgstr "bitte freilassen, wenn die passw&ouml;rtern nicht ge&auml;ndert werden sollen."
+msgstr ""
+"bitte freilassen, wenn die passw&ouml;rtern nicht ge&auml;ndert werden "
+"sollen."
 
+#: instalar.php:225 opciones.php:126
 #, fuzzy
 msgid "Desactivado"
 msgstr "deaktiviert"
 
+#: instalar.php:218 opciones.php:120
 #, fuzzy
 msgid "Descripci&oacute;n del sitio:"
 msgstr "beschreibung deiner website:"
 
+#: editar.php:139
 #, fuzzy
 msgid "Descripci&oacute;n:"
 msgstr "beschreibung:"
 
+#: opciones.php:183
 #, fuzzy
 msgid "E-mail:"
 msgstr "e-mail:"
 
+#: editar.php:132
 #, fuzzy
 msgid "Edita los datos de tu enlace."
 msgstr "linkdaten bearbeiten"
 
+#: cpanel.php:123 editar_ajax.php:79 index.php:228
 #, fuzzy
 msgid "Editar"
 msgstr "bearbeiten"
 
 #, fuzzy
-msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
-msgstr "die datei <code>include/config.ini</code> kann nicht bearbeitet werden (fehlende schreibrechte)."
+msgid ""
+"El archivo <code>include/config.ini</code> no tiene permisos de escritura"
+msgstr ""
+"die datei <code>include/config.ini</code> kann nicht bearbeitet werden "
+"(fehlende schreibrechte)."
 
-msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
+#: recordar.php:90
+msgid ""
+"El email ingresado en el formulario es distinto al que esta guardado en la "
+"base de datos"
 msgstr ""
 
+#: sabrosus.php:42
 #, fuzzy
-msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>."
-msgstr "<a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> und <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">pedro santana</a> haben das sa.bros.us-projekt 2005 begonnen, zusammen mit <a href=\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"Sa.bros.us team\">anderen mitarbeitern</a>."
+msgid ""
+"El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title="
+"\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/"
+"\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta "
+"con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/"
+"memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros "
+"miembros</a>."
+msgstr ""
+"<a href=\"http://www.stanmx.com/\" title=\"StanMX\">estanislao vizcarra</a> "
+"und <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">pedro "
+"santana</a> haben das sa.bros.us-projekt 2005 begonnen, zusammen mit <a href="
+"\"https://sourceforge.net/project/memberlist.php?group_id=143603\" title="
+"\"Sa.bros.us team\">anderen mitarbeitern</a>."
 
 #, fuzzy
-msgid "El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
-msgstr "sa.bros.us ist 'open source' (du kannst es also benutzen und den original-code bearbeiten) und l&auml;uft mit PHP und MySQL. die offizielle homepage findest du <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us\">hier</a>; herunterladen kannst du das programm bei <a href=\"https://sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project\">sourceforge.net</a>."
+msgid ""
+"El proyecto sabros.us es 'open source' (puedes utilizar y modificar el "
+"c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina "
+"oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us"
+"\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/"
+"projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
+msgstr ""
+"sa.bros.us ist 'open source' (du kannst es also benutzen und den original-"
+"code bearbeiten) und l&auml;uft mit PHP und MySQL. die offizielle homepage "
+"findest du <a href=\"http://sabrosus.sourceforge.net/\" title=\"sa.bros.us"
+"\">hier</a>; herunterladen kannst du das programm bei <a href=\"https://"
+"sourceforge.net/projects/sabrosus/\" title=\"sa.bros.us project"
+"\">sourceforge.net</a>."
 
-msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
+#: importardelicious.php:67
+msgid ""
+"El usuario o la contrase&ntilde;a introducidos no son correctos, por favor "
+"verificalos e intenta nuevamente."
 msgstr ""
 
+#: cpanel.php:124
 #, fuzzy
 msgid "Eliminar"
 msgstr "l&ouml;schen"
 
+#: editar.php:157
 #, fuzzy
 msgid "Eliminar enlace"
 msgstr "link l&ouml;schen"
 
+#: instalar.php:216
 #, fuzzy
 msgid "Email:"
 msgstr "e-mail:"
 
+#: cpanel.php:121 editar.php:142
 #, fuzzy
 msgid "Enlace Privado:"
 msgstr "privater link:"
 
+#: editar.php:136
 #, fuzzy
 msgid "Enlace:"
 msgstr "links von"
 
+#: rss.php:54 rss.php:60 rss92.php:54
 msgid "Enlaces de"
 msgstr "links von"
 
+#: opciones.php:148
 #, fuzzy
 msgid "Enlaces por p&aacute;gina:"
 msgstr "links pro seite:"
 
-msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
+#: opciones.php:141
+msgid ""
+"Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title="
+"\"SopaSabrosa\">SopaSabrosa</a>:"
 msgstr ""
 
+#: editar_ajax.php:54 index.php:194 functions.php:39
 msgid "Error al ejecutar la consulta en la DB"
 msgstr ""
 
+#: sabrosus.php:53
 #, fuzzy
 msgid "Es 'open source'."
 msgstr "open source"
 
+#: sabrosus.php:51
 #, fuzzy
 msgid "Es sencillo y r&aacute;pido de instalar."
 msgstr "einfache installation"
 
+#: editar.php:148
 #, fuzzy
-msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
-msgstr "eine liste von tags zur beschreibung des links, getrennt durch leerzeichen (bsp.: xhtml css php)"
+msgid ""
+"Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
+msgstr ""
+"eine liste von tags zur beschreibung des links, getrennt durch leerzeichen "
+"(bsp.: xhtml css php)"
 
+#: editar.php:132
 #, fuzzy
 msgid "Escribe los datos de tu enlace."
 msgstr "angaben zum lesezeichen"
 
+#: cpanel.php:38 eliminar.php:56
 #, fuzzy
 msgid "Esta acci&oacute;n no se puede deshacer!"
 msgstr "dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!"
 
+#: tags.class.php:261
 msgid "Etiquetas relacionadas:"
 msgstr ""
 
+#: editar.php:145
 #, fuzzy
 msgid "Etiquetas:"
 msgstr "tags:"
 
+#: importar.php:113
 #, fuzzy
 msgid "Exportar tus marcadores de tu navegador a un archivo"
 msgstr "exportiere deine lesezeichen vom browser in eine datei"
 
+#: sabrosus.php:44
 msgid "FUNCIONALIDADES:"
 msgstr "funktionen:"
 
+#: generarBadge.php:106
 #, fuzzy
 msgid "Filtrar por etiqueta:"
 msgstr "nach tag filtern:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 #, fuzzy
 msgid "Gris"
 msgstr "grau"
 
+#: opciones.php:112
 #, fuzzy
 msgid "Ha ocurrido un error al almacenar los cambios"
 msgstr "ein fehler ist aufgetreten."
 
-msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
+#: importardelicious.php:72
+msgid ""
+"Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). "
+"Por favor intenta nuevamente en unos instantes."
 msgstr ""
 
+#: close.php:43
 msgid "Ha ocurrido un error."
 msgstr "fehler"
 
+#: index.php:173
 #, fuzzy
-msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
-msgstr "es sind <strong>%no_enlaces%</strong> links gespeichert. angezeigt werden die links <strong>%desde%</strong> bis1 <strong>%total%</strong>."
+msgid ""
+"Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el "
+"<strong>%desde%</strong> hasta el <strong>%total%</strong>"
+msgstr ""
+"es sind <strong>%no_enlaces%</strong> links gespeichert. angezeigt werden "
+"die links <strong>%desde%</strong> bis1 <strong>%total%</strong>."
 
+#: generarBadge.php:110 generarBadgeTags.php:129
 #, fuzzy
 msgid "Hoja de estilo de mi sabros.us"
 msgstr "style-sheet f&uuml;r mein sa.bros.us"
 
+#: instalar.php:227
 #, fuzzy
 msgid "Idioma"
 msgstr "sprache:"
 
+#: opciones.php:128
 #, fuzzy
 msgid "Idioma:"
 msgstr "sprache:"
 
+#: importar.php:97 importar.php:106
 #, fuzzy
 msgid "Importar"
 msgstr "importieren"
 
-msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
+#: recordar.php:88
+msgid ""
+"Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido "
+"a que nunca ingres&oacute; el email del administrador"
 msgstr ""
 
+#: editar.php:163
 #, fuzzy
 msgid "Instalar el bookmarklet."
 msgstr "bookmarklet installieren"
 
+#: importar.php:110
 #, fuzzy
 msgid "Instrucciones"
 msgstr "anleitung"
 
+#: login.php:52
 #, fuzzy
 msgid "Introduzca su contrase&ntilde;a"
 msgstr "bitte gib dein passwort ein"
 
+#: importar.php:115
 #, fuzzy
-msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
-msgstr "internet explorer: <kbd>datei &gt; import und export... &gt; favoriten exportieren</kbd>"
+msgid ""
+"Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar "
+"favoritos</kbd>"
+msgstr ""
+"internet explorer: <kbd>datei &gt; import und export... &gt; favoriten "
+"exportieren</kbd>"
 
+#: instalar.php:249
 #, fuzzy
-msgid "La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
-msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
+msgid ""
+"La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de "
+"control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el "
+"sitio</a>."
+msgstr ""
+"<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a "
+"href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a "
+"href=\"/index.php\">deine site besuchen.</a>"
 
-msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
+#: recordar.php:82
+msgid ""
+"La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise "
+"su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
 msgstr ""
 
-msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:"
+#: recordar.php:29
+msgid ""
+"La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - "
+"Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La "
+"nueva contrasea para ingresar al panel de sabros.us es:"
 msgstr ""
 
+#: opciones.php:36
 #, fuzzy
 msgid "Las contrase&ntilde;as deben ser iguales"
 msgstr "die passw&ouml;rter stimmen nicht &uuml;berein."
 
+#: opciones.php:107
 #, fuzzy
 msgid "Los cambios se han almacenado con &eacute;xito"
 msgstr "&auml;nderungen wurden aktualisiert."
 
+#: instalar.php:34 instalar.php:35
 msgid "Los passwords introducidos no coinciden"
 msgstr ""
 
+#: badge.php:58
 msgid "M&aacute;s en"
 msgstr "mehr in"
 
@@ -386,460 +558,645 @@ msgstr "mein sa.bro.sus"
 msgid "Mis etiquetas en sa.bro.sus"
 msgstr "meine tags bei sa.bros.us"
 
+#: opciones.php:173
 #, fuzzy
 msgid "Mostrar contenidos multimedia:"
 msgstr "multimedia-inhalte anzeigen:"
 
+#: opciones.php:175
 msgid "Mostrar descripciones en el badge de enlaces:"
 msgstr ""
 
+#: opciones.php:177
 #, fuzzy
 msgid "Mostrar la nube de etiquetas a la derecha:"
 msgstr "farbe der tag-wolke:"
 
+#: opciones.php:176
 #, fuzzy
 msgid "Mostrar solo la nube de etiquetas en la portada:"
 msgstr "farbe der tag-wolke:"
 
+#: importar.php:116
 #, fuzzy
-msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
-msgstr "mozilla firefox: <kbd>lesezeichen &gt; lesezeichen-manager... &gt; datei &gt; export...</kbd>"
+msgid ""
+"Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo "
+"&gt; exportar...</kbd>"
+msgstr ""
+"mozilla firefox: <kbd>lesezeichen &gt; lesezeichen-manager... &gt; datei "
+"&gt; export...</kbd>"
 
+#: instalar.php:221
 #, fuzzy
 msgid "N&uacute;mero de enlaces por p&aacute;gina:"
 msgstr "links pro seite:"
 
+#: generarBadge.php:104
 #, fuzzy
 msgid "N&uacute;mero de enlaces:"
 msgstr "anzahl links:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 #, fuzzy
 msgid "Naranja"
 msgstr "orange"
 
+#: importar.php:117
 #, fuzzy
-msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
-msgstr "netscape: <kbd>lesezeichen &gt; lesezeichen verwalten... &gt; extras &gt; export...</kbd>"
+msgid ""
+"Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas "
+"&gt; exportar...</kbd>"
+msgstr ""
+"netscape: <kbd>lesezeichen &gt; lesezeichen verwalten... &gt; extras &gt; "
+"export...</kbd>"
 
-msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
+#: instalar.php:37
+msgid ""
+"No es posible escribir el archivo <code>include/config.php</code>. Debes "
+"cambiar los permisos de dicho archivo de modo de poder ser escrito por el "
+"instalador."
 msgstr ""
 
-msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
+#: cpanel.php:74 index.php:120
+msgid ""
+"No es posible exportar enlaces, debido a que el directorio <code>tmp</code> "
+"no cuenta con permisos de escritura."
 msgstr ""
 
-msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
+#: instalar.php:36
+msgid ""
+"No fue posible conectarse a la base de datos. Ppor favor revisa los valores "
+"introducidos e intentalo nuevamente"
 msgstr ""
 
+#: index.php:184
 #, fuzzy
 msgid "No hay ning&uacute;n enlace en este sabros.us todav&iacute;a."
 msgstr "in diesem sa.bros.us wurden noch keine links gespeichert."
 
-msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
+#: importardelicious.php:58
+msgid ""
+"No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya "
+"estar incluidos en sabros.us."
 msgstr ""
 
+#: instalar.php:217
 #, fuzzy
 msgid "Nombre de tu sitio:"
 msgstr "name deiner website:"
 
+#: opciones.php:119
 #, fuzzy
 msgid "Nombre del sitio:"
 msgstr "name deiner website:"
 
+#: generarBadgeTags.php:105
 msgid "Nube de ejemplo"
 msgstr ""
 
+#: recordar.php:99
 #, fuzzy
 msgid "Nueva contrase&ntilde;a"
 msgstr "passwort speichern"
 
+#: importar.php:103
 #, fuzzy
 msgid "P&uacute;blico"
 msgstr "&ouml;ffentlich"
 
-msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
+#: importardelicious.php:82
+msgid ""
+"Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
 msgstr ""
 
+#: generarBadge.php:89 generarBadgeTags.php:123
 #, fuzzy
-msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
-msgstr "kopiere diesen code und f&uuml;ge ihn an der gew&uuml;nschten stelle in deinem blog oder deiner website ein."
+msgid ""
+"Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que "
+"hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog "
+"o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en "
+"tu sabros.us."
+msgstr ""
+"kopiere diesen code und f&uuml;ge ihn an der gew&uuml;nschten stelle in "
+"deinem blog oder deiner website ein."
 
+#: instalar.php:214
 msgid "Password para el control panel:"
 msgstr ""
 
+#: instalar.php:205
 msgid "Password:"
 msgstr ""
 
+#: sabrosus.php:47
 #, fuzzy
-msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
+msgid ""
+"Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se "
+"puede a&ntilde;adir a tu navegador."
 msgstr "lesezeichen schnell per browser hinzuf&uuml;gen"
 
+#: sabrosus.php:49
 #, fuzzy
-msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
+msgid ""
+"Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
 msgstr "rss-feeds f&uuml;r alle lesezeichen oder einzelne tags"
 
+#: sabrosus.php:50
 #, fuzzy
 msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
 msgstr "tag-wolke f&uuml;r alle tags m&ouml;glich"
 
+#: sabrosus.php:46
 #, fuzzy
 msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
 msgstr "lesezeichen per konsole organisieren"
 
+#: sabrosus.php:48
 #, fuzzy
-msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
-msgstr "jedes lesezeichen mit tags versehen, damit auch andere lesezeichen mit dem gleichen tag finden"
+msgid ""
+"Permite insertar 'tags' de cada bookmark, para que posteriormente pueda "
+"servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
+msgstr ""
+"jedes lesezeichen mit tags versehen, damit auch andere lesezeichen mit dem "
+"gleichen tag finden"
 
+#: opciones.php:174
 #, fuzzy
 msgid "Permitir que se exporten los enlaces:"
 msgstr "link-export erlauben:"
 
+#: generarBadgeTags.php:78
 #, fuzzy
 msgid "Personalice la nube de etiquetas:"
 msgstr "farbe der tag-wolke:"
 
+#: instalar.php:208
 msgid "Prefijo para las tablas:"
 msgstr ""
 
+#: importar.php:101
 #, fuzzy
 msgid "Privacidad:"
 msgstr "status:"
 
+#: importar.php:104
 #, fuzzy
 msgid "Privado"
 msgstr "privat"
 
+#: index.php:290
 msgid "RSS de la etiqueta"
 msgstr "rss-feed f&uuml;r aktuellen tag"
 
+#: index.php:288 sabrosus.php:59
 #, fuzzy
 msgid "RSS de sabros.us"
 msgstr "rss-feed f&uuml;r dieses sa.bros.us"
 
+#: instalar.php:206
 #, fuzzy
 msgid "Reescribe el Password:"
 msgstr "passwort best&auml;tigen:"
 
+#: instalar.php:215
 #, fuzzy
 msgid "Reescribe el password:"
 msgstr "passwort best&auml;tigen:"
 
+#: opciones.php:182
 #, fuzzy
 msgid "Reescribe la contrase&ntilde;a:"
 msgstr "passwort best&auml;tigen:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 #, fuzzy
 msgid "Rojo"
 msgstr "rot"
 
-msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
+#: importardelicious.php:57
+msgid ""
+"Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde "
+"del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
 msgstr ""
 
-msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
+#: recordar.php:92
+msgid ""
+"Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva "
+"a intentarlo m&aacute;s tarde"
 msgstr ""
 
+#: importar.php:121
 #, fuzzy
-msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
-msgstr "w&auml;hle den standard-status f&uuml;r deine importierten lesezeichen aus."
+msgid ""
+"Seleccionar la privacidad por defecto asignada a los marcadores importados"
+msgstr ""
+"w&auml;hle den standard-status f&uuml;r deine importierten lesezeichen aus."
 
+#: generarBadgeTags.php:79
 #, fuzzy
-msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
+msgid ""
+"Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
 msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
 
+#: generarBadge.php:103
 #, fuzzy
 msgid "Seleccione sus preferencias para desplegar su sabros.us:"
 msgstr "w&auml;hle die eigenschaften deines sa.bros.us-badge:"
 
+#: instalar.php:203
 msgid "Servidor:"
 msgstr ""
 
+#: generarBadge.php:111 generarBadgeTags.php:130
 #, fuzzy
-msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
-msgstr "wenn du den code anpassen willst, dies ist die verwendete xmlt-struktur."
+msgid ""
+"Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la "
+"estructura del XHTML generado por sabros.us badge."
+msgstr ""
+"wenn du den code anpassen willst, dies ist die verwendete xmlt-struktur."
 
-msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
+#: recordar.php:100
+msgid ""
+"Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico "
+"del administrador de sabros.us en el siguiente formulario y le enviaremos "
+"una nueva contrase&ntilde;a a su cuenta de correo."
 msgstr ""
 
-msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+#: generarBadgeTags.php:75
+msgid ""
+"Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en "
+"tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se "
+"muestre m&aacute;s grande."
 msgstr ""
 
+#: generarBadge.php:85
 #, fuzzy
-msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sabros.us"
-msgstr "wenn du ein blog oder eine website hast, kannst du die neuesten links in deinem sa.bros.us dort anzeigen."
+msgid ""
+"Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s "
+"recientes ingresados en tu sabros.us"
+msgstr ""
+"wenn du ein blog oder eine website hast, kannst du die neuesten links in "
+"deinem sa.bros.us dort anzeigen."
 
+#: cpanel.php:140 cpanel.php:142 instalar.php:181
 msgid "Siguiente"
 msgstr "vorw&auml;rts"
 
+#: pagination.php:215 pagination.php:219
 #, fuzzy
 msgid "Siguiente &raquo;"
 msgstr "vorw&auml;rts"
 
+#: editar.php:133
 #, fuzzy
 msgid "T&iacute;tulo:"
 msgstr "titel:"
 
+#: generarBadgeTags.php:83
 msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
 msgstr ""
 
+#: generarBadgeTags.php:81
 msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
 msgstr ""
 
+#: close.php:41
 msgid "Terminando sesi&oacute;n..."
 msgstr "du bist ausgeloggt."
 
+#: sabrosus.php:52
 #, fuzzy
 msgid "Tiene un atractivo dise&ntilde;o."
 msgstr "modernes design"
 
+#: instalar.php:204
 #, fuzzy
 msgid "Usuario:"
 msgstr "suche:"
 
+#: cpanel.php:122
 msgid "Ver"
 msgstr ""
 
+#: generarBadgeTags.php:90 opciones.php:153
 #, fuzzy
 msgid "Verde"
 msgstr "gr&uuml;n"
 
+#: update.php:29 update.php:40
 #, fuzzy
 msgid "actualizaci&oacute;n"
 msgstr "aktualisierung"
 
+#: opciones.php:184 update.php:75
 msgid "actualizar"
 msgstr "aktualisieren"
 
+#: editar.php:157
 msgid "agregar"
 msgstr "hinzuf&uuml;gen"
 
+#: editar.php:164
 #, fuzzy
 msgid "agregar a sabros.us"
 msgstr "zu sa.bros.us hinzuf&uuml;gen"
 
+#: cpanel.php:61 editar.php:82 editar.php:104 editar.php:110
 msgid "agregar enlace"
 msgstr "link hinzuf&uuml;gen"
 
+#: cpanel.php:83
 msgid "buscar"
 msgstr "suche"
 
+#: importardelicious.php:88
 #, fuzzy
 msgid "contrase&ntilde;a:"
 msgstr "passwort:"
 
+#: editar.php:157
 #, fuzzy
 msgid "editar"
 msgstr "bearbeiten"
 
+#: editar.php:82 editar.php:104
 msgid "editar enlace"
 msgstr "link bearbeiten"
 
+#: editar_ajax.php:110 index.php:258
 msgid "el"
 msgstr "um"
 
+#: eliminar.php:59
 #, fuzzy
 msgid "eliminar"
 msgstr "l&ouml;schen"
 
+#: eliminar.php:38 eliminar.php:48
 msgid "eliminar enlace"
 msgstr "link l&ouml;schen"
 
+#: recordar.php:101
 #, fuzzy
 msgid "email:"
 msgstr "e-mail:"
 
+#: editar_ajax.php:108 index.php:256
 msgid "en"
 msgstr "in"
 
+#: tags.class.php:171 tags.class.php:184
 msgid "enlaces con esta etiqueta"
 msgstr "links mit diesem tag"
 
+#: cpanel.php:64
 #, fuzzy
 msgid "exportar"
 msgstr "exportieren"
 
+#: index.php:262
 #, fuzzy
 msgid "exportar a mi sabros.us"
 msgstr "in mein sa.bros.us kopieren"
 
+#: cpanel.php:151 editar.php:169 eliminar.php:65 generarBadge.php:128
+#: generarBadgeTags.php:148 importar.php:127 importardelicious.php:99
+#: index.php:286 instalar.php:255 login.php:67 opciones.php:190
+#: recordar.php:108 sabrosus.php:58 update.php:86
 #, fuzzy
 msgid "generado con:"
 msgstr "L&auml;uft mit"
 
+#: cpanel.php:62
 msgid "generar badge"
 msgstr ""
 
+#: generarBadge.php:76 generarBadgeTags.php:52
 msgid "generar badge de la nube de etiquetas"
 msgstr ""
 
+#: generarBadge.php:24 generarBadge.php:73 generarBadgeTags.php:62
+#: generarBadgeTags.php:65
 msgid "generar badge de los enlaces"
 msgstr "badge erstellen"
 
+#: generarBadgeTags.php:99
 #, fuzzy
 msgid "generar c&oacute;digo"
 msgstr "quelltext"
 
+#: login.php:55
 #, fuzzy
 msgid "guardar contrase&ntilde;a"
 msgstr "passwort speichern"
 
+#: cpanel.php:63 importardelicious.php:90
 #, fuzzy
 msgid "importar"
 msgstr "importieren"
 
+#: importar.php:89
 msgid "importar de del.icio.us"
 msgstr ""
 
+#: importardelicious.php:33 importardelicious.php:42
 msgid "importar de delicious"
 msgstr ""
 
+#: importardelicious.php:45
 msgid "importar desde un archivo"
 msgstr ""
 
+#: importar.php:76 importar.php:86
 msgid "importar marcadores"
 msgstr "lesezeichen importieren"
 
+#: login.php:60
 #, fuzzy
 msgid "ingresar"
 msgstr "einloggen"
 
+#: login.php:37 login.php:46
 msgid "ingreso"
 msgstr "einloggen"
 
+#: index.php:85 sabrosus.php:33
 #, fuzzy
 msgid "inicio sabros.us"
 msgstr "sa.bros.us-startseite"
 
+#: instalar.php:141 instalar.php:160
 #, fuzzy
 msgid "instalaci&oacute;n"
 msgstr "aktualisierung"
 
+#: cpanel.php:65
 msgid "ir a opciones"
 msgstr "einstellungen"
 
+#: cpanel.php:66 opciones.php:101 recordar.php:76
 #, fuzzy
 msgid "ir a sabros.us"
 msgstr "zu deiner sa.bros.us-startseite"
 
 #, fuzzy
-msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
-msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
+msgid ""
+"la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. puedes acceder al <a href=\""
+msgstr ""
+"<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a "
+"href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a "
+"href=\"/index.php\">deine site besuchen.</a>"
 
+#: generarBadgeTags.php:134
 #, fuzzy
 msgid "mis etiquetas en sabros.us"
 msgstr "meine tags bei sa.bros.us"
 
+#: opciones.php:76 opciones.php:98
 msgid "opciones"
 msgstr "einstellungen"
 
+#: tags.class.php:75
 #, fuzzy
 msgid "ordena por la etiqueta"
 msgstr "nach tag sortieren"
 
+#: cpanel.php:26 cpanel.php:59 editar.php:105 eliminar.php:49
+#: generarBadge.php:75 generarBadgeTags.php:64 importar.php:88
+#: importardelicious.php:44 index.php:101 opciones.php:100 recordar.php:75
 #, fuzzy
 msgid "panel de control"
 msgstr "konsole"
 
+#: recordar.php:50 recordar.php:73
 msgid "recordar contrase&ntilde;a"
 msgstr ""
 
+#: sabrosus.php:33
 #, fuzzy
 msgid "regresar a sabros.us"
 msgstr "zur&uuml;ck zu sa.bros.us"
 
+#: sabrosus.php:38
 #, fuzzy
-msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr "sa.bros.us ist ein cms, mit dem du lesezeichen auf deiner website organisieren kannst - genau so wie bei de.licio.us. aber mit sa.bros.us kannst du das auf deiner eigenen website machen."
+msgid ""
+"sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que "
+"insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes "
+"gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro "
+"servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n "
+"en tu propio sitio web."
+msgstr ""
+"sa.bros.us ist ein cms, mit dem du lesezeichen auf deiner website "
+"organisieren kannst - genau so wie bei de.licio.us. aber mit sa.bros.us "
+"kannst du das auf deiner eigenen website machen."
 
+#: update.php:73
 #, fuzzy
-msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
-msgstr "wenn die zeichen eher selten zu sein scheinen, klicke auf die schaltfl&auml;che, um den fehler zu beheben."
+msgid ""
+"si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton "
+"para solucionarlo."
+msgstr ""
+"wenn die zeichen eher selten zu sein scheinen, klicke auf die schaltfl&auml;"
+"che, um den fehler zu beheben."
 
+#: recordar.php:102
 msgid "solicitar nueva"
 msgstr ""
 
+#: cpanel.php:67
 msgid "terminar la sesi&oacute;n"
 msgstr "ausloggen"
 
+#: close.php:27 close.php:37
 msgid "terminar sesi&oacute;n"
 msgstr "ausloggen"
 
+#: importardelicious.php:86
 #, fuzzy
 msgid "usuario:"
 msgstr "suche:"
 
-#, fuzzy
-#~ msgid "<strong>Atenci&oacute;n</strong>: no se puede acceder a la informaci&oacute;n necesaria para realizar la actualizaci&oacute;n. por favor, asegurese de que el archivo <code>include/config.php</code> no haya sido reemplazado y tengas los datos de su antig&uuml;a versi&oacute;n."
-#~ msgstr "<strong>warnung</strong>: die f&uuml;r die aktualisierung notwendigen informationen konnten nicht gelesen werden. bitte &uuml;berpr&uuml;fe, ob die datei <code>include/config.php</code> nicht versehentlich ersetzt wurde und dass sie nicht daten einer vorhergehenden version enth&auml;lt."
+#: actualizar.php:13
+msgid "Se ha producido un error miestras se actualizaban las estructuras"
+msgstr ""
 
-#, fuzzy
-#~ msgid "<strong>error</strong>: el archivo <code>include/config.php</code> no tiene permiso de escritura. c&aacute;mbie los atributos del archivo y vuelva a ejecutar &eacute;sta actualizaci&oacute;n."
-#~ msgstr "<strong>fehler</strong>: die datei <code>include/config.php</code> hat nicht die erforderlichen schreibrechte. bitte &auml;ndere sie und f&uuml;hre die aktualisierung erneut durch."
+#: badge.php:42 badge.php:58
+msgid "Mi sabros.us"
+msgstr ""
 
-#, fuzzy
-#~ msgid "Actualizaci&oacute;n de sabros.us"
-#~ msgstr "sa.bros.us-aktualisierung"
+#: badgeTags.php:18
+msgid "Mis etiquetas en sabros.us"
+msgstr ""
 
-#~ msgid "Actualizar"
-#~ msgstr "aktualisieren"
+#: editar.php:92
+msgid "Error en las etiquetas"
+msgstr ""
 
-#~ msgid "Ir a la p&aacute;gina:"
-#~ msgstr "gehe zu:"
+#: editar_ajax.js.php:38 editar_ajax.js.php:72
+msgid " Saboreando..."
+msgstr ""
 
-#, fuzzy
-#~ msgid "Se proceder&aacute; a realizar la actualizaci&oacute;n de versiones. Solo tiene que presionar el boton 'actualizar' y el proceso se realizar&aacute; automaticamente."
-#~ msgstr "die aktualisierung kann nun beginnen. klicke einfach auf die schaltfl&auml;che 'aktualisieren' und sie wird automatisch durchgef&uuml;hrt."
+#: editar_ajax.js.php:114
+msgid "Saboreando..."
+msgstr ""
 
-#, fuzzy
-#~ msgid "activado"
-#~ msgstr "aktiviert"
+#: editar_ajax.js.php:118
+msgid "Guardar"
+msgstr ""
 
-#, fuzzy
-#~ msgid "aleatorio"
-#~ msgstr "zuf&auml;llig"
+#: editar_ajax.js.php:119
+msgid "Cancelar"
+msgstr ""
 
-#, fuzzy
-#~ msgid "azul"
-#~ msgstr "blau"
+#: editar_ajax.php:36
+msgid "Editar enlace"
+msgstr ""
 
-#, fuzzy
-#~ msgid "color para la nube de etiquetas:"
-#~ msgstr "farbe der tag-wolke:"
+#: editar_ajax.php:37
+msgid "Titulo"
+msgstr ""
 
-#, fuzzy
-#~ msgid "desactivado"
-#~ msgstr "deaktiviert"
+#: editar_ajax.php:40
+msgid "Enlace"
+msgstr ""
 
-#, fuzzy
-#~ msgid "descripci&oacute;n del sitio:"
-#~ msgstr "beschreibung deiner website:"
+#: editar_ajax.php:43
+msgid "Descripci&oacute;n"
+msgstr ""
 
-#, fuzzy
-#~ msgid "esta acci&oacute;n no se puede deshacer!"
-#~ msgstr "dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!"
+#: editar_ajax.php:46
+msgid "Tags"
+msgstr ""
 
-#, fuzzy
-#~ msgid "gris"
-#~ msgstr "grau"
+#: index.php:180 tags.class.php:349 tags.class.php:352
+msgid "No hay ning&uacute;n enlace que concuerde con la busqueda"
+msgstr ""
 
-#, fuzzy
-#~ msgid "idioma"
-#~ msgstr "sprache:"
+#: index.php:182
+msgid "No hay ning&uacute;n enlace con esta etiqueta"
+msgstr ""
 
-#, fuzzy
-#~ msgid "la actualizaci&oacute;n de sabros.us se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\"/index.php\">ver el sitio.</a>"
-#~ msgstr "<strong>sa.bros.us</strong> wurde erfolgreich aktualisiert. du kannst zur <a href=\"/cpanel.php\">konsole</a> gehen und links hinzuf&uuml;gen oder <a href=\"/index.php\">deine site besuchen.</a>"
+#: opciones.php:143
+msgid "Agregar rel='nofollow' en los enlaces:"
+msgstr ""
 
-#, fuzzy
-#~ msgid "naranja"
-#~ msgstr "orange"
+#: sabrosus.php:40
+msgid ""
+"El proyecto sabros.us es 'open source' (puedes utilizar y modificar el "
+"c&oacute;digo libremente) y funciona con PHP y MySQL. Visita la <a href="
+"\"http://sabros.us/\" title=\"sabros.us\">p&aacute;gina oficial del sabros."
+"us</a>."
+msgstr ""
 
-#, fuzzy
-#~ msgid "rojo"
-#~ msgstr "rot"
+#: update.php:66
+msgid ""
+"la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. puedes acceder al <a href=\"%sab_url_rep%/cpanel.php"
+"\">panel de control</a> y comenzar a agregar enlaces o <a href=\"%sab_url_rep"
+"%/index.php\">ver el sitio.</a>"
+msgstr ""
 
-#, fuzzy
-#~ msgid "siguiente"
-#~ msgstr "vorw&auml;rts"
-
-#, fuzzy
-#~ msgid "verde"
-#~ msgstr "gr&uuml;n"
+#: tags.class.php:171
+msgid "Agregar esta etiqueta a la busqueda"
+msgstr ""

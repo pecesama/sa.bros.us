@@ -1,317 +1,489 @@
-# English translation of Sa.bros.us, a web-based bookmark manager.
-# Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the GPL v2.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: sabros.us 1.7\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-13 10:20-0500\n"
-"PO-Revision-Date: 2006-09-18 21:39+0100\n"
-"Last-Translator: Pedro Santana <pecesama@hotmail.com>\n"
-"Language-Team: pecesama <sabrosus@gmail.com>\n"
+"POT-Creation-Date: 2007-04-26 22:04-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: English\n"
-"X-Poedit-Country: UNITED STATES\n"
-"X-Poedit-SourceCharset: utf-8\n"
 
+#: login.php:59
 msgid "&iquest;Olvidaste tu contrase&ntilde;a?"
 msgstr "Forgot your password?"
 
+#: cpanel.php:38 eliminar.php:55
 msgid "&iquest;Realmente desea eliminar este enlace de su sabros.us?"
 msgstr "Do you want to delete this link?"
 
+#: login.php:59
 msgid "&iquest;olvidaste tu contrase&ntilde;a?"
 msgstr "Forgot your password?"
 
+#: index.php:101 sabrosus.php:18 sabrosus.php:31
 msgid "&iquest;qu&eacute; es sabros.us?"
 msgstr "what is sabros.us?"
 
+#: pagination.php:58 pagination.php:62 pagination.php:67
 msgid "&laquo; Anterior"
 msgstr "Back"
 
+#: instalar.php:219 instalar.php:220
 msgid "(sin <q>/</q> al final)"
 msgstr "(without the trailing slash <q>/</q>)"
 
+#: instalar.php:171
 msgid "-- Idiomas --"
 msgstr "-- Languages --"
 
-msgid "/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
+msgid ""
+"/cpanel.php\">panel de control</a> y comenzar a agregar enlaces o <a href=\""
 msgstr "/cpanel.php\">control panel</a> and start adding links or <a href=\""
 
 msgid "/index.php\">ver el sitio.</a>"
 msgstr "/index.php\">view the site</a>."
 
+#: instalar.php:222 opciones.php:123
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> amigable:"
 msgstr "Friendly <abbr title=\"uniform resource locator\">URL</abbr>:"
 
+#: instalar.php:219 opciones.php:122
 msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> de sabros.us:"
 msgstr "sabros.us <abbr title=\"Uniform Resource Locator\">URL</abbr>:"
 
-msgid "<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
+#: instalar.php:220 opciones.php:121
+msgid ""
+"<abbr title=\"Uniform Resource Locator\">URL</abbr> del sitio principal:"
 msgstr "main site <abbr title=\"Uniform Resource Locator\">URL</abbr>:"
 
-msgid "<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada anteriormente. no es necesario volver a ejecutarla."
-msgstr "<strong>warning</strong>: the update already was made previously. It is not necessary to execute it again."
+#: update.php:80
+msgid ""
+"<strong>atenci&oacute;n</strong>: la actualizaci&oacute;n ya fue realizada "
+"anteriormente. no es necesario volver a ejecutarla."
+msgstr ""
+"<strong>warning</strong>: the update already was made previously. It is not "
+"necessary to execute it again."
 
+#: instalar.php:224 opciones.php:125
 msgid "Activado"
 msgstr "Activated"
 
+#: generarBadgeTags.php:74
 msgid "Agrega las etiquetas de sabros.us a t&uacute; sitio."
 msgstr "add the sabros.us tag cloud to your website."
 
+#: generarBadge.php:84
 msgid "Agrega los URLs de sabros.us a t&uacute; sitio."
 msgstr "add to your web the sabros.us url's."
 
+#: editar.php:150
 msgid "Agregar etiquetas"
 msgstr "Add tags"
 
+#: generarBadge.php:102
 msgid "Agregue sus preferencias al c&oacute;digo generado."
 msgstr "Add your preferences to the generated code."
 
+#: generarBadgeTags.php:90 opciones.php:153
 msgid "Aleatorio"
 msgstr "Random"
 
+#: cpanel.php:133 cpanel.php:135
 msgid "Anterior"
 msgstr "Back"
 
+#: importar.php:98
 msgid "Archivo:"
 msgstr "File:"
 
+#: editar.php:164
 msgid "Arrastar a la \"Bookmarks Toolbar\" el siguiente recuadro:"
 msgstr "Drag this link to the \"bookmarks toolbar\":"
 
+#: generarBadgeTags.php:90 opciones.php:153
 msgid "Azul"
 msgstr "Blue"
 
+#: instalar.php:207
 msgid "Base de Datos:"
 msgstr "Database:"
 
+#: tags.class.php:274
 msgid "Buscar enlaces con"
 msgstr "Search links with"
 
+#: cpanel.php:81
 msgid "Buscar:"
 msgstr "Search:"
 
-msgid "Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de 1MB"
-msgstr "Click <kbd>browse...</kbd> to find the saved bookmark file on your computer. The maximum size the file can be 1mb"
+#: importar.php:120
+msgid ""
+"Clic <kbd>examinar...</kbd> para encontrar el archivo de marcadores guardado "
+"en la computadora. El tama&ntilde;o m&aacute;ximo del archivo puede ser de "
+"1MB"
+msgstr ""
+"Click <kbd>browse...</kbd> to find the saved bookmark file on your computer. "
+"The maximum size the file can be 1mb"
 
-msgid "Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; esto puede llevar algo de tiempo"
-msgstr "Click <kbd>import</kbd> to start importing the bookmarks; it may take a minute"
+#: importar.php:122
+msgid ""
+"Clic <kbd>importar</kbd> para iniciar la importaci&oacute;n de marcadores; "
+"esto puede llevar algo de tiempo"
+msgstr ""
+"Click <kbd>import</kbd> to start importing the bookmarks; it may take a "
+"minute"
 
+#: generarBadgeTags.php:86 opciones.php:149
 msgid "Color para la nube de etiquetas:"
 msgstr "Tag cloud's color:"
 
+#: opciones.php:146
 msgid "Configuraci&oacute;n de la apariencia"
 msgstr "Theme configuration"
 
+#: instalar.php:201
 msgid "Configuraci&oacute;n de la base de datos"
 msgstr "Database configuration"
 
+#: instalar.php:212 opciones.php:118
 msgid "Configuraci&oacute;n de sabros.us"
 msgstr "sabros.us configuration"
 
+#: opciones.php:180
 msgid "Configuraci&oacute;n del administrador"
 msgstr "Administrator configuration"
 
+#: instalar.php:244
 msgid "Configurar"
 msgstr "Configure"
 
+#: opciones.php:181
 msgid "Contrase&ntilde;a para el <strong>panel de control</strong>:"
 msgstr "<strong>Control panel's</strong> password:"
 
+#: login.php:53
 msgid "Contrase&ntilde;a:"
 msgstr "Password:"
 
+#: cpanel.php:114
 msgid "Control de contenidos"
 msgstr "Content control"
 
+#: generarBadge.php:88 generarBadgeTags.php:122
 msgid "Copiar el c&oacute;digo fuente"
 msgstr "Copy source code"
 
+#: tags.class.php:181
 msgid "Da clic para etiquetar esta entrada con"
 msgstr "Click to tag this entry with"
 
+#: importardelicious.php:85
 msgid "Datos de del.icio.us"
 msgstr "del.icio.us info"
 
+#: instalar.php:30
 msgid "Debes introducir el nombre de la base de datos a utilizar"
 msgstr "Please type the name of the database to use"
 
+#: instalar.php:31
 msgid "Debes introducir el password para el usuario admin"
 msgstr "Please type the administrator password"
 
+#: instalar.php:29
 msgid "Debes introducir el password para la base de datos"
 msgstr "Please type the password for the database"
 
+#: instalar.php:27
 msgid "Debes introducir el servidor de base de datos"
 msgstr "Please type the hostname of the database"
 
+#: instalar.php:28
 msgid "Debes introducir el usuario para la base de datos"
 msgstr "Please type the username for the database"
 
+#: instalar.php:33
 msgid "Debes introducir la URL para el sitio"
 msgstr "Please type the site url"
 
+#: instalar.php:32
 msgid "Debes introducir la URL para sabros.us"
 msgstr "Please type the full sabros.us url"
 
+#: opciones.php:182
 msgid "Deje en blanco para no cambiar la contrase&ntilde;a"
 msgstr "Leave blank to not change the password"
 
+#: instalar.php:225 opciones.php:126
 msgid "Desactivado"
 msgstr "Deactivated"
 
+#: instalar.php:218 opciones.php:120
 msgid "Descripci&oacute;n del sitio:"
 msgstr "Description of the website:"
 
+#: editar.php:139
 msgid "Descripci&oacute;n:"
 msgstr "Description:"
 
+#: opciones.php:183
 msgid "E-mail:"
 msgstr "E-mail:"
 
+#: editar.php:132
 msgid "Edita los datos de tu enlace."
 msgstr "Edit the bookmark data."
 
+#: cpanel.php:123 editar_ajax.php:79 index.php:228
 msgid "Editar"
 msgstr "Edit"
 
-msgid "El archivo <code>include/config.ini</code> no tiene permisos de escritura"
+msgid ""
+"El archivo <code>include/config.ini</code> no tiene permisos de escritura"
 msgstr "The file <code>include/config.ini</code> is not writable"
 
-msgid "El email ingresado en el formulario es distinto al que esta guardado en la base de datos"
+#: recordar.php:90
+msgid ""
+"El email ingresado en el formulario es distinto al que esta guardado en la "
+"base de datos"
 msgstr "The introduced e-mail is not the same as in the database."
 
-msgid "El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title=\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros miembros</a>."
-msgstr "The project was started by <a href=\"http://www.stanmx.com/\">estanislao vizcarra</a> and <a href=\"http://www.pecesama.net/\">pedro santana</a> in 2005, and counts with the collaboration of <a href=\"http://sourceforge.net/project/memberlist.php?group_id=143603\">other members</a>."
+#: sabrosus.php:42
+msgid ""
+"El proyecto fue iniciado por <a href=\"http://www.stanmx.com/\" title="
+"\"StanMX\">Estanislao Vizcarra</a> y por <a href=\"http://www.pecesama.net/"
+"\" title=\"Pedro Santana\">Pedro Santana</a> en 2005, y adem&aacute;s cuenta "
+"con la colaboraci&oacute;n de <a href=\"http://sourceforge.net/project/"
+"memberlist.php?group_id=143603\" title=\"equipo de sabros.us\">otros "
+"miembros</a>."
+msgstr ""
+"The project was started by <a href=\"http://www.stanmx.com/\">estanislao "
+"vizcarra</a> and <a href=\"http://www.pecesama.net/\">pedro santana</a> in "
+"2005, and counts with the collaboration of <a href=\"http://sourceforge.net/"
+"project/memberlist.php?group_id=143603\">other members</a>."
 
-msgid "El proyecto sabros.us es 'open source' (puedes utilizar y modificar el c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
-msgstr "The sabros.us project is 'open source' (you can use and change the original source code freely) and runs with php and mysql. The official home page is <a href=\"http://sabros.us/\" title=\"sa.bros.us\">sabros.us</a> and the software can be downloaded from <a href=\"http://sourceforge.net/projects/sabrosus/\" title=\"sabros.us project\">sourceforge.net</a>."
+msgid ""
+"El proyecto sabros.us es 'open source' (puedes utilizar y modificar el "
+"c&oacute;digo libremente) y funciona con PHP y MySQL. La p&aacute;gina "
+"oficial del proyecto es <a href=\"http://sabros.us/\" title=\"sabros.us"
+"\">esta</a> y te lo puedes descargar desde <a href=\"http://sourceforge.net/"
+"projects/sabrosus/\" title=\"proyecto sabros.us\">SourceForge.net</a>."
+msgstr ""
+"The sabros.us project is 'open source' (you can use and change the original "
+"source code freely) and runs with php and mysql. The official home page is "
+"<a href=\"http://sabros.us/\" title=\"sa.bros.us\">sabros.us</a> and the "
+"software can be downloaded from <a href=\"http://sourceforge.net/projects/"
+"sabrosus/\" title=\"sabros.us project\">sourceforge.net</a>."
 
-msgid "El usuario o la contrase&ntilde;a introducidos no son correctos, por favor verificalos e intenta nuevamente."
+#: importardelicious.php:67
+msgid ""
+"El usuario o la contrase&ntilde;a introducidos no son correctos, por favor "
+"verificalos e intenta nuevamente."
 msgstr "Invalid user name or password. Please try again."
 
+#: cpanel.php:124
 msgid "Eliminar"
 msgstr "Delete"
 
+#: editar.php:157
 msgid "Eliminar enlace"
 msgstr "Delete link"
 
+#: instalar.php:216
 msgid "Email:"
 msgstr "E-mail:"
 
+#: cpanel.php:121 editar.php:142
 msgid "Enlace Privado:"
 msgstr "Private link:"
 
+#: editar.php:136
 msgid "Enlace:"
 msgstr "Link:"
 
+#: rss.php:54 rss.php:60 rss92.php:54
 msgid "Enlaces de"
 msgstr "Links of"
 
+#: opciones.php:148
 msgid "Enlaces por p&aacute;gina:"
 msgstr "Links by page:"
 
-msgid "Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title=\"SopaSabrosa\">SopaSabrosa</a>:"
-msgstr "Send links to <a href=\"http://www.sopasabrosa.com.ar\">SopaSabrosa</a>:"
+#: opciones.php:141
+msgid ""
+"Enviar entradas a <a href=\"http://www.sopasabrosa.com.ar\" title="
+"\"SopaSabrosa\">SopaSabrosa</a>:"
+msgstr ""
+"Send links to <a href=\"http://www.sopasabrosa.com.ar\">SopaSabrosa</a>:"
 
+#: editar_ajax.php:54 index.php:194 functions.php:39
 msgid "Error al ejecutar la consulta en la DB"
 msgstr "Error while executing the query on the DB"
 
+#: sabrosus.php:53
 msgid "Es 'open source'."
 msgstr "It's open source."
 
+#: sabrosus.php:51
 msgid "Es sencillo y r&aacute;pido de instalar."
 msgstr "Simple and easy to install."
 
-msgid "Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
-msgstr "Write a space-separated list of tags describing this bookmark (ex: xhtml css php)."
+#: editar.php:148
+msgid ""
+"Escribe las etiquetas separadas por un espacio en blanco (ej: xhtml css php)."
+msgstr ""
+"Write a space-separated list of tags describing this bookmark (ex: xhtml css "
+"php)."
 
+#: editar.php:132
 msgid "Escribe los datos de tu enlace."
 msgstr "Create a new bookmark."
 
+#: cpanel.php:38 eliminar.php:56
 msgid "Esta acci&oacute;n no se puede deshacer!"
 msgstr "There's no undo here!"
 
+#: tags.class.php:261
 msgid "Etiquetas relacionadas:"
 msgstr "Related tags"
 
+#: editar.php:145
 msgid "Etiquetas:"
 msgstr "Tags:"
 
+#: importar.php:113
 msgid "Exportar tus marcadores de tu navegador a un archivo"
 msgstr "Export your bookmarks from your browser to a file"
 
+#: sabrosus.php:44
 msgid "FUNCIONALIDADES:"
 msgstr "Features:"
 
+#: generarBadge.php:106
 msgid "Filtrar por etiqueta:"
 msgstr "Filter by tag:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 msgid "Gris"
 msgstr "Gray"
 
+#: opciones.php:112
 msgid "Ha ocurrido un error al almacenar los cambios"
 msgstr "An error has occurred while storing the data"
 
-msgid "Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). Por favor intenta nuevamente en unos instantes."
-msgstr "An error has occurred (error  <strong>%no_error%</strong>). Please try it again."
+#: importardelicious.php:72
+msgid ""
+"Ha ocurrido un error no especificado (error  <strong>%no_error%</strong>). "
+"Por favor intenta nuevamente en unos instantes."
+msgstr ""
+"An error has occurred (error  <strong>%no_error%</strong>). Please try it "
+"again."
 
+#: close.php:43
 msgid "Ha ocurrido un error."
 msgstr "An error has occurred."
 
-msgid "Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el <strong>%desde%</strong> hasta el <strong>%total%</strong>"
-msgstr "There are <strong>%no_enlaces%</strong> links. showing from <strong>%desde%</strong> to <strong>%total%</strong>"
+#: index.php:173
+msgid ""
+"Hay <strong>%no_enlaces%</strong> enlaces. Est&aacute;s viendo desde el "
+"<strong>%desde%</strong> hasta el <strong>%total%</strong>"
+msgstr ""
+"There are <strong>%no_enlaces%</strong> links. showing from <strong>%desde%</"
+"strong> to <strong>%total%</strong>"
 
+#: generarBadge.php:110 generarBadgeTags.php:129
 msgid "Hoja de estilo de mi sabros.us"
 msgstr "Style sheet of my sabros.us"
 
+#: instalar.php:227
 msgid "Idioma"
 msgstr "Language:"
 
+#: opciones.php:128
 msgid "Idioma:"
 msgstr "Language:"
 
+#: importar.php:97 importar.php:106
 msgid "Importar"
 msgstr "Import"
 
-msgid "Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido a que nunca ingres&oacute; el email del administrador"
-msgstr "Impossible to send your password by email, because you did not enter the administrator's e-mail"
+#: recordar.php:88
+msgid ""
+"Imposible enviar su contrase&ntilde;a por correo electr&oacute;nico, debido "
+"a que nunca ingres&oacute; el email del administrador"
+msgstr ""
+"Impossible to send your password by email, because you did not enter the "
+"administrator's e-mail"
 
+#: editar.php:163
 msgid "Instalar el bookmarklet."
 msgstr "Install the bookmarklet."
 
+#: importar.php:110
 msgid "Instrucciones"
 msgstr "Instructions"
 
+#: login.php:52
 msgid "Introduzca su contrase&ntilde;a"
 msgstr "Type your password"
 
-msgid "Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar favoritos</kbd>"
-msgstr "Internet explorer: <kbd>file &gt; import and export... &gt; export favorites</kbd>"
+#: importar.php:115
+msgid ""
+"Iternet Explorer: <kbd>archivo &gt; importar y exportar... &gt; exportar "
+"favoritos</kbd>"
+msgstr ""
+"Internet explorer: <kbd>file &gt; import and export... &gt; export "
+"favorites</kbd>"
 
-msgid "La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>."
-msgstr "The installation of sabros.us has completed successfully. You can access the <a href=\"/cpanel.php\">control panel</a> and start adding links or <a href=\"/index.php\">visit the site.</a>"
+#: instalar.php:249
+msgid ""
+"La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de "
+"control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el "
+"sitio</a>."
+msgstr ""
+"The installation of sabros.us has completed successfully. You can access the "
+"<a href=\"/cpanel.php\">control panel</a> and start adding links or <a href="
+"\"/index.php\">visit the site.</a>"
 
-msgid "La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
-msgstr "An email containing your new password has been sent to your address. It contains easy instructions to complete this password change."
+#: recordar.php:82
+msgid ""
+"La nueva contrase&ntilde;a fue enviada al correo electr&oacute;nico. Revise "
+"su bandeja de entrada donde encontrar&aacute; m&aacute;s indicaciones"
+msgstr ""
+"An email containing your new password has been sent to your address. It "
+"contains easy instructions to complete this password change."
 
-msgid "La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La nueva contrasea para ingresar al panel de sabros.us es:"
-msgstr "The new password was automatically generated - you might like to change your password to something easier to remember.<br />Your current login information is now:"
+#: recordar.php:29
+msgid ""
+"La nueva contrase&ntilde;a fue generada de manera autom&aacute;tica - "
+"Deber&iacute;a cambiarla por algo m&aacute;s sencillo de recordar -.<br />La "
+"nueva contrasea para ingresar al panel de sabros.us es:"
+msgstr ""
+"The new password was automatically generated - you might like to change your "
+"password to something easier to remember.<br />Your current login "
+"information is now:"
 
+#: opciones.php:36
 msgid "Las contrase&ntilde;as deben ser iguales"
 msgstr "Passwords must match"
 
+#: opciones.php:107
 msgid "Los cambios se han almacenado con &eacute;xito"
 msgstr "Changes have been saved"
 
+#: instalar.php:34 instalar.php:35
 msgid "Los passwords introducidos no coinciden"
 msgstr "The passwords don't match"
 
+#: badge.php:58
 msgid "M&aacute;s en"
 msgstr "More in"
 
@@ -321,321 +493,598 @@ msgstr "My sabros.us"
 msgid "Mis etiquetas en sa.bro.sus"
 msgstr "My tags on sabros.us"
 
+#: opciones.php:173
 msgid "Mostrar contenidos multimedia:"
 msgstr "Show multimedia content:"
 
+#: opciones.php:175
 msgid "Mostrar descripciones en el badge de enlaces:"
 msgstr "Show descriptions on the links badge:"
 
+#: opciones.php:177
 msgid "Mostrar la nube de etiquetas a la derecha:"
 msgstr "Show the tag cloud on the right:"
 
+#: opciones.php:176
 msgid "Mostrar solo la nube de etiquetas en la portada:"
 msgstr "Show only the tag cloud on the main page:"
 
-msgid "Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo &gt; exportar...</kbd>"
-msgstr "Mozilla firefox: <kbd>bookmarks &gt; manage bookmarks... &gt; file &gt; export...</kbd>"
+#: importar.php:116
+msgid ""
+"Mozilla Firefox: <kbd>marcadores &gt; administrar marcadores... &gt; archivo "
+"&gt; exportar...</kbd>"
+msgstr ""
+"Mozilla firefox: <kbd>bookmarks &gt; manage bookmarks... &gt; file &gt; "
+"export...</kbd>"
 
+#: instalar.php:221
 msgid "N&uacute;mero de enlaces por p&aacute;gina:"
 msgstr "Number of links by page:"
 
+#: generarBadge.php:104
 msgid "N&uacute;mero de enlaces:"
 msgstr "Number of links:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 msgid "Naranja"
 msgstr "Orange"
 
-msgid "Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas &gt; exportar...</kbd>"
-msgstr "Netscape: <kbd>bookmarks &gt; manage bookmarks... &gt; tools &gt; export...</kbd>"
+#: importar.php:117
+msgid ""
+"Netscape: <kbd>marcadores &gt; administrar marcadores... &gt; herramientas "
+"&gt; exportar...</kbd>"
+msgstr ""
+"Netscape: <kbd>bookmarks &gt; manage bookmarks... &gt; tools &gt; export...</"
+"kbd>"
 
-msgid "No es posible escribir el archivo <code>include/config.php</code>. Debes cambiar los permisos de dicho archivo de modo de poder ser escrito por el instalador."
-msgstr "Unable to write to <code>include/config.php</code>. Please check the permissions on the file and run the installation again."
+#: instalar.php:37
+msgid ""
+"No es posible escribir el archivo <code>include/config.php</code>. Debes "
+"cambiar los permisos de dicho archivo de modo de poder ser escrito por el "
+"instalador."
+msgstr ""
+"Unable to write to <code>include/config.php</code>. Please check the "
+"permissions on the file and run the installation again."
 
-msgid "No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura."
-msgstr "It is not possible to export links, because the folder <code>tmp</code> is write protected"
+#: cpanel.php:74 index.php:120
+msgid ""
+"No es posible exportar enlaces, debido a que el directorio <code>tmp</code> "
+"no cuenta con permisos de escritura."
+msgstr ""
+"It is not possible to export links, because the folder <code>tmp</code> is "
+"write protected"
 
-msgid "No fue posible conectarse a la base de datos. Ppor favor revisa los valores introducidos e intentalo nuevamente"
-msgstr "Unable to connect to the database. Please check the database settings and try again."
+#: instalar.php:36
+msgid ""
+"No fue posible conectarse a la base de datos. Ppor favor revisa los valores "
+"introducidos e intentalo nuevamente"
+msgstr ""
+"Unable to connect to the database. Please check the database settings and "
+"try again."
 
+#: index.php:184
 msgid "No hay ning&uacute;n enlace en este sabros.us todav&iacute;a."
 msgstr "There are not links on this sabros.us yet."
 
-msgid "No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya estar incluidos en sabros.us."
-msgstr "Were not imported <strong>%no_noimportadosrepetidos%</strong> links because already were included in sa.bros.us."
+#: importardelicious.php:58
+msgid ""
+"No se importaron <strong>%no_noimportadosrepetidos%</strong> enlaces por ya "
+"estar incluidos en sabros.us."
+msgstr ""
+"Were not imported <strong>%no_noimportadosrepetidos%</strong> links because "
+"already were included in sa.bros.us."
 
+#: instalar.php:217
 msgid "Nombre de tu sitio:"
 msgstr "Your website name:"
 
+#: opciones.php:119
 msgid "Nombre del sitio:"
 msgstr "Website name:"
 
+#: generarBadgeTags.php:105
 msgid "Nube de ejemplo"
 msgstr "Example cloud"
 
+#: recordar.php:99
 msgid "Nueva contrase&ntilde;a"
 msgstr "New password"
 
+#: importar.php:103
 msgid "P&uacute;blico"
 msgstr "Public"
 
-msgid "Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
-msgstr "In order to import the del.icio.us's links, introduce your login information."
+#: importardelicious.php:82
+msgid ""
+"Para importar los enlaces desde del.icio.us, ingrese los datos de su cuenta."
+msgstr ""
+"In order to import the del.icio.us's links, introduce your login information."
 
-msgid "Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en tu sabros.us."
-msgstr "In order to show the newest sabros.us urls, you must copy this code anywhere of your blog or in a html page."
+#: generarBadge.php:89 generarBadgeTags.php:123
+msgid ""
+"Para mostrar los URLs m&aacute;s recientes lo &uacute;nico que se tiene que "
+"hacer es colocar el siguiente c&oacute;digo en cualquier parte de un weblog "
+"o una p&aacute;gina HTML para que se muestren los enlaces que se tienen en "
+"tu sabros.us."
+msgstr ""
+"In order to show the newest sabros.us urls, you must copy this code anywhere "
+"of your blog or in a html page."
 
+#: instalar.php:214
 msgid "Password para el control panel:"
 msgstr "Password for the control panel:"
 
+#: instalar.php:205
 msgid "Password:"
 msgstr "Password:"
 
-msgid "Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se puede a&ntilde;adir a tu navegador."
+#: sabrosus.php:47
+msgid ""
+"Permite crear bookmarks r&aacute;pidamente mediante un bot&oacute;n que se "
+"puede a&ntilde;adir a tu navegador."
 msgstr "Quickly add bookmarks using your web browser."
 
-msgid "Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
-msgstr "RSS and Atom feeds of either your newest bookmarks, or the newest bookmarks filtered by tag."
+#: sabrosus.php:49
+msgid ""
+"Permite crear un feed RSS de todos los bookmarks o de un tag en especial."
+msgstr ""
+"RSS and Atom feeds of either your newest bookmarks, or the newest bookmarks "
+"filtered by tag."
 
+#: sabrosus.php:50
 msgid "Permite crear una 'nube de tags' de todas las etiquetas insertadas."
 msgstr "Automatic generation of a 'tag cloud' of all available tags."
 
+#: sabrosus.php:46
 msgid "Permite gestionar los bookmarks a trav&eacute;s de un panel de control."
 msgstr "Manage your bookmarks through a control panel."
 
-msgid "Permite insertar 'tags' de cada bookmark, para que posteriormente pueda servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
+#: sabrosus.php:48
+msgid ""
+"Permite insertar 'tags' de cada bookmark, para que posteriormente pueda "
+"servir de ayuda para encontrar otros bookmarks de la misma tem&aacute;tica."
 msgstr "Add tags to each bookmark, and use each tag to find similar bookmarks."
 
+#: opciones.php:174
 msgid "Permitir que se exporten los enlaces:"
 msgstr "Allow visitors to export links:"
 
+#: generarBadgeTags.php:78
 msgid "Personalice la nube de etiquetas:"
 msgstr "Customize your tag cloud:"
 
+#: instalar.php:208
 msgid "Prefijo para las tablas:"
 msgstr "Database table prefix:"
 
+#: importar.php:101
 msgid "Privacidad:"
 msgstr "Privacy:"
 
+#: importar.php:104
 msgid "Privado"
 msgstr "Private"
 
+#: index.php:290
 msgid "RSS de la etiqueta"
 msgstr "Tag feed"
 
+#: index.php:288 sabrosus.php:59
 msgid "RSS de sabros.us"
 msgstr "sabros.us feed"
 
+#: instalar.php:206
 msgid "Reescribe el Password:"
 msgstr "Confirm password:"
 
+#: instalar.php:215
 msgid "Reescribe el password:"
 msgstr "Confirm password:"
 
+#: opciones.php:182
 msgid "Reescribe la contrase&ntilde;a:"
 msgstr "Confirm password:"
 
+#: generarBadgeTags.php:90 opciones.php:153
 msgid "Rojo"
 msgstr "Red"
 
-msgid "Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
-msgstr "The import process has been completed successfully. Were imported <strong>%no_importados%</strong> links."
+#: importardelicious.php:57
+msgid ""
+"Se complet&oacute; exitosamente la importaci&oacute;n de tus enlaces desde "
+"del.icio.us. En total se importaron <strong>%no_importados%</strong> enlaces."
+msgstr ""
+"The import process has been completed successfully. Were imported <strong>%"
+"no_importados%</strong> links."
 
-msgid "Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva a intentarlo m&aacute;s tarde"
-msgstr "An error has occurred. You may attempt to send it again. If your attempt fails, please contact your system administrator."
+#: recordar.php:92
+msgid ""
+"Se produjo un error al intentar enviar el correo electr&oacute;nico. Vuelva "
+"a intentarlo m&aacute;s tarde"
+msgstr ""
+"An error has occurred. You may attempt to send it again. If your attempt "
+"fails, please contact your system administrator."
 
-msgid "Seleccionar la privacidad por defecto asignada a los marcadores importados"
+#: importar.php:121
+msgid ""
+"Seleccionar la privacidad por defecto asignada a los marcadores importados"
 msgstr "Select the default privacy setting for your imported bookmarks"
 
-msgid "Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
+#: generarBadgeTags.php:79
+msgid ""
+"Seleccione sus preferencias para desplegar su nube de etiquetas de sabros.us:"
 msgstr "Choose your preferences to display the sabros.us tag cloud:"
 
+#: generarBadge.php:103
 msgid "Seleccione sus preferencias para desplegar su sabros.us:"
 msgstr "Choose your preferences to display your sabros.us:"
 
+#: instalar.php:203
 msgid "Servidor:"
 msgstr "Server:"
 
-msgid "Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la estructura del XHTML generado por sabros.us badge."
-msgstr "If you want to personalize the sabros.us style, this is the xhtml structure used."
+#: generarBadge.php:111 generarBadgeTags.php:130
+msgid ""
+"Si deseas personalizar el estilo de despliegue de tu sabros.us, este es la "
+"estructura del XHTML generado por sabros.us badge."
+msgstr ""
+"If you want to personalize the sabros.us style, this is the xhtml structure "
+"used."
 
-msgid "Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico del administrador de sabros.us en el siguiente formulario y le enviaremos una nueva contrase&ntilde;a a su cuenta de correo."
-msgstr "If you have forgotten your password, we can send you a new password by e-mail, please indicate your e-mail address, your new password will be sent to you."
+#: recordar.php:100
+msgid ""
+"Si olvid&oacute; su contrase&ntilde;a, ingrese el correo electr&oacute;nico "
+"del administrador de sabros.us en el siguiente formulario y le enviaremos "
+"una nueva contrase&ntilde;a a su cuenta de correo."
+msgstr ""
+"If you have forgotten your password, we can send you a new password by e-"
+"mail, please indicate your e-mail address, your new password will be sent to "
+"you."
 
-msgid "Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se muestre m&aacute;s grande."
+#: generarBadgeTags.php:75
+msgid ""
+"Si tienes un sitio web o un blog, puedes mostrar las etiquetas ingresadas en "
+"tu sabros.us dispuestas de manera que la etiqueta m&aacute;s relevante se "
+"muestre m&aacute;s grande."
 msgstr "If you have a blog or a website, you can show the sabros.us tag cloud."
 
-msgid "Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s recientes ingresados en tu sabros.us"
-msgstr "If you have a blog or a website, you can show the newest urls added to your sabros.us"
+#: generarBadge.php:85
+msgid ""
+"Si tienes un sitio web o un blog, puedes mostrar los URLs m&aacute;s "
+"recientes ingresados en tu sabros.us"
+msgstr ""
+"If you have a blog or a website, you can show the newest urls added to your "
+"sabros.us"
 
+#: cpanel.php:140 cpanel.php:142 instalar.php:181
 msgid "Siguiente"
 msgstr "Next"
 
+#: pagination.php:215 pagination.php:219
 msgid "Siguiente &raquo;"
 msgstr "Next &raquo;"
 
+#: editar.php:133
 msgid "T&iacute;tulo:"
 msgstr "Title:"
 
+#: generarBadgeTags.php:83
 msgid "Tama&ntilde;o de fuente m&aacute;ximo:"
 msgstr "Maximum font size"
 
+#: generarBadgeTags.php:81
 msgid "Tama&ntilde;o de fuente m&iacute;nimo:"
 msgstr "Minimum font size"
 
+#: close.php:41
 msgid "Terminando sesi&oacute;n..."
 msgstr "Log out"
 
+#: sabrosus.php:52
 msgid "Tiene un atractivo dise&ntilde;o."
 msgstr "Has a fashionable design."
 
+#: instalar.php:204
 msgid "Usuario:"
 msgstr "User:"
 
+#: cpanel.php:122
 msgid "Ver"
 msgstr "View"
 
+#: generarBadgeTags.php:90 opciones.php:153
 msgid "Verde"
 msgstr "Green"
 
+#: update.php:29 update.php:40
 msgid "actualizaci&oacute;n"
 msgstr "Update"
 
+#: opciones.php:184 update.php:75
 msgid "actualizar"
 msgstr "Update"
 
+#: editar.php:157
 msgid "agregar"
 msgstr "Add"
 
+#: editar.php:164
 msgid "agregar a sabros.us"
 msgstr "Add to sabros.us"
 
+#: cpanel.php:61 editar.php:82 editar.php:104 editar.php:110
 msgid "agregar enlace"
 msgstr "Add link"
 
+#: cpanel.php:83
 msgid "buscar"
 msgstr "Search"
 
+#: importardelicious.php:88
 msgid "contrase&ntilde;a:"
 msgstr "Password:"
 
+#: editar.php:157
 msgid "editar"
 msgstr "Edit"
 
+#: editar.php:82 editar.php:104
 msgid "editar enlace"
 msgstr "Edit bookmark"
 
+#: editar_ajax.php:110 index.php:258
 msgid "el"
 msgstr "at"
 
+#: eliminar.php:59
 msgid "eliminar"
 msgstr "delete"
 
+#: eliminar.php:38 eliminar.php:48
 msgid "eliminar enlace"
 msgstr "delete link"
 
+#: recordar.php:101
 msgid "email:"
 msgstr "e-mail:"
 
+#: editar_ajax.php:108 index.php:256
 msgid "en"
 msgstr "in"
 
+#: tags.class.php:171 tags.class.php:184
 msgid "enlaces con esta etiqueta"
 msgstr "links with that tag"
 
+#: cpanel.php:64
 msgid "exportar"
 msgstr "export"
 
+#: index.php:262
 msgid "exportar a mi sabros.us"
 msgstr "export to my sabros.us"
 
+#: cpanel.php:151 editar.php:169 eliminar.php:65 generarBadge.php:128
+#: generarBadgeTags.php:148 importar.php:127 importardelicious.php:99
+#: index.php:286 instalar.php:255 login.php:67 opciones.php:190
+#: recordar.php:108 sabrosus.php:58 update.php:86
 msgid "generado con:"
 msgstr "powered by:"
 
+#: cpanel.php:62
 msgid "generar badge"
 msgstr "generate badge"
 
+#: generarBadge.php:76 generarBadgeTags.php:52
 msgid "generar badge de la nube de etiquetas"
 msgstr "generate tag cloud badge"
 
+#: generarBadge.php:24 generarBadge.php:73 generarBadgeTags.php:62
+#: generarBadgeTags.php:65
 msgid "generar badge de los enlaces"
 msgstr "create links badge"
 
+#: generarBadgeTags.php:99
 msgid "generar c&oacute;digo"
 msgstr "generate code"
 
+#: login.php:55
 msgid "guardar contrase&ntilde;a"
 msgstr "save password"
 
+#: cpanel.php:63 importardelicious.php:90
 msgid "importar"
 msgstr "import"
 
+#: importar.php:89
 msgid "importar de del.icio.us"
 msgstr "import from del.icio.us"
 
+#: importardelicious.php:33 importardelicious.php:42
 msgid "importar de delicious"
 msgstr "import from del.icio.us"
 
+#: importardelicious.php:45
 msgid "importar desde un archivo"
 msgstr "import from a file"
 
+#: importar.php:76 importar.php:86
 msgid "importar marcadores"
 msgstr "import bookmarks"
 
+#: login.php:60
 msgid "ingresar"
 msgstr "log in"
 
+#: login.php:37 login.php:46
 msgid "ingreso"
 msgstr "log in"
 
+#: index.php:85 sabrosus.php:33
 msgid "inicio sabros.us"
 msgstr "sabros.us home"
 
+#: instalar.php:141 instalar.php:160
 msgid "instalaci&oacute;n"
 msgstr "installation"
 
+#: cpanel.php:65
 msgid "ir a opciones"
 msgstr "go to options"
 
+#: cpanel.php:66 opciones.php:101 recordar.php:76
 msgid "ir a sabros.us"
 msgstr "go to sabros.us"
 
-msgid "la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. puedes acceder al <a href=\""
-msgstr "sabros.us update has been completed successfully. You can access the <a href=\"/cpanel.php\">control panel</a> and start adding links or <a href=\"/index.php\">visit the site.</a>"
+msgid ""
+"la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. puedes acceder al <a href=\""
+msgstr ""
+"sabros.us update has been completed successfully. You can access the <a href="
+"\"/cpanel.php\">control panel</a> and start adding links or <a href=\"/index."
+"php\">visit the site.</a>"
 
+#: generarBadgeTags.php:134
 msgid "mis etiquetas en sabros.us"
 msgstr "my tags on sabros.us"
 
+#: opciones.php:76 opciones.php:98
 msgid "opciones"
 msgstr "options"
 
+#: tags.class.php:75
 msgid "ordena por la etiqueta"
 msgstr "sort by tag"
 
+#: cpanel.php:26 cpanel.php:59 editar.php:105 eliminar.php:49
+#: generarBadge.php:75 generarBadgeTags.php:64 importar.php:88
+#: importardelicious.php:44 index.php:101 opciones.php:100 recordar.php:75
 msgid "panel de control"
 msgstr "control panel"
 
+#: recordar.php:50 recordar.php:73
 msgid "recordar contrase&ntilde;a"
 msgstr "remember password"
 
+#: sabrosus.php:33
 msgid "regresar a sabros.us"
 msgstr "back to sabros.us"
 
-msgid "sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n en tu propio sitio web."
-msgstr "sabros.us is a web-based bookmarking system to organize your bookmarks on your website. It is similar to del.icio.us in that you can manage your bookmarks online, but with sabros.us you can do it on your own website."
+#: sabrosus.php:38
+msgid ""
+"sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que "
+"insertas en tu sitio web. Al igual que con el servicio del.icio.us puedes "
+"gestionar bookmarks, pero a trav&eacute;s de p&aacute;ginas alojadas en otro "
+"servidor, con sabros.us haces lo mismo pero las p&aacute;ginas est&aacute;n "
+"en tu propio sitio web."
+msgstr ""
+"sabros.us is a web-based bookmarking system to organize your bookmarks on "
+"your website. It is similar to del.icio.us in that you can manage your "
+"bookmarks online, but with sabros.us you can do it on your own website."
 
-msgid "si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton para solucionarlo."
-msgstr "if the characters appears to be rather rare, press the button to fix it."
+#: update.php:73
+msgid ""
+"si aparecen caracteres extra&ntilde;os en algunos enlaces, clic en el boton "
+"para solucionarlo."
+msgstr ""
+"if the characters appears to be rather rare, press the button to fix it."
 
+#: recordar.php:102
 msgid "solicitar nueva"
 msgstr "get new password"
 
+#: cpanel.php:67
 msgid "terminar la sesi&oacute;n"
 msgstr "log out"
 
+#: close.php:27 close.php:37
 msgid "terminar sesi&oacute;n"
 msgstr "log out"
 
+#: importardelicious.php:86
 msgid "usuario:"
 msgstr "user:"
 
+#: actualizar.php:13
+msgid "Se ha producido un error miestras se actualizaban las estructuras"
+msgstr ""
+
+#: badge.php:42 badge.php:58
+msgid "Mi sabros.us"
+msgstr ""
+
+#: badgeTags.php:18
+msgid "Mis etiquetas en sabros.us"
+msgstr ""
+
+#: editar.php:92
+msgid "Error en las etiquetas"
+msgstr ""
+
+#: editar_ajax.js.php:38 editar_ajax.js.php:72
+msgid " Saboreando..."
+msgstr ""
+
+#: editar_ajax.js.php:114
+msgid "Saboreando..."
+msgstr ""
+
+#: editar_ajax.js.php:118
+msgid "Guardar"
+msgstr ""
+
+#: editar_ajax.js.php:119
+msgid "Cancelar"
+msgstr ""
+
+#: editar_ajax.php:36
+msgid "Editar enlace"
+msgstr ""
+
+#: editar_ajax.php:37
+msgid "Titulo"
+msgstr ""
+
+#: editar_ajax.php:40
+msgid "Enlace"
+msgstr ""
+
+#: editar_ajax.php:43
+msgid "Descripci&oacute;n"
+msgstr ""
+
+#: editar_ajax.php:46
+msgid "Tags"
+msgstr ""
+
+#: index.php:180 tags.class.php:349 tags.class.php:352
+msgid "No hay ning&uacute;n enlace que concuerde con la busqueda"
+msgstr ""
+
+#: index.php:182
+msgid "No hay ning&uacute;n enlace con esta etiqueta"
+msgstr ""
+
+#: opciones.php:143
+msgid "Agregar rel='nofollow' en los enlaces:"
+msgstr ""
+
+#: sabrosus.php:40
+msgid ""
+"El proyecto sabros.us es 'open source' (puedes utilizar y modificar el "
+"c&oacute;digo libremente) y funciona con PHP y MySQL. Visita la <a href="
+"\"http://sabros.us/\" title=\"sabros.us\">p&aacute;gina oficial del sabros."
+"us</a>."
+msgstr ""
+
+#: update.php:66
+msgid ""
+"la actualizaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. puedes acceder al <a href=\"%sab_url_rep%/cpanel.php"
+"\">panel de control</a> y comenzar a agregar enlaces o <a href=\"%sab_url_rep"
+"%/index.php\">ver el sitio.</a>"
+msgstr ""
+
+#: tags.class.php:171
+msgid "Agregar esta etiqueta a la busqueda"
+msgstr ""
