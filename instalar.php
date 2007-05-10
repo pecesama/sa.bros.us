@@ -246,7 +246,7 @@ if(!isset($_POST['paso']) || $_POST['paso']==0)
 	</form>
 	<?php
 	} else {
-		echo "<p>".__("La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"index.php\">ver el sitio</a>.")."</p>";
+		echo "<p>".__("La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; satisfactoriamente. Puedes acceder al <a href=\"./cpanel.php\">Panel de control</a> y comenzar a agregar enlaces o <a href=\"./index.php\">ver el sitio</a>.")."</p>";
 	}
 }
 ?>
