@@ -217,6 +217,9 @@ $tagoo = new tags;
 								if (esFlickrPhoto($row["enlace"])) {
 									echo "\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
 								}
+								if (esImagen($row["enlace"])) {
+									echo "\t\t<img src=\"".$Sabrosus->sabrUrl."/thumbnails.php?w=105&img=".$row[enlace]."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
+								}
 							}
 						}
 						echo "\t\t\t<h3>";
