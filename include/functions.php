@@ -98,6 +98,13 @@ function esFlickrPhoto($photoUrl) {
 	return false;
 }
 
+function esImagen($photoUrl) {
+	if (endsWith($photoUrl, ".jpg") || endsWith($photoUrl, ".jpeg") || endsWith($photoUrl, ".png") || endsWith($photoUrl, ".gif")) {
+		return true;
+	}
+	return false;
+}
+
 function getFlickrPhotoUrl($photoUrl) {
 	$params = explode("/", $photoUrl);
 	return "&#104;&#116;&#116;&#112;://&#102;&#108;&#105;&#99;&#107;&#114;&#46;&#99;&#111;&#109;/&#100;&#101;&#108;&#105;&#99;&#105;&#111;&#117;&#115;_&#116;&#104;&#117;&#109;&#98;&#46;&#103;&#110;&#101;?&#105;&#100;=".$params[5];
@@ -138,6 +145,7 @@ function getYoutubeVideoUrl($videoUrl) {
 //de reproduccion
 function ocupaReproduccionEspecial($url) {
 if (esFlickrPhoto($url)) { return true; }
+elseif (esImagen($url)) { return true; }
 elseif (esMP3($url)) { return true; }
 elseif (esYoutubeVideo($url)) { return true; }
 elseif (esVimeoVideo($url)) { return true; }
