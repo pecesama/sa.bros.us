@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-04-26 23:10-0600\n"
+"POT-Creation-Date: 2007-05-26 13:49-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1142,4 +1142,12 @@ msgstr ""
 
 #: editar_ajax.php:46
 msgid "Etiquetas"
+msgstr ""
+
+#: instalar.php:249
+msgid ""
+"La instalaci&oacute;n de <strong>sabros.us</strong> se realiz&oacute; "
+"satisfactoriamente. Puedes acceder al <a href=\"./cpanel.php\">Panel de "
+"control</a> y comenzar a agregar enlaces o <a href=\"./index.php\">ver el "
+"sitio</a>."
 msgstr ""
