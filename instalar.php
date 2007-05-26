@@ -305,17 +305,10 @@ function installdb($server, $dbUser, $dbPass, $dataBase, $prefix, $stitle, $snam
 		$result = mysql_query($sqlStr,$link);
 
 
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'Stanmx.com - Buscando la accesibilidad','http://www.stanmx.com','".utf8_encode("Pgina de Estanislao Vizcarra, autor de sabros.us")."','2005-07-10 00:41:06',0);";
+		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (1,'sabros.us bookmarks manager','http://sabros.us/','".utf8_encode("sabros.us is a CMS to put your bookmarks online with folksonomy support")."',now(),0);";
 		$result = mysql_query($sqlStr,$link);
 		
-		$tags->addTags("css xhtml diseo web estandares cine php", "1");
-
-		$sqlStr = "INSERT INTO `".$prefix."sabrosus` VALUES (2,'Pecesama.Net [developing the future]','http://www.pecesama.net','".utf8_encode("Pgina de Pedro Santana, co-autor de sabros.us")."','2005-07-10 00:42:04',0);";
-		$result = mysql_query($sqlStr,$link);
-		
-
-		$tags->addTags("php programacin web java javascript", "2");
-
+		$tags->addTags("sabrosus bookmarks manager bookmark php opensource", "1");
 
 		$sqlStr = "INSERT INTO `".$prefix."config` VALUES ('".$sname."','".$stitle."','".$siteUrl."','".$sabrUrl."','".$useFriendlyUrl."','".$lang."','".$limite."','".$email."','".md5($admPass)."');";
 		$result = mysql_query($sqlStr,$link);
