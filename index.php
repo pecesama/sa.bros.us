@@ -211,13 +211,14 @@ $tagoo = new tags;
 							if(!ocupaReproduccionEspecial($row["enlace"])) {
 								echo "\t\t<img class=\"preview\" src=\"http://sabros.us/thumbs/?url=".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
 							} else {
+								/* Archivos de Imagenes */
+								if (esImagen($row["enlace"])) {
+									echo "\t\t<img src=\"".$Sabrosus->sabrUrl."/thumbnails.php?w=101&img=".$row[enlace]."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
+								}
 								/* Imagenes de Flickr */
 								if (esFlickrPhoto($row["enlace"])) {
 									echo "\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
-								}
-								if (esImagen($row["enlace"])) {
-									echo "\t\t<img src=\"".$Sabrosus->sabrUrl."/thumbnails.php?w=105&img=".$row[enlace]."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
-								}
+								}								
 							}
 						}
 						echo "\t\t\t<h3>";
