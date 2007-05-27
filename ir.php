@@ -10,7 +10,6 @@
 
 	include("include/config.php");
 	include("include/conex.php");
-	include("include/functions.php");
 	
 	if(!isset($_GET['id']) || !is_numeric($_GET['id']))
 	{

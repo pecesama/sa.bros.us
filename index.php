@@ -48,24 +48,28 @@ $tagoo = new tags;
 	<?php }?>
 </head>
 <body>
-<?
-
-	/* PATCH Bug #1242025 */
+<?	
 	if (isset($_GET["tag"])) {
 		$navegador = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 		if (stristr($navegador, "opera") || stristr($navegador, "msie")) {
-			/* PATCH Bug #1359231 */
 			$tagtag=$_GET["tag"];
 			if (isset($tagtag)) {
 				$tagtag = utf8_decode($_GET["tag"]);
 			}
-			/* End PATCH Bug #1359231 */
 		} else {
 			$tagtag = $_GET["tag"];
 		}
 		$tagtag = urldecode($tagtag);
 	}
-	/* End PATCH Bug #1242025 */
+	
+	if (isset($_GET["pag"])) {
+		$pag=strip_tags($_GET["pag"]);
+		if (!is_numeric($pag)) {
+			$pag=1;
+		}
+	} else {
+		$pag=1;
+	}
 ?>
 <div id="pagina">
 
@@ -81,16 +85,16 @@ $tagoo = new tags;
 		<h2>
 		<?
 		echo "\t<a title=\"".$Sabrosus->siteTitle."\" href=\"".$Sabrosus->siteUrl."\">".$Sabrosus->siteName."</a>/";
-		if (isset($tagtag) || isset($_GET["pag"])) {
+		if (isset($tagtag) || isset($pag)) {
 			echo "<a title=\"".__("inicio sabros.us")."\" href=\"".$Sabrosus->sabrUrl."\">sabros.us</a>/";
 			if(isset($tagtag)) {
-				if(isset($_GET["pag"])) {
-					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","?tag=").urlencode($tagtag)."\">".htmlspecialchars($tagtag)."</a>/<span>".$_GET["pag"]."</span>";
+				if(isset($pag)) {
+					echo "<a title=\"".$tagtag."\" href=\"".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","?tag=").urlencode($tagtag)."\">".htmlspecialchars($tagtag)."</a>/<span>".$pag."</span>";
 				} else {
 					echo "<span>".htmlspecialchars($tagtag)."</span>";
 				}
 			} else {
-				echo "<span>".$_GET["pag"]."</span>";
+				echo "<span>".$pag."</span>";
 			}
 		} else {
 			echo "<span>sabros.us</span>\n";
@@ -120,13 +124,7 @@ $tagoo = new tags;
 				<p><?=__("No es posible exportar enlaces, debido a que el directorio <code>tmp</code> no cuenta con permisos de escritura.");?></p>
 			</div>
 		<? } ?>
-		<?
-
-		if (isset($_GET["pag"])) {
-			$pag=$_GET["pag"];
-		} else {
-			$pag=1; //Si $pag no esta definido la transformo en 0
-		}
+		<?		
 
 		$desde=($pag-1)*$Sabrosus->limit;
 		

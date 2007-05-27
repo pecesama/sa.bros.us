@@ -2,7 +2,9 @@ Historial de versiones
 
 v 1.8
 
- 
+    * Solucionada posible vulnerabilidad con el $_GET['pag'] (pecesama)
+    * Solucionado bug de URL Firendly en la busqueda por etiquetas (pecesama y Jorge Condomí)
+    * Mostrar thumbs en enlaces de imagenes gif, jpg y png (pecesama)
     * Mostrar con iluminado las etiquetas pertenecen a un enlace en la edicion (pecesama)
     * Agregada la opcion de rel="nofollow" configurable desde el panel de administracion (Victor Bracco)
     * Modificaciones al JavaScript de la busqueda por tags (pecesama)
