@@ -16,14 +16,14 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 	include("include/tags.class.php");
 	
 	if(!isset($_GET['id']) || !esAdmin() || !is_numeric($_GET['id'])){
-		header("location: index.php");
+		header("Location: ".$Sabrosus->sabrUrl."/index.php");
 		exit();
 	}
 	$id = intval($_GET['id']);
 	$sqlStr="SELECT * FROM ".$prefix."sabrosus WHERE (id_enlace=".$id.") LIMIT 1";
 
 	if(!$row=mysql_fetch_assoc(mysql_query($sqlStr,$link))){
-		header("location: index.php");
+		header("Location: ".$Sabrosus->sabrUrl."/index.php");
 		exit();
 	}
 $tags = new tags;
@@ -65,6 +65,10 @@ if(!isset($_GET['enlace'])){
 							if(!ocupaReproduccionEspecial($row["enlace"])) {
 								echo "\t\t<img class=\"preview\" src=\"http://sabros.us/thumbs/?url=".htmlspecialchars($row["enlace"])."\" alt=\"".htmlspecialchars($row["title"])."\" />";
 							} else {
+								/* Archivos de Imagenes */
+								if (esImagen($row["enlace"])) {
+									echo "\t\t<img src=\"".$Sabrosus->sabrUrl."/thumbnails.php?w=101&img=".$row[enlace]."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
+								}
 								/* Imagenes de Flickr */
 								if (esFlickrPhoto($row["enlace"])) {
 									echo "\t\t<img src=\"".getFlickrPhotoUrl($row["enlace"])."\" alt=\"".$row["title"]."\" class=\"preview\" />\n";
