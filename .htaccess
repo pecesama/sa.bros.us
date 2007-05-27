@@ -1,4 +1,4 @@
-# Comienza sabro.us v1.8
+# Comienza sabros.us v1.8
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteBase /
@@ -19,4 +19,4 @@ RewriteRule pag/([0-9]{1,})/busqueda/([^/]+) index.php?pag=$1&busqueda=$2 [L]
 RewriteRule pag/([0-9]{1,}) index.php?pag=$1 [L]															
 
 </IfModule>
-# Termina sabro.us v1.8  
+# Termina sabros.us v1.8  
