@@ -311,8 +311,8 @@ class tags
 			global $link, $prefix;
 			$busqueda = trim($busqueda);
 			$mTags = explode("::",$busqueda);
-				if(count($mTags) <= 2){					
-					header("Location: index.php/tag/".urldecode(stripslashes($mTags[1])));
+				if(count($mTags) <= 2){
+					header("Location: ".$Sabrosus->sabrUrl.chequearURLFriendly("/tag/","?tag=").urldecode(stripslashes($mTags[1])));
 					echo $mTags[1];
 					exit();
 				}else{
