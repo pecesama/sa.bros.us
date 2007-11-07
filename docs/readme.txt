@@ -1,4 +1,4 @@
-sabros.us 1.8 version
+sabros.us 1.75 version
 
 - What is sabros.us?
 
@@ -11,9 +11,10 @@ sabros.us 1.8 version
 - How do I install it?
 
         1.- Unpack the distribution under your webroot directory.
-        2.- Locate instalar.php in your browser.
+        2.- Locate and execute instalar.php in your web browser.
         3.- Follow the instructions.
-        4.- When you are done, be sure to delete instalar.php script.
+	4.- Locate and execute exportar-ini.php in your browser.
+        4.- When you are done, be sure to delete instalar.php and exportar-ini.php files.
 
 - Extra data?
 

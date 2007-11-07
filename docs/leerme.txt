@@ -1,4 +1,4 @@
-sabros.us version 1.8
+sabros.us version 1.75
 
 - Que es sabros.us?
 
@@ -13,8 +13,9 @@ sabros.us version 1.8
 
 	1.- Descomprime el .zip dentro de un folder llamado sabrosus (o puedes darle cualquier otro nombre).
 	2.- Corre instalar.php y llena los campos con los datos que se te solicitan.
-	3.- Una vez presionado el boton de configurar, tu sabros.us esta listo para trabajar.
-	4.- Por ultimo elimina el archivo instalar.php para evitar problemas de seguridad futuros.
+	2.- Corre exportar-ini.php.
+	3.- Tu sabros.us esta listo para trabajar.
+	4.- Por ultimo elimina los archivos instalar.php y exportar-ini.php para evitar problemas de seguridad futuros.
 
 - Otros datos?
 
