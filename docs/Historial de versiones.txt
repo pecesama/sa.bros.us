@@ -1,6 +1,6 @@
 Historial de versiones
 
-v 1.8
+v 1.75
 
     * Solucionada posible vulnerabilidad con el $_GET['pag'] (pecesama)
     * Solucionado bug de URL Firendly en la busqueda por etiquetas (pecesama y Jorge Condomí)
