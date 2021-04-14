@@ -9,6 +9,6 @@ The project’s code is provided as-is, and is not actively maintained.
 sa.bros.us
 ==========
 
-abros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. 
+sabros.us es un sistema para organizar los bookmarks o enlaces favoritos que insertas en tu sitio web. 
  
 El proyecto sabros.us es 'open source' (puedes utilizar y modificar el código libremente) y funciona con PHP y MySQL. 
